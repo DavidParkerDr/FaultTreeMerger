@@ -1,0 +1,3568 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<HiP-HOPS_Results model="model_v14Big_Haz" build="Commercial" majorVersion="2" minorVersion="5" version="869" versionDate="25 October 2013">
+  <FaultTrees>
+    <FMEA>
+      <Component>
+        <Name>Auxiliary_Battery</Name>
+        <Events>
+          <BasicEvent ID="1">
+            <Name>Auxiliary_Battery.OFailure1</Name>
+            <ShortName>OFailure1</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="1">
+                <Name>No_Braking_3_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="2">
+                <Name>No_Braking_4_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="3">
+                <Name>No_Braking_Diagonal</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="4">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="5">
+                <Name>No_Braking_Rear</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="7">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="9">
+                <Name>No_Braking_Rear</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="2">
+            <Name>Auxiliary_Battery.VFailure1</Name>
+            <ShortName>VFailure1</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="6">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>true</SinglePointFailure>
+              </Effect>
+              <Effect ID="8">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>true</SinglePointFailure>
+              </Effect>
+              <Effect ID="10">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>true</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+        </Events>
+      </Component>
+      <Component>
+        <Name>Brake_Unit1.EMB</Name>
+        <Events>
+          <BasicEvent ID="3">
+            <Name>Brake_Unit1.EMB.OFailure1</Name>
+            <ShortName>OFailure1</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="1">
+                <Name>No_Braking_3_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="2">
+                <Name>No_Braking_4_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="3">
+                <Name>No_Braking_Diagonal</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="4">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="7">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="4">
+            <Name>Brake_Unit1.EMB.VFailure1</Name>
+            <ShortName>VFailure1</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="6">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="8">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+        </Events>
+      </Component>
+      <Component>
+        <Name>Brake_Unit1.EMB_Power_Converter</Name>
+        <Events>
+          <BasicEvent ID="5">
+            <Name>Brake_Unit1.EMB_Power_Converter.VFailure1</Name>
+            <ShortName>VFailure1</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="6">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="8">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="6">
+            <Name>Brake_Unit1.EMB_Power_Converter.OFailure1</Name>
+            <ShortName>OFailure1</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="1">
+                <Name>No_Braking_3_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="2">
+                <Name>No_Braking_4_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="3">
+                <Name>No_Braking_Diagonal</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="4">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="7">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+        </Events>
+      </Component>
+      <Component>
+        <Name>Brake_Unit1.IWM</Name>
+        <Events>
+          <BasicEvent ID="7">
+            <Name>Brake_Unit1.IWM.OFailure1</Name>
+            <ShortName>OFailure1</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="1">
+                <Name>No_Braking_3_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="2">
+                <Name>No_Braking_4_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="3">
+                <Name>No_Braking_Diagonal</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="4">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="7">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="8">
+            <Name>Brake_Unit1.IWM.VFailure1</Name>
+            <ShortName>VFailure1</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="6">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="8">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+        </Events>
+      </Component>
+      <Component>
+        <Name>Brake_Unit1.IWM_Power_Converter</Name>
+        <Events>
+          <BasicEvent ID="9">
+            <Name>Brake_Unit1.IWM_Power_Converter.VFailure1</Name>
+            <ShortName>VFailure1</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="6">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="8">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="10">
+            <Name>Brake_Unit1.IWM_Power_Converter.OFailure1</Name>
+            <ShortName>OFailure1</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="1">
+                <Name>No_Braking_3_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="2">
+                <Name>No_Braking_4_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="3">
+                <Name>No_Braking_Diagonal</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="4">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="7">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+        </Events>
+      </Component>
+      <Component>
+        <Name>Brake_Unit1.Wheel_Node_Controller</Name>
+        <Events>
+          <BasicEvent ID="11">
+            <Name>Brake_Unit1.Wheel_Node_Controller.OFailure1</Name>
+            <ShortName>OFailure1</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="1">
+                <Name>No_Braking_3_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="2">
+                <Name>No_Braking_4_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="3">
+                <Name>No_Braking_Diagonal</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="4">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="7">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="12">
+            <Name>Brake_Unit1.Wheel_Node_Controller.OFailure2</Name>
+            <ShortName>OFailure2</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="1">
+                <Name>No_Braking_3_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="2">
+                <Name>No_Braking_4_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="3">
+                <Name>No_Braking_Diagonal</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="4">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="7">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="13">
+            <Name>Brake_Unit1.Wheel_Node_Controller.VFailure1</Name>
+            <ShortName>VFailure1</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="6">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="8">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="14">
+            <Name>Brake_Unit1.Wheel_Node_Controller.VFailure2</Name>
+            <ShortName>VFailure2</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="6">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="8">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+        </Events>
+      </Component>
+      <Component>
+        <Name>Brake_Unit2.EMB</Name>
+        <Events>
+          <BasicEvent ID="15">
+            <Name>Brake_Unit2.EMB.OFailure1</Name>
+            <ShortName>OFailure1</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="1">
+                <Name>No_Braking_3_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="2">
+                <Name>No_Braking_4_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="3">
+                <Name>No_Braking_Diagonal</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="4">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="7">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="16">
+            <Name>Brake_Unit2.EMB.VFailure1</Name>
+            <ShortName>VFailure1</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="6">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="8">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+        </Events>
+      </Component>
+      <Component>
+        <Name>Brake_Unit2.EMB_Power_Converter</Name>
+        <Events>
+          <BasicEvent ID="17">
+            <Name>Brake_Unit2.EMB_Power_Converter.VFailure1</Name>
+            <ShortName>VFailure1</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="6">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="8">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="18">
+            <Name>Brake_Unit2.EMB_Power_Converter.OFailure1</Name>
+            <ShortName>OFailure1</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="1">
+                <Name>No_Braking_3_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="2">
+                <Name>No_Braking_4_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="3">
+                <Name>No_Braking_Diagonal</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="4">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="7">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+        </Events>
+      </Component>
+      <Component>
+        <Name>Brake_Unit2.IWM</Name>
+        <Events>
+          <BasicEvent ID="19">
+            <Name>Brake_Unit2.IWM.OFailure1</Name>
+            <ShortName>OFailure1</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="1">
+                <Name>No_Braking_3_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="2">
+                <Name>No_Braking_4_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="3">
+                <Name>No_Braking_Diagonal</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="4">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="7">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="20">
+            <Name>Brake_Unit2.IWM.VFailure1</Name>
+            <ShortName>VFailure1</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="6">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="8">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+        </Events>
+      </Component>
+      <Component>
+        <Name>Brake_Unit2.IWM_Power_Converter</Name>
+        <Events>
+          <BasicEvent ID="21">
+            <Name>Brake_Unit2.IWM_Power_Converter.VFailure1</Name>
+            <ShortName>VFailure1</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="6">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="8">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="22">
+            <Name>Brake_Unit2.IWM_Power_Converter.OFailure1</Name>
+            <ShortName>OFailure1</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="1">
+                <Name>No_Braking_3_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="2">
+                <Name>No_Braking_4_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="3">
+                <Name>No_Braking_Diagonal</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="4">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="7">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+        </Events>
+      </Component>
+      <Component>
+        <Name>Brake_Unit2.Wheel_Node_Controller</Name>
+        <Events>
+          <BasicEvent ID="23">
+            <Name>Brake_Unit2.Wheel_Node_Controller.OFailure1</Name>
+            <ShortName>OFailure1</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="1">
+                <Name>No_Braking_3_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="2">
+                <Name>No_Braking_4_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="3">
+                <Name>No_Braking_Diagonal</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="4">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="7">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="24">
+            <Name>Brake_Unit2.Wheel_Node_Controller.OFailure2</Name>
+            <ShortName>OFailure2</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="1">
+                <Name>No_Braking_3_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="2">
+                <Name>No_Braking_4_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="3">
+                <Name>No_Braking_Diagonal</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="4">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="7">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="25">
+            <Name>Brake_Unit2.Wheel_Node_Controller.VFailure1</Name>
+            <ShortName>VFailure1</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="6">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="8">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="26">
+            <Name>Brake_Unit2.Wheel_Node_Controller.VFailure2</Name>
+            <ShortName>VFailure2</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="6">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="8">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+        </Events>
+      </Component>
+      <Component>
+        <Name>Brake_Unit3.EMB</Name>
+        <Events>
+          <BasicEvent ID="27">
+            <Name>Brake_Unit3.EMB.OFailure1</Name>
+            <ShortName>OFailure1</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="1">
+                <Name>No_Braking_3_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="2">
+                <Name>No_Braking_4_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="3">
+                <Name>No_Braking_Diagonal</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="5">
+                <Name>No_Braking_Rear</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="9">
+                <Name>No_Braking_Rear</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="28">
+            <Name>Brake_Unit3.EMB.VFailure1</Name>
+            <ShortName>VFailure1</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="6">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="10">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+        </Events>
+      </Component>
+      <Component>
+        <Name>Brake_Unit3.EMB_Power_Converter</Name>
+        <Events>
+          <BasicEvent ID="29">
+            <Name>Brake_Unit3.EMB_Power_Converter.VFailure1</Name>
+            <ShortName>VFailure1</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="6">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="10">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="30">
+            <Name>Brake_Unit3.EMB_Power_Converter.OFailure1</Name>
+            <ShortName>OFailure1</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="1">
+                <Name>No_Braking_3_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="2">
+                <Name>No_Braking_4_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="3">
+                <Name>No_Braking_Diagonal</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="5">
+                <Name>No_Braking_Rear</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="9">
+                <Name>No_Braking_Rear</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+        </Events>
+      </Component>
+      <Component>
+        <Name>Brake_Unit3.IWM</Name>
+        <Events>
+          <BasicEvent ID="31">
+            <Name>Brake_Unit3.IWM.OFailure1</Name>
+            <ShortName>OFailure1</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="1">
+                <Name>No_Braking_3_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="2">
+                <Name>No_Braking_4_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="3">
+                <Name>No_Braking_Diagonal</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="5">
+                <Name>No_Braking_Rear</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="9">
+                <Name>No_Braking_Rear</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="32">
+            <Name>Brake_Unit3.IWM.VFailure1</Name>
+            <ShortName>VFailure1</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="6">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="10">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+        </Events>
+      </Component>
+      <Component>
+        <Name>Brake_Unit3.IWM_Power_Converter</Name>
+        <Events>
+          <BasicEvent ID="33">
+            <Name>Brake_Unit3.IWM_Power_Converter.VFailure1</Name>
+            <ShortName>VFailure1</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="6">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="10">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="34">
+            <Name>Brake_Unit3.IWM_Power_Converter.OFailure1</Name>
+            <ShortName>OFailure1</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="1">
+                <Name>No_Braking_3_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="2">
+                <Name>No_Braking_4_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="3">
+                <Name>No_Braking_Diagonal</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="5">
+                <Name>No_Braking_Rear</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="9">
+                <Name>No_Braking_Rear</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+        </Events>
+      </Component>
+      <Component>
+        <Name>Brake_Unit3.Wheel_Node_Controller</Name>
+        <Events>
+          <BasicEvent ID="35">
+            <Name>Brake_Unit3.Wheel_Node_Controller.OFailure1</Name>
+            <ShortName>OFailure1</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="1">
+                <Name>No_Braking_3_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="2">
+                <Name>No_Braking_4_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="3">
+                <Name>No_Braking_Diagonal</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="5">
+                <Name>No_Braking_Rear</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="9">
+                <Name>No_Braking_Rear</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="36">
+            <Name>Brake_Unit3.Wheel_Node_Controller.OFailure2</Name>
+            <ShortName>OFailure2</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="1">
+                <Name>No_Braking_3_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="2">
+                <Name>No_Braking_4_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="3">
+                <Name>No_Braking_Diagonal</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="5">
+                <Name>No_Braking_Rear</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="9">
+                <Name>No_Braking_Rear</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="37">
+            <Name>Brake_Unit3.Wheel_Node_Controller.VFailure1</Name>
+            <ShortName>VFailure1</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="6">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="10">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="38">
+            <Name>Brake_Unit3.Wheel_Node_Controller.VFailure2</Name>
+            <ShortName>VFailure2</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="6">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="10">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+        </Events>
+      </Component>
+      <Component>
+        <Name>Brake_Unit4.EMB</Name>
+        <Events>
+          <BasicEvent ID="39">
+            <Name>Brake_Unit4.EMB.OFailure1</Name>
+            <ShortName>OFailure1</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="1">
+                <Name>No_Braking_3_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="2">
+                <Name>No_Braking_4_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="3">
+                <Name>No_Braking_Diagonal</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="5">
+                <Name>No_Braking_Rear</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="9">
+                <Name>No_Braking_Rear</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="40">
+            <Name>Brake_Unit4.EMB.VFailure1</Name>
+            <ShortName>VFailure1</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="6">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="10">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+        </Events>
+      </Component>
+      <Component>
+        <Name>Brake_Unit4.EMB_Power_Converter</Name>
+        <Events>
+          <BasicEvent ID="41">
+            <Name>Brake_Unit4.EMB_Power_Converter.VFailure1</Name>
+            <ShortName>VFailure1</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="6">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="10">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="42">
+            <Name>Brake_Unit4.EMB_Power_Converter.OFailure1</Name>
+            <ShortName>OFailure1</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="1">
+                <Name>No_Braking_3_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="2">
+                <Name>No_Braking_4_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="3">
+                <Name>No_Braking_Diagonal</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="5">
+                <Name>No_Braking_Rear</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="9">
+                <Name>No_Braking_Rear</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+        </Events>
+      </Component>
+      <Component>
+        <Name>Brake_Unit4.IWM</Name>
+        <Events>
+          <BasicEvent ID="43">
+            <Name>Brake_Unit4.IWM.OFailure1</Name>
+            <ShortName>OFailure1</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="1">
+                <Name>No_Braking_3_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="2">
+                <Name>No_Braking_4_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="3">
+                <Name>No_Braking_Diagonal</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="5">
+                <Name>No_Braking_Rear</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="9">
+                <Name>No_Braking_Rear</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="44">
+            <Name>Brake_Unit4.IWM.VFailure1</Name>
+            <ShortName>VFailure1</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="6">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="10">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+        </Events>
+      </Component>
+      <Component>
+        <Name>Brake_Unit4.IWM_Power_Converter</Name>
+        <Events>
+          <BasicEvent ID="45">
+            <Name>Brake_Unit4.IWM_Power_Converter.VFailure1</Name>
+            <ShortName>VFailure1</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="6">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="10">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="46">
+            <Name>Brake_Unit4.IWM_Power_Converter.OFailure1</Name>
+            <ShortName>OFailure1</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="1">
+                <Name>No_Braking_3_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="2">
+                <Name>No_Braking_4_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="3">
+                <Name>No_Braking_Diagonal</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="5">
+                <Name>No_Braking_Rear</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="9">
+                <Name>No_Braking_Rear</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+        </Events>
+      </Component>
+      <Component>
+        <Name>Brake_Unit4.Wheel_Node_Controller</Name>
+        <Events>
+          <BasicEvent ID="47">
+            <Name>Brake_Unit4.Wheel_Node_Controller.OFailure1</Name>
+            <ShortName>OFailure1</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="1">
+                <Name>No_Braking_3_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="2">
+                <Name>No_Braking_4_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="3">
+                <Name>No_Braking_Diagonal</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="5">
+                <Name>No_Braking_Rear</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="9">
+                <Name>No_Braking_Rear</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="48">
+            <Name>Brake_Unit4.Wheel_Node_Controller.OFailure2</Name>
+            <ShortName>OFailure2</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="1">
+                <Name>No_Braking_3_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="2">
+                <Name>No_Braking_4_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="3">
+                <Name>No_Braking_Diagonal</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="5">
+                <Name>No_Braking_Rear</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="9">
+                <Name>No_Braking_Rear</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="49">
+            <Name>Brake_Unit4.Wheel_Node_Controller.VFailure1</Name>
+            <ShortName>VFailure1</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="6">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="10">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="50">
+            <Name>Brake_Unit4.Wheel_Node_Controller.VFailure2</Name>
+            <ShortName>VFailure2</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="6">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="10">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+        </Events>
+      </Component>
+      <Component>
+        <Name>Communication_Bus1</Name>
+        <Events>
+          <BasicEvent ID="51">
+            <Name>Communication_Bus1.OFailure1</Name>
+            <ShortName>OFailure1</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="1">
+                <Name>No_Braking_3_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="2">
+                <Name>No_Braking_4_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="3">
+                <Name>No_Braking_Diagonal</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="4">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="5">
+                <Name>No_Braking_Rear</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="7">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="9">
+                <Name>No_Braking_Rear</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+        </Events>
+      </Component>
+      <Component>
+        <Name>Communication_Bus2</Name>
+        <Events>
+          <BasicEvent ID="52">
+            <Name>Communication_Bus2.OFailure1</Name>
+            <ShortName>OFailure1</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="1">
+                <Name>No_Braking_3_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="2">
+                <Name>No_Braking_4_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="3">
+                <Name>No_Braking_Diagonal</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="4">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="5">
+                <Name>No_Braking_Rear</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="7">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="9">
+                <Name>No_Braking_Rear</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+        </Events>
+      </Component>
+      <Component>
+        <Name>Electronic_Pedal</Name>
+        <Events>
+          <BasicEvent ID="53">
+            <Name>Electronic_Pedal.OFailure1</Name>
+            <ShortName>OFailure1</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="1">
+                <Name>No_Braking_3_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="2">
+                <Name>No_Braking_4_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="3">
+                <Name>No_Braking_Diagonal</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="4">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="5">
+                <Name>No_Braking_Rear</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="6">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="7">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="8">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="9">
+                <Name>No_Braking_Rear</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="10">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="54">
+            <Name>Electronic_Pedal.OFailure2</Name>
+            <ShortName>OFailure2</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="1">
+                <Name>No_Braking_3_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="2">
+                <Name>No_Braking_4_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="3">
+                <Name>No_Braking_Diagonal</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="4">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="5">
+                <Name>No_Braking_Rear</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="7">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="9">
+                <Name>No_Braking_Rear</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="55">
+            <Name>Electronic_Pedal.VFailure1</Name>
+            <ShortName>VFailure1</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="6">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>true</SinglePointFailure>
+              </Effect>
+              <Effect ID="8">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>true</SinglePointFailure>
+              </Effect>
+              <Effect ID="10">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="56">
+            <Name>Electronic_Pedal.VFailure2</Name>
+            <ShortName>VFailure2</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="6">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="8">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>true</SinglePointFailure>
+              </Effect>
+              <Effect ID="10">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+        </Events>
+      </Component>
+      <Component>
+        <Name>Mechanical_Pedal</Name>
+        <Events>
+          <BasicEvent ID="57">
+            <Name>Mechanical_Pedal.OFailure1</Name>
+            <ShortName>OFailure1</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="1">
+                <Name>No_Braking_3_Wheels</Name>
+                <SinglePointFailure>true</SinglePointFailure>
+              </Effect>
+              <Effect ID="2">
+                <Name>No_Braking_4_Wheels</Name>
+                <SinglePointFailure>true</SinglePointFailure>
+              </Effect>
+              <Effect ID="3">
+                <Name>No_Braking_Diagonal</Name>
+                <SinglePointFailure>true</SinglePointFailure>
+              </Effect>
+              <Effect ID="4">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>true</SinglePointFailure>
+              </Effect>
+              <Effect ID="5">
+                <Name>No_Braking_Rear</Name>
+                <SinglePointFailure>true</SinglePointFailure>
+              </Effect>
+              <Effect ID="6">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="7">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>true</SinglePointFailure>
+              </Effect>
+              <Effect ID="8">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="9">
+                <Name>No_Braking_Rear</Name>
+                <SinglePointFailure>true</SinglePointFailure>
+              </Effect>
+              <Effect ID="10">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="58">
+            <Name>Mechanical_Pedal.VFailure1</Name>
+            <ShortName>VFailure1</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="6">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>true</SinglePointFailure>
+              </Effect>
+              <Effect ID="8">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>true</SinglePointFailure>
+              </Effect>
+              <Effect ID="10">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>true</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+        </Events>
+      </Component>
+      <Component>
+        <Name>Powertrain_Battery</Name>
+        <Events>
+          <BasicEvent ID="59">
+            <Name>Powertrain_Battery.OFailure1</Name>
+            <ShortName>OFailure1</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="1">
+                <Name>No_Braking_3_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="2">
+                <Name>No_Braking_4_Wheels</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="3">
+                <Name>No_Braking_Diagonal</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="4">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="5">
+                <Name>No_Braking_Rear</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="7">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="9">
+                <Name>No_Braking_Rear</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="60">
+            <Name>Powertrain_Battery.VFailure1</Name>
+            <ShortName>VFailure1</ShortName>
+            <Description></Description>
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="6">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>true</SinglePointFailure>
+              </Effect>
+              <Effect ID="8">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>true</SinglePointFailure>
+              </Effect>
+              <Effect ID="10">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>true</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+        </Events>
+      </Component>
+    </FMEA>
+    <FaultTree ID="3">
+      <Name>No_Braking_Diagonal</Name>
+      <Description></Description>
+      <SIL>3</SIL>
+      <Unavailability>0</Unavailability>
+      <UnavailabilitySort>0.0</UnavailabilitySort>
+      <Severity>0</Severity>
+      <CutSetsSummary>
+        <CutSets order="1" pruned="false">1</CutSets>
+        <CutSets order="2" pruned="false">3</CutSets>
+        <CutSets order="3" pruned="false">36</CutSets>
+        <CutSets order="4" pruned="false">162</CutSets>
+      </CutSetsSummary>
+      <AllCutSets>
+        <CutSets order="1">
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="57" />
+            </Events>
+          </CutSet>
+        </CutSets>
+        <CutSets order="2">
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="1" />
+              <Event ID="59" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="51" />
+              <Event ID="52" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="53" />
+              <Event ID="54" />
+            </Events>
+          </CutSet>
+        </CutSets>
+        <CutSets order="3">
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="1" />
+              <Event ID="7" />
+              <Event ID="43" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="1" />
+              <Event ID="7" />
+              <Event ID="46" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="1" />
+              <Event ID="7" />
+              <Event ID="48" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="1" />
+              <Event ID="10" />
+              <Event ID="43" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="1" />
+              <Event ID="10" />
+              <Event ID="46" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="1" />
+              <Event ID="10" />
+              <Event ID="48" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="1" />
+              <Event ID="12" />
+              <Event ID="43" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="1" />
+              <Event ID="12" />
+              <Event ID="46" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="1" />
+              <Event ID="12" />
+              <Event ID="48" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="1" />
+              <Event ID="19" />
+              <Event ID="31" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="1" />
+              <Event ID="19" />
+              <Event ID="34" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="1" />
+              <Event ID="22" />
+              <Event ID="31" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="1" />
+              <Event ID="19" />
+              <Event ID="36" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="1" />
+              <Event ID="22" />
+              <Event ID="34" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="1" />
+              <Event ID="24" />
+              <Event ID="31" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="1" />
+              <Event ID="22" />
+              <Event ID="36" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="1" />
+              <Event ID="24" />
+              <Event ID="34" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="1" />
+              <Event ID="24" />
+              <Event ID="36" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="3" />
+              <Event ID="39" />
+              <Event ID="59" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="3" />
+              <Event ID="42" />
+              <Event ID="59" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="3" />
+              <Event ID="47" />
+              <Event ID="59" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="6" />
+              <Event ID="39" />
+              <Event ID="59" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="6" />
+              <Event ID="42" />
+              <Event ID="59" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="6" />
+              <Event ID="47" />
+              <Event ID="59" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="11" />
+              <Event ID="39" />
+              <Event ID="59" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="11" />
+              <Event ID="42" />
+              <Event ID="59" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="11" />
+              <Event ID="47" />
+              <Event ID="59" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="15" />
+              <Event ID="27" />
+              <Event ID="59" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="15" />
+              <Event ID="30" />
+              <Event ID="59" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="15" />
+              <Event ID="35" />
+              <Event ID="59" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="18" />
+              <Event ID="27" />
+              <Event ID="59" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="18" />
+              <Event ID="30" />
+              <Event ID="59" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="18" />
+              <Event ID="35" />
+              <Event ID="59" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="23" />
+              <Event ID="27" />
+              <Event ID="59" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="23" />
+              <Event ID="30" />
+              <Event ID="59" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="23" />
+              <Event ID="35" />
+              <Event ID="59" />
+            </Events>
+          </CutSet>
+        </CutSets>
+        <CutSets order="4">
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="3" />
+              <Event ID="7" />
+              <Event ID="39" />
+              <Event ID="43" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="3" />
+              <Event ID="7" />
+              <Event ID="39" />
+              <Event ID="46" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="3" />
+              <Event ID="7" />
+              <Event ID="42" />
+              <Event ID="43" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="3" />
+              <Event ID="7" />
+              <Event ID="39" />
+              <Event ID="48" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="3" />
+              <Event ID="7" />
+              <Event ID="42" />
+              <Event ID="46" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="3" />
+              <Event ID="7" />
+              <Event ID="42" />
+              <Event ID="48" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="3" />
+              <Event ID="7" />
+              <Event ID="43" />
+              <Event ID="47" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="3" />
+              <Event ID="7" />
+              <Event ID="46" />
+              <Event ID="47" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="3" />
+              <Event ID="7" />
+              <Event ID="47" />
+              <Event ID="48" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="3" />
+              <Event ID="10" />
+              <Event ID="39" />
+              <Event ID="43" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="3" />
+              <Event ID="10" />
+              <Event ID="39" />
+              <Event ID="46" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="3" />
+              <Event ID="10" />
+              <Event ID="42" />
+              <Event ID="43" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="3" />
+              <Event ID="10" />
+              <Event ID="39" />
+              <Event ID="48" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="3" />
+              <Event ID="10" />
+              <Event ID="42" />
+              <Event ID="46" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="3" />
+              <Event ID="10" />
+              <Event ID="42" />
+              <Event ID="48" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="3" />
+              <Event ID="10" />
+              <Event ID="43" />
+              <Event ID="47" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="3" />
+              <Event ID="12" />
+              <Event ID="39" />
+              <Event ID="43" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="3" />
+              <Event ID="10" />
+              <Event ID="46" />
+              <Event ID="47" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="3" />
+              <Event ID="10" />
+              <Event ID="47" />
+              <Event ID="48" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="3" />
+              <Event ID="12" />
+              <Event ID="39" />
+              <Event ID="46" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="3" />
+              <Event ID="12" />
+              <Event ID="42" />
+              <Event ID="43" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="3" />
+              <Event ID="12" />
+              <Event ID="39" />
+              <Event ID="48" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="3" />
+              <Event ID="12" />
+              <Event ID="42" />
+              <Event ID="46" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="3" />
+              <Event ID="12" />
+              <Event ID="42" />
+              <Event ID="48" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="3" />
+              <Event ID="12" />
+              <Event ID="43" />
+              <Event ID="47" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="3" />
+              <Event ID="12" />
+              <Event ID="46" />
+              <Event ID="47" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="3" />
+              <Event ID="12" />
+              <Event ID="47" />
+              <Event ID="48" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="6" />
+              <Event ID="7" />
+              <Event ID="39" />
+              <Event ID="43" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="6" />
+              <Event ID="7" />
+              <Event ID="39" />
+              <Event ID="46" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="6" />
+              <Event ID="7" />
+              <Event ID="42" />
+              <Event ID="43" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="6" />
+              <Event ID="7" />
+              <Event ID="39" />
+              <Event ID="48" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="6" />
+              <Event ID="7" />
+              <Event ID="42" />
+              <Event ID="46" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="6" />
+              <Event ID="7" />
+              <Event ID="42" />
+              <Event ID="48" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="6" />
+              <Event ID="7" />
+              <Event ID="43" />
+              <Event ID="47" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="6" />
+              <Event ID="7" />
+              <Event ID="46" />
+              <Event ID="47" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="6" />
+              <Event ID="7" />
+              <Event ID="47" />
+              <Event ID="48" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="6" />
+              <Event ID="10" />
+              <Event ID="39" />
+              <Event ID="43" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="6" />
+              <Event ID="10" />
+              <Event ID="39" />
+              <Event ID="46" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="6" />
+              <Event ID="10" />
+              <Event ID="42" />
+              <Event ID="43" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="6" />
+              <Event ID="10" />
+              <Event ID="39" />
+              <Event ID="48" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="6" />
+              <Event ID="10" />
+              <Event ID="42" />
+              <Event ID="46" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="6" />
+              <Event ID="10" />
+              <Event ID="42" />
+              <Event ID="48" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="6" />
+              <Event ID="10" />
+              <Event ID="43" />
+              <Event ID="47" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="6" />
+              <Event ID="12" />
+              <Event ID="39" />
+              <Event ID="43" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="6" />
+              <Event ID="10" />
+              <Event ID="46" />
+              <Event ID="47" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="6" />
+              <Event ID="10" />
+              <Event ID="47" />
+              <Event ID="48" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="6" />
+              <Event ID="12" />
+              <Event ID="39" />
+              <Event ID="46" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="6" />
+              <Event ID="12" />
+              <Event ID="42" />
+              <Event ID="43" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="6" />
+              <Event ID="12" />
+              <Event ID="39" />
+              <Event ID="48" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="6" />
+              <Event ID="12" />
+              <Event ID="42" />
+              <Event ID="46" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="6" />
+              <Event ID="12" />
+              <Event ID="42" />
+              <Event ID="48" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="6" />
+              <Event ID="12" />
+              <Event ID="43" />
+              <Event ID="47" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="6" />
+              <Event ID="12" />
+              <Event ID="46" />
+              <Event ID="47" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="6" />
+              <Event ID="12" />
+              <Event ID="47" />
+              <Event ID="48" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="7" />
+              <Event ID="11" />
+              <Event ID="39" />
+              <Event ID="43" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="7" />
+              <Event ID="11" />
+              <Event ID="39" />
+              <Event ID="46" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="7" />
+              <Event ID="11" />
+              <Event ID="42" />
+              <Event ID="43" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="7" />
+              <Event ID="11" />
+              <Event ID="39" />
+              <Event ID="48" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="7" />
+              <Event ID="11" />
+              <Event ID="42" />
+              <Event ID="46" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="7" />
+              <Event ID="11" />
+              <Event ID="42" />
+              <Event ID="48" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="7" />
+              <Event ID="11" />
+              <Event ID="43" />
+              <Event ID="47" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="7" />
+              <Event ID="11" />
+              <Event ID="46" />
+              <Event ID="47" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="7" />
+              <Event ID="11" />
+              <Event ID="47" />
+              <Event ID="48" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="10" />
+              <Event ID="11" />
+              <Event ID="39" />
+              <Event ID="43" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="10" />
+              <Event ID="11" />
+              <Event ID="39" />
+              <Event ID="46" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="10" />
+              <Event ID="11" />
+              <Event ID="42" />
+              <Event ID="43" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="10" />
+              <Event ID="11" />
+              <Event ID="39" />
+              <Event ID="48" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="10" />
+              <Event ID="11" />
+              <Event ID="42" />
+              <Event ID="46" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="10" />
+              <Event ID="11" />
+              <Event ID="42" />
+              <Event ID="48" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="10" />
+              <Event ID="11" />
+              <Event ID="43" />
+              <Event ID="47" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="10" />
+              <Event ID="11" />
+              <Event ID="46" />
+              <Event ID="47" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="10" />
+              <Event ID="11" />
+              <Event ID="47" />
+              <Event ID="48" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="11" />
+              <Event ID="12" />
+              <Event ID="39" />
+              <Event ID="43" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="11" />
+              <Event ID="12" />
+              <Event ID="39" />
+              <Event ID="46" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="11" />
+              <Event ID="12" />
+              <Event ID="42" />
+              <Event ID="43" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="11" />
+              <Event ID="12" />
+              <Event ID="39" />
+              <Event ID="48" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="11" />
+              <Event ID="12" />
+              <Event ID="42" />
+              <Event ID="46" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="11" />
+              <Event ID="12" />
+              <Event ID="42" />
+              <Event ID="48" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="11" />
+              <Event ID="12" />
+              <Event ID="43" />
+              <Event ID="47" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="11" />
+              <Event ID="12" />
+              <Event ID="46" />
+              <Event ID="47" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="11" />
+              <Event ID="12" />
+              <Event ID="47" />
+              <Event ID="48" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="15" />
+              <Event ID="19" />
+              <Event ID="27" />
+              <Event ID="31" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="15" />
+              <Event ID="19" />
+              <Event ID="30" />
+              <Event ID="31" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="15" />
+              <Event ID="19" />
+              <Event ID="27" />
+              <Event ID="34" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="15" />
+              <Event ID="22" />
+              <Event ID="27" />
+              <Event ID="31" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="15" />
+              <Event ID="19" />
+              <Event ID="27" />
+              <Event ID="36" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="15" />
+              <Event ID="19" />
+              <Event ID="30" />
+              <Event ID="34" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="15" />
+              <Event ID="22" />
+              <Event ID="30" />
+              <Event ID="31" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="15" />
+              <Event ID="19" />
+              <Event ID="30" />
+              <Event ID="36" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="15" />
+              <Event ID="22" />
+              <Event ID="27" />
+              <Event ID="34" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="15" />
+              <Event ID="24" />
+              <Event ID="27" />
+              <Event ID="31" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="15" />
+              <Event ID="19" />
+              <Event ID="31" />
+              <Event ID="35" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="15" />
+              <Event ID="22" />
+              <Event ID="27" />
+              <Event ID="36" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="15" />
+              <Event ID="22" />
+              <Event ID="30" />
+              <Event ID="34" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="15" />
+              <Event ID="24" />
+              <Event ID="30" />
+              <Event ID="31" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="15" />
+              <Event ID="24" />
+              <Event ID="27" />
+              <Event ID="34" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="15" />
+              <Event ID="19" />
+              <Event ID="34" />
+              <Event ID="35" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="15" />
+              <Event ID="22" />
+              <Event ID="30" />
+              <Event ID="36" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="15" />
+              <Event ID="22" />
+              <Event ID="31" />
+              <Event ID="35" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="15" />
+              <Event ID="24" />
+              <Event ID="27" />
+              <Event ID="36" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="15" />
+              <Event ID="19" />
+              <Event ID="35" />
+              <Event ID="36" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="15" />
+              <Event ID="24" />
+              <Event ID="30" />
+              <Event ID="34" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="15" />
+              <Event ID="24" />
+              <Event ID="30" />
+              <Event ID="36" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="15" />
+              <Event ID="22" />
+              <Event ID="34" />
+              <Event ID="35" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="15" />
+              <Event ID="24" />
+              <Event ID="31" />
+              <Event ID="35" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="15" />
+              <Event ID="22" />
+              <Event ID="35" />
+              <Event ID="36" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="15" />
+              <Event ID="24" />
+              <Event ID="34" />
+              <Event ID="35" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="15" />
+              <Event ID="24" />
+              <Event ID="35" />
+              <Event ID="36" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="18" />
+              <Event ID="19" />
+              <Event ID="27" />
+              <Event ID="31" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="18" />
+              <Event ID="19" />
+              <Event ID="30" />
+              <Event ID="31" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="18" />
+              <Event ID="19" />
+              <Event ID="27" />
+              <Event ID="34" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="18" />
+              <Event ID="22" />
+              <Event ID="27" />
+              <Event ID="31" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="18" />
+              <Event ID="19" />
+              <Event ID="27" />
+              <Event ID="36" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="18" />
+              <Event ID="19" />
+              <Event ID="30" />
+              <Event ID="34" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="18" />
+              <Event ID="22" />
+              <Event ID="30" />
+              <Event ID="31" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="18" />
+              <Event ID="19" />
+              <Event ID="30" />
+              <Event ID="36" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="18" />
+              <Event ID="22" />
+              <Event ID="27" />
+              <Event ID="34" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="18" />
+              <Event ID="24" />
+              <Event ID="27" />
+              <Event ID="31" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="18" />
+              <Event ID="19" />
+              <Event ID="31" />
+              <Event ID="35" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="18" />
+              <Event ID="22" />
+              <Event ID="27" />
+              <Event ID="36" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="18" />
+              <Event ID="22" />
+              <Event ID="30" />
+              <Event ID="34" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="18" />
+              <Event ID="24" />
+              <Event ID="30" />
+              <Event ID="31" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="18" />
+              <Event ID="24" />
+              <Event ID="27" />
+              <Event ID="34" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="18" />
+              <Event ID="19" />
+              <Event ID="34" />
+              <Event ID="35" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="18" />
+              <Event ID="22" />
+              <Event ID="30" />
+              <Event ID="36" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="18" />
+              <Event ID="22" />
+              <Event ID="31" />
+              <Event ID="35" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="18" />
+              <Event ID="24" />
+              <Event ID="27" />
+              <Event ID="36" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="18" />
+              <Event ID="19" />
+              <Event ID="35" />
+              <Event ID="36" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="18" />
+              <Event ID="24" />
+              <Event ID="30" />
+              <Event ID="34" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="18" />
+              <Event ID="24" />
+              <Event ID="30" />
+              <Event ID="36" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="18" />
+              <Event ID="22" />
+              <Event ID="34" />
+              <Event ID="35" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="18" />
+              <Event ID="24" />
+              <Event ID="31" />
+              <Event ID="35" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="18" />
+              <Event ID="22" />
+              <Event ID="35" />
+              <Event ID="36" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="18" />
+              <Event ID="24" />
+              <Event ID="34" />
+              <Event ID="35" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="18" />
+              <Event ID="24" />
+              <Event ID="35" />
+              <Event ID="36" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="19" />
+              <Event ID="23" />
+              <Event ID="27" />
+              <Event ID="31" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="19" />
+              <Event ID="23" />
+              <Event ID="30" />
+              <Event ID="31" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="19" />
+              <Event ID="23" />
+              <Event ID="27" />
+              <Event ID="34" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="19" />
+              <Event ID="23" />
+              <Event ID="27" />
+              <Event ID="36" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="19" />
+              <Event ID="23" />
+              <Event ID="30" />
+              <Event ID="34" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="19" />
+              <Event ID="23" />
+              <Event ID="30" />
+              <Event ID="36" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="19" />
+              <Event ID="23" />
+              <Event ID="31" />
+              <Event ID="35" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="19" />
+              <Event ID="23" />
+              <Event ID="34" />
+              <Event ID="35" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="19" />
+              <Event ID="23" />
+              <Event ID="35" />
+              <Event ID="36" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="22" />
+              <Event ID="23" />
+              <Event ID="27" />
+              <Event ID="31" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="22" />
+              <Event ID="23" />
+              <Event ID="30" />
+              <Event ID="31" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="22" />
+              <Event ID="23" />
+              <Event ID="27" />
+              <Event ID="34" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="22" />
+              <Event ID="23" />
+              <Event ID="27" />
+              <Event ID="36" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="22" />
+              <Event ID="23" />
+              <Event ID="30" />
+              <Event ID="34" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="22" />
+              <Event ID="23" />
+              <Event ID="30" />
+              <Event ID="36" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="22" />
+              <Event ID="23" />
+              <Event ID="31" />
+              <Event ID="35" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="22" />
+              <Event ID="23" />
+              <Event ID="34" />
+              <Event ID="35" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="22" />
+              <Event ID="23" />
+              <Event ID="35" />
+              <Event ID="36" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="23" />
+              <Event ID="24" />
+              <Event ID="27" />
+              <Event ID="31" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="23" />
+              <Event ID="24" />
+              <Event ID="30" />
+              <Event ID="31" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="23" />
+              <Event ID="24" />
+              <Event ID="27" />
+              <Event ID="34" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="23" />
+              <Event ID="24" />
+              <Event ID="27" />
+              <Event ID="36" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="23" />
+              <Event ID="24" />
+              <Event ID="30" />
+              <Event ID="34" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="23" />
+              <Event ID="24" />
+              <Event ID="30" />
+              <Event ID="36" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="23" />
+              <Event ID="24" />
+              <Event ID="31" />
+              <Event ID="35" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="23" />
+              <Event ID="24" />
+              <Event ID="34" />
+              <Event ID="35" />
+            </Events>
+          </CutSet>
+          <CutSet>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Events>
+              <Event ID="23" />
+              <Event ID="24" />
+              <Event ID="35" />
+              <Event ID="36" />
+            </Events>
+          </CutSet>
+        </CutSets>
+      </AllCutSets>
+    </FaultTree>
+  </FaultTrees>
+</HiP-HOPS_Results>

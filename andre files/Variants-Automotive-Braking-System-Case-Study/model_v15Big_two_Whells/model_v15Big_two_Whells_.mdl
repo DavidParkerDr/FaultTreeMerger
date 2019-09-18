@@ -1,0 +1,3672 @@
+Model {
+  Name			  "model_v15Big_two_Whells_"
+  Version		  7.6
+  MdlSubVersion		  0
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    0
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.190"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+  }
+  Description		  "<HiP-HOPS_Model_Parameters><ToolVersion><Name>Matlab</Name><Number>7.11.0.584 </Number></ToolVersion"
+  "><RiskTime>10000</RiskTime><OptimisationParams></OptimisationParams><Hazards><Hazard><Name>No_Braking_Front</Name><D"
+  "escription></Description><SafetyRequirement>4</SafetyRequirement><Causes><Cause><Probability></Probability><FailureL"
+  "ogic>Omission-Brake_Unit1.Add.Braking AND Omission-Brake_Unit2.Add.Braking</FailureLogic></Cause></Causes></Hazard><"
+  "Hazard><Name>Value_Braking</Name><Description></Description><SafetyRequirement>4</SafetyRequirement><Causes><Cause><"
+  "Probability></Probability><FailureLogic>Value-Brake_Unit1.Add.Braking AND Value-Brake_Unit2.Add.Braking</FailureLogi"
+  "c></Cause></Causes></Hazard></Hazards><AdvancedParameters></AdvancedParameters></HiP-HOPS_Model_Parameters>"
+  SavedCharacterEncoding  "windows-1252"
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  DataTypeOverrideAppliesTo "AllNumericTypes"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  MaxMDLFileLineLength	  120
+  Created		  "Wed Feb 22 11:59:16 2012"
+  Creator		  "Asus"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "André"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Fri May 30 10:36:45 2014"
+  RTWModifiedTimeStamp	  323346999
+  ModelVersionFormat	  "1.%<AutoIncrement:190>"
+  ConfigurationManager	  "None"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  CovForceBlockReductionOff on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  CovExternalEMLEnable	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse		  on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.10.0"
+      Array {
+	Type			"Handle"
+	Dimension		9
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.10.0"
+	  StartTime		  "0.0"
+	  StopTime		  "10.0"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  ConcurrentTasks	  off
+	  Solver		  "ode45"
+	  SolverName		  "ode45"
+	  SolverJacobianMethodControl "auto"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.10.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  DSMLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  DSMLoggingName	  "dsmout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Version		  "1.10.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    8
+	    Cell		    "BooleansAsBitfields"
+	    Cell		    "PassReuseOutputArgsAs"
+	    Cell		    "PassReuseOutputArgsThreshold"
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    Cell		    "UseSpecifiedMinMax"
+	    PropName		    "DisabledProps"
+	  }
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  UseIntDivNetSlope	  off
+	  UseSpecifiedMinMax	  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  StrengthReduction	  off
+	  ExpressionFolding	  on
+	  BooleansAsBitfields	  off
+	  BitfieldContainerType	  "uint_T"
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  MaxStackSize		  "Inherit from target"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.10.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"warning"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  MaskedZcDiagnostic	  "warning"
+	  IgnoredZcDiagnostic	  "warning"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  InitInArrayFormatMsg	  "warning"
+	  StrictBusMsg		  "ErrorLevel1"
+	  BusNameAdapt		  "WarnAndRepair"
+	  NonBusSignalsTreatedAsBus "none"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	  SFUnusedDataAndEventsDiag "warning"
+	  SFUnexpectedBacktrackingDiag "warning"
+	  SFInvalidInputDataAccessInChartInitDiag "warning"
+	  SFNoUnconditionalDefaultTransitionDiag "warning"
+	  SFTransitionOutsideNaturalParentDiag "warning"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.10.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdBitPerFloat	  32
+	  ProdBitPerDouble	  64
+	  ProdBitPerPointer	  32
+	  ProdLargestAtomicInteger "Char"
+	  ProdLargestAtomicFloat  "None"
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetBitPerFloat	  32
+	  TargetBitPerDouble	  64
+	  TargetBitPerPointer	  32
+	  TargetLargestAtomicInteger "Char"
+	  TargetLargestAtomicFloat "None"
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.10.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  EnableParallelModelReferenceBuilds off
+	  ParallelModelReferenceErrorOnInvalidPool on
+	  ParallelModelReferenceMATLABWorkerInit "None"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  PropagateVarSize	  "Infer from blocks in model"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	  PropagateSignalLabelsOutOfModel off
+	  SupportModelReferenceSimTargetCustomCode off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  8
+	  Version		  "1.10.0"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimBlas		  on
+	  SimCtrlC		  on
+	  SimExtrinsic		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimParseCustomCode	  on
+	  SimBuildMode		  "sf_incremental_build"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  9
+	  Version		  "1.10.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    8
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    Cell		    "GenerateTraceReport"
+	    Cell		    "GenerateTraceReportSl"
+	    Cell		    "GenerateTraceReportSf"
+	    Cell		    "GenerateTraceReportEml"
+	    Cell		    "GenerateSLWebview"
+	    Cell		    "GenerateCodeMetricsReport"
+	    PropName		    "DisabledProps"
+	  }
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  GenerateSLWebview	  off
+	  RTWCompilerOptimization "Off"
+	  CheckMdlBeforeBuild	  "Off"
+	  CustomRebuildMode	  "OnUpdate"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      10
+	      Version		      "1.10.0"
+	      Array {
+		Type			"Cell"
+		Dimension		21
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"IgnoreTestpoints"
+		Cell			"InsertBlockDesc"
+		Cell			"InsertPolySpaceComments"
+		Cell			"SFDataObjDesc"
+		Cell			"MATLABFcnDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrFcnArg"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		Cell			"ReqsInCode"
+		PropName		"DisabledProps"
+	      }
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      MATLABFcnDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      InsertPolySpaceComments off
+	      SimulinkBlockComments   on
+	      MATLABSourceComments    off
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      11
+	      Version		      "1.10.0"
+	      Array {
+		Type			"Cell"
+		Dimension		16
+		Cell			"GeneratePreprocessorConditionals"
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"CPPClassGenCompliant"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"PortableWordSizes"
+		PropName		"DisabledProps"
+	      }
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      TargetFunctionLibrary   "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      ERTCodeCoverageTool     "None"
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      IncludeMdlTerminateFcn  on
+	      GeneratePreprocessorConditionals "Disable all"
+	      CombineOutputUpdateFcns off
+	      CombineSignalStateStructs	off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      SupportVariableSizeSignals off
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    off
+	      AutosarCompliant	      off
+	      UseMalloc		      off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	hdlcoderui.hdlcc {
+	  $ObjectID		  12
+	  Version		  "1.10.0"
+	  Description		  "HDL Coder custom configuration component"
+	  Name			  "HDL Coder"
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+      ConfigPrmDlgPosition    " [ 243, 69, 1123, 699 ] "
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    1
+  }
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchInputForFeedbackSignals off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      DataTypeOverrideAppliesTo	"AllNumericTypes"
+      MinMaxOverflowLogging   "UseLocalSettings"
+      Variant		      off
+      GeneratePreprocessorConditionals off
+    }
+  }
+  System {
+    Name		    "model_v15Big_two_Whells_"
+    Location		    [2, 82, 1331, 698]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "A4"
+    PaperUnits		    "centimeters"
+    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "80"
+    ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    "1131"
+    Block {
+      BlockType		      SubSystem
+      Name		      "Auxiliary_Battery"
+      SID		      "745"
+      Ports		      [0, 1]
+      Position		      [987, 845, 1063, 935]
+      BlockRotation	      270
+      BackgroundColor	      "yellow"
+      List {
+	ListType		RTWdata
+	HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false</Inc"
+	"ludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</ExcludeFromO"
+	"ptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>NotRefined</HBlockType><SubsystemLocation>FromCurrentModel</S"
+	"ubsystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent><Name>OFailure1<"
+	"/Name><UnavailabilityFormula><Constant><FailureRate>0</FailureRate><RepairRate>0</RepairRate></Constant></Unavailabil"
+	"ityFormula></BasicEvent><BasicEvent><Name>VFailure1</Name><UnavailabilityFormula><None></None></UnavailabilityFormula"
+	"></BasicEvent></BasicEvents><OutputDeviations><OutputDeviation><Name>Omission-Out1</Name><Severity>0</Severity><Syste"
+	"mOutport>false</SystemOutport><FailureExpression>OFailure1</FailureExpression></OutputDeviation><OutputDeviation><Nam"
+	"e>Value-Out1</Name><Severity>0</Severity><SystemOutport>false</SystemOutport><FailureExpression>VFailure1</FailureExp"
+	"ression></OutputDeviation></OutputDeviations><DiagnosticCoverages></DiagnosticCoverages></FailureData></Current></Imp"
+	"lementations></HiPHOPS_ComponentFailureData>"
+	HiPHOPS_isPerspective	"false"
+      }
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"Auxiliary_Battery"
+	Location		[0, 82, 1346, 739]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  SID			  "747"
+	  Position		  [585, 103, 615, 117]
+	  IconDisplay		  "Port number"
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Brake_Unit1"
+      SID		      "749"
+      Ports		      [4, 2]
+      Position		      [248, 110, 347, 210]
+      BlockRotation	      270
+      List {
+	ListType		RTWdata
+	HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false</Inc"
+	"ludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</ExcludeFromO"
+	"ptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>Refined</HBlockType><SubsystemLocation>FromCurrentModel</Subs"
+	"ystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents></BasicEvents><PotentialCCFs></"
+	"PotentialCCFs><OutputDeviations></OutputDeviations><ExportedPropagations></ExportedPropagations><DiagnosticCoverages>"
+	"</DiagnosticCoverages></FailureData></Current></Implementations></HiPHOPS_ComponentFailureData>"
+	HiPHOPS_isPerspective	"false"
+      }
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"Brake_Unit1"
+	Location		[2, 82, 1348, 715]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "In1"
+	  SID			  "1018"
+	  Position		  [90, 263, 120, 277]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "In2"
+	  SID			  "1019"
+	  Position		  [90, 313, 120, 327]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "In3"
+	  SID			  "1020"
+	  Position		  [410, 128, 440, 142]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "In4"
+	  SID			  "1021"
+	  Position		  [475, 368, 505, 382]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Add"
+	  SID			  "1022"
+	  Ports			  [2, 1]
+	  Position		  [815, 254, 880, 301]
+	  List {
+	    ListType		    RTWdata
+	    HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false<"
+	    "/IncludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</Excl"
+	    "udeFromOptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>NotRefined</HBlockType><SubsystemLocation>FromCur"
+	    "rentModel</SubsystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents></BasicEvent"
+	    "s><OutputDeviations><OutputDeviation><Name>Omission-Braking</Name><Severity>0</Severity><SystemOutport>false</Sys"
+	    "temOutport><FailureExpression>Omission-In1 and Omission-In2</FailureExpression></OutputDeviation><OutputDeviation"
+	    "><Name>Value-Braking</Name><Severity>0</Severity><SystemOutport>false</SystemOutport><FailureExpression>Value-In1"
+	    " or Value-In2</FailureExpression></OutputDeviation></OutputDeviations><DiagnosticCoverages></DiagnosticCoverages>"
+	    "</FailureData></Current></Implementations></HiPHOPS_ComponentFailureData>"
+	    HiPHOPS_isPerspective   "false"
+	  }
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "Add"
+	    Location		    [2, 82, 1348, 715]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In1"
+	      SID		      "1023"
+	      Position		      [110, 103, 140, 117]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In2"
+	      SID		      "1024"
+	      Position		      [140, 183, 170, 197]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Braking"
+	      SID		      "1025"
+	      Position		      [575, 103, 605, 117]
+	      IconDisplay	      "Port number"
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "EMB"
+	  SID			  "1026"
+	  Ports			  [1, 1]
+	  Position		  [660, 99, 760, 141]
+	  BackgroundColor	  "gray"
+	  List {
+	    ListType		    RTWdata
+	    HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false<"
+	    "/IncludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</Excl"
+	    "udeFromOptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>NotRefined</HBlockType><SubsystemLocation>FromCur"
+	    "rentModel</SubsystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent>"
+	    "<Name>OFailure1</Name><UnavailabilityFormula><Constant><FailureRate>0</FailureRate><RepairRate>0</RepairRate></Co"
+	    "nstant></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailure1</Name><UnavailabilityFormula><Constant><F"
+	    "ailureRate>0</FailureRate><RepairRate>0</RepairRate></Constant></UnavailabilityFormula></BasicEvent></BasicEvents"
+	    "><OutputDeviations><OutputDeviation><Name>Omission-Out1</Name><Severity>0</Severity><SystemOutport>false</SystemO"
+	    "utport><FailureExpression>OFailure1 or Omission-In1</FailureExpression></OutputDeviation><OutputDeviation><Name>V"
+	    "alue-Out1</Name><Severity>0</Severity><SystemOutport>false</SystemOutport><FailureExpression>VFailure1 or Value-I"
+	    "n1</FailureExpression></OutputDeviation></OutputDeviations><DiagnosticCoverages></DiagnosticCoverages></FailureDa"
+	    "ta></Current></Implementations></HiPHOPS_ComponentFailureData>"
+	    HiPHOPS_isPerspective   "false"
+	  }
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "EMB"
+	    Location		    [2, 82, 1348, 715]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In1"
+	      SID		      "1027"
+	      Position		      [110, 103, 140, 117]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      SID		      "1028"
+	      Position		      [575, 103, 605, 117]
+	      IconDisplay	      "Port number"
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "EMB_Power_Converter"
+	  SID			  "1029"
+	  Ports			  [2, 1]
+	  Position		  [475, 92, 575, 148]
+	  List {
+	    ListType		    RTWdata
+	    HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false<"
+	    "/IncludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</Excl"
+	    "udeFromOptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>NotRefined</HBlockType><SubsystemLocation>FromCur"
+	    "rentModel</SubsystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent>"
+	    "<Name>VFailure1</Name><UnavailabilityFormula><Constant><FailureRate>0</FailureRate><RepairRate>0</RepairRate></Co"
+	    "nstant></UnavailabilityFormula></BasicEvent><BasicEvent><Name>OFailure1</Name><UnavailabilityFormula><Constant><F"
+	    "ailureRate>0</FailureRate><RepairRate>0</RepairRate></Constant></UnavailabilityFormula></BasicEvent></BasicEvents"
+	    "><OutputDeviations><OutputDeviation><Name>Omission-Out1</Name><Severity>0</Severity><SystemOutport>false</SystemO"
+	    "utport><FailureExpression>Omission-In1 or Omission-In2 or OFailure1</FailureExpression></OutputDeviation><OutputD"
+	    "eviation><Name>Value-Out1</Name><Severity>0</Severity><SystemOutport>false</SystemOutport><FailureExpression>VFai"
+	    "lure1 or Value-In1 or Value-In2</FailureExpression></OutputDeviation></OutputDeviations><DiagnosticCoverages></Di"
+	    "agnosticCoverages></FailureData></Current></Implementations></HiPHOPS_ComponentFailureData>"
+	    HiPHOPS_isPerspective   "false"
+	  }
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "EMB_Power_Converter"
+	    Location		    [2, 82, 1348, 715]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In1"
+	      SID		      "1030"
+	      Position		      [110, 103, 140, 117]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In2"
+	      SID		      "1031"
+	      Position		      [110, 178, 140, 192]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      SID		      "1032"
+	      Position		      [575, 103, 605, 117]
+	      IconDisplay	      "Port number"
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "IWM"
+	  SID			  "1033"
+	  Ports			  [2, 2]
+	  Position		  [660, 414, 760, 456]
+	  BackgroundColor	  "lightBlue"
+	  List {
+	    ListType		    RTWdata
+	    HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false<"
+	    "/IncludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</Excl"
+	    "udeFromOptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>NotRefined</HBlockType><SubsystemLocation>FromCur"
+	    "rentModel</SubsystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent>"
+	    "<Name>OFailure1</Name><UnavailabilityFormula><Constant><FailureRate>0</FailureRate><RepairRate>0</RepairRate></Co"
+	    "nstant></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailure1</Name><UnavailabilityFormula><Constant><F"
+	    "ailureRate>0</FailureRate><RepairRate>0</RepairRate></Constant></UnavailabilityFormula></BasicEvent></BasicEvents"
+	    "><OutputDeviations><OutputDeviation><Name>Omission-Out1</Name><Severity>0</Severity><SystemOutport>false</SystemO"
+	    "utport><FailureExpression>OFailure1 or Omission-In1 or Omission-In2</FailureExpression></OutputDeviation><OutputD"
+	    "eviation><Name>Omission-Out2</Name><Severity>0</Severity><SystemOutport>false</SystemOutport><FailureExpression>O"
+	    "Failure1 or Omission-In1 or Omission-In2</FailureExpression></OutputDeviation><OutputDeviation><Name>Value-Out1</"
+	    "Name><Severity>0</Severity><SystemOutport>false</SystemOutport><FailureExpression>VFailure1 or Value-In1 or Value"
+	    "-In2</FailureExpression></OutputDeviation><OutputDeviation><Name>Value-Out2</Name><Severity>0</Severity><SystemOu"
+	    "tport>false</SystemOutport><FailureExpression>VFailure1 or Value-In1 or Value-In2</FailureExpression></OutputDevi"
+	    "ation></OutputDeviations><DiagnosticCoverages></DiagnosticCoverages></FailureData></Current></Implementations></H"
+	    "iPHOPS_ComponentFailureData>"
+	    HiPHOPS_isPerspective   "false"
+	  }
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "IWM"
+	    Location		    [2, 82, 1348, 715]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In1"
+	      SID		      "1034"
+	      Position		      [330, 278, 360, 292]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In2"
+	      SID		      "1035"
+	      Position		      [330, 183, 360, 197]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      SID		      "1036"
+	      Position		      [575, 183, 605, 197]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out2"
+	      SID		      "1037"
+	      Position		      [575, 278, 605, 292]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Annotation {
+	      Position		      [595, 195]
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "IWM_Power_Converter"
+	  SID			  "1038"
+	  Ports			  [2, 2]
+	  Position		  [475, 441, 575, 494]
+	  List {
+	    ListType		    RTWdata
+	    HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false<"
+	    "/IncludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</Excl"
+	    "udeFromOptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>NotRefined</HBlockType><SubsystemLocation>FromCur"
+	    "rentModel</SubsystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent>"
+	    "<Name>VFailure1</Name><UnavailabilityFormula><Constant><FailureRate>0</FailureRate><RepairRate>0</RepairRate></Co"
+	    "nstant></UnavailabilityFormula></BasicEvent><BasicEvent><Name>OFailure1</Name><UnavailabilityFormula><Constant><F"
+	    "ailureRate>0</FailureRate><RepairRate>0</RepairRate></Constant></UnavailabilityFormula></BasicEvent></BasicEvents"
+	    "><OutputDeviations><OutputDeviation><Name>Omission-Out1</Name><Severity>0</Severity><SystemOutport>false</SystemO"
+	    "utport><FailureExpression>Omission-In1 or OFailure1 or Omission-In2</FailureExpression></OutputDeviation><OutputD"
+	    "eviation><Name>Value-Out2</Name><Severity>0</Severity><SystemOutport>false</SystemOutport><FailureExpression>Valu"
+	    "e-In1 or VFailure1</FailureExpression></OutputDeviation><OutputDeviation><Name>Omission-Out2</Name><Severity>0</S"
+	    "everity><SystemOutport>false</SystemOutport><FailureExpression>Omission-In1 or OFailure1</FailureExpression></Out"
+	    "putDeviation><OutputDeviation><Name>Value-Out1</Name><Severity>0</Severity><SystemOutport>false</SystemOutport><F"
+	    "ailureExpression>Value-In1 or Value-In2 or VFailure1</FailureExpression></OutputDeviation></OutputDeviations><Dia"
+	    "gnosticCoverages></DiagnosticCoverages></FailureData></Current></Implementations></HiPHOPS_ComponentFailureData>"
+	    HiPHOPS_isPerspective   "false"
+	  }
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "IWM_Power_Converter"
+	    Location		    [2, 82, 1348, 715]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In1"
+	      SID		      "1039"
+	      Position		      [110, 168, 140, 182]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In2"
+	      SID		      "1040"
+	      Position		      [165, 258, 195, 272]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      SID		      "1041"
+	      Position		      [575, 103, 605, 117]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out2"
+	      SID		      "1042"
+	      Position		      [595, 208, 625, 222]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Wheel_Node_Controller"
+	  SID			  "1043"
+	  Ports			  [2, 2]
+	  Position		  [225, 244, 345, 346]
+	  BackgroundColor	  "[1.000000, 0.501961, 0.501961]"
+	  DropShadow		  on
+	  NamePlacement		  "alternate"
+	  List {
+	    ListType		    RTWdata
+	    HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false<"
+	    "/IncludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</Excl"
+	    "udeFromOptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>NotRefined</HBlockType><SubsystemLocation>FromCur"
+	    "rentModel</SubsystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent>"
+	    "<Name>OFailure1</Name><UnavailabilityFormula><Constant><FailureRate>0</FailureRate><RepairRate>0</RepairRate></Co"
+	    "nstant></UnavailabilityFormula></BasicEvent><BasicEvent><Name>OFailure2</Name><UnavailabilityFormula><Constant><F"
+	    "ailureRate>0</FailureRate><RepairRate>0</RepairRate></Constant></UnavailabilityFormula></BasicEvent><BasicEvent><"
+	    "Name>VFailure1</Name><UnavailabilityFormula><Constant><FailureRate>0</FailureRate><RepairRate>0</RepairRate></Con"
+	    "stant></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailure2</Name><UnavailabilityFormula><Constant><Fa"
+	    "ilureRate>0</FailureRate><RepairRate>0</RepairRate></Constant></UnavailabilityFormula></BasicEvent></BasicEvents>"
+	    "<OutputDeviations><OutputDeviation><Name>Omission-Out1</Name><Severity>0</Severity><SystemOutport>false</SystemOu"
+	    "tport><FailureExpression>OFailure1 or (Omission-In1 and Omission-In2)</FailureExpression></OutputDeviation><Outpu"
+	    "tDeviation><Name>Omission-Out2</Name><Severity>0</Severity><SystemOutport>false</SystemOutport><FailureExpression"
+	    ">OFailure2 or (Omission-In1 and Omission-In2)</FailureExpression></OutputDeviation><OutputDeviation><Name>Value-O"
+	    "ut1</Name><Severity>0</Severity><SystemOutport>false</SystemOutport><FailureExpression>VFailure1 or Value-In1 or "
+	    "(Omission-In1 and Value-In2)</FailureExpression></OutputDeviation><OutputDeviation><Name>Value-Out2</Name><Severi"
+	    "ty>0</Severity><SystemOutport>false</SystemOutport><FailureExpression>VFailure2 or Value-In1 or (Omission-In1 and"
+	    " Value-In2)</FailureExpression></OutputDeviation></OutputDeviations><DiagnosticCoverages></DiagnosticCoverages></"
+	    "FailureData></Current></Implementations></HiPHOPS_ComponentFailureData>"
+	    HiPHOPS_isPerspective   "false"
+	  }
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "Wheel_Node_Controller"
+	    Location		    [-2, 82, 1344, 739]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In1"
+	      SID		      "1044"
+	      Position		      [485, 158, 515, 172]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In2"
+	      SID		      "1045"
+	      Position		      [485, 188, 515, 202]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      SID		      "1046"
+	      Position		      [695, 208, 725, 222]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out2"
+	      SID		      "1047"
+	      Position		      [695, 248, 725, 262]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Braking_T1"
+	  SID			  "1048"
+	  Position		  [920, 273, 950, 287]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Generated_Power1"
+	  SID			  "1049"
+	  Position		  [620, 288, 650, 302]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "EMB_Power_Converter"
+	  SrcPort		  1
+	  DstBlock		  "EMB"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Add"
+	  SrcPort		  1
+	  DstBlock		  "Braking_T1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Wheel_Node_Controller"
+	  SrcPort		  1
+	  Points		  [45, 0; 0, -165]
+	  DstBlock		  "EMB_Power_Converter"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "EMB"
+	  SrcPort		  1
+	  Points		  [35, 0]
+	  DstBlock		  "Add"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "IWM"
+	  SrcPort		  1
+	  Points		  [35, 0]
+	  DstBlock		  "Add"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "IWM"
+	  SrcPort		  2
+	  Points		  [20, 0; 0, 70; -390, 0; 0, -35]
+	  DstBlock		  "IWM_Power_Converter"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "IWM_Power_Converter"
+	  SrcPort		  2
+	  Points		  [55, 0; 0, -35]
+	  DstBlock		  "IWM"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Wheel_Node_Controller"
+	  SrcPort		  2
+	  Points		  [55, 0; 0, 135]
+	  DstBlock		  "IWM_Power_Converter"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "In1"
+	  SrcPort		  1
+	  DstBlock		  "Wheel_Node_Controller"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "In2"
+	  SrcPort		  1
+	  DstBlock		  "Wheel_Node_Controller"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "In3"
+	  SrcPort		  1
+	  DstBlock		  "EMB_Power_Converter"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "IWM_Power_Converter"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, -160]
+	  DstBlock		  "Generated_Power1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "In4"
+	  SrcPort		  1
+	  Points		  [135, 0]
+	  DstBlock		  "IWM"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Brake_Unit2"
+      SID		      "871"
+      Ports		      [4, 2]
+      Position		      [250, 745, 345, 845]
+      BlockRotation	      270
+      BlockMirror	      on
+      NamePlacement	      "alternate"
+      List {
+	ListType		RTWdata
+	HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false</Inc"
+	"ludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</ExcludeFromO"
+	"ptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>Refined</HBlockType><SubsystemLocation>FromCurrentModel</Subs"
+	"ystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents></BasicEvents><PotentialCCFs></"
+	"PotentialCCFs><OutputDeviations></OutputDeviations><ExportedPropagations></ExportedPropagations><DiagnosticCoverages>"
+	"</DiagnosticCoverages></FailureData></Current></Implementations></HiPHOPS_ComponentFailureData>"
+	HiPHOPS_isPerspective	"false"
+      }
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"Brake_Unit2"
+	Location		[2, 82, 1364, 715]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "In1"
+	  SID			  "872"
+	  Position		  [150, 258, 180, 272]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "In2"
+	  SID			  "873"
+	  Position		  [150, 308, 180, 322]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "In3"
+	  SID			  "982"
+	  Position		  [470, 123, 500, 137]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "In4"
+	  SID			  "985"
+	  Position		  [535, 363, 565, 377]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Add"
+	  SID			  "874"
+	  Ports			  [2, 1]
+	  Position		  [875, 249, 940, 296]
+	  List {
+	    ListType		    RTWdata
+	    HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false<"
+	    "/IncludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</Excl"
+	    "udeFromOptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>NotRefined</HBlockType><SubsystemLocation>FromCur"
+	    "rentModel</SubsystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents></BasicEvent"
+	    "s><OutputDeviations><OutputDeviation><Name>Omission-Braking</Name><Severity>0</Severity><SystemOutport>false</Sys"
+	    "temOutport><FailureExpression>Omission-In1 and Omission-In2</FailureExpression></OutputDeviation><OutputDeviation"
+	    "><Name>Value-Braking</Name><Severity>0</Severity><SystemOutport>false</SystemOutport><FailureExpression>Value-In1"
+	    " or Value-In2</FailureExpression></OutputDeviation></OutputDeviations><DiagnosticCoverages></DiagnosticCoverages>"
+	    "</FailureData></Current></Implementations></HiPHOPS_ComponentFailureData>"
+	    HiPHOPS_isPerspective   "false"
+	  }
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "Add"
+	    Location		    [2, 82, 1348, 715]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In1"
+	      SID		      "875"
+	      Position		      [110, 103, 140, 117]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In2"
+	      SID		      "876"
+	      Position		      [140, 183, 170, 197]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Braking"
+	      SID		      "877"
+	      Position		      [575, 103, 605, 117]
+	      IconDisplay	      "Port number"
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "EMB"
+	  SID			  "880"
+	  Ports			  [1, 1]
+	  Position		  [720, 94, 820, 136]
+	  BackgroundColor	  "gray"
+	  List {
+	    ListType		    RTWdata
+	    HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false<"
+	    "/IncludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</Excl"
+	    "udeFromOptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>NotRefined</HBlockType><SubsystemLocation>FromCur"
+	    "rentModel</SubsystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent>"
+	    "<Name>OFailure1</Name><UnavailabilityFormula><Constant><FailureRate>0</FailureRate><RepairRate>0</RepairRate></Co"
+	    "nstant></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailure1</Name><UnavailabilityFormula><Constant><F"
+	    "ailureRate>0</FailureRate><RepairRate>0</RepairRate></Constant></UnavailabilityFormula></BasicEvent></BasicEvents"
+	    "><OutputDeviations><OutputDeviation><Name>Omission-Out1</Name><Severity>0</Severity><SystemOutport>false</SystemO"
+	    "utport><FailureExpression>OFailure1 or Omission-In1</FailureExpression></OutputDeviation><OutputDeviation><Name>V"
+	    "alue-Out1</Name><Severity>0</Severity><SystemOutport>false</SystemOutport><FailureExpression>VFailure1 or Value-I"
+	    "n1</FailureExpression></OutputDeviation></OutputDeviations><DiagnosticCoverages></DiagnosticCoverages></FailureDa"
+	    "ta></Current></Implementations></HiPHOPS_ComponentFailureData>"
+	    HiPHOPS_isPerspective   "false"
+	  }
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "EMB"
+	    Location		    [2, 82, 1348, 715]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In1"
+	      SID		      "881"
+	      Position		      [110, 103, 140, 117]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      SID		      "882"
+	      Position		      [575, 103, 605, 117]
+	      IconDisplay	      "Port number"
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "EMB_Power_Converter"
+	  SID			  "883"
+	  Ports			  [2, 1]
+	  Position		  [535, 87, 635, 143]
+	  List {
+	    ListType		    RTWdata
+	    HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false<"
+	    "/IncludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</Excl"
+	    "udeFromOptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>NotRefined</HBlockType><SubsystemLocation>FromCur"
+	    "rentModel</SubsystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent>"
+	    "<Name>VFailure1</Name><UnavailabilityFormula><Constant><FailureRate>0</FailureRate><RepairRate>0</RepairRate></Co"
+	    "nstant></UnavailabilityFormula></BasicEvent><BasicEvent><Name>OFailure1</Name><UnavailabilityFormula><Constant><F"
+	    "ailureRate>0</FailureRate><RepairRate>0</RepairRate></Constant></UnavailabilityFormula></BasicEvent></BasicEvents"
+	    "><OutputDeviations><OutputDeviation><Name>Omission-Out1</Name><Severity>0</Severity><SystemOutport>false</SystemO"
+	    "utport><FailureExpression>Omission-In1 or Omission-In2 or OFailure1</FailureExpression></OutputDeviation><OutputD"
+	    "eviation><Name>Value-Out1</Name><Severity>0</Severity><SystemOutport>false</SystemOutport><FailureExpression>VFai"
+	    "lure1 or Value-In1 or Value-In2</FailureExpression></OutputDeviation></OutputDeviations><DiagnosticCoverages></Di"
+	    "agnosticCoverages></FailureData></Current></Implementations></HiPHOPS_ComponentFailureData>"
+	    HiPHOPS_isPerspective   "false"
+	  }
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "EMB_Power_Converter"
+	    Location		    [2, 82, 1348, 715]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In1"
+	      SID		      "884"
+	      Position		      [110, 103, 140, 117]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In2"
+	      SID		      "885"
+	      Position		      [110, 178, 140, 192]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      SID		      "886"
+	      Position		      [575, 103, 605, 117]
+	      IconDisplay	      "Port number"
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "IWM"
+	  SID			  "887"
+	  Ports			  [2, 2]
+	  Position		  [720, 409, 820, 451]
+	  BackgroundColor	  "lightBlue"
+	  List {
+	    ListType		    RTWdata
+	    HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false<"
+	    "/IncludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</Excl"
+	    "udeFromOptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>NotRefined</HBlockType><SubsystemLocation>FromCur"
+	    "rentModel</SubsystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent>"
+	    "<Name>OFailure1</Name><UnavailabilityFormula><Constant><FailureRate>0</FailureRate><RepairRate>0</RepairRate></Co"
+	    "nstant></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailure1</Name><UnavailabilityFormula><Constant><F"
+	    "ailureRate>0</FailureRate><RepairRate>0</RepairRate></Constant></UnavailabilityFormula></BasicEvent></BasicEvents"
+	    "><OutputDeviations><OutputDeviation><Name>Omission-Out1</Name><Severity>0</Severity><SystemOutport>false</SystemO"
+	    "utport><FailureExpression>OFailure1 or Omission-In1 or Omission-In2</FailureExpression></OutputDeviation><OutputD"
+	    "eviation><Name>Omission-Out2</Name><Severity>0</Severity><SystemOutport>false</SystemOutport><FailureExpression>O"
+	    "Failure1 or Omission-In1 or Omission-In2</FailureExpression></OutputDeviation><OutputDeviation><Name>Value-Out1</"
+	    "Name><Severity>0</Severity><SystemOutport>false</SystemOutport><FailureExpression>VFailure1 or Value-In1 or Value"
+	    "-In2</FailureExpression></OutputDeviation><OutputDeviation><Name>Value-Out2</Name><Severity>0</Severity><SystemOu"
+	    "tport>false</SystemOutport><FailureExpression>VFailure1 or Value-In1 or Value-In2</FailureExpression></OutputDevi"
+	    "ation></OutputDeviations><DiagnosticCoverages></DiagnosticCoverages></FailureData></Current></Implementations></H"
+	    "iPHOPS_ComponentFailureData>"
+	    HiPHOPS_isPerspective   "false"
+	  }
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "IWM"
+	    Location		    [2, 82, 1348, 715]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In1"
+	      SID		      "888"
+	      Position		      [330, 278, 360, 292]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In2"
+	      SID		      "889"
+	      Position		      [330, 183, 360, 197]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      SID		      "890"
+	      Position		      [575, 183, 605, 197]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out2"
+	      SID		      "891"
+	      Position		      [575, 278, 605, 292]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Annotation {
+	      Position		      [595, 195]
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "IWM_Power_Converter"
+	  SID			  "892"
+	  Ports			  [2, 2]
+	  Position		  [535, 436, 635, 489]
+	  List {
+	    ListType		    RTWdata
+	    HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false<"
+	    "/IncludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</Excl"
+	    "udeFromOptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>NotRefined</HBlockType><SubsystemLocation>FromCur"
+	    "rentModel</SubsystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent>"
+	    "<Name>VFailure1</Name><UnavailabilityFormula><Constant><FailureRate>0</FailureRate><RepairRate>0</RepairRate></Co"
+	    "nstant></UnavailabilityFormula></BasicEvent><BasicEvent><Name>OFailure1</Name><UnavailabilityFormula><Constant><F"
+	    "ailureRate>0</FailureRate><RepairRate>0</RepairRate></Constant></UnavailabilityFormula></BasicEvent></BasicEvents"
+	    "><OutputDeviations><OutputDeviation><Name>Omission-Out1</Name><Severity>0</Severity><SystemOutport>false</SystemO"
+	    "utport><FailureExpression>Omission-In1 or OFailure1 or Omission-In2</FailureExpression></OutputDeviation><OutputD"
+	    "eviation><Name>Value-Out2</Name><Severity>0</Severity><SystemOutport>false</SystemOutport><FailureExpression>Valu"
+	    "e-In1 or VFailure1</FailureExpression></OutputDeviation><OutputDeviation><Name>Omission-Out2</Name><Severity>0</S"
+	    "everity><SystemOutport>false</SystemOutport><FailureExpression>Omission-In1 or OFailure1</FailureExpression></Out"
+	    "putDeviation><OutputDeviation><Name>Value-Out1</Name><Severity>0</Severity><SystemOutport>false</SystemOutport><F"
+	    "ailureExpression>Value-In1 or Value-In2 or VFailure1</FailureExpression></OutputDeviation></OutputDeviations><Dia"
+	    "gnosticCoverages></DiagnosticCoverages></FailureData></Current></Implementations></HiPHOPS_ComponentFailureData>"
+	    HiPHOPS_isPerspective   "false"
+	  }
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "IWM_Power_Converter"
+	    Location		    [2, 82, 1348, 715]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In1"
+	      SID		      "893"
+	      Position		      [110, 168, 140, 182]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In2"
+	      SID		      "894"
+	      Position		      [165, 258, 195, 272]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      SID		      "895"
+	      Position		      [575, 103, 605, 117]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out2"
+	      SID		      "896"
+	      Position		      [595, 208, 625, 222]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Wheel_Node_Controller"
+	  SID			  "900"
+	  Ports			  [2, 2]
+	  Position		  [285, 239, 405, 341]
+	  BackgroundColor	  "[1.000000, 0.501961, 0.501961]"
+	  DropShadow		  on
+	  NamePlacement		  "alternate"
+	  List {
+	    ListType		    RTWdata
+	    HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false<"
+	    "/IncludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</Excl"
+	    "udeFromOptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>NotRefined</HBlockType><SubsystemLocation>FromCur"
+	    "rentModel</SubsystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent>"
+	    "<Name>OFailure1</Name><UnavailabilityFormula><Constant><FailureRate>0</FailureRate><RepairRate>0</RepairRate></Co"
+	    "nstant></UnavailabilityFormula></BasicEvent><BasicEvent><Name>OFailure2</Name><UnavailabilityFormula><Constant><F"
+	    "ailureRate>0</FailureRate><RepairRate>0</RepairRate></Constant></UnavailabilityFormula></BasicEvent><BasicEvent><"
+	    "Name>VFailure1</Name><UnavailabilityFormula><Constant><FailureRate>0</FailureRate><RepairRate>0</RepairRate></Con"
+	    "stant></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailure2</Name><UnavailabilityFormula><Constant><Fa"
+	    "ilureRate>0</FailureRate><RepairRate>0</RepairRate></Constant></UnavailabilityFormula></BasicEvent></BasicEvents>"
+	    "<OutputDeviations><OutputDeviation><Name>Omission-Out1</Name><Severity>0</Severity><SystemOutport>false</SystemOu"
+	    "tport><FailureExpression>OFailure1 or (Omission-In1 and Omission-In2)</FailureExpression></OutputDeviation><Outpu"
+	    "tDeviation><Name>Omission-Out2</Name><Severity>0</Severity><SystemOutport>false</SystemOutport><FailureExpression"
+	    ">OFailure2 or (Omission-In1 and Omission-In2)</FailureExpression></OutputDeviation><OutputDeviation><Name>Value-O"
+	    "ut1</Name><Severity>0</Severity><SystemOutport>false</SystemOutport><FailureExpression>VFailure1 or Value-In1 or "
+	    "(Omission-In1 and Value-In2)</FailureExpression></OutputDeviation><OutputDeviation><Name>Value-Out2</Name><Severi"
+	    "ty>0</Severity><SystemOutport>false</SystemOutport><FailureExpression>VFailure2 or Value-In1 or (Omission-In1 and"
+	    " Value-In2)</FailureExpression></OutputDeviation></OutputDeviations><DiagnosticCoverages></DiagnosticCoverages></"
+	    "FailureData></Current></Implementations></HiPHOPS_ComponentFailureData>"
+	    HiPHOPS_isPerspective   "false"
+	  }
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "Wheel_Node_Controller"
+	    Location		    [-2, 82, 1344, 722]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In1"
+	      SID		      "901"
+	      Position		      [485, 158, 515, 172]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In2"
+	      SID		      "902"
+	      Position		      [485, 188, 515, 202]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      SID		      "903"
+	      Position		      [1505, 348, 1535, 362]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out2"
+	      SID		      "904"
+	      Position		      [1505, 388, 1535, 402]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Braking_T2"
+	  SID			  "906"
+	  Position		  [980, 268, 1010, 282]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Generated_Power2"
+	  SID			  "984"
+	  Position		  [680, 283, 710, 297]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "EMB_Power_Converter"
+	  SrcPort		  1
+	  DstBlock		  "EMB"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Add"
+	  SrcPort		  1
+	  DstBlock		  "Braking_T2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Wheel_Node_Controller"
+	  SrcPort		  1
+	  Points		  [45, 0; 0, -165]
+	  DstBlock		  "EMB_Power_Converter"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "EMB"
+	  SrcPort		  1
+	  Points		  [35, 0]
+	  DstBlock		  "Add"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "IWM"
+	  SrcPort		  1
+	  Points		  [35, 0]
+	  DstBlock		  "Add"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "IWM"
+	  SrcPort		  2
+	  Points		  [20, 0; 0, 70; -390, 0; 0, -35]
+	  DstBlock		  "IWM_Power_Converter"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "IWM_Power_Converter"
+	  SrcPort		  2
+	  Points		  [55, 0; 0, -35]
+	  DstBlock		  "IWM"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Wheel_Node_Controller"
+	  SrcPort		  2
+	  Points		  [55, 0; 0, 135]
+	  DstBlock		  "IWM_Power_Converter"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "In1"
+	  SrcPort		  1
+	  DstBlock		  "Wheel_Node_Controller"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "In2"
+	  SrcPort		  1
+	  DstBlock		  "Wheel_Node_Controller"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "In3"
+	  SrcPort		  1
+	  DstBlock		  "EMB_Power_Converter"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "IWM_Power_Converter"
+	  SrcPort		  1
+	  Points		  [5, 0; 0, -160]
+	  DstBlock		  "Generated_Power2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "In4"
+	  SrcPort		  1
+	  Points		  [135, 0]
+	  DstBlock		  "IWM"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Communication_Bus1"
+      SID		      "514"
+      Ports		      [2, 1]
+      Position		      [710, 418, 930, 462]
+      List {
+	ListType		RTWdata
+	HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false</Inc"
+	"ludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</ExcludeFromO"
+	"ptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>NotRefined</HBlockType><SubsystemLocation>FromCurrentModel</S"
+	"ubsystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent><Name>OFailure1<"
+	"/Name><UnavailabilityFormula><Constant><FailureRate>0</FailureRate><RepairRate>0</RepairRate></Constant></Unavailabil"
+	"ityFormula></BasicEvent></BasicEvents><OutputDeviations><OutputDeviation><Name>Omission-Out1</Name><Description>		</D"
+	"escription><Severity>0</Severity><SystemOutport>false</SystemOutport><FailureExpression>OFailure1 or (Omission-In1 an"
+	"d Omission-In2)</FailureExpression></OutputDeviation><OutputDeviation><Name>Value-Out1</Name><Severity>0</Severity><S"
+	"ystemOutport>false</SystemOutport><FailureExpression>Value-In1 or (Omission-In1 and Value-In2)</FailureExpression></O"
+	"utputDeviation></OutputDeviations><DiagnosticCoverages></DiagnosticCoverages></FailureData></Current></Implementation"
+	"s></HiPHOPS_ComponentFailureData>"
+	HiPHOPS_isPerspective	"false"
+      }
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"Communication_Bus1"
+	Location		[2, 82, 1348, 715]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "In1"
+	  SID			  "515"
+	  Position		  [110, 103, 140, 117]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "In2"
+	  SID			  "516"
+	  Position		  [125, 158, 155, 172]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  SID			  "517"
+	  Position		  [575, 103, 605, 117]
+	  IconDisplay		  "Port number"
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Communication_Bus2"
+      SID		      "518"
+      Ports		      [2, 1]
+      Position		      [630, 488, 850, 532]
+      List {
+	ListType		RTWdata
+	HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false</Inc"
+	"ludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</ExcludeFromO"
+	"ptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>NotRefined</HBlockType><SubsystemLocation>FromCurrentModel</S"
+	"ubsystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent><Name>OFailure1<"
+	"/Name><UnavailabilityFormula><Constant><FailureRate>0</FailureRate><RepairRate>0</RepairRate></Constant></Unavailabil"
+	"ityFormula></BasicEvent></BasicEvents><OutputDeviations><OutputDeviation><Name>Omission-Out1</Name><Description>		</D"
+	"escription><Severity>0</Severity><SystemOutport>false</SystemOutport><FailureExpression>OFailure1 or (Omission-In1 an"
+	"d Omission-In2)</FailureExpression></OutputDeviation><OutputDeviation><Name>Value-Out1</Name><Severity>0</Severity><S"
+	"ystemOutport>false</SystemOutport><FailureExpression>Value-In1 or (Omission-In1 and Value-In2)</FailureExpression></O"
+	"utputDeviation></OutputDeviations><DiagnosticCoverages></DiagnosticCoverages></FailureData></Current></Implementation"
+	"s></HiPHOPS_ComponentFailureData>"
+	HiPHOPS_isPerspective	"false"
+      }
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"Communication_Bus2"
+	Location		[2, 82, 1348, 715]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "In1"
+	  SID			  "519"
+	  Position		  [110, 103, 140, 117]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "In2"
+	  SID			  "520"
+	  Position		  [120, 158, 150, 172]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  SID			  "521"
+	  Position		  [575, 103, 605, 117]
+	  IconDisplay		  "Port number"
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Electronic_Pedal"
+      SID		      "11"
+      Ports		      [1, 2]
+      Position		      [465, 391, 510, 544]
+      BackgroundColor	      "gray"
+      List {
+	ListType		RTWdata
+	HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false</Inc"
+	"ludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</ExcludeFromO"
+	"ptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>NotRefined</HBlockType><SubsystemLocation>FromCurrentModel</S"
+	"ubsystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent><Name>OFailure1<"
+	"/Name><UnavailabilityFormula><Constant><FailureRate>0</FailureRate><RepairRate>0</RepairRate></Constant></Unavailabil"
+	"ityFormula></BasicEvent><BasicEvent><Name>OFailure2</Name><UnavailabilityFormula><Constant><FailureRate>0</FailureRat"
+	"e><RepairRate>0</RepairRate></Constant></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailure1</Name><Unavai"
+	"labilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailure2</Name><UnavailabilityFo"
+	"rmula><None></None></UnavailabilityFormula></BasicEvent></BasicEvents><OutputDeviations><OutputDeviation><Name>Omissi"
+	"on-Out1</Name><Severity>0</Severity><SystemOutport>false</SystemOutport><FailureExpression>Omission-In1 or OFailure1<"
+	"/FailureExpression></OutputDeviation><OutputDeviation><Name>Omission-Out2</Name><Severity>0</Severity><SystemOutport>"
+	"false</SystemOutport><FailureExpression>Omission-In1 or OFailure2</FailureExpression></OutputDeviation><OutputDeviati"
+	"on><Name>Value-Out1</Name><Severity>0</Severity><SystemOutport>false</SystemOutport><FailureExpression>Value-In1 or V"
+	"Failure1</FailureExpression></OutputDeviation><OutputDeviation><Name>Value-Out2</Name><Severity>0</Severity><SystemOu"
+	"tport>false</SystemOutport><FailureExpression>Value-In1 or VFailure2</FailureExpression></OutputDeviation></OutputDev"
+	"iations><DiagnosticCoverages></DiagnosticCoverages></FailureData></Current></Implementations></HiPHOPS_ComponentFailu"
+	"reData>"
+	HiPHOPS_isPerspective	"false"
+      }
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"Electronic_Pedal"
+	Location		[0, 82, 1346, 739]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "In1"
+	  SID			  "660"
+	  Position		  [65, 228, 95, 242]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "ComController1"
+	  SID			  "406"
+	  Ports			  [1, 1]
+	  Position		  [650, 81, 705, 139]
+	  List {
+	    ListType		    RTWdata
+	    HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false<"
+	    "/IncludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</Excl"
+	    "udeFromOptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>NotRefined</HBlockType><SubsystemLocation>FromCur"
+	    "rentModel</SubsystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent>"
+	    "<Name>OFailure1</Name><UnavailabilityFormula><Constant><FailureRate>0</FailureRate><RepairRate>0</RepairRate></Co"
+	    "nstant></UnavailabilityFormula></BasicEvent></BasicEvents><OutputDeviations><OutputDeviation><Name>Omission-Out1<"
+	    "/Name><Severity>0</Severity><SystemOutport>false</SystemOutport><FailureExpression>Omission-In1 or OFailure1</Fai"
+	    "lureExpression></OutputDeviation><OutputDeviation><Name>Value-Out1</Name><Severity>0</Severity><SystemOutport>fal"
+	    "se</SystemOutport><FailureExpression>Value-In1</FailureExpression></OutputDeviation></OutputDeviations><Diagnosti"
+	    "cCoverages></DiagnosticCoverages></FailureData></Current></Implementations></HiPHOPS_ComponentFailureData>"
+	    HiPHOPS_isPerspective   "false"
+	  }
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "ComController1"
+	    Location		    [2, 82, 1348, 715]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In1"
+	      SID		      "407"
+	      Position		      [190, 103, 220, 117]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      SID		      "410"
+	      Position		      [360, 113, 390, 127]
+	      IconDisplay	      "Port number"
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "ComController2"
+	  SID			  "395"
+	  Ports			  [1, 1]
+	  Position		  [645, 329, 700, 391]
+	  List {
+	    ListType		    RTWdata
+	    HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false<"
+	    "/IncludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</Excl"
+	    "udeFromOptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>NotRefined</HBlockType><SubsystemLocation>FromCur"
+	    "rentModel</SubsystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents></BasicEvent"
+	    "s><OutputDeviations></OutputDeviations><DiagnosticCoverages></DiagnosticCoverages></FailureData></Current></Imple"
+	    "mentations></HiPHOPS_ComponentFailureData>"
+	    HiPHOPS_isPerspective   "false"
+	  }
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "ComController2"
+	    Location		    [-159, 120, 1187, 753]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In1"
+	      SID		      "397"
+	      Position		      [190, 168, 220, 182]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      SID		      "398"
+	      Position		      [360, 113, 390, 127]
+	      IconDisplay	      "Port number"
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Processing_Unit1"
+	  SID			  "726"
+	  Ports			  [3, 1]
+	  Position		  [465, 94, 535, 176]
+	  List {
+	    ListType		    RTWdata
+	    HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false<"
+	    "/IncludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</Excl"
+	    "udeFromOptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>NotRefined</HBlockType><SubsystemLocation>FromCur"
+	    "rentModel</SubsystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent>"
+	    "<Name>OFailure1</Name><UnavailabilityFormula><Constant><FailureRate>0</FailureRate><RepairRate>0</RepairRate></Co"
+	    "nstant></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailure1</Name><UnavailabilityFormula><None></None"
+	    "></UnavailabilityFormula></BasicEvent></BasicEvents><OutputDeviations><OutputDeviation><Name>Omission-Out1</Name>"
+	    "<Severity>0</Severity><SystemOutport>false</SystemOutport><FailureExpression>Omission-In1 and Omission-In2 or Omi"
+	    "ssion-In1 and Omission-In3 or Omission-In2 and Omission-In3 or OFailure1 or Value-In1 and Value-In2 or Value-In2 "
+	    "and Value-In3 or Value-In1 and Value-In3</FailureExpression></OutputDeviation><OutputDeviation><Name>Value-Out1</"
+	    "Name><Severity>0</Severity><SystemOutport>false</SystemOutport><FailureExpression>PedalValue-In1 and PedalValue-I"
+	    "n2 or PedalValue-In3 and PedalValue-In2 or PedalValue-In1 and PedalValue-In3 or VFailure1</FailureExpression></Ou"
+	    "tputDeviation></OutputDeviations><DiagnosticCoverages></DiagnosticCoverages></FailureData></Current></Implementat"
+	    "ions></HiPHOPS_ComponentFailureData>"
+	    HiPHOPS_isPerspective   "false"
+	  }
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "Processing_Unit1"
+	    Location		    [2, 82, 1348, 715]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In1"
+	      SID		      "727"
+	      Position		      [280, 43, 310, 57]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In2"
+	      SID		      "728"
+	      Position		      [280, 108, 310, 122]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In3"
+	      SID		      "729"
+	      Position		      [280, 178, 310, 192]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "ASIC1"
+	      SID		      "730"
+	      Ports		      [3, 1]
+	      Position		      [440, 40, 500, 110]
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"ASIC1"
+		Location		[433, 403, 931, 703]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "In1"
+		  SID			  "731"
+		  Position		  [200, 103, 230, 117]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "In2"
+		  SID			  "732"
+		  Position		  [200, 148, 230, 162]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "In3"
+		  SID			  "733"
+		  Position		  [200, 198, 230, 212]
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out1"
+		  SID			  "734"
+		  Position		  [360, 103, 390, 117]
+		  IconDisplay		  "Port number"
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "ASIC2"
+	      SID		      "735"
+	      Ports		      [3, 1]
+	      Position		      [440, 150, 500, 220]
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"ASIC2"
+		Location		[433, 403, 931, 703]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "In1"
+		  SID			  "736"
+		  Position		  [190, 73, 220, 87]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "In2"
+		  SID			  "737"
+		  Position		  [190, 178, 220, 192]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "In3"
+		  SID			  "738"
+		  Position		  [190, 218, 220, 232]
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out1"
+		  SID			  "739"
+		  Position		  [360, 103, 390, 117]
+		  IconDisplay		  "Port number"
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Redundant Voter"
+	      SID		      "740"
+	      Ports		      [2, 1]
+	      Position		      [635, 83, 695, 152]
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"Redundant Voter"
+		Location		[433, 403, 931, 703]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "In1"
+		  SID			  "741"
+		  Position		  [190, 73, 220, 87]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "In2"
+		  SID			  "742"
+		  Position		  [190, 158, 220, 172]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out2"
+		  SID			  "743"
+		  Position		  [360, 158, 390, 172]
+		  IconDisplay		  "Port number"
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      SID		      "744"
+	      Position		      [730, 113, 760, 127]
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "ASIC1"
+	      SrcPort		      1
+	      Points		      [90, 0; 0, 25]
+	      DstBlock		      "Redundant Voter"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "ASIC2"
+	      SrcPort		      1
+	      Points		      [90, 0; 0, -50]
+	      DstBlock		      "Redundant Voter"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "In1"
+	      SrcPort		      1
+	      Points		      [40, 0]
+	      Branch {
+		DstBlock		"ASIC1"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 110]
+		DstBlock		"ASIC2"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "In2"
+	      SrcPort		      1
+	      Points		      [85, 70; 0, 0]
+	      Branch {
+		Points			[0, 70]
+		DstBlock		"ASIC2"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[0, -40]
+		DstBlock		"ASIC1"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Redundant Voter"
+	      SrcPort		      1
+	      DstBlock		      "Out1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "In3"
+	      SrcPort		      1
+	      Points		      [60, 0]
+	      Branch {
+		Points			[0, -85]
+		DstBlock		"ASIC1"
+		DstPort			3
+	      }
+	      Branch {
+		Points			[0, 25]
+		DstBlock		"ASIC2"
+		DstPort			3
+	      }
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Processing_Unit2"
+	  SID			  "707"
+	  Ports			  [3, 1]
+	  Position		  [435, 319, 505, 401]
+	  List {
+	    ListType		    RTWdata
+	    HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false<"
+	    "/IncludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</Excl"
+	    "udeFromOptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>NotRefined</HBlockType><SubsystemLocation>FromCur"
+	    "rentModel</SubsystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent>"
+	    "<Name>OFailure1</Name><UnavailabilityFormula><Constant><FailureRate>0</FailureRate><RepairRate>0</RepairRate></Co"
+	    "nstant></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailure1</Name><UnavailabilityFormula><None></None"
+	    "></UnavailabilityFormula></BasicEvent></BasicEvents><OutputDeviations><OutputDeviation><Name>Omission-Out1</Name>"
+	    "<Severity>0</Severity><SystemOutport>false</SystemOutport><FailureExpression>Omission-In1 and Omission-In2 or Omi"
+	    "ssion-In1 and Omission-In3 or Omission-In2 and Omission-In3 or OFailure1 or Value-In1 and Value-In2 or Value-In2 "
+	    "and Value-In3 or Value-In1 and Value-In3</FailureExpression></OutputDeviation><OutputDeviation><Name>Value-Out1</"
+	    "Name><Severity>0</Severity><SystemOutport>false</SystemOutport><FailureExpression>PedalValue-In1 and PedalValue-I"
+	    "n2 or PedalValue-In3 and PedalValue-In2 or PedalValue-In1 and PedalValue-In3 or VFailure1</FailureExpression></Ou"
+	    "tputDeviation></OutputDeviations><DiagnosticCoverages></DiagnosticCoverages></FailureData></Current></Implementat"
+	    "ions></HiPHOPS_ComponentFailureData>"
+	    HiPHOPS_isPerspective   "false"
+	  }
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "Processing_Unit2"
+	    Location		    [2, 82, 1348, 715]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In1"
+	      SID		      "708"
+	      Position		      [280, 43, 310, 57]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In2"
+	      SID		      "709"
+	      Position		      [280, 108, 310, 122]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In3"
+	      SID		      "710"
+	      Position		      [280, 178, 310, 192]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "ASIC1"
+	      SID		      "711"
+	      Ports		      [3, 1]
+	      Position		      [440, 40, 500, 110]
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"ASIC1"
+		Location		[433, 403, 931, 703]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "In1"
+		  SID			  "712"
+		  Position		  [200, 103, 230, 117]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "In2"
+		  SID			  "713"
+		  Position		  [200, 148, 230, 162]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "In3"
+		  SID			  "714"
+		  Position		  [200, 198, 230, 212]
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out1"
+		  SID			  "715"
+		  Position		  [360, 103, 390, 117]
+		  IconDisplay		  "Port number"
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "ASIC2"
+	      SID		      "716"
+	      Ports		      [3, 1]
+	      Position		      [440, 150, 500, 220]
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"ASIC2"
+		Location		[433, 403, 931, 703]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "In1"
+		  SID			  "717"
+		  Position		  [190, 73, 220, 87]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "In2"
+		  SID			  "718"
+		  Position		  [190, 178, 220, 192]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "In3"
+		  SID			  "719"
+		  Position		  [190, 218, 220, 232]
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out1"
+		  SID			  "720"
+		  Position		  [360, 103, 390, 117]
+		  IconDisplay		  "Port number"
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Redundant Voter"
+	      SID		      "721"
+	      Ports		      [2, 1]
+	      Position		      [635, 83, 695, 152]
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"Redundant Voter"
+		Location		[433, 403, 931, 703]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "In1"
+		  SID			  "722"
+		  Position		  [190, 73, 220, 87]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "In2"
+		  SID			  "723"
+		  Position		  [190, 158, 220, 172]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out2"
+		  SID			  "724"
+		  Position		  [360, 158, 390, 172]
+		  IconDisplay		  "Port number"
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      SID		      "725"
+	      Position		      [730, 113, 760, 127]
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "ASIC1"
+	      SrcPort		      1
+	      Points		      [90, 0; 0, 25]
+	      DstBlock		      "Redundant Voter"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "ASIC2"
+	      SrcPort		      1
+	      Points		      [90, 0; 0, -50]
+	      DstBlock		      "Redundant Voter"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "In1"
+	      SrcPort		      1
+	      Points		      [40, 0]
+	      Branch {
+		DstBlock		"ASIC1"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 110]
+		DstBlock		"ASIC2"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "In2"
+	      SrcPort		      1
+	      Points		      [85, 70; 0, 0]
+	      Branch {
+		Points			[0, 70]
+		DstBlock		"ASIC2"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[0, -40]
+		DstBlock		"ASIC1"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Redundant Voter"
+	      SrcPort		      1
+	      DstBlock		      "Out1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "In3"
+	      SrcPort		      1
+	      Points		      [60, 0]
+	      Branch {
+		Points			[0, -85]
+		DstBlock		"ASIC1"
+		DstPort			3
+	      }
+	      Branch {
+		Points			[0, 25]
+		DstBlock		"ASIC2"
+		DstPort			3
+	      }
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Sensor1"
+	  SID			  "323"
+	  Ports			  [1, 1]
+	  Position		  [245, 19, 285, 61]
+	  List {
+	    ListType		    RTWdata
+	    HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false<"
+	    "/IncludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</Excl"
+	    "udeFromOptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>NotRefined</HBlockType><SubsystemLocation>FromCur"
+	    "rentModel</SubsystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent>"
+	    "<Name>OFailure1</Name><UnavailabilityFormula><Constant><FailureRate>0</FailureRate><RepairRate>0</RepairRate></Co"
+	    "nstant></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailure1</Name><UnavailabilityFormula><None></None"
+	    "></UnavailabilityFormula></BasicEvent></BasicEvents><OutputDeviations><OutputDeviation><Name>Omission-Out1</Name>"
+	    "<Severity>0</Severity><SystemOutport>false</SystemOutport><FailureExpression>Omission-In1 or OFailure1</FailureEx"
+	    "pression></OutputDeviation><OutputDeviation><Name>Value-Out1</Name><Severity>0</Severity><SystemOutport>false</Sy"
+	    "stemOutport><FailureExpression>VFailure1</FailureExpression></OutputDeviation><OutputDeviation><Name>PedalValue-O"
+	    "ut1</Name><Severity>0</Severity><SystemOutport>false</SystemOutport><FailureExpression>Value-In1</FailureExpressi"
+	    "on></OutputDeviation></OutputDeviations><DiagnosticCoverages></DiagnosticCoverages></FailureData></Current></Impl"
+	    "ementations></HiPHOPS_ComponentFailureData>"
+	    HiPHOPS_isPerspective   "false"
+	  }
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "Sensor1"
+	    Location		    [431, 371, 933, 724]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In1"
+	      SID		      "324"
+	      Position		      [190, 103, 220, 117]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      SID		      "325"
+	      Position		      [360, 103, 390, 117]
+	      IconDisplay	      "Port number"
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Sensor2"
+	  SID			  "692"
+	  Ports			  [1, 1]
+	  Position		  [255, 89, 295, 131]
+	  List {
+	    ListType		    RTWdata
+	    HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false<"
+	    "/IncludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</Excl"
+	    "udeFromOptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>NotRefined</HBlockType><SubsystemLocation>FromCur"
+	    "rentModel</SubsystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent>"
+	    "<Name>OFailure1</Name><UnavailabilityFormula><Constant><FailureRate>0</FailureRate><RepairRate>0</RepairRate></Co"
+	    "nstant></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailure1</Name><UnavailabilityFormula><None></None"
+	    "></UnavailabilityFormula></BasicEvent></BasicEvents><OutputDeviations><OutputDeviation><Name>Omission-Out1</Name>"
+	    "<Severity>0</Severity><SystemOutport>false</SystemOutport><FailureExpression>Omission-In1 or OFailure1</FailureEx"
+	    "pression></OutputDeviation><OutputDeviation><Name>Value-Out1</Name><Severity>0</Severity><SystemOutport>false</Sy"
+	    "stemOutport><FailureExpression>VFailure1</FailureExpression></OutputDeviation><OutputDeviation><Name>PedalValue-O"
+	    "ut1</Name><Severity>0</Severity><SystemOutport>false</SystemOutport><FailureExpression>Value-In1</FailureExpressi"
+	    "on></OutputDeviation></OutputDeviations><DiagnosticCoverages></DiagnosticCoverages></FailureData></Current></Impl"
+	    "ementations></HiPHOPS_ComponentFailureData>"
+	    HiPHOPS_isPerspective   "false"
+	  }
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "Sensor2"
+	    Location		    [433, 403, 931, 703]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In1"
+	      SID		      "693"
+	      Position		      [190, 103, 220, 117]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      SID		      "694"
+	      Position		      [360, 103, 390, 117]
+	      IconDisplay	      "Port number"
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Sensor3"
+	  SID			  "695"
+	  Ports			  [1, 1]
+	  Position		  [255, 154, 295, 196]
+	  List {
+	    ListType		    RTWdata
+	    HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false<"
+	    "/IncludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</Excl"
+	    "udeFromOptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>NotRefined</HBlockType><SubsystemLocation>FromCur"
+	    "rentModel</SubsystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent>"
+	    "<Name>OFailure1</Name><UnavailabilityFormula><Constant><FailureRate>0</FailureRate><RepairRate>0</RepairRate></Co"
+	    "nstant></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailure1</Name><UnavailabilityFormula><None></None"
+	    "></UnavailabilityFormula></BasicEvent></BasicEvents><OutputDeviations><OutputDeviation><Name>Omission-Out1</Name>"
+	    "<Severity>0</Severity><SystemOutport>false</SystemOutport><FailureExpression>Omission-In1 or OFailure1</FailureEx"
+	    "pression></OutputDeviation><OutputDeviation><Name>Value-Out1</Name><Severity>0</Severity><SystemOutport>false</Sy"
+	    "stemOutport><FailureExpression>VFailure1</FailureExpression></OutputDeviation><OutputDeviation><Name>PedalValue-O"
+	    "ut1</Name><Severity>0</Severity><SystemOutport>false</SystemOutport><FailureExpression>Value-In1</FailureExpressi"
+	    "on></OutputDeviation></OutputDeviations><DiagnosticCoverages></DiagnosticCoverages></FailureData></Current></Impl"
+	    "ementations></HiPHOPS_ComponentFailureData>"
+	    HiPHOPS_isPerspective   "false"
+	  }
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "Sensor3"
+	    Location		    [433, 403, 931, 703]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In1"
+	      SID		      "696"
+	      Position		      [190, 103, 220, 117]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      SID		      "697"
+	      Position		      [360, 103, 390, 117]
+	      IconDisplay	      "Port number"
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Sensor4"
+	  SID			  "698"
+	  Ports			  [1, 1]
+	  Position		  [230, 279, 270, 321]
+	  List {
+	    ListType		    RTWdata
+	    HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false<"
+	    "/IncludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</Excl"
+	    "udeFromOptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>NotRefined</HBlockType><SubsystemLocation>FromCur"
+	    "rentModel</SubsystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent>"
+	    "<Name>OFailure1</Name><UnavailabilityFormula><Constant><FailureRate>0</FailureRate><RepairRate>0</RepairRate></Co"
+	    "nstant></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailure1</Name><UnavailabilityFormula><None></None"
+	    "></UnavailabilityFormula></BasicEvent></BasicEvents><OutputDeviations><OutputDeviation><Name>Omission-Out1</Name>"
+	    "<Severity>0</Severity><SystemOutport>false</SystemOutport><FailureExpression>Omission-In1 or OFailure1</FailureEx"
+	    "pression></OutputDeviation><OutputDeviation><Name>Value-Out1</Name><Severity>0</Severity><SystemOutport>false</Sy"
+	    "stemOutport><FailureExpression>VFailure1</FailureExpression></OutputDeviation><OutputDeviation><Name>PedalValue-O"
+	    "ut1</Name><Severity>0</Severity><SystemOutport>false</SystemOutport><FailureExpression>Value-In1</FailureExpressi"
+	    "on></OutputDeviation></OutputDeviations><DiagnosticCoverages></DiagnosticCoverages></FailureData></Current></Impl"
+	    "ementations></HiPHOPS_ComponentFailureData>"
+	    HiPHOPS_isPerspective   "false"
+	  }
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "Sensor4"
+	    Location		    [433, 403, 931, 703]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In1"
+	      SID		      "699"
+	      Position		      [190, 103, 220, 117]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      SID		      "700"
+	      Position		      [360, 103, 390, 117]
+	      IconDisplay	      "Port number"
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Sensor5"
+	  SID			  "701"
+	  Ports			  [1, 1]
+	  Position		  [230, 339, 270, 381]
+	  List {
+	    ListType		    RTWdata
+	    HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false<"
+	    "/IncludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</Excl"
+	    "udeFromOptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>NotRefined</HBlockType><SubsystemLocation>FromCur"
+	    "rentModel</SubsystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent>"
+	    "<Name>OFailure1</Name><UnavailabilityFormula><Constant><FailureRate>0</FailureRate><RepairRate>0</RepairRate></Co"
+	    "nstant></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailure1</Name><UnavailabilityFormula><None></None"
+	    "></UnavailabilityFormula></BasicEvent></BasicEvents><OutputDeviations><OutputDeviation><Name>Omission-Out1</Name>"
+	    "<Severity>0</Severity><SystemOutport>false</SystemOutport><FailureExpression>Omission-In1 or OFailure1</FailureEx"
+	    "pression></OutputDeviation><OutputDeviation><Name>Value-Out1</Name><Severity>0</Severity><SystemOutport>false</Sy"
+	    "stemOutport><FailureExpression>VFailure1</FailureExpression></OutputDeviation><OutputDeviation><Name>PedalValue-O"
+	    "ut1</Name><Severity>0</Severity><SystemOutport>false</SystemOutport><FailureExpression>Value-In1</FailureExpressi"
+	    "on></OutputDeviation></OutputDeviations><DiagnosticCoverages></DiagnosticCoverages></FailureData></Current></Impl"
+	    "ementations></HiPHOPS_ComponentFailureData>"
+	    HiPHOPS_isPerspective   "false"
+	  }
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "Sensor5"
+	    Location		    [433, 403, 931, 703]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In1"
+	      SID		      "702"
+	      Position		      [190, 103, 220, 117]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      SID		      "703"
+	      Position		      [360, 103, 390, 117]
+	      IconDisplay	      "Port number"
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Sensor6"
+	  SID			  "704"
+	  Ports			  [1, 1]
+	  Position		  [230, 409, 270, 451]
+	  List {
+	    ListType		    RTWdata
+	    HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false<"
+	    "/IncludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</Excl"
+	    "udeFromOptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>NotRefined</HBlockType><SubsystemLocation>FromCur"
+	    "rentModel</SubsystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent>"
+	    "<Name>OFailure1</Name><UnavailabilityFormula><Constant><FailureRate>0</FailureRate><RepairRate>0</RepairRate></Co"
+	    "nstant></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailure1</Name><UnavailabilityFormula><None></None"
+	    "></UnavailabilityFormula></BasicEvent></BasicEvents><OutputDeviations><OutputDeviation><Name>Omission-Out1</Name>"
+	    "<Severity>0</Severity><SystemOutport>false</SystemOutport><FailureExpression>Omission-In1 or OFailure1</FailureEx"
+	    "pression></OutputDeviation><OutputDeviation><Name>Value-Out1</Name><Severity>0</Severity><SystemOutport>false</Sy"
+	    "stemOutport><FailureExpression>VFailure1</FailureExpression></OutputDeviation><OutputDeviation><Name>PedalValue-O"
+	    "ut1</Name><Severity>0</Severity><SystemOutport>false</SystemOutport><FailureExpression>Value-In1</FailureExpressi"
+	    "on></OutputDeviation></OutputDeviations><DiagnosticCoverages></DiagnosticCoverages></FailureData></Current></Impl"
+	    "ementations></HiPHOPS_ComponentFailureData>"
+	    HiPHOPS_isPerspective   "false"
+	  }
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "Sensor6"
+	    Location		    [433, 403, 931, 703]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In1"
+	      SID		      "705"
+	      Position		      [190, 103, 220, 117]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      SID		      "706"
+	      Position		      [360, 103, 390, 117]
+	      IconDisplay	      "Port number"
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  SID			  "315"
+	  Position		  [775, 103, 805, 117]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out2"
+	  SID			  "413"
+	  Position		  [780, 353, 810, 367]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "In1"
+	  SrcPort		  1
+	  Points		  [50, 0; 0, -65]
+	  Branch {
+	    Points		    [0, 130]
+	    Branch {
+	      Points		      [0, 60]
+	      Branch {
+		DstBlock		"Sensor5"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 70]
+		DstBlock		"Sensor6"
+		DstPort			1
+	      }
+	    }
+	    Branch {
+	      DstBlock		      "Sensor4"
+	      DstPort		      1
+	    }
+	  }
+	  Branch {
+	    Points		    [0, -60]
+	    Branch {
+	      Points		      [0, -70]
+	      DstBlock		      "Sensor1"
+	      DstPort		      1
+	    }
+	    Branch {
+	      DstBlock		      "Sensor2"
+	      DstPort		      1
+	    }
+	  }
+	  Branch {
+	    Points		    [90, 0]
+	    DstBlock		    "Sensor3"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "ComController1"
+	  SrcPort		  1
+	  DstBlock		  "Out1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "ComController2"
+	  SrcPort		  1
+	  DstBlock		  "Out2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sensor1"
+	  SrcPort		  1
+	  Points		  [130, 0; 0, 70]
+	  DstBlock		  "Processing_Unit1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sensor2"
+	  SrcPort		  1
+	  Points		  [0, 20; 150, 0]
+	  DstBlock		  "Processing_Unit1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Sensor3"
+	  SrcPort		  1
+	  Points		  [25, 0; 0, -15]
+	  DstBlock		  "Processing_Unit1"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Processing_Unit1"
+	  SrcPort		  1
+	  Points		  [0, -25]
+	  DstBlock		  "ComController1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sensor4"
+	  SrcPort		  1
+	  Points		  [50, 0; 0, 35]
+	  DstBlock		  "Processing_Unit2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sensor5"
+	  SrcPort		  1
+	  DstBlock		  "Processing_Unit2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Sensor6"
+	  SrcPort		  1
+	  Points		  [50, 0; 0, -45]
+	  DstBlock		  "Processing_Unit2"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Processing_Unit2"
+	  SrcPort		  1
+	  DstBlock		  "ComController2"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Mechanical_Pedal"
+      SID		      "657"
+      Ports		      [0, 1]
+      Position		      [375, 346, 420, 594]
+      DropShadow	      on
+      List {
+	ListType		RTWdata
+	HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false</Inc"
+	"ludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</ExcludeFromO"
+	"ptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>NotRefined</HBlockType><SubsystemLocation>FromCurrentModel</S"
+	"ubsystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent><Name>OFailure1<"
+	"/Name><UnavailabilityFormula><Constant><FailureRate>0</FailureRate><RepairRate>0</RepairRate></Constant></Unavailabil"
+	"ityFormula></BasicEvent><BasicEvent><Name>VFailure1</Name><UnavailabilityFormula><Constant><FailureRate>0</FailureRat"
+	"e><RepairRate>0</RepairRate></Constant></UnavailabilityFormula></BasicEvent></BasicEvents><OutputDeviations><OutputDe"
+	"viation><Name>Omission-Out1</Name><Severity>0</Severity><SystemOutport>false</SystemOutport><FailureExpression>OFailu"
+	"re1</FailureExpression></OutputDeviation><OutputDeviation><Name>Value-Out1</Name><Severity>0</Severity><SystemOutport"
+	">false</SystemOutport><FailureExpression>VFailure1</FailureExpression></OutputDeviation></OutputDeviations><Diagnosti"
+	"cCoverages></DiagnosticCoverages></FailureData></Current></Implementations></HiPHOPS_ComponentFailureData>"
+	HiPHOPS_isPerspective	"false"
+      }
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"Mechanical_Pedal"
+	Location		[433, 403, 931, 703]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  SID			  "658"
+	  Position		  [360, 73, 390, 87]
+	  IconDisplay		  "Port number"
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Powertrain_Battery"
+      SID		      "162"
+      Ports		      [2, 1]
+      Position		      [1152, 855, 1228, 945]
+      BlockRotation	      270
+      BackgroundColor	      "yellow"
+      List {
+	ListType		RTWdata
+	HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false</Inc"
+	"ludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</ExcludeFromO"
+	"ptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>NotRefined</HBlockType><SubsystemLocation>FromCurrentModel</S"
+	"ubsystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent><Name>OFailure1<"
+	"/Name><UnavailabilityFormula><Constant><FailureRate>0</FailureRate><RepairRate>0</RepairRate></Constant></Unavailabil"
+	"ityFormula></BasicEvent><BasicEvent><Name>VFailure1</Name><UnavailabilityFormula><None></None></UnavailabilityFormula"
+	"></BasicEvent></BasicEvents><OutputDeviations><OutputDeviation><Name>Omission-Out1</Name><Severity>0</Severity><Syste"
+	"mOutport>false</SystemOutport><FailureExpression>OFailure1</FailureExpression></OutputDeviation><OutputDeviation><Nam"
+	"e>Value-Out1</Name><Severity>0</Severity><SystemOutport>false</SystemOutport><FailureExpression>VFailure1</FailureExp"
+	"ression></OutputDeviation></OutputDeviations><DiagnosticCoverages></DiagnosticCoverages></FailureData></Current></Imp"
+	"lementations></HiPHOPS_ComponentFailureData>"
+	HiPHOPS_isPerspective	"false"
+      }
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"Powertrain_Battery"
+	Location		[0, 82, 1346, 739]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "In1"
+	  SID			  "171"
+	  Position		  [350, 103, 380, 117]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "In2"
+	  SID			  "1114"
+	  Position		  [365, 118, 395, 132]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  SID			  "165"
+	  Position		  [585, 103, 615, 117]
+	  IconDisplay		  "Port number"
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "Electronic_Pedal"
+      SrcPort		      1
+      Points		      [25, 0; 0, -30; 25, 0]
+      Branch {
+	Points			[130, 0]
+	DstBlock		"Communication_Bus1"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 100]
+	DstBlock		"Communication_Bus2"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Electronic_Pedal"
+      SrcPort		      2
+      Points		      [25, 0; 0, 15; 55, 0]
+      Branch {
+	Points			[0, -70]
+	DstBlock		"Communication_Bus1"
+	DstPort			2
+      }
+      Branch {
+	DstBlock		"Communication_Bus2"
+	DstPort			2
+      }
+    }
+    Line {
+      SrcBlock		      "Mechanical_Pedal"
+      SrcPort		      1
+      DstBlock		      "Electronic_Pedal"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Communication_Bus1"
+      SrcPort		      1
+      Points		      [0, -30; 275, 0]
+      Branch {
+	Points			[0, -90; -950, 0]
+	DstBlock		"Brake_Unit1"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 235; -950, 0]
+	DstBlock		"Brake_Unit2"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Communication_Bus2"
+      SrcPort		      1
+      Points		      [335, 0]
+      Branch {
+	Points			[0, 155; -905, 0]
+	DstBlock		"Brake_Unit2"
+	DstPort			2
+      }
+      Branch {
+	Points			[0, -210; -905, 0]
+	DstBlock		"Brake_Unit1"
+	DstPort			2
+      }
+    }
+    Line {
+      SrcBlock		      "Auxiliary_Battery"
+      SrcPort		      1
+      Points		      [0, -150]
+      Branch {
+	Points			[-715, 0]
+	DstBlock		"Brake_Unit2"
+	DstPort			3
+      }
+      Branch {
+	Points			[145, 0; 0, -415; -860, 0]
+	DstBlock		"Brake_Unit1"
+	DstPort			3
+      }
+    }
+    Line {
+      SrcBlock		      "Powertrain_Battery"
+      SrcPort		      1
+      Points		      [0, -140]
+      Branch {
+	Points			[-855, 0]
+	DstBlock		"Brake_Unit2"
+	DstPort			4
+      }
+      Branch {
+	Points			[610, 0; 0, -460; -1465, 0]
+	DstBlock		"Brake_Unit1"
+	DstPort			4
+      }
+    }
+    Line {
+      SrcBlock		      "Brake_Unit2"
+      SrcPort		      2
+      Points		      [0, 115; 850, 0]
+      DstBlock		      "Powertrain_Battery"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Brake_Unit1"
+      SrcPort		      2
+      Points		      [0, -70; -150, 0; 0, 955; 1035, 0]
+      DstBlock		      "Powertrain_Battery"
+      DstPort		      2
+    }
+    Annotation {
+      Position		      [1028, 445]
+    }
+    Annotation {
+      Position		      [1025, 431]
+    }
+    Annotation {
+      Position		      [906, 591]
+    }
+    Annotation {
+      Position		      [1153, 805]
+    }
+    Annotation {
+      Position		      [1121, 436]
+    }
+    Annotation {
+      Position		      [1604, 620]
+    }
+    Annotation {
+      Name		      ".No Brake 4 Wheels\n.No Brake 3 Wheels\n.No Brake Front\n.No Brake Rear\nNo Brake Diag"
+      Position		      [2089, 234]
+    }
+  }
+}

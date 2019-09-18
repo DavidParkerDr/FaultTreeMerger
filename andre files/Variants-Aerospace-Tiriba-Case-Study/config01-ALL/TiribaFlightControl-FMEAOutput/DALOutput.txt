@@ -1,0 +1,63 @@
+Ran for 3.3375 seconds 
+Best allocation cost 590
+Best Allocation is 
+450, BarometricProcessor.OFailure1 has a DAL of 2
+Decomposed Effect No_Pilot_Commands Type BY ONE
+662, BusCreator1.OFailure1 has a DAL of 2
+Decomposed Effect No_Pilot_Commands Type BY ONE
+1363, PilotJoystick.OFailure1 has a DAL of 2
+Decomposed Effect No_Pilot_Commands Type BY ONE
+1364, PilotJoystick.OFailure2 has a DAL of 2
+Decomposed Effect No_Pilot_Commands Type BY ONE
+451, BarometricProcessor.OFailure2 has a DAL of 2
+Decomposed Effect No_Pilot_Commands Type BY ONE
+452, BarometricProcessor.OFailure3 has a DAL of 2
+Decomposed Effect No_Pilot_Commands Type BY ONE
+640, BusCreator.OFailure1 has a DAL of 2
+Decomposed Effect No_Pilot_Commands Type BY ONE
+726, BusCreator3.OFailure1 has a DAL of 2
+Decomposed Effect No_Pilot_Commands Type BY ONE
+750, BusCreator4.OFailure1 has a DAL of 2
+Decomposed Effect No_Pilot_Commands Type BY ONE
+796, FailSafeController.OFailure1 has a DAL of 2
+Decomposed Effect No_Pilot_Commands Type BY ONE
+822, FlightControlMixer.OFailure1 has a DAL of 2
+Decomposed Effect No_Pilot_Commands Type BY ONE
+907, IMUSensor.OFailure1 has a DAL of 2
+Decomposed Effect No_Pilot_Commands Type BY ONE
+909, IMUSensor.OFailure2 has a DAL of 2
+Decomposed Effect No_Pilot_Commands Type BY ONE
+1375, PressureeSensor.OFailure1 has a DAL of 2
+Decomposed Effect No_Pilot_Commands Type BY ONE
+1376, PressureeSensor.OFailure2 has a DAL of 2
+Decomposed Effect No_Pilot_Commands Type BY ONE
+920, ModeSwitcher.OFailure2 has a DAL of 2
+Decomposed Effect No_Pilot_Commands Type BY ONE
+1129, PWMDecoder.OFailure1 has a DAL of 2
+Decomposed Effect No_Pilot_Commands Type BY ONE
+1161, PWMDecoder.BusCreatorX.OFailure1 has a DAL of 2
+Decomposed Effect No_Pilot_Commands Type BY ONE
+1019, ModeSwitcher.MultiportSwitch2.OFailure1 has a DAL of 1
+Decomposed Effect No_Pilot_Commands Type BY TWO
+1130, PWMDecoder.OFailure2 has a DAL of 2
+Decomposed Effect No_Pilot_Commands Type BY ONE
+663, BusCreator1.VFailure1 has a DAL of 2
+Decomposed Effect Value_Pilot_Commands Type BY ONE
+1365, PilotJoystick.VFailure1 has a DAL of 2
+Decomposed Effect Value_Pilot_Commands Type BY ONE
+1366, PilotJoystick.VFailure2 has a DAL of 2
+Decomposed Effect Value_Pilot_Commands Type BY ONE
+641, BusCreator.VFailure1 has a DAL of 2
+Decomposed Effect Value_Pilot_Commands Type BY ONE
+797, FailSafeController.VFailure1 has a DAL of 2
+Decomposed Effect Value_Pilot_Commands Type BY ONE
+922, ModeSwitcher.VFailure2 has a DAL of 2
+Decomposed Effect Value_Pilot_Commands Type BY ONE
+1131, PWMDecoder.VFailure1 has a DAL of 2
+Decomposed Effect Value_Pilot_Commands Type BY ONE
+1162, PWMDecoder.BusCreatorX.VFailure1 has a DAL of 2
+Decomposed Effect Value_Pilot_Commands Type BY ONE
+1020, ModeSwitcher.MultiportSwitch2.VFailure1 has a DAL of 2
+Decomposed Effect Value_Pilot_Commands Type BY ONE
+1132, PWMDecoder.VFailure2 has a DAL of 2
+Decomposed Effect Value_Pilot_Commands Type BY ONE

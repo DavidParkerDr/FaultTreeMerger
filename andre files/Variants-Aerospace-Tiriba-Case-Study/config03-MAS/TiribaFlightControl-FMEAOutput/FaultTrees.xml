@@ -1,0 +1,3094 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<HiP-HOPS_Results model="TiribaFlightControl" build="Commercial" majorVersion="2" minorVersion="5" version="885" versionDate="26 November 2014">
+    <FaultTrees>
+        <FMEA>
+            <Component>
+                <Name>AssistedModeSwitch</Name>
+                <Events>
+                    <BasicEvent ID="1">
+                        <Name>AssistedModeSwitch.OFailure1</Name>
+                        <ShortName>OFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="2">
+                        <Name>AssistedModeSwitch.VFailure1</Name>
+                        <ShortName>VFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                </Events>
+            </Component>
+            <Component>
+                <Name>Autopilot</Name>
+                <Events>
+                    <BasicEvent ID="27">
+                        <Name>Autopilot.OFailure1</Name>
+                        <ShortName>OFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="28">
+                        <Name>Autopilot.VFailure1</Name>
+                        <ShortName>VFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                </Events>
+            </Component>
+            <Component>
+                <Name>Autopilot.BusCreator</Name>
+                <Events>
+                    <BasicEvent ID="53">
+                        <Name>Autopilot.BusCreator.OFailure1</Name>
+                        <ShortName>OFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="54">
+                        <Name>Autopilot.BusCreator.VFailure1</Name>
+                        <ShortName>VFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                </Events>
+            </Component>
+            <Component>
+                <Name>Autopilot.BusSelector2</Name>
+                <Events>
+                    <BasicEvent ID="87">
+                        <Name>Autopilot.BusSelector2.OFailure1</Name>
+                        <ShortName>OFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="88">
+                        <Name>Autopilot.BusSelector2.VFailure1</Name>
+                        <ShortName>VFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                </Events>
+            </Component>
+            <Component>
+                <Name>Autopilot.BusSelector3</Name>
+                <Events>
+                    <BasicEvent ID="105">
+                        <Name>Autopilot.BusSelector3.OFailure1</Name>
+                        <ShortName>OFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="106">
+                        <Name>Autopilot.BusSelector3.OFailure2</Name>
+                        <ShortName>OFailure2</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="107">
+                        <Name>Autopilot.BusSelector3.OFailure3</Name>
+                        <ShortName>OFailure3</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="108">
+                        <Name>Autopilot.BusSelector3.VFailure1</Name>
+                        <ShortName>VFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="109">
+                        <Name>Autopilot.BusSelector3.VFailure2</Name>
+                        <ShortName>VFailure2</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="110">
+                        <Name>Autopilot.BusSelector3.VFailure3</Name>
+                        <ShortName>VFailure3</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                </Events>
+            </Component>
+            <Component>
+                <Name>Autopilot.BusSelector4</Name>
+                <Events>
+                    <BasicEvent ID="139">
+                        <Name>Autopilot.BusSelector4.OFailure1</Name>
+                        <ShortName>OFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="140">
+                        <Name>Autopilot.BusSelector4.VFailure1</Name>
+                        <ShortName>VFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="141">
+                        <Name>Autopilot.BusSelector4.OFailure2</Name>
+                        <ShortName>OFailure2</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="142">
+                        <Name>Autopilot.BusSelector4.VFailure2</Name>
+                        <ShortName>VFailure2</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                </Events>
+            </Component>
+            <Component>
+                <Name>Autopilot.ClimbController</Name>
+                <Events>
+                    <BasicEvent ID="167">
+                        <Name>Autopilot.ClimbController.OFailure1</Name>
+                        <ShortName>OFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="168">
+                        <Name>Autopilot.ClimbController.VFailure1</Name>
+                        <ShortName>VFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                </Events>
+            </Component>
+            <Component>
+                <Name>Autopilot.EmbeddedMATLABFunction</Name>
+                <Events>
+                    <BasicEvent ID="197">
+                        <Name>Autopilot.EmbeddedMATLABFunction.VFailure1</Name>
+                        <ShortName>VFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="198">
+                        <Name>Autopilot.EmbeddedMATLABFunction.OFailure1</Name>
+                        <ShortName>OFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                </Events>
+            </Component>
+            <Component>
+                <Name>Autopilot.PitchController</Name>
+                <Events>
+                    <BasicEvent ID="211">
+                        <Name>Autopilot.PitchController.OFailure1</Name>
+                        <ShortName>OFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="212">
+                        <Name>Autopilot.PitchController.VFailure1</Name>
+                        <ShortName>VFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                </Events>
+            </Component>
+            <Component>
+                <Name>Autopilot.RollController</Name>
+                <Events>
+                    <BasicEvent ID="237">
+                        <Name>Autopilot.RollController.OFailure1</Name>
+                        <ShortName>OFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="238">
+                        <Name>Autopilot.RollController.VFailure1</Name>
+                        <ShortName>VFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                </Events>
+            </Component>
+            <Component>
+                <Name>Autopilot.SpeedController</Name>
+                <Events>
+                    <BasicEvent ID="259">
+                        <Name>Autopilot.SpeedController.OFailure1</Name>
+                        <ShortName>OFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="260">
+                        <Name>Autopilot.SpeedController.VFailure1</Name>
+                        <ShortName>VFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                </Events>
+            </Component>
+            <Component>
+                <Name>Autopilot.Switch</Name>
+                <Events>
+                    <BasicEvent ID="293">
+                        <Name>Autopilot.Switch.OFailure1</Name>
+                        <ShortName>OFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="294">
+                        <Name>Autopilot.Switch.VFailure1</Name>
+                        <ShortName>VFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                </Events>
+            </Component>
+            <Component>
+                <Name>Autopilot.Switch1</Name>
+                <Events>
+                    <BasicEvent ID="323">
+                        <Name>Autopilot.Switch1.OFailure1</Name>
+                        <ShortName>OFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="324">
+                        <Name>Autopilot.Switch1.VFailure1</Name>
+                        <ShortName>VFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                </Events>
+            </Component>
+            <Component>
+                <Name>Autopilot.Switch2</Name>
+                <Events>
+                    <BasicEvent ID="353">
+                        <Name>Autopilot.Switch2.OFailure1</Name>
+                        <ShortName>OFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="354">
+                        <Name>Autopilot.Switch2.VFailure1</Name>
+                        <ShortName>VFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                </Events>
+            </Component>
+            <Component>
+                <Name>Autopilot.Switch3</Name>
+                <Events>
+                    <BasicEvent ID="383">
+                        <Name>Autopilot.Switch3.OFailure1</Name>
+                        <ShortName>OFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="384">
+                        <Name>Autopilot.Switch3.VFailure1</Name>
+                        <ShortName>VFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                </Events>
+            </Component>
+            <Component>
+                <Name>BarometricProcessor</Name>
+                <Events>
+                    <BasicEvent ID="446">
+                        <Name>BarometricProcessor.OFailure1</Name>
+                        <ShortName>OFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects>
+                            <Effect ID="2774">
+                                <Name>No_Pilot_Commands</Name>
+                                <SinglePointFailure>false</SinglePointFailure>
+                            </Effect>
+                            <Effect ID="2855">
+                                <Name>Value_Pilot_Commands</Name>
+                                <SinglePointFailure>false</SinglePointFailure>
+                            </Effect>
+                        </Effects>
+                    </BasicEvent>
+                    <BasicEvent ID="447">
+                        <Name>BarometricProcessor.OFailure2</Name>
+                        <ShortName>OFailure2</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects>
+                            <Effect ID="2774">
+                                <Name>No_Pilot_Commands</Name>
+                                <SinglePointFailure>false</SinglePointFailure>
+                            </Effect>
+                            <Effect ID="2855">
+                                <Name>Value_Pilot_Commands</Name>
+                                <SinglePointFailure>false</SinglePointFailure>
+                            </Effect>
+                        </Effects>
+                    </BasicEvent>
+                    <BasicEvent ID="448">
+                        <Name>BarometricProcessor.OFailure3</Name>
+                        <ShortName>OFailure3</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects>
+                            <Effect ID="2774">
+                                <Name>No_Pilot_Commands</Name>
+                                <SinglePointFailure>false</SinglePointFailure>
+                            </Effect>
+                            <Effect ID="2855">
+                                <Name>Value_Pilot_Commands</Name>
+                                <SinglePointFailure>false</SinglePointFailure>
+                            </Effect>
+                        </Effects>
+                    </BasicEvent>
+                    <BasicEvent ID="449">
+                        <Name>BarometricProcessor.VFailure1</Name>
+                        <ShortName>VFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="450">
+                        <Name>BarometricProcessor.VFailure2</Name>
+                        <ShortName>VFailure2</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="451">
+                        <Name>BarometricProcessor.VFailure3</Name>
+                        <ShortName>VFailure3</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                </Events>
+            </Component>
+            <Component>
+                <Name>BasicCommandProcessor</Name>
+                <Events>
+                    <BasicEvent ID="508">
+                        <Name>BasicCommandProcessor.OFailure1</Name>
+                        <ShortName>OFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="509">
+                        <Name>BasicCommandProcessor.VFailure1</Name>
+                        <ShortName>VFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                </Events>
+            </Component>
+            <Component>
+                <Name>BusCreator</Name>
+                <Events>
+                    <BasicEvent ID="535">
+                        <Name>BusCreator.OFailure1</Name>
+                        <ShortName>OFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects>
+                            <Effect ID="2774">
+                                <Name>No_Pilot_Commands</Name>
+                                <SinglePointFailure>false</SinglePointFailure>
+                            </Effect>
+                        </Effects>
+                    </BasicEvent>
+                    <BasicEvent ID="536">
+                        <Name>BusCreator.VFailure1</Name>
+                        <ShortName>VFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects>
+                            <Effect ID="2855">
+                                <Name>Value_Pilot_Commands</Name>
+                                <SinglePointFailure>false</SinglePointFailure>
+                            </Effect>
+                        </Effects>
+                    </BasicEvent>
+                </Events>
+            </Component>
+            <Component>
+                <Name>BusCreator1</Name>
+                <Events>
+                    <BasicEvent ID="557">
+                        <Name>BusCreator1.OFailure1</Name>
+                        <ShortName>OFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects>
+                            <Effect ID="2774">
+                                <Name>No_Pilot_Commands</Name>
+                                <SinglePointFailure>false</SinglePointFailure>
+                            </Effect>
+                            <Effect ID="2855">
+                                <Name>Value_Pilot_Commands</Name>
+                                <SinglePointFailure>false</SinglePointFailure>
+                            </Effect>
+                        </Effects>
+                    </BasicEvent>
+                    <BasicEvent ID="558">
+                        <Name>BusCreator1.VFailure1</Name>
+                        <ShortName>VFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects>
+                            <Effect ID="2855">
+                                <Name>Value_Pilot_Commands</Name>
+                                <SinglePointFailure>false</SinglePointFailure>
+                            </Effect>
+                        </Effects>
+                    </BasicEvent>
+                </Events>
+            </Component>
+            <Component>
+                <Name>BusCreator2</Name>
+                <Events>
+                    <BasicEvent ID="583">
+                        <Name>BusCreator2.OFailure1</Name>
+                        <ShortName>OFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="584">
+                        <Name>BusCreator2.VFailure1</Name>
+                        <ShortName>VFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                </Events>
+            </Component>
+            <Component>
+                <Name>BusCreator3</Name>
+                <Events>
+                    <BasicEvent ID="621">
+                        <Name>BusCreator3.OFailure1</Name>
+                        <ShortName>OFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects>
+                            <Effect ID="2774">
+                                <Name>No_Pilot_Commands</Name>
+                                <SinglePointFailure>false</SinglePointFailure>
+                            </Effect>
+                            <Effect ID="2855">
+                                <Name>Value_Pilot_Commands</Name>
+                                <SinglePointFailure>false</SinglePointFailure>
+                            </Effect>
+                        </Effects>
+                    </BasicEvent>
+                    <BasicEvent ID="622">
+                        <Name>BusCreator3.VFailure1</Name>
+                        <ShortName>VFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                </Events>
+            </Component>
+            <Component>
+                <Name>BusCreator4</Name>
+                <Events>
+                    <BasicEvent ID="645">
+                        <Name>BusCreator4.OFailure1</Name>
+                        <ShortName>OFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects>
+                            <Effect ID="2774">
+                                <Name>No_Pilot_Commands</Name>
+                                <SinglePointFailure>false</SinglePointFailure>
+                            </Effect>
+                            <Effect ID="2855">
+                                <Name>Value_Pilot_Commands</Name>
+                                <SinglePointFailure>false</SinglePointFailure>
+                            </Effect>
+                        </Effects>
+                    </BasicEvent>
+                    <BasicEvent ID="646">
+                        <Name>BusCreator4.VFailure1</Name>
+                        <ShortName>VFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                </Events>
+            </Component>
+            <Component>
+                <Name>CommandSwitch</Name>
+                <Events>
+                    <BasicEvent ID="667">
+                        <Name>CommandSwitch.OFailure1</Name>
+                        <ShortName>OFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="668">
+                        <Name>CommandSwitch.VFailure1</Name>
+                        <ShortName>VFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                </Events>
+            </Component>
+            <Component>
+                <Name>FailSafeController</Name>
+                <Events>
+                    <BasicEvent ID="691">
+                        <Name>FailSafeController.OFailure1</Name>
+                        <ShortName>OFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects>
+                            <Effect ID="2774">
+                                <Name>No_Pilot_Commands</Name>
+                                <SinglePointFailure>false</SinglePointFailure>
+                            </Effect>
+                        </Effects>
+                    </BasicEvent>
+                    <BasicEvent ID="692">
+                        <Name>FailSafeController.VFailure1</Name>
+                        <ShortName>VFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects>
+                            <Effect ID="2855">
+                                <Name>Value_Pilot_Commands</Name>
+                                <SinglePointFailure>false</SinglePointFailure>
+                            </Effect>
+                        </Effects>
+                    </BasicEvent>
+                </Events>
+            </Component>
+            <Component>
+                <Name>FlightControlMixer</Name>
+                <Events>
+                    <BasicEvent ID="717">
+                        <Name>FlightControlMixer.OFailure1</Name>
+                        <ShortName>OFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects>
+                            <Effect ID="2774">
+                                <Name>No_Pilot_Commands</Name>
+                                <SinglePointFailure>false</SinglePointFailure>
+                            </Effect>
+                        </Effects>
+                    </BasicEvent>
+                    <BasicEvent ID="718">
+                        <Name>FlightControlMixer.VFailure1</Name>
+                        <ShortName>VFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                </Events>
+            </Component>
+            <Component>
+                <Name>FlightStabilizer</Name>
+                <Events>
+                    <BasicEvent ID="743">
+                        <Name>FlightStabilizer.OFailure1</Name>
+                        <ShortName>OFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="744">
+                        <Name>FlightStabilizer.VFailure1</Name>
+                        <ShortName>VFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                </Events>
+            </Component>
+            <Component>
+                <Name>FlightStabilizer.AltitudeController</Name>
+                <Events>
+                    <BasicEvent ID="773">
+                        <Name>FlightStabilizer.AltitudeController.OFailure1</Name>
+                        <ShortName>OFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="774">
+                        <Name>FlightStabilizer.AltitudeController.VFailure1</Name>
+                        <ShortName>VFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                </Events>
+            </Component>
+            <Component>
+                <Name>IMUSensor</Name>
+                <Events>
+                    <BasicEvent ID="802">
+                        <Name>IMUSensor.OFailure1</Name>
+                        <ShortName>OFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects>
+                            <Effect ID="2774">
+                                <Name>No_Pilot_Commands</Name>
+                                <SinglePointFailure>false</SinglePointFailure>
+                            </Effect>
+                            <Effect ID="2855">
+                                <Name>Value_Pilot_Commands</Name>
+                                <SinglePointFailure>false</SinglePointFailure>
+                            </Effect>
+                        </Effects>
+                    </BasicEvent>
+                    <BasicEvent ID="803">
+                        <Name>IMUSensor.VFailure1</Name>
+                        <ShortName>VFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="804">
+                        <Name>IMUSensor.OFailure2</Name>
+                        <ShortName>OFailure2</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects>
+                            <Effect ID="2774">
+                                <Name>No_Pilot_Commands</Name>
+                                <SinglePointFailure>false</SinglePointFailure>
+                            </Effect>
+                            <Effect ID="2855">
+                                <Name>Value_Pilot_Commands</Name>
+                                <SinglePointFailure>false</SinglePointFailure>
+                            </Effect>
+                        </Effects>
+                    </BasicEvent>
+                    <BasicEvent ID="805">
+                        <Name>IMUSensor.VFailure2</Name>
+                        <ShortName>VFailure2</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                </Events>
+            </Component>
+            <Component>
+                <Name>ModeSwitcher</Name>
+                <Events>
+                    <BasicEvent ID="814">
+                        <Name>ModeSwitcher.OFailure1</Name>
+                        <ShortName>OFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="815">
+                        <Name>ModeSwitcher.OFailure2</Name>
+                        <ShortName>OFailure2</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects>
+                            <Effect ID="2774">
+                                <Name>No_Pilot_Commands</Name>
+                                <SinglePointFailure>false</SinglePointFailure>
+                            </Effect>
+                        </Effects>
+                    </BasicEvent>
+                    <BasicEvent ID="816">
+                        <Name>ModeSwitcher.VFailure1</Name>
+                        <ShortName>VFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="817">
+                        <Name>ModeSwitcher.VFailure2</Name>
+                        <ShortName>VFailure2</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects>
+                            <Effect ID="2855">
+                                <Name>Value_Pilot_Commands</Name>
+                                <SinglePointFailure>false</SinglePointFailure>
+                            </Effect>
+                        </Effects>
+                    </BasicEvent>
+                </Events>
+            </Component>
+            <Component>
+                <Name>ModeSwitcher.Constant</Name>
+                <Events>
+                    <BasicEvent ID="846">
+                        <Name>ModeSwitcher.Constant.OFailure1</Name>
+                        <ShortName>OFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="847">
+                        <Name>ModeSwitcher.Constant.VFailure1</Name>
+                        <ShortName>VFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                </Events>
+            </Component>
+            <Component>
+                <Name>ModeSwitcher.Constant1</Name>
+                <Events>
+                    <BasicEvent ID="852">
+                        <Name>ModeSwitcher.Constant1.OFailure1</Name>
+                        <ShortName>OFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="853">
+                        <Name>ModeSwitcher.Constant1.VFailure1</Name>
+                        <ShortName>VFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                </Events>
+            </Component>
+            <Component>
+                <Name>ModeSwitcher.MultiportSwitch</Name>
+                <Events>
+                    <BasicEvent ID="858">
+                        <Name>ModeSwitcher.MultiportSwitch.OFailure1</Name>
+                        <ShortName>OFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="859">
+                        <Name>ModeSwitcher.MultiportSwitch.VFailure1</Name>
+                        <ShortName>VFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                </Events>
+            </Component>
+            <Component>
+                <Name>ModeSwitcher.MultiportSwitch1</Name>
+                <Events>
+                    <BasicEvent ID="892">
+                        <Name>ModeSwitcher.MultiportSwitch1.OFailure1</Name>
+                        <ShortName>OFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="893">
+                        <Name>ModeSwitcher.MultiportSwitch1.VFailure1</Name>
+                        <ShortName>VFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                </Events>
+            </Component>
+            <Component>
+                <Name>ModeSwitcher.MultiportSwitch2</Name>
+                <Events>
+                    <BasicEvent ID="926">
+                        <Name>ModeSwitcher.MultiportSwitch2.OFailure1</Name>
+                        <ShortName>OFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects>
+                            <Effect ID="2774">
+                                <Name>No_Pilot_Commands</Name>
+                                <SinglePointFailure>false</SinglePointFailure>
+                            </Effect>
+                        </Effects>
+                    </BasicEvent>
+                    <BasicEvent ID="927">
+                        <Name>ModeSwitcher.MultiportSwitch2.VFailure1</Name>
+                        <ShortName>VFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects>
+                            <Effect ID="2855">
+                                <Name>Value_Pilot_Commands</Name>
+                                <SinglePointFailure>false</SinglePointFailure>
+                            </Effect>
+                        </Effects>
+                    </BasicEvent>
+                </Events>
+            </Component>
+            <Component>
+                <Name>ModeSwitcher.MultiportSwitch3</Name>
+                <Events>
+                    <BasicEvent ID="960">
+                        <Name>ModeSwitcher.MultiportSwitch3.OFailure1</Name>
+                        <ShortName>OFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="961">
+                        <Name>ModeSwitcher.MultiportSwitch3.VFailure1</Name>
+                        <ShortName>VFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                </Events>
+            </Component>
+            <Component>
+                <Name>NavigationSubsystem</Name>
+                <Events>
+                    <BasicEvent ID="1012">
+                        <Name>NavigationSubsystem.OFailure1</Name>
+                        <ShortName>OFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="1013">
+                        <Name>NavigationSubsystem.OFailure2</Name>
+                        <ShortName>OFailure2</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="1014">
+                        <Name>NavigationSubsystem.OFailure3</Name>
+                        <ShortName>OFailure3</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="1015">
+                        <Name>NavigationSubsystem.OFailure4</Name>
+                        <ShortName>OFailure4</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="1016">
+                        <Name>NavigationSubsystem.VFailure1</Name>
+                        <ShortName>VFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="1017">
+                        <Name>NavigationSubsystem.VFailure2</Name>
+                        <ShortName>VFailure2</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="1018">
+                        <Name>NavigationSubsystem.VFailure3</Name>
+                        <ShortName>VFailure3</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="1019">
+                        <Name>NavigationSubsystem.VFailure4</Name>
+                        <ShortName>VFailure4</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                </Events>
+            </Component>
+            <Component>
+                <Name>PWMDecoder</Name>
+                <Events>
+                    <BasicEvent ID="1036">
+                        <Name>PWMDecoder.OFailure1</Name>
+                        <ShortName>OFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects>
+                            <Effect ID="2774">
+                                <Name>No_Pilot_Commands</Name>
+                                <SinglePointFailure>false</SinglePointFailure>
+                            </Effect>
+                        </Effects>
+                    </BasicEvent>
+                    <BasicEvent ID="1037">
+                        <Name>PWMDecoder.OFailure2</Name>
+                        <ShortName>OFailure2</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects>
+                            <Effect ID="2774">
+                                <Name>No_Pilot_Commands</Name>
+                                <SinglePointFailure>false</SinglePointFailure>
+                            </Effect>
+                            <Effect ID="2855">
+                                <Name>Value_Pilot_Commands</Name>
+                                <SinglePointFailure>false</SinglePointFailure>
+                            </Effect>
+                        </Effects>
+                    </BasicEvent>
+                    <BasicEvent ID="1038">
+                        <Name>PWMDecoder.VFailure1</Name>
+                        <ShortName>VFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects>
+                            <Effect ID="2855">
+                                <Name>Value_Pilot_Commands</Name>
+                                <SinglePointFailure>false</SinglePointFailure>
+                            </Effect>
+                        </Effects>
+                    </BasicEvent>
+                    <BasicEvent ID="1039">
+                        <Name>PWMDecoder.VFailure2</Name>
+                        <ShortName>VFailure2</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects>
+                            <Effect ID="2855">
+                                <Name>Value_Pilot_Commands</Name>
+                                <SinglePointFailure>false</SinglePointFailure>
+                            </Effect>
+                        </Effects>
+                    </BasicEvent>
+                </Events>
+            </Component>
+            <Component>
+                <Name>PWMDecoder.BusCreatorX</Name>
+                <Events>
+                    <BasicEvent ID="1068">
+                        <Name>PWMDecoder.BusCreatorX.OFailure1</Name>
+                        <ShortName>OFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects>
+                            <Effect ID="2774">
+                                <Name>No_Pilot_Commands</Name>
+                                <SinglePointFailure>false</SinglePointFailure>
+                            </Effect>
+                        </Effects>
+                    </BasicEvent>
+                    <BasicEvent ID="1069">
+                        <Name>PWMDecoder.BusCreatorX.VFailure1</Name>
+                        <ShortName>VFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects>
+                            <Effect ID="2855">
+                                <Name>Value_Pilot_Commands</Name>
+                                <SinglePointFailure>false</SinglePointFailure>
+                            </Effect>
+                        </Effects>
+                    </BasicEvent>
+                </Events>
+            </Component>
+            <Component>
+                <Name>PWMDecoder.Demux1</Name>
+                <Events>
+                    <BasicEvent ID="1102">
+                        <Name>PWMDecoder.Demux1.OFailure1</Name>
+                        <ShortName>OFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="1103">
+                        <Name>PWMDecoder.Demux1.OFailure2</Name>
+                        <ShortName>OFailure2</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="1104">
+                        <Name>PWMDecoder.Demux1.OFailure3</Name>
+                        <ShortName>OFailure3</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="1105">
+                        <Name>PWMDecoder.Demux1.VFailure1</Name>
+                        <ShortName>VFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="1106">
+                        <Name>PWMDecoder.Demux1.VFailure2</Name>
+                        <ShortName>VFailure2</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="1107">
+                        <Name>PWMDecoder.Demux1.VFailure3</Name>
+                        <ShortName>VFailure3</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                </Events>
+            </Component>
+            <Component>
+                <Name>PWMEncoder</Name>
+                <Events>
+                    <BasicEvent ID="1176">
+                        <Name>PWMEncoder.OFailure1</Name>
+                        <ShortName>OFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="1177">
+                        <Name>PWMEncoder.VFailure1</Name>
+                        <ShortName>VFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                </Events>
+            </Component>
+            <Component>
+                <Name>PWMEncoder.FourWayLeverSmoothing</Name>
+                <Events>
+                    <BasicEvent ID="1194">
+                        <Name>PWMEncoder.FourWayLeverSmoothing.OFailure1</Name>
+                        <ShortName>OFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="1195">
+                        <Name>PWMEncoder.FourWayLeverSmoothing.VFailure1</Name>
+                        <ShortName>VFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                </Events>
+            </Component>
+            <Component>
+                <Name>PWMEncoder.FourWayLeverSmoothing.LeverSmoothing</Name>
+                <Events>
+                    <BasicEvent ID="1208">
+                        <Name>PWMEncoder.FourWayLeverSmoothing.LeverSmoothing.OFailure1</Name>
+                        <ShortName>OFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="1209">
+                        <Name>PWMEncoder.FourWayLeverSmoothing.LeverSmoothing.VFailure1</Name>
+                        <ShortName>VFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                </Events>
+            </Component>
+            <Component>
+                <Name>PWMEncoder.FourWayLeverSmoothing.LeverSmoothing2</Name>
+                <Events>
+                    <BasicEvent ID="1222">
+                        <Name>PWMEncoder.FourWayLeverSmoothing.LeverSmoothing2.OFailure1</Name>
+                        <ShortName>OFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="1223">
+                        <Name>PWMEncoder.FourWayLeverSmoothing.LeverSmoothing2.VFailure1</Name>
+                        <ShortName>VFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                </Events>
+            </Component>
+            <Component>
+                <Name>PWMEncoder.FourWayLeverSmoothing.LeverSmoothing3</Name>
+                <Events>
+                    <BasicEvent ID="1236">
+                        <Name>PWMEncoder.FourWayLeverSmoothing.LeverSmoothing3.OFailure1</Name>
+                        <ShortName>OFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="1237">
+                        <Name>PWMEncoder.FourWayLeverSmoothing.LeverSmoothing3.VFailure1</Name>
+                        <ShortName>VFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                </Events>
+            </Component>
+            <Component>
+                <Name>PWMEncoder.FourWayLeverSmoothing.LeverSmothing1</Name>
+                <Events>
+                    <BasicEvent ID="1250">
+                        <Name>PWMEncoder.FourWayLeverSmoothing.LeverSmothing1.OFailure1</Name>
+                        <ShortName>OFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="1251">
+                        <Name>PWMEncoder.FourWayLeverSmoothing.LeverSmothing1.VFailure1</Name>
+                        <ShortName>VFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                </Events>
+            </Component>
+            <Component>
+                <Name>PilotJoystick</Name>
+                <Events>
+                    <BasicEvent ID="1276">
+                        <Name>PilotJoystick.OFailure1</Name>
+                        <ShortName>OFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects>
+                            <Effect ID="2774">
+                                <Name>No_Pilot_Commands</Name>
+                                <SinglePointFailure>false</SinglePointFailure>
+                            </Effect>
+                            <Effect ID="2855">
+                                <Name>Value_Pilot_Commands</Name>
+                                <SinglePointFailure>false</SinglePointFailure>
+                            </Effect>
+                        </Effects>
+                    </BasicEvent>
+                    <BasicEvent ID="1277">
+                        <Name>PilotJoystick.OFailure2</Name>
+                        <ShortName>OFailure2</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects>
+                            <Effect ID="2774">
+                                <Name>No_Pilot_Commands</Name>
+                                <SinglePointFailure>false</SinglePointFailure>
+                            </Effect>
+                            <Effect ID="2855">
+                                <Name>Value_Pilot_Commands</Name>
+                                <SinglePointFailure>false</SinglePointFailure>
+                            </Effect>
+                        </Effects>
+                    </BasicEvent>
+                    <BasicEvent ID="1278">
+                        <Name>PilotJoystick.VFailure1</Name>
+                        <ShortName>VFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects>
+                            <Effect ID="2855">
+                                <Name>Value_Pilot_Commands</Name>
+                                <SinglePointFailure>false</SinglePointFailure>
+                            </Effect>
+                        </Effects>
+                    </BasicEvent>
+                    <BasicEvent ID="1279">
+                        <Name>PilotJoystick.VFailure2</Name>
+                        <ShortName>VFailure2</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects>
+                            <Effect ID="2855">
+                                <Name>Value_Pilot_Commands</Name>
+                                <SinglePointFailure>false</SinglePointFailure>
+                            </Effect>
+                        </Effects>
+                    </BasicEvent>
+                </Events>
+            </Component>
+            <Component>
+                <Name>PressureeSensor</Name>
+                <Events>
+                    <BasicEvent ID="1288">
+                        <Name>PressureeSensor.OFailure1</Name>
+                        <ShortName>OFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects>
+                            <Effect ID="2774">
+                                <Name>No_Pilot_Commands</Name>
+                                <SinglePointFailure>false</SinglePointFailure>
+                            </Effect>
+                            <Effect ID="2855">
+                                <Name>Value_Pilot_Commands</Name>
+                                <SinglePointFailure>false</SinglePointFailure>
+                            </Effect>
+                        </Effects>
+                    </BasicEvent>
+                    <BasicEvent ID="1289">
+                        <Name>PressureeSensor.OFailure2</Name>
+                        <ShortName>OFailure2</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects>
+                            <Effect ID="2774">
+                                <Name>No_Pilot_Commands</Name>
+                                <SinglePointFailure>false</SinglePointFailure>
+                            </Effect>
+                            <Effect ID="2855">
+                                <Name>Value_Pilot_Commands</Name>
+                                <SinglePointFailure>false</SinglePointFailure>
+                            </Effect>
+                        </Effects>
+                    </BasicEvent>
+                    <BasicEvent ID="1290">
+                        <Name>PressureeSensor.VFailure1</Name>
+                        <ShortName>VFailure1</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                    <BasicEvent ID="1291">
+                        <Name>PressureeSensor.VFailure2</Name>
+                        <ShortName>VFailure2</ShortName>
+                        <Description/>
+                        <Unavailability>0</Unavailability>
+                        <Effects/>
+                    </BasicEvent>
+                </Events>
+            </Component>
+        </FMEA>
+        <FaultTree ID="2774">
+            <Name>No_Pilot_Commands</Name>
+            <Description/>
+            <SIL>4</SIL>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Severity>0</Severity>
+            <OutputDeviation>
+                <Name>No_Pilot_Commands</Name>
+                <Children>
+                    <Or ID="2774">
+                        <Name>No_Pilot_Commands</Name>
+                        <Children>
+                            <And ID="2775">
+                                <Name>AND</Name>
+                                <Children>
+                                    <Or ID="1042">
+                                        <Name>Omission-PWMDecoder.FlightControls</Name>
+                                        <Children>
+                                            <Event ID="1036"/>
+                                            <Event ID="557"/>
+                                            <Event ID="1276"/>
+                                            <Event ID="1277"/>
+                                            <Event ID="1068"/>
+                                        </Children>
+                                    </Or>
+                                    <Or ID="826">
+                                        <Name>Omission-ModeSwitcher.ControlMode</Name>
+                                        <Children>
+                                            <Event ID="815"/>
+                                            <Event ID="1037"/>
+                                            <Event ID="557"/>
+                                            <Event ID="1276"/>
+                                            <Event ID="1277"/>
+                                            <Event ID="926"/>
+                                            <And ID="931">
+                                                <Name>AND [Omission-ModeSwitcher.MultiportSwitch2.DefaultOut1]</Name>
+                                                <Children>
+                                                    <Or ID="2789">
+                                                        <Name>OR [Omission-ModeSwitcher.PilotMode]</Name>
+                                                        <Children>
+                                                            <Event ID="1037"/>
+                                                            <Event ID="557"/>
+                                                            <Event ID="1276"/>
+                                                            <Event ID="1277"/>
+                                                        </Children>
+                                                    </Or>
+                                                    <Event ID="852"/>
+                                                    <Event ID="846"/>
+                                                </Children>
+                                            </And>
+                                        </Children>
+                                    </Or>
+                                    <Or ID="698">
+                                        <Name>Omission-FailSafeController.FilteredControls</Name>
+                                        <Children>
+                                            <Event ID="691"/>
+                                            <Event ID="717"/>
+                                            <And ID="722">
+                                                <Name>AND [Omission-FlightControlMixer.FlightControls]</Name>
+                                                <Children>
+                                                    <Or ID="2795">
+                                                        <Name>OR [Omission-Autopilot.HighLevelControls]</Name>
+                                                        <Children>
+                                                            <Event ID="27"/>
+                                                            <And ID="32">
+                                                                <Name>AND [Omission-Autopilot.HighLevelControls]</Name>
+                                                                <Children>
+                                                                    <Or ID="2796">
+                                                                        <Name>OR [Omission-AssistedModeSwitch.DefaultOut1]</Name>
+                                                                        <Children>
+                                                                            <Event ID="1"/>
+                                                                            <Event ID="814"/>
+                                                                            <Event ID="960"/>
+                                                                            <And ID="965">
+                                                                                <Name>AND [Omission-ModeSwitcher.MultiportSwitch3.DefaultOut1]</Name>
+                                                                                <Children>
+                                                                                    <Or ID="2799">
+                                                                                        <Name>OR [Omission-ModeSwitcher.PilotMode]</Name>
+                                                                                        <Children>
+                                                                                            <Event ID="1037"/>
+                                                                                            <Event ID="557"/>
+                                                                                            <Event ID="1276"/>
+                                                                                            <Event ID="1277"/>
+                                                                                        </Children>
+                                                                                    </Or>
+                                                                                    <Or ID="2800">
+                                                                                        <Name>OR [Omission-ModeSwitcher.MultiportSwitch1.DefaultOut1]</Name>
+                                                                                        <Children>
+                                                                                            <Event ID="892"/>
+                                                                                            <And ID="897">
+                                                                                                <Name>AND [Omission-ModeSwitcher.MultiportSwitch1.DefaultOut1]</Name>
+                                                                                                <Children>
+                                                                                                    <Or ID="2801">
+                                                                                                        <Name>OR [Omission-ModeSwitcher.PilotMode]</Name>
+                                                                                                        <Children>
+                                                                                                            <Event ID="1037"/>
+                                                                                                            <Event ID="557"/>
+                                                                                                            <Event ID="1276"/>
+                                                                                                            <Event ID="1277"/>
+                                                                                                        </Children>
+                                                                                                    </Or>
+                                                                                                    <Event ID="852"/>
+                                                                                                    <Event ID="846"/>
+                                                                                                </Children>
+                                                                                            </And>
+                                                                                        </Children>
+                                                                                    </Or>
+                                                                                    <Or ID="2802">
+                                                                                        <Name>OR [Omission-ModeSwitcher.MultiportSwitch.DefaultOut1]</Name>
+                                                                                        <Children>
+                                                                                            <Event ID="858"/>
+                                                                                            <And ID="863">
+                                                                                                <Name>AND [Omission-ModeSwitcher.MultiportSwitch.DefaultOut1]</Name>
+                                                                                                <Children>
+                                                                                                    <Or ID="2803">
+                                                                                                        <Name>OR [Omission-ModeSwitcher.NavSysMode]</Name>
+                                                                                                        <Children>
+                                                                                                            <Event ID="508"/>
+                                                                                                            <Event ID="583"/>
+                                                                                                            <Event ID="1012"/>
+                                                                                                            <Event ID="1013"/>
+                                                                                                            <Event ID="1014"/>
+                                                                                                            <Event ID="1015"/>
+                                                                                                            <Event ID="557"/>
+                                                                                                            <Event ID="1276"/>
+                                                                                                            <Event ID="1277"/>
+                                                                                                            <Event ID="535"/>
+                                                                                                            <Event ID="645"/>
+                                                                                                            <Event ID="802"/>
+                                                                                                            <Event ID="804"/>
+                                                                                                            <Event ID="621"/>
+                                                                                                            <Event ID="446"/>
+                                                                                                            <Event ID="1288"/>
+                                                                                                            <Event ID="1289"/>
+                                                                                                            <Event ID="447"/>
+                                                                                                            <Event ID="448"/>
+                                                                                                        </Children>
+                                                                                                    </Or>
+                                                                                                    <Event ID="852"/>
+                                                                                                    <Event ID="846"/>
+                                                                                                </Children>
+                                                                                            </And>
+                                                                                        </Children>
+                                                                                    </Or>
+                                                                                </Children>
+                                                                            </And>
+                                                                            <Event ID="743"/>
+                                                                            <Event ID="535"/>
+                                                                            <Event ID="645"/>
+                                                                            <Event ID="802"/>
+                                                                            <Event ID="804"/>
+                                                                            <Event ID="621"/>
+                                                                            <Event ID="446"/>
+                                                                            <Event ID="1288"/>
+                                                                            <Event ID="1289"/>
+                                                                            <Event ID="447"/>
+                                                                            <Event ID="448"/>
+                                                                            <Event ID="1036"/>
+                                                                            <Event ID="557"/>
+                                                                            <Event ID="1276"/>
+                                                                            <Event ID="1277"/>
+                                                                            <Event ID="1068"/>
+                                                                            <Event ID="773"/>
+                                                                        </Children>
+                                                                    </Or>
+                                                                    <Or ID="2810">
+                                                                        <Name>OR [Omission-BusCreator.DefaultOut1]</Name>
+                                                                        <Children>
+                                                                            <Event ID="535"/>
+                                                                            <Event ID="645"/>
+                                                                            <Event ID="802"/>
+                                                                            <Event ID="804"/>
+                                                                            <Event ID="621"/>
+                                                                            <Event ID="446"/>
+                                                                            <Event ID="1288"/>
+                                                                            <Event ID="1289"/>
+                                                                            <Event ID="447"/>
+                                                                            <Event ID="448"/>
+                                                                        </Children>
+                                                                    </Or>
+                                                                </Children>
+                                                            </And>
+                                                            <Event ID="53"/>
+                                                            <Event ID="293"/>
+                                                            <Event ID="237"/>
+                                                            <Event ID="87"/>
+                                                            <Event ID="139"/>
+                                                            <Event ID="535"/>
+                                                            <Event ID="645"/>
+                                                            <Event ID="802"/>
+                                                            <Event ID="804"/>
+                                                            <Event ID="621"/>
+                                                            <Event ID="446"/>
+                                                            <Event ID="1288"/>
+                                                            <Event ID="1289"/>
+                                                            <Event ID="447"/>
+                                                            <Event ID="448"/>
+                                                            <Event ID="1"/>
+                                                            <Event ID="814"/>
+                                                            <Event ID="960"/>
+                                                            <And ID="965">
+                                                                <Name>AND [Omission-ModeSwitcher.MultiportSwitch3.DefaultOut1]</Name>
+                                                                <Children>
+                                                                    <Or ID="2799">
+                                                                        <Name>OR [Omission-ModeSwitcher.PilotMode]</Name>
+                                                                        <Children>
+                                                                            <Event ID="1037"/>
+                                                                            <Event ID="557"/>
+                                                                            <Event ID="1276"/>
+                                                                            <Event ID="1277"/>
+                                                                        </Children>
+                                                                    </Or>
+                                                                    <Or ID="2800">
+                                                                        <Name>OR [Omission-ModeSwitcher.MultiportSwitch1.DefaultOut1]</Name>
+                                                                        <Children>
+                                                                            <Event ID="892"/>
+                                                                            <And ID="897">
+                                                                                <Name>AND [Omission-ModeSwitcher.MultiportSwitch1.DefaultOut1]</Name>
+                                                                                <Children>
+                                                                                    <Or ID="2801">
+                                                                                        <Name>OR [Omission-ModeSwitcher.PilotMode]</Name>
+                                                                                        <Children>
+                                                                                            <Event ID="1037"/>
+                                                                                            <Event ID="557"/>
+                                                                                            <Event ID="1276"/>
+                                                                                            <Event ID="1277"/>
+                                                                                        </Children>
+                                                                                    </Or>
+                                                                                    <Event ID="852"/>
+                                                                                    <Event ID="846"/>
+                                                                                </Children>
+                                                                            </And>
+                                                                        </Children>
+                                                                    </Or>
+                                                                    <Or ID="2802">
+                                                                        <Name>OR [Omission-ModeSwitcher.MultiportSwitch.DefaultOut1]</Name>
+                                                                        <Children>
+                                                                            <Event ID="858"/>
+                                                                            <And ID="863">
+                                                                                <Name>AND [Omission-ModeSwitcher.MultiportSwitch.DefaultOut1]</Name>
+                                                                                <Children>
+                                                                                    <Or ID="2803">
+                                                                                        <Name>OR [Omission-ModeSwitcher.NavSysMode]</Name>
+                                                                                        <Children>
+                                                                                            <Event ID="508"/>
+                                                                                            <Event ID="583"/>
+                                                                                            <Event ID="1012"/>
+                                                                                            <Event ID="1013"/>
+                                                                                            <Event ID="1014"/>
+                                                                                            <Event ID="1015"/>
+                                                                                            <Event ID="557"/>
+                                                                                            <Event ID="1276"/>
+                                                                                            <Event ID="1277"/>
+                                                                                            <Event ID="535"/>
+                                                                                            <Event ID="645"/>
+                                                                                            <Event ID="802"/>
+                                                                                            <Event ID="804"/>
+                                                                                            <Event ID="621"/>
+                                                                                            <Event ID="446"/>
+                                                                                            <Event ID="1288"/>
+                                                                                            <Event ID="1289"/>
+                                                                                            <Event ID="447"/>
+                                                                                            <Event ID="448"/>
+                                                                                        </Children>
+                                                                                    </Or>
+                                                                                    <Event ID="852"/>
+                                                                                    <Event ID="846"/>
+                                                                                </Children>
+                                                                            </And>
+                                                                        </Children>
+                                                                    </Or>
+                                                                </Children>
+                                                            </And>
+                                                            <Event ID="743"/>
+                                                            <Event ID="1036"/>
+                                                            <Event ID="557"/>
+                                                            <Event ID="1276"/>
+                                                            <Event ID="1277"/>
+                                                            <Event ID="1068"/>
+                                                            <Event ID="773"/>
+                                                            <Event ID="323"/>
+                                                            <Event ID="211"/>
+                                                            <Event ID="353"/>
+                                                            <Event ID="259"/>
+                                                            <Event ID="105"/>
+                                                            <Event ID="141"/>
+                                                            <Event ID="383"/>
+                                                            <Event ID="167"/>
+                                                            <Event ID="198"/>
+                                                            <Event ID="107"/>
+                                                        </Children>
+                                                    </Or>
+                                                    <Or ID="2810">
+                                                        <Name>OR [Omission-BusCreator.DefaultOut1]</Name>
+                                                        <Children>
+                                                            <Event ID="535"/>
+                                                            <Event ID="645"/>
+                                                            <Event ID="802"/>
+                                                            <Event ID="804"/>
+                                                            <Event ID="621"/>
+                                                            <Event ID="446"/>
+                                                            <Event ID="1288"/>
+                                                            <Event ID="1289"/>
+                                                            <Event ID="447"/>
+                                                            <Event ID="448"/>
+                                                        </Children>
+                                                    </Or>
+                                                </Children>
+                                            </And>
+                                            <Event ID="535"/>
+                                            <Event ID="645"/>
+                                            <Event ID="802"/>
+                                            <Event ID="804"/>
+                                            <Event ID="621"/>
+                                            <Event ID="446"/>
+                                            <Event ID="1288"/>
+                                            <Event ID="1289"/>
+                                            <Event ID="447"/>
+                                            <Event ID="448"/>
+                                        </Children>
+                                    </Or>
+                                </Children>
+                            </And>
+                        </Children>
+                    </Or>
+                </Children>
+            </OutputDeviation>
+            <CutSetsSummary>
+                <CutSets order="2" pruned="false">36</CutSets>
+                <CutSets order="3" pruned="false">72</CutSets>
+            </CutSetsSummary>
+        </FaultTree>
+        <FaultTree ID="2855">
+            <Name>Value_Pilot_Commands</Name>
+            <Description/>
+            <SIL>3</SIL>
+            <Unavailability>0</Unavailability>
+            <UnavailabilitySort>0.0</UnavailabilitySort>
+            <Severity>0</Severity>
+            <OutputDeviation>
+                <Name>Value_Pilot_Commands</Name>
+                <Children>
+                    <Or ID="2855">
+                        <Name>Value_Pilot_Commands</Name>
+                        <Children>
+                            <And ID="2856">
+                                <Name>AND</Name>
+                                <Children>
+                                    <Or ID="1054">
+                                        <Name>Value-PWMDecoder.FlightControls</Name>
+                                        <Children>
+                                            <Event ID="1038"/>
+                                            <Event ID="557"/>
+                                            <Event ID="1276"/>
+                                            <Event ID="1277"/>
+                                            <Event ID="558"/>
+                                            <Event ID="1278"/>
+                                            <Event ID="1279"/>
+                                            <Event ID="1069"/>
+                                        </Children>
+                                    </Or>
+                                    <Or ID="840">
+                                        <Name>Value-ModeSwitcher.ControlMode</Name>
+                                        <Children>
+                                            <Event ID="817"/>
+                                            <Event ID="1037"/>
+                                            <Event ID="557"/>
+                                            <Event ID="1276"/>
+                                            <Event ID="1277"/>
+                                            <Event ID="1039"/>
+                                            <Event ID="558"/>
+                                            <Event ID="1278"/>
+                                            <Event ID="1279"/>
+                                            <Event ID="927"/>
+                                            <And ID="947">
+                                                <Name>AND [Value-ModeSwitcher.MultiportSwitch2.DefaultOut1]</Name>
+                                                <Children>
+                                                    <Or ID="2870">
+                                                        <Name>OR [Value-ModeSwitcher.PilotMode]</Name>
+                                                        <Children>
+                                                            <Event ID="1039"/>
+                                                            <Event ID="557"/>
+                                                            <Event ID="1276"/>
+                                                            <Event ID="1277"/>
+                                                            <Event ID="558"/>
+                                                            <Event ID="1278"/>
+                                                            <Event ID="1279"/>
+                                                        </Children>
+                                                    </Or>
+                                                    <Event ID="853"/>
+                                                    <Event ID="847"/>
+                                                </Children>
+                                            </And>
+                                        </Children>
+                                    </Or>
+                                    <Or ID="710">
+                                        <Name>Value-FailSafeController.FilteredControls</Name>
+                                        <Children>
+                                            <Event ID="692"/>
+                                            <And ID="708">
+                                                <Name>AND [Value-FailSafeController.FilteredControls]</Name>
+                                                <Children>
+                                                    <Or ID="2875">
+                                                        <Name>OR [Value-FlightControlMixer.FlightControls]</Name>
+                                                        <Children>
+                                                            <Event ID="718"/>
+                                                            <Event ID="28"/>
+                                                            <Event ID="2"/>
+                                                            <Event ID="816"/>
+                                                            <Event ID="509"/>
+                                                            <Event ID="584"/>
+                                                            <Event ID="1016"/>
+                                                            <Event ID="1017"/>
+                                                            <Event ID="1018"/>
+                                                            <Event ID="1019"/>
+                                                            <Event ID="558"/>
+                                                            <Event ID="1278"/>
+                                                            <Event ID="1279"/>
+                                                            <Event ID="536"/>
+                                                            <Event ID="645"/>
+                                                            <Event ID="802"/>
+                                                            <Event ID="804"/>
+                                                            <Event ID="621"/>
+                                                            <Event ID="446"/>
+                                                            <Event ID="1288"/>
+                                                            <Event ID="1289"/>
+                                                            <Event ID="447"/>
+                                                            <Event ID="448"/>
+                                                            <Event ID="961"/>
+                                                            <And ID="981">
+                                                                <Name>AND [Value-ModeSwitcher.MultiportSwitch3.DefaultOut1]</Name>
+                                                                <Children>
+                                                                    <Or ID="2888">
+                                                                        <Name>OR [Value-ModeSwitcher.PilotMode]</Name>
+                                                                        <Children>
+                                                                            <Event ID="1039"/>
+                                                                            <Event ID="557"/>
+                                                                            <Event ID="1276"/>
+                                                                            <Event ID="1277"/>
+                                                                            <Event ID="558"/>
+                                                                            <Event ID="1278"/>
+                                                                            <Event ID="1279"/>
+                                                                        </Children>
+                                                                    </Or>
+                                                                    <Or ID="2889">
+                                                                        <Name>OR [Value-ModeSwitcher.MultiportSwitch1.DefaultOut1]</Name>
+                                                                        <Children>
+                                                                            <Event ID="893"/>
+                                                                            <And ID="913">
+                                                                                <Name>AND [Value-ModeSwitcher.MultiportSwitch1.DefaultOut1]</Name>
+                                                                                <Children>
+                                                                                    <Or ID="2890">
+                                                                                        <Name>OR [Value-ModeSwitcher.PilotMode]</Name>
+                                                                                        <Children>
+                                                                                            <Event ID="1039"/>
+                                                                                            <Event ID="557"/>
+                                                                                            <Event ID="1276"/>
+                                                                                            <Event ID="1277"/>
+                                                                                            <Event ID="558"/>
+                                                                                            <Event ID="1278"/>
+                                                                                            <Event ID="1279"/>
+                                                                                        </Children>
+                                                                                    </Or>
+                                                                                    <Event ID="853"/>
+                                                                                    <Event ID="847"/>
+                                                                                </Children>
+                                                                            </And>
+                                                                        </Children>
+                                                                    </Or>
+                                                                    <Or ID="2891">
+                                                                        <Name>OR [Value-ModeSwitcher.MultiportSwitch.DefaultOut1]</Name>
+                                                                        <Children>
+                                                                            <Event ID="859"/>
+                                                                            <And ID="879">
+                                                                                <Name>AND [Value-ModeSwitcher.MultiportSwitch.DefaultOut1]</Name>
+                                                                                <Children>
+                                                                                    <Or ID="2892">
+                                                                                        <Name>OR [Value-ModeSwitcher.NavSysMode]</Name>
+                                                                                        <Children>
+                                                                                            <Event ID="509"/>
+                                                                                            <Event ID="584"/>
+                                                                                            <Event ID="1016"/>
+                                                                                            <Event ID="1017"/>
+                                                                                            <Event ID="1018"/>
+                                                                                            <Event ID="1019"/>
+                                                                                            <Event ID="558"/>
+                                                                                            <Event ID="1278"/>
+                                                                                            <Event ID="1279"/>
+                                                                                            <Event ID="536"/>
+                                                                                            <Event ID="645"/>
+                                                                                            <Event ID="802"/>
+                                                                                            <Event ID="804"/>
+                                                                                            <Event ID="621"/>
+                                                                                            <Event ID="446"/>
+                                                                                            <Event ID="1288"/>
+                                                                                            <Event ID="1289"/>
+                                                                                            <Event ID="447"/>
+                                                                                            <Event ID="448"/>
+                                                                                        </Children>
+                                                                                    </Or>
+                                                                                    <Event ID="853"/>
+                                                                                    <Event ID="847"/>
+                                                                                </Children>
+                                                                            </And>
+                                                                        </Children>
+                                                                    </Or>
+                                                                </Children>
+                                                            </And>
+                                                            <Event ID="744"/>
+                                                            <Event ID="1038"/>
+                                                            <Event ID="557"/>
+                                                            <Event ID="1276"/>
+                                                            <Event ID="1277"/>
+                                                            <Event ID="1069"/>
+                                                            <Event ID="774"/>
+                                                            <Event ID="54"/>
+                                                            <Event ID="294"/>
+                                                            <Event ID="238"/>
+                                                            <Event ID="87"/>
+                                                            <Event ID="139"/>
+                                                            <Event ID="535"/>
+                                                            <Event ID="1"/>
+                                                            <Event ID="814"/>
+                                                            <Event ID="960"/>
+                                                            <And ID="965">
+                                                                <Name>AND [Omission-ModeSwitcher.MultiportSwitch3.DefaultOut1]</Name>
+                                                                <Children>
+                                                                    <Or ID="2799">
+                                                                        <Name>OR [Omission-ModeSwitcher.PilotMode]</Name>
+                                                                        <Children>
+                                                                            <Event ID="1037"/>
+                                                                            <Event ID="557"/>
+                                                                            <Event ID="1276"/>
+                                                                            <Event ID="1277"/>
+                                                                        </Children>
+                                                                    </Or>
+                                                                    <Or ID="2800">
+                                                                        <Name>OR [Omission-ModeSwitcher.MultiportSwitch1.DefaultOut1]</Name>
+                                                                        <Children>
+                                                                            <Event ID="892"/>
+                                                                            <And ID="897">
+                                                                                <Name>AND [Omission-ModeSwitcher.MultiportSwitch1.DefaultOut1]</Name>
+                                                                                <Children>
+                                                                                    <Or ID="2801">
+                                                                                        <Name>OR [Omission-ModeSwitcher.PilotMode]</Name>
+                                                                                        <Children>
+                                                                                            <Event ID="1037"/>
+                                                                                            <Event ID="557"/>
+                                                                                            <Event ID="1276"/>
+                                                                                            <Event ID="1277"/>
+                                                                                        </Children>
+                                                                                    </Or>
+                                                                                    <Event ID="852"/>
+                                                                                    <Event ID="846"/>
+                                                                                </Children>
+                                                                            </And>
+                                                                        </Children>
+                                                                    </Or>
+                                                                    <Or ID="2802">
+                                                                        <Name>OR [Omission-ModeSwitcher.MultiportSwitch.DefaultOut1]</Name>
+                                                                        <Children>
+                                                                            <Event ID="858"/>
+                                                                            <And ID="863">
+                                                                                <Name>AND [Omission-ModeSwitcher.MultiportSwitch.DefaultOut1]</Name>
+                                                                                <Children>
+                                                                                    <Or ID="2803">
+                                                                                        <Name>OR [Omission-ModeSwitcher.NavSysMode]</Name>
+                                                                                        <Children>
+                                                                                            <Event ID="508"/>
+                                                                                            <Event ID="583"/>
+                                                                                            <Event ID="1012"/>
+                                                                                            <Event ID="1013"/>
+                                                                                            <Event ID="1014"/>
+                                                                                            <Event ID="1015"/>
+                                                                                            <Event ID="557"/>
+                                                                                            <Event ID="1276"/>
+                                                                                            <Event ID="1277"/>
+                                                                                            <Event ID="535"/>
+                                                                                            <Event ID="645"/>
+                                                                                            <Event ID="802"/>
+                                                                                            <Event ID="804"/>
+                                                                                            <Event ID="621"/>
+                                                                                            <Event ID="446"/>
+                                                                                            <Event ID="1288"/>
+                                                                                            <Event ID="1289"/>
+                                                                                            <Event ID="447"/>
+                                                                                            <Event ID="448"/>
+                                                                                        </Children>
+                                                                                    </Or>
+                                                                                    <Event ID="852"/>
+                                                                                    <Event ID="846"/>
+                                                                                </Children>
+                                                                            </And>
+                                                                        </Children>
+                                                                    </Or>
+                                                                </Children>
+                                                            </And>
+                                                            <Event ID="743"/>
+                                                            <Event ID="1036"/>
+                                                            <Event ID="1068"/>
+                                                            <Event ID="773"/>
+                                                            <Event ID="324"/>
+                                                            <Event ID="212"/>
+                                                            <Event ID="88"/>
+                                                            <Event ID="140"/>
+                                                            <Event ID="354"/>
+                                                            <Event ID="260"/>
+                                                            <Event ID="108"/>
+                                                            <Event ID="142"/>
+                                                            <Event ID="384"/>
+                                                            <Event ID="168"/>
+                                                            <Event ID="197"/>
+                                                            <Event ID="110"/>
+                                                        </Children>
+                                                    </Or>
+                                                    <Or ID="2885">
+                                                        <Name>OR [Value-BusCreator.DefaultOut1]</Name>
+                                                        <Children>
+                                                            <Event ID="536"/>
+                                                            <Event ID="645"/>
+                                                            <Event ID="802"/>
+                                                            <Event ID="804"/>
+                                                            <Event ID="621"/>
+                                                            <Event ID="446"/>
+                                                            <Event ID="1288"/>
+                                                            <Event ID="1289"/>
+                                                            <Event ID="447"/>
+                                                            <Event ID="448"/>
+                                                        </Children>
+                                                    </Or>
+                                                </Children>
+                                            </And>
+                                        </Children>
+                                    </Or>
+                                </Children>
+                            </And>
+                        </Children>
+                    </Or>
+                </Children>
+            </OutputDeviation>
+            <CutSetsSummary>
+                <CutSets order="2" pruned="false">66</CutSets>
+                <CutSets order="3" pruned="false">88</CutSets>
+            </CutSetsSummary>
+        </FaultTree>
+    </FaultTrees>
+    <WarningList>
+        <Warning>Excessive number of warnings; displaying first 100 of 2302 only.</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Sum1.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Sum1.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Sum1.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Sum1.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Sum1.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Sum1.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Sum1.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Sum1.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Sum1.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Demux.DefaultOut3</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Sum1.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Sum1.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Sum1.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Demux.DefaultOut3</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Sum1.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Sum1.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Sum1.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Demux.DefaultOut3</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Sum1.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Sum1.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Sum1.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Demux.DefaultOut3</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Sum1.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Sum1.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Sum1.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Demux.DefaultOut3</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Sum1.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Sum1.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Sum1.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Demux.DefaultOut3</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Gain2.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Gain2.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Gain2.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Gain2.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Gain2.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Gain2.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Gain2.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Gain2.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Gain2.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Gain2.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Gain2.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected input deviation - Omission-ModeSwitcher.AssistedMode</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Gain2.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Gain2.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Gain2.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Gain2.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Gain2.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Gain2.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Gain2.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Gain2.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Gain2.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Gain2.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-BasicCommandProcessor.Constant.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-BasicCommandProcessor.Constant.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-BasicCommandProcessor.Constant.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-BasicCommandProcessor.Constant.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-BasicCommandProcessor.Constant.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-BasicCommandProcessor.Constant.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Gain2.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Gain2.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-BasicCommandProcessor.Constant.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Gain2.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Gain2.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-BasicCommandProcessor.Constant.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Gain2.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Gain2.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-BasicCommandProcessor.Constant.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected input deviation - Omission-ModeSwitcher.AssistedMode</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Gain2.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Gain2.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-BasicCommandProcessor.Constant.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Gain2.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Gain2.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-BasicCommandProcessor.Constant.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-Constant.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Sum1.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Sum1.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Sum1.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Demux.DefaultOut3</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Sum1.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Sum1.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Sum1.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Demux.DefaultOut3</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Sum1.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Sum1.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Sum1.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Demux.DefaultOut3</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Sum1.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Sum1.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Sum1.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Demux.DefaultOut3</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-Constant.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Sum1.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Sum1.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Sum1.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Demux.DefaultOut3</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Sum1.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Sum1.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Sum1.DefaultOut1</Warning>
+        <Warning>Warning: removing unconnected line node leading to - Omission-PWMDecoder.Demux.DefaultOut3</Warning>
+    </WarningList>
+    <SafetyAllocations>
+        <ModelFileName>TiribaFlightControl</ModelFileName>
+        <RandomSeed>1427818480</RandomSeed>
+        <Generation>1000</Generation>
+        <EncodingType>FixedEncoding</EncodingType>
+        <TimeElapsed>6</TimeElapsed>
+        <Objectives>
+            <Objective>
+                <Name>ASILCost</Name>
+                <Goal>Minimize</Goal>
+            </Objective>
+            <Objective>
+                <Name>ASILInvalids</Name>
+                <Goal>Minimize</Goal>
+            </Objective>
+        </Objectives>
+        <Population>
+            <Individual>
+                <IndividualID>1</IndividualID>
+                <Encoding>
+                    <TreeASILEncoding>
+                        <EncodingNode>
+                            <Component>
+                                <ShortName>AssistedModeSwitch</ShortName>
+                                <FullName>AssistedModeSwitch</FullName>
+                                <BasicEvents>
+                                    <BasicEvent>
+                                        <Name>AssistedModeSwitch.OFailure1</Name>
+                                        <ID>1</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>AssistedModeSwitch.VFailure1</Name>
+                                        <ID>2</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                </BasicEvents>
+                            </Component>
+                        </EncodingNode>
+                        <EncodingNode>
+                            <Component>
+                                <ShortName>Autopilot</ShortName>
+                                <FullName>Autopilot</FullName>
+                                <BasicEvents>
+                                    <BasicEvent>
+                                        <Name>Autopilot.OFailure1</Name>
+                                        <ID>27</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>Autopilot.VFailure1</Name>
+                                        <ID>28</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                </BasicEvents>
+                            </Component>
+                        </EncodingNode>
+                        <EncodingNode>
+                            <Component>
+                                <ShortName>Autopilot.BusCreator</ShortName>
+                                <FullName>Autopilot.BusCreator</FullName>
+                                <BasicEvents>
+                                    <BasicEvent>
+                                        <Name>Autopilot.BusCreator.OFailure1</Name>
+                                        <ID>53</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>Autopilot.BusCreator.VFailure1</Name>
+                                        <ID>54</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                </BasicEvents>
+                            </Component>
+                        </EncodingNode>
+                        <EncodingNode>
+                            <Component>
+                                <ShortName>Autopilot.BusSelector2</ShortName>
+                                <FullName>Autopilot.BusSelector2</FullName>
+                                <BasicEvents>
+                                    <BasicEvent>
+                                        <Name>Autopilot.BusSelector2.OFailure1</Name>
+                                        <ID>87</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>Autopilot.BusSelector2.VFailure1</Name>
+                                        <ID>88</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                </BasicEvents>
+                            </Component>
+                        </EncodingNode>
+                        <EncodingNode>
+                            <Component>
+                                <ShortName>Autopilot.BusSelector3</ShortName>
+                                <FullName>Autopilot.BusSelector3</FullName>
+                                <BasicEvents>
+                                    <BasicEvent>
+                                        <Name>Autopilot.BusSelector3.OFailure1</Name>
+                                        <ID>105</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>Autopilot.BusSelector3.OFailure2</Name>
+                                        <ID>106</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>Autopilot.BusSelector3.OFailure3</Name>
+                                        <ID>107</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>Autopilot.BusSelector3.VFailure1</Name>
+                                        <ID>108</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>Autopilot.BusSelector3.VFailure2</Name>
+                                        <ID>109</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>Autopilot.BusSelector3.VFailure3</Name>
+                                        <ID>110</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                </BasicEvents>
+                            </Component>
+                        </EncodingNode>
+                        <EncodingNode>
+                            <Component>
+                                <ShortName>Autopilot.BusSelector4</ShortName>
+                                <FullName>Autopilot.BusSelector4</FullName>
+                                <BasicEvents>
+                                    <BasicEvent>
+                                        <Name>Autopilot.BusSelector4.OFailure1</Name>
+                                        <ID>139</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>Autopilot.BusSelector4.VFailure1</Name>
+                                        <ID>140</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>Autopilot.BusSelector4.OFailure2</Name>
+                                        <ID>141</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>Autopilot.BusSelector4.VFailure2</Name>
+                                        <ID>142</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                </BasicEvents>
+                            </Component>
+                        </EncodingNode>
+                        <EncodingNode>
+                            <Component>
+                                <ShortName>Autopilot.ClimbController</ShortName>
+                                <FullName>Autopilot.ClimbController</FullName>
+                                <BasicEvents>
+                                    <BasicEvent>
+                                        <Name>Autopilot.ClimbController.OFailure1</Name>
+                                        <ID>167</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>Autopilot.ClimbController.VFailure1</Name>
+                                        <ID>168</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                </BasicEvents>
+                            </Component>
+                        </EncodingNode>
+                        <EncodingNode>
+                            <Component>
+                                <ShortName>Autopilot.EmbeddedMATLABFunction</ShortName>
+                                <FullName>Autopilot.EmbeddedMATLABFunction</FullName>
+                                <BasicEvents>
+                                    <BasicEvent>
+                                        <Name>Autopilot.EmbeddedMATLABFunction.VFailure1</Name>
+                                        <ID>197</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>Autopilot.EmbeddedMATLABFunction.OFailure1</Name>
+                                        <ID>198</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                </BasicEvents>
+                            </Component>
+                        </EncodingNode>
+                        <EncodingNode>
+                            <Component>
+                                <ShortName>Autopilot.PitchController</ShortName>
+                                <FullName>Autopilot.PitchController</FullName>
+                                <BasicEvents>
+                                    <BasicEvent>
+                                        <Name>Autopilot.PitchController.OFailure1</Name>
+                                        <ID>211</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>Autopilot.PitchController.VFailure1</Name>
+                                        <ID>212</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                </BasicEvents>
+                            </Component>
+                        </EncodingNode>
+                        <EncodingNode>
+                            <Component>
+                                <ShortName>Autopilot.RollController</ShortName>
+                                <FullName>Autopilot.RollController</FullName>
+                                <BasicEvents>
+                                    <BasicEvent>
+                                        <Name>Autopilot.RollController.OFailure1</Name>
+                                        <ID>237</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>Autopilot.RollController.VFailure1</Name>
+                                        <ID>238</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                </BasicEvents>
+                            </Component>
+                        </EncodingNode>
+                        <EncodingNode>
+                            <Component>
+                                <ShortName>Autopilot.SpeedController</ShortName>
+                                <FullName>Autopilot.SpeedController</FullName>
+                                <BasicEvents>
+                                    <BasicEvent>
+                                        <Name>Autopilot.SpeedController.OFailure1</Name>
+                                        <ID>259</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>Autopilot.SpeedController.VFailure1</Name>
+                                        <ID>260</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                </BasicEvents>
+                            </Component>
+                        </EncodingNode>
+                        <EncodingNode>
+                            <Component>
+                                <ShortName>Autopilot.Switch</ShortName>
+                                <FullName>Autopilot.Switch</FullName>
+                                <BasicEvents>
+                                    <BasicEvent>
+                                        <Name>Autopilot.Switch.OFailure1</Name>
+                                        <ID>293</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>Autopilot.Switch.VFailure1</Name>
+                                        <ID>294</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                </BasicEvents>
+                            </Component>
+                        </EncodingNode>
+                        <EncodingNode>
+                            <Component>
+                                <ShortName>Autopilot.Switch1</ShortName>
+                                <FullName>Autopilot.Switch1</FullName>
+                                <BasicEvents>
+                                    <BasicEvent>
+                                        <Name>Autopilot.Switch1.OFailure1</Name>
+                                        <ID>323</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>Autopilot.Switch1.VFailure1</Name>
+                                        <ID>324</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                </BasicEvents>
+                            </Component>
+                        </EncodingNode>
+                        <EncodingNode>
+                            <Component>
+                                <ShortName>Autopilot.Switch2</ShortName>
+                                <FullName>Autopilot.Switch2</FullName>
+                                <BasicEvents>
+                                    <BasicEvent>
+                                        <Name>Autopilot.Switch2.OFailure1</Name>
+                                        <ID>353</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>Autopilot.Switch2.VFailure1</Name>
+                                        <ID>354</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                </BasicEvents>
+                            </Component>
+                        </EncodingNode>
+                        <EncodingNode>
+                            <Component>
+                                <ShortName>Autopilot.Switch3</ShortName>
+                                <FullName>Autopilot.Switch3</FullName>
+                                <BasicEvents>
+                                    <BasicEvent>
+                                        <Name>Autopilot.Switch3.OFailure1</Name>
+                                        <ID>383</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>Autopilot.Switch3.VFailure1</Name>
+                                        <ID>384</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                </BasicEvents>
+                            </Component>
+                        </EncodingNode>
+                        <EncodingNode>
+                            <Component>
+                                <ShortName>BarometricProcessor</ShortName>
+                                <FullName>BarometricProcessor</FullName>
+                                <BasicEvents>
+                                    <BasicEvent>
+                                        <Name>BarometricProcessor.OFailure1</Name>
+                                        <ID>446</ID>
+                                        <SafetyRequirement>2</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>BarometricProcessor.OFailure2</Name>
+                                        <ID>447</ID>
+                                        <SafetyRequirement>2</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>BarometricProcessor.OFailure3</Name>
+                                        <ID>448</ID>
+                                        <SafetyRequirement>2</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>BarometricProcessor.VFailure1</Name>
+                                        <ID>449</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>BarometricProcessor.VFailure2</Name>
+                                        <ID>450</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>BarometricProcessor.VFailure3</Name>
+                                        <ID>451</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                </BasicEvents>
+                            </Component>
+                        </EncodingNode>
+                        <EncodingNode>
+                            <Component>
+                                <ShortName>BasicCommandProcessor</ShortName>
+                                <FullName>BasicCommandProcessor</FullName>
+                                <BasicEvents>
+                                    <BasicEvent>
+                                        <Name>BasicCommandProcessor.OFailure1</Name>
+                                        <ID>508</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>BasicCommandProcessor.VFailure1</Name>
+                                        <ID>509</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                </BasicEvents>
+                            </Component>
+                        </EncodingNode>
+                        <EncodingNode>
+                            <Component>
+                                <ShortName>BusCreator</ShortName>
+                                <FullName>BusCreator</FullName>
+                                <BasicEvents>
+                                    <BasicEvent>
+                                        <Name>BusCreator.OFailure1</Name>
+                                        <ID>535</ID>
+                                        <SafetyRequirement>3</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>BusCreator.VFailure1</Name>
+                                        <ID>536</ID>
+                                        <SafetyRequirement>2</SafetyRequirement>
+                                    </BasicEvent>
+                                </BasicEvents>
+                            </Component>
+                        </EncodingNode>
+                        <EncodingNode>
+                            <Component>
+                                <ShortName>BusCreator1</ShortName>
+                                <FullName>BusCreator1</FullName>
+                                <BasicEvents>
+                                    <BasicEvent>
+                                        <Name>BusCreator1.OFailure1</Name>
+                                        <ID>557</ID>
+                                        <SafetyRequirement>4</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>BusCreator1.VFailure1</Name>
+                                        <ID>558</ID>
+                                        <SafetyRequirement>2</SafetyRequirement>
+                                    </BasicEvent>
+                                </BasicEvents>
+                            </Component>
+                        </EncodingNode>
+                        <EncodingNode>
+                            <Component>
+                                <ShortName>BusCreator2</ShortName>
+                                <FullName>BusCreator2</FullName>
+                                <BasicEvents>
+                                    <BasicEvent>
+                                        <Name>BusCreator2.OFailure1</Name>
+                                        <ID>583</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>BusCreator2.VFailure1</Name>
+                                        <ID>584</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                </BasicEvents>
+                            </Component>
+                        </EncodingNode>
+                        <EncodingNode>
+                            <Component>
+                                <ShortName>BusCreator3</ShortName>
+                                <FullName>BusCreator3</FullName>
+                                <BasicEvents>
+                                    <BasicEvent>
+                                        <Name>BusCreator3.OFailure1</Name>
+                                        <ID>621</ID>
+                                        <SafetyRequirement>2</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>BusCreator3.VFailure1</Name>
+                                        <ID>622</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                </BasicEvents>
+                            </Component>
+                        </EncodingNode>
+                        <EncodingNode>
+                            <Component>
+                                <ShortName>BusCreator4</ShortName>
+                                <FullName>BusCreator4</FullName>
+                                <BasicEvents>
+                                    <BasicEvent>
+                                        <Name>BusCreator4.OFailure1</Name>
+                                        <ID>645</ID>
+                                        <SafetyRequirement>2</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>BusCreator4.VFailure1</Name>
+                                        <ID>646</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                </BasicEvents>
+                            </Component>
+                        </EncodingNode>
+                        <EncodingNode>
+                            <Component>
+                                <ShortName>CommandSwitch</ShortName>
+                                <FullName>CommandSwitch</FullName>
+                                <BasicEvents>
+                                    <BasicEvent>
+                                        <Name>CommandSwitch.OFailure1</Name>
+                                        <ID>667</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>CommandSwitch.VFailure1</Name>
+                                        <ID>668</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                </BasicEvents>
+                            </Component>
+                        </EncodingNode>
+                        <EncodingNode>
+                            <Component>
+                                <ShortName>FailSafeController</ShortName>
+                                <FullName>FailSafeController</FullName>
+                                <BasicEvents>
+                                    <BasicEvent>
+                                        <Name>FailSafeController.OFailure1</Name>
+                                        <ID>691</ID>
+                                        <SafetyRequirement>2</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>FailSafeController.VFailure1</Name>
+                                        <ID>692</ID>
+                                        <SafetyRequirement>2</SafetyRequirement>
+                                    </BasicEvent>
+                                </BasicEvents>
+                            </Component>
+                        </EncodingNode>
+                        <EncodingNode>
+                            <Component>
+                                <ShortName>FlightControlMixer</ShortName>
+                                <FullName>FlightControlMixer</FullName>
+                                <BasicEvents>
+                                    <BasicEvent>
+                                        <Name>FlightControlMixer.OFailure1</Name>
+                                        <ID>717</ID>
+                                        <SafetyRequirement>2</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>FlightControlMixer.VFailure1</Name>
+                                        <ID>718</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                </BasicEvents>
+                            </Component>
+                        </EncodingNode>
+                        <EncodingNode>
+                            <Component>
+                                <ShortName>FlightStabilizer</ShortName>
+                                <FullName>FlightStabilizer</FullName>
+                                <BasicEvents>
+                                    <BasicEvent>
+                                        <Name>FlightStabilizer.OFailure1</Name>
+                                        <ID>743</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>FlightStabilizer.VFailure1</Name>
+                                        <ID>744</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                </BasicEvents>
+                            </Component>
+                        </EncodingNode>
+                        <EncodingNode>
+                            <Component>
+                                <ShortName>FlightStabilizer.AltitudeController</ShortName>
+                                <FullName>FlightStabilizer.AltitudeController</FullName>
+                                <BasicEvents>
+                                    <BasicEvent>
+                                        <Name>FlightStabilizer.AltitudeController.OFailure1</Name>
+                                        <ID>773</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>FlightStabilizer.AltitudeController.VFailure1</Name>
+                                        <ID>774</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                </BasicEvents>
+                            </Component>
+                        </EncodingNode>
+                        <EncodingNode>
+                            <Component>
+                                <ShortName>IMUSensor</ShortName>
+                                <FullName>IMUSensor</FullName>
+                                <BasicEvents>
+                                    <BasicEvent>
+                                        <Name>IMUSensor.OFailure1</Name>
+                                        <ID>802</ID>
+                                        <SafetyRequirement>2</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>IMUSensor.VFailure1</Name>
+                                        <ID>803</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>IMUSensor.OFailure2</Name>
+                                        <ID>804</ID>
+                                        <SafetyRequirement>2</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>IMUSensor.VFailure2</Name>
+                                        <ID>805</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                </BasicEvents>
+                            </Component>
+                        </EncodingNode>
+                        <EncodingNode>
+                            <Component>
+                                <ShortName>ModeSwitcher</ShortName>
+                                <FullName>ModeSwitcher</FullName>
+                                <BasicEvents>
+                                    <BasicEvent>
+                                        <Name>ModeSwitcher.OFailure1</Name>
+                                        <ID>814</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>ModeSwitcher.OFailure2</Name>
+                                        <ID>815</ID>
+                                        <SafetyRequirement>4</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>ModeSwitcher.VFailure1</Name>
+                                        <ID>816</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>ModeSwitcher.VFailure2</Name>
+                                        <ID>817</ID>
+                                        <SafetyRequirement>2</SafetyRequirement>
+                                    </BasicEvent>
+                                </BasicEvents>
+                            </Component>
+                        </EncodingNode>
+                        <EncodingNode>
+                            <Component>
+                                <ShortName>ModeSwitcher.Constant</ShortName>
+                                <FullName>ModeSwitcher.Constant</FullName>
+                                <BasicEvents>
+                                    <BasicEvent>
+                                        <Name>ModeSwitcher.Constant.OFailure1</Name>
+                                        <ID>846</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>ModeSwitcher.Constant.VFailure1</Name>
+                                        <ID>847</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                </BasicEvents>
+                            </Component>
+                        </EncodingNode>
+                        <EncodingNode>
+                            <Component>
+                                <ShortName>ModeSwitcher.Constant1</ShortName>
+                                <FullName>ModeSwitcher.Constant1</FullName>
+                                <BasicEvents>
+                                    <BasicEvent>
+                                        <Name>ModeSwitcher.Constant1.OFailure1</Name>
+                                        <ID>852</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>ModeSwitcher.Constant1.VFailure1</Name>
+                                        <ID>853</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                </BasicEvents>
+                            </Component>
+                        </EncodingNode>
+                        <EncodingNode>
+                            <Component>
+                                <ShortName>ModeSwitcher.MultiportSwitch</ShortName>
+                                <FullName>ModeSwitcher.MultiportSwitch</FullName>
+                                <BasicEvents>
+                                    <BasicEvent>
+                                        <Name>ModeSwitcher.MultiportSwitch.OFailure1</Name>
+                                        <ID>858</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>ModeSwitcher.MultiportSwitch.VFailure1</Name>
+                                        <ID>859</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                </BasicEvents>
+                            </Component>
+                        </EncodingNode>
+                        <EncodingNode>
+                            <Component>
+                                <ShortName>ModeSwitcher.MultiportSwitch1</ShortName>
+                                <FullName>ModeSwitcher.MultiportSwitch1</FullName>
+                                <BasicEvents>
+                                    <BasicEvent>
+                                        <Name>ModeSwitcher.MultiportSwitch1.OFailure1</Name>
+                                        <ID>892</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>ModeSwitcher.MultiportSwitch1.VFailure1</Name>
+                                        <ID>893</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                </BasicEvents>
+                            </Component>
+                        </EncodingNode>
+                        <EncodingNode>
+                            <Component>
+                                <ShortName>ModeSwitcher.MultiportSwitch2</ShortName>
+                                <FullName>ModeSwitcher.MultiportSwitch2</FullName>
+                                <BasicEvents>
+                                    <BasicEvent>
+                                        <Name>ModeSwitcher.MultiportSwitch2.OFailure1</Name>
+                                        <ID>926</ID>
+                                        <SafetyRequirement>4</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>ModeSwitcher.MultiportSwitch2.VFailure1</Name>
+                                        <ID>927</ID>
+                                        <SafetyRequirement>2</SafetyRequirement>
+                                    </BasicEvent>
+                                </BasicEvents>
+                            </Component>
+                        </EncodingNode>
+                        <EncodingNode>
+                            <Component>
+                                <ShortName>ModeSwitcher.MultiportSwitch3</ShortName>
+                                <FullName>ModeSwitcher.MultiportSwitch3</FullName>
+                                <BasicEvents>
+                                    <BasicEvent>
+                                        <Name>ModeSwitcher.MultiportSwitch3.OFailure1</Name>
+                                        <ID>960</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>ModeSwitcher.MultiportSwitch3.VFailure1</Name>
+                                        <ID>961</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                </BasicEvents>
+                            </Component>
+                        </EncodingNode>
+                        <EncodingNode>
+                            <Component>
+                                <ShortName>NavigationSubsystem</ShortName>
+                                <FullName>NavigationSubsystem</FullName>
+                                <BasicEvents>
+                                    <BasicEvent>
+                                        <Name>NavigationSubsystem.OFailure1</Name>
+                                        <ID>1012</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>NavigationSubsystem.OFailure2</Name>
+                                        <ID>1013</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>NavigationSubsystem.OFailure3</Name>
+                                        <ID>1014</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>NavigationSubsystem.OFailure4</Name>
+                                        <ID>1015</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>NavigationSubsystem.VFailure1</Name>
+                                        <ID>1016</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>NavigationSubsystem.VFailure2</Name>
+                                        <ID>1017</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>NavigationSubsystem.VFailure3</Name>
+                                        <ID>1018</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>NavigationSubsystem.VFailure4</Name>
+                                        <ID>1019</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                </BasicEvents>
+                            </Component>
+                        </EncodingNode>
+                        <EncodingNode>
+                            <Component>
+                                <ShortName>PWMDecoder</ShortName>
+                                <FullName>PWMDecoder</FullName>
+                                <BasicEvents>
+                                    <BasicEvent>
+                                        <Name>PWMDecoder.OFailure1</Name>
+                                        <ID>1036</ID>
+                                        <SafetyRequirement>4</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>PWMDecoder.OFailure2</Name>
+                                        <ID>1037</ID>
+                                        <SafetyRequirement>4</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>PWMDecoder.VFailure1</Name>
+                                        <ID>1038</ID>
+                                        <SafetyRequirement>2</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>PWMDecoder.VFailure2</Name>
+                                        <ID>1039</ID>
+                                        <SafetyRequirement>2</SafetyRequirement>
+                                    </BasicEvent>
+                                </BasicEvents>
+                            </Component>
+                        </EncodingNode>
+                        <EncodingNode>
+                            <Component>
+                                <ShortName>PWMDecoder.BusCreatorX</ShortName>
+                                <FullName>PWMDecoder.BusCreatorX</FullName>
+                                <BasicEvents>
+                                    <BasicEvent>
+                                        <Name>PWMDecoder.BusCreatorX.OFailure1</Name>
+                                        <ID>1068</ID>
+                                        <SafetyRequirement>4</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>PWMDecoder.BusCreatorX.VFailure1</Name>
+                                        <ID>1069</ID>
+                                        <SafetyRequirement>2</SafetyRequirement>
+                                    </BasicEvent>
+                                </BasicEvents>
+                            </Component>
+                        </EncodingNode>
+                        <EncodingNode>
+                            <Component>
+                                <ShortName>PWMDecoder.Demux1</ShortName>
+                                <FullName>PWMDecoder.Demux1</FullName>
+                                <BasicEvents>
+                                    <BasicEvent>
+                                        <Name>PWMDecoder.Demux1.OFailure1</Name>
+                                        <ID>1102</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>PWMDecoder.Demux1.OFailure2</Name>
+                                        <ID>1103</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>PWMDecoder.Demux1.OFailure3</Name>
+                                        <ID>1104</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>PWMDecoder.Demux1.VFailure1</Name>
+                                        <ID>1105</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>PWMDecoder.Demux1.VFailure2</Name>
+                                        <ID>1106</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>PWMDecoder.Demux1.VFailure3</Name>
+                                        <ID>1107</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                </BasicEvents>
+                            </Component>
+                        </EncodingNode>
+                        <EncodingNode>
+                            <Component>
+                                <ShortName>PWMEncoder</ShortName>
+                                <FullName>PWMEncoder</FullName>
+                                <BasicEvents>
+                                    <BasicEvent>
+                                        <Name>PWMEncoder.OFailure1</Name>
+                                        <ID>1176</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>PWMEncoder.VFailure1</Name>
+                                        <ID>1177</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                </BasicEvents>
+                            </Component>
+                        </EncodingNode>
+                        <EncodingNode>
+                            <Component>
+                                <ShortName>PWMEncoder.FourWayLeverSmoothing</ShortName>
+                                <FullName>PWMEncoder.FourWayLeverSmoothing</FullName>
+                                <BasicEvents>
+                                    <BasicEvent>
+                                        <Name>PWMEncoder.FourWayLeverSmoothing.OFailure1</Name>
+                                        <ID>1194</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>PWMEncoder.FourWayLeverSmoothing.VFailure1</Name>
+                                        <ID>1195</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                </BasicEvents>
+                            </Component>
+                        </EncodingNode>
+                        <EncodingNode>
+                            <Component>
+                                <ShortName>PWMEncoder.FourWayLeverSmoothing.LeverSmoothing</ShortName>
+                                <FullName>PWMEncoder.FourWayLeverSmoothing.LeverSmoothing</FullName>
+                                <BasicEvents>
+                                    <BasicEvent>
+                                        <Name>PWMEncoder.FourWayLeverSmoothing.LeverSmoothing.OFailure1</Name>
+                                        <ID>1208</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>PWMEncoder.FourWayLeverSmoothing.LeverSmoothing.VFailure1</Name>
+                                        <ID>1209</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                </BasicEvents>
+                            </Component>
+                        </EncodingNode>
+                        <EncodingNode>
+                            <Component>
+                                <ShortName>PWMEncoder.FourWayLeverSmoothing.LeverSmoothing2</ShortName>
+                                <FullName>PWMEncoder.FourWayLeverSmoothing.LeverSmoothing2</FullName>
+                                <BasicEvents>
+                                    <BasicEvent>
+                                        <Name>PWMEncoder.FourWayLeverSmoothing.LeverSmoothing2.OFailure1</Name>
+                                        <ID>1222</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>PWMEncoder.FourWayLeverSmoothing.LeverSmoothing2.VFailure1</Name>
+                                        <ID>1223</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                </BasicEvents>
+                            </Component>
+                        </EncodingNode>
+                        <EncodingNode>
+                            <Component>
+                                <ShortName>PWMEncoder.FourWayLeverSmoothing.LeverSmoothing3</ShortName>
+                                <FullName>PWMEncoder.FourWayLeverSmoothing.LeverSmoothing3</FullName>
+                                <BasicEvents>
+                                    <BasicEvent>
+                                        <Name>PWMEncoder.FourWayLeverSmoothing.LeverSmoothing3.OFailure1</Name>
+                                        <ID>1236</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>PWMEncoder.FourWayLeverSmoothing.LeverSmoothing3.VFailure1</Name>
+                                        <ID>1237</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                </BasicEvents>
+                            </Component>
+                        </EncodingNode>
+                        <EncodingNode>
+                            <Component>
+                                <ShortName>PWMEncoder.FourWayLeverSmoothing.LeverSmothing1</ShortName>
+                                <FullName>PWMEncoder.FourWayLeverSmoothing.LeverSmothing1</FullName>
+                                <BasicEvents>
+                                    <BasicEvent>
+                                        <Name>PWMEncoder.FourWayLeverSmoothing.LeverSmothing1.OFailure1</Name>
+                                        <ID>1250</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>PWMEncoder.FourWayLeverSmoothing.LeverSmothing1.VFailure1</Name>
+                                        <ID>1251</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                </BasicEvents>
+                            </Component>
+                        </EncodingNode>
+                        <EncodingNode>
+                            <Component>
+                                <ShortName>PilotJoystick</ShortName>
+                                <FullName>PilotJoystick</FullName>
+                                <BasicEvents>
+                                    <BasicEvent>
+                                        <Name>PilotJoystick.OFailure1</Name>
+                                        <ID>1276</ID>
+                                        <SafetyRequirement>4</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>PilotJoystick.OFailure2</Name>
+                                        <ID>1277</ID>
+                                        <SafetyRequirement>4</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>PilotJoystick.VFailure1</Name>
+                                        <ID>1278</ID>
+                                        <SafetyRequirement>2</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>PilotJoystick.VFailure2</Name>
+                                        <ID>1279</ID>
+                                        <SafetyRequirement>2</SafetyRequirement>
+                                    </BasicEvent>
+                                </BasicEvents>
+                            </Component>
+                        </EncodingNode>
+                        <EncodingNode>
+                            <Component>
+                                <ShortName>PressureeSensor</ShortName>
+                                <FullName>PressureeSensor</FullName>
+                                <BasicEvents>
+                                    <BasicEvent>
+                                        <Name>PressureeSensor.OFailure1</Name>
+                                        <ID>1288</ID>
+                                        <SafetyRequirement>2</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>PressureeSensor.OFailure2</Name>
+                                        <ID>1289</ID>
+                                        <SafetyRequirement>2</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>PressureeSensor.VFailure1</Name>
+                                        <ID>1290</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                    <BasicEvent>
+                                        <Name>PressureeSensor.VFailure2</Name>
+                                        <ID>1291</ID>
+                                        <SafetyRequirement>0</SafetyRequirement>
+                                    </BasicEvent>
+                                </BasicEvents>
+                            </Component>
+                        </EncodingNode>
+                    </TreeASILEncoding>
+                </Encoding>
+                <Evaluations>
+                    <Evaluation>
+                        <Name>ASILCost</Name>
+                        <Value>860</Value>
+                    </Evaluation>
+                    <Evaluation>
+                        <Name>ASILInvalids</Name>
+                        <Value>0</Value>
+                    </Evaluation>
+                </Evaluations>
+                <LastAlteredGeneration>1000</LastAlteredGeneration>
+            </Individual>
+        </Population>
+    </SafetyAllocations>
+</HiP-HOPS_Results>

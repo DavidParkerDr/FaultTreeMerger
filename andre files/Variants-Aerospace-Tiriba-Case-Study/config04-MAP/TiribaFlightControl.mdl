@@ -1,0 +1,3791 @@
+Model {
+  Name			  "TiribaFlightControl"
+  Version		  7.6
+  MdlSubVersion		  0
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    0
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.172"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+  }
+  Description		  "<HiP-HOPS_Model_Parameters><ToolVersion><Name>Matlab</Name><Number>7.11.0.584 </Number></ToolVersion"
+  "><RiskTime>10000</RiskTime><OptimisationParams><MaxGenerations>100</MaxGenerations></OptimisationParams><Hazards><Ha"
+  "zard><Name>No_Pilot_Commands</Name><Description></Description><SafetyRequirement>4</SafetyRequirement><Causes><Cause"
+  "><Probability></Probability><FailureLogic>Omission-PWMDecoder.FlightControls AND Omission-FailSafeController.Filtere"
+  "dControls</FailureLogic></Cause></Causes></Hazard><Hazard><Name>Value_Pilot_Commands</Name><Description></Descriptio"
+  "n><SafetyRequirement>4</SafetyRequirement><Causes><Cause><Probability></Probability><FailureLogic>Value-PWMDecoder.F"
+  "lightControls AND Value-FailSafeController.FilteredControls</FailureLogic></Cause></Causes></Hazard></Hazards><Advan"
+  "cedParameters></AdvancedParameters></HiP-HOPS_Model_Parameters>"
+  SavedCharacterEncoding  "windows-1252"
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  DataTypeOverrideAppliesTo "AllNumericTypes"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  MaxMDLFileLineLength	  120
+  Created		  "Tue Feb 24 12:59:40 2015"
+  Creator		  "Andre"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "Andre"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Tue Mar 31 11:26:33 2015"
+  RTWModifiedTimeStamp	  349698573
+  ModelVersionFormat	  "1.%<AutoIncrement:172>"
+  ConfigurationManager	  "None"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  CovForceBlockReductionOff on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  CovExternalEMLEnable	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse		  on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.10.0"
+      Array {
+	Type			"Handle"
+	Dimension		8
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.10.0"
+	  StartTime		  "0.0"
+	  StopTime		  "10.0"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  ConcurrentTasks	  off
+	  Solver		  "ode45"
+	  SolverName		  "ode45"
+	  SolverJacobianMethodControl "auto"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.10.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  DSMLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  DSMLoggingName	  "dsmout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Version		  "1.10.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    8
+	    Cell		    "BooleansAsBitfields"
+	    Cell		    "PassReuseOutputArgsAs"
+	    Cell		    "PassReuseOutputArgsThreshold"
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    Cell		    "UseSpecifiedMinMax"
+	    PropName		    "DisabledProps"
+	  }
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  UseIntDivNetSlope	  off
+	  UseSpecifiedMinMax	  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  StrengthReduction	  off
+	  ExpressionFolding	  on
+	  BooleansAsBitfields	  off
+	  BitfieldContainerType	  "uint_T"
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  MaxStackSize		  "Inherit from target"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.10.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"warning"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  MaskedZcDiagnostic	  "warning"
+	  IgnoredZcDiagnostic	  "warning"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  InitInArrayFormatMsg	  "warning"
+	  StrictBusMsg		  "ErrorLevel1"
+	  BusNameAdapt		  "WarnAndRepair"
+	  NonBusSignalsTreatedAsBus "none"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	  SFUnusedDataAndEventsDiag "warning"
+	  SFUnexpectedBacktrackingDiag "warning"
+	  SFInvalidInputDataAccessInChartInitDiag "warning"
+	  SFNoUnconditionalDefaultTransitionDiag "warning"
+	  SFTransitionOutsideNaturalParentDiag "warning"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.10.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdBitPerFloat	  32
+	  ProdBitPerDouble	  64
+	  ProdBitPerPointer	  32
+	  ProdLargestAtomicInteger "Char"
+	  ProdLargestAtomicFloat  "None"
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetBitPerFloat	  32
+	  TargetBitPerDouble	  64
+	  TargetBitPerPointer	  32
+	  TargetLargestAtomicInteger "Char"
+	  TargetLargestAtomicFloat "None"
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.10.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  EnableParallelModelReferenceBuilds off
+	  ParallelModelReferenceErrorOnInvalidPool on
+	  ParallelModelReferenceMATLABWorkerInit "None"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  PropagateVarSize	  "Infer from blocks in model"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	  PropagateSignalLabelsOutOfModel off
+	  SupportModelReferenceSimTargetCustomCode off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  8
+	  Version		  "1.10.0"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimBlas		  on
+	  SimCtrlC		  on
+	  SimExtrinsic		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimParseCustomCode	  on
+	  SimBuildMode		  "sf_incremental_build"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  9
+	  Version		  "1.10.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    7
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    Cell		    "GenerateTraceReport"
+	    Cell		    "GenerateTraceReportSl"
+	    Cell		    "GenerateTraceReportSf"
+	    Cell		    "GenerateTraceReportEml"
+	    Cell		    "GenerateSLWebview"
+	    PropName		    "DisabledProps"
+	  }
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  GenerateSLWebview	  off
+	  RTWCompilerOptimization "Off"
+	  CheckMdlBeforeBuild	  "Off"
+	  CustomRebuildMode	  "OnUpdate"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      10
+	      Version		      "1.10.0"
+	      Array {
+		Type			"Cell"
+		Dimension		21
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"IgnoreTestpoints"
+		Cell			"InsertBlockDesc"
+		Cell			"InsertPolySpaceComments"
+		Cell			"SFDataObjDesc"
+		Cell			"MATLABFcnDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrFcnArg"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		Cell			"ReqsInCode"
+		PropName		"DisabledProps"
+	      }
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      MATLABFcnDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      InsertPolySpaceComments off
+	      SimulinkBlockComments   on
+	      MATLABSourceComments    off
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      11
+	      Version		      "1.10.0"
+	      Array {
+		Type			"Cell"
+		Dimension		16
+		Cell			"GeneratePreprocessorConditionals"
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"CPPClassGenCompliant"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"PortableWordSizes"
+		PropName		"DisabledProps"
+	      }
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      TargetFunctionLibrary   "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      ERTCodeCoverageTool     "None"
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      IncludeMdlTerminateFcn  on
+	      GeneratePreprocessorConditionals "Disable all"
+	      CombineOutputUpdateFcns off
+	      CombineSignalStateStructs	off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      SupportVariableSizeSignals off
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    off
+	      AutosarCompliant	      off
+	      UseMalloc		      off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+      ConfigPrmDlgPosition    " [ 243, 69, 1123, 699 ] "
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    1
+  }
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      BusCreator
+      Inputs		      "4"
+      DisplayOption	      "none"
+      OutDataTypeStr	      "Inherit: auto"
+      NonVirtualBus	      off
+    }
+    Block {
+      BlockType		      BusSelector
+      OutputAsBus	      off
+    }
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+      LockScale		      off
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+      PreserveConstantTs      off
+    }
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      Gain
+      Gain		      "1"
+      Multiplication	      "Element-wise(K.*u)"
+      ParamMin		      "[]"
+      ParamMax		      "[]"
+      ParamDataTypeStr	      "Inherit: Same as input"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchInputForFeedbackSignals off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      MultiPortSwitch
+      DataPortOrder	      "One-based contiguous"
+      Inputs		      "3"
+      DataPortIndices	      "{1,2,3}"
+      DataPortForDefault      "Last data port"
+      DiagnosticForDefault    "Error"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+      AllowDiffInputSizes     off
+    }
+    Block {
+      BlockType		      Mux
+      Inputs		      "4"
+      DisplayOption	      "none"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      NonVirtualBus	      off
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Saturate
+      UpperLimitSource	      "Dialog"
+      UpperLimit	      "0.5"
+      LowerLimitSource	      "Dialog"
+      LowerLimit	      "-0.5"
+      LinearizeAsGain	      on
+      ZeroCross		      on
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as input"
+      LockScale		      off
+      RndMeth		      "Floor"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      DataTypeOverrideAppliesTo	"AllNumericTypes"
+      MinMaxOverflowLogging   "UseLocalSettings"
+      Variant		      off
+      GeneratePreprocessorConditionals off
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      AccumDataTypeStr	      "Inherit: Inherit via internal rule"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as first input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Switch
+      Criteria		      "u2 >= Threshold"
+      Threshold		      "0"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      ZeroCross		      on
+      SampleTime	      "-1"
+      AllowDiffInputSizes     off
+    }
+    Block {
+      BlockType		      Terminator
+    }
+  }
+  System {
+    Name		    "TiribaFlightControl"
+    Location		    [2, 82, 1348, 698]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    "175"
+    Block {
+      BlockType		      SubSystem
+      Name		      "Autopilot"
+      SID		      "19"
+      Ports		      [2, 1]
+      Position		      [940, 149, 1060, 231]
+      LibraryVersion	      "1.225"
+      List {
+	ListType		RTWdata
+	HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false</Inc"
+	"ludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</ExcludeFromO"
+	"ptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>Both</HBlockType><SubsystemLocation>FromCurrentModel</Subsyst"
+	"emLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent><Name>OFailure1</Name>"
+	"<UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailure1</Name><Unavailab"
+	"ilityFormula><None></None></UnavailabilityFormula></BasicEvent></BasicEvents><PotentialCCFs></PotentialCCFs><OutputDe"
+	"viations><OutputDeviation><Name>Omission-HighLevelControls</Name><Severity>0</Severity><SystemOutport>true</SystemOut"
+	"port><Causes><Cause><Probability></Probability><FailureLogic>OFailure1 OR (Omission-Settings AND Omission-SensorData)"
+	"</FailureLogic></Cause></Causes></OutputDeviation><OutputDeviation><Name>Value-HighLevelControls</Name><Severity>0</S"
+	"everity><SystemOutport>true</SystemOutport><Causes><Cause><Probability></Probability><FailureLogic>VFailure1 OR (Valu"
+	"e-Settings OR Value-SensorData)</FailureLogic></Cause></Causes></OutputDeviation></OutputDeviations><ExportedPropagat"
+	"ions></ExportedPropagations></FailureData></Current></Implementations></HiPHOPS_ComponentFailureData>"
+	HiPHOPS_isPerspective	"false"
+      }
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"Autopilot"
+	Location		[2, 82, 1331, 698]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "SensorData"
+	  SID			  "22"
+	  Position		  [15, 248, 45, 262]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Settings"
+	  SID			  "20"
+	  Position		  [20, 758, 50, 772]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    PropagatedSignals	    "signal1"
+	    ShowPropagatedSignals   "on"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  BusCreator
+	  Name			  "BusCreator"
+	  SID			  "130"
+	  Ports			  [4, 1]
+	  Position		  [1325, 255, 1330, 430]
+	  List {
+	    ListType		    RTWdata
+	    HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false<"
+	    "/IncludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</Excl"
+	    "udeFromOptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>Both</HBlockType><SubsystemLocation>FromCurrentMo"
+	    "del</SubsystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent><Name>"
+	    "OFailure1</Name><UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailu"
+	    "re1</Name><UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent></BasicEvents><PotentialCCFs><"
+	    "/PotentialCCFs><OutputDeviations><OutputDeviation><Name>Omission-DefaultOut1</Name><Severity>0</Severity><SystemO"
+	    "utport>true</SystemOutport><Causes><Cause><Probability></Probability><FailureLogic>OFailure1 OR (Omission-Default"
+	    "In1 OR Omission-DefaultIn2 OR Omission-DefaultIn3 OR Omission-DefaultIn4)</FailureLogic></Cause></Causes></Output"
+	    "Deviation><OutputDeviation><Name>Value-DefaultOut1</Name><Severity>0</Severity><SystemOutport>true</SystemOutport"
+	    "><Causes><Cause><Probability></Probability><FailureLogic>VFailure1 OR (Value-DefaultIn1 OR Value-DefaultIn2 OR Va"
+	    "lue-DefaultIn3 OR Value-DefaultIn4)</FailureLogic></Cause></Causes></OutputDeviation></OutputDeviations><Exported"
+	    "Propagations></ExportedPropagations><DiagnosticCoverages></DiagnosticCoverages></FailureData></Current></Implemen"
+	    "tations></HiPHOPS_ComponentFailureData>"
+	    HiPHOPS_isPerspective   "false"
+	  }
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  BusSelector
+	  Name			  "BusSelector2"
+	  SID			  "94"
+	  Ports			  [1, 1]
+	  Position		  [300, 106, 305, 144]
+	  List {
+	    ListType		    RTWdata
+	    HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false<"
+	    "/IncludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</Excl"
+	    "udeFromOptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>Both</HBlockType><SubsystemLocation>FromCurrentMo"
+	    "del</SubsystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent><Name>"
+	    "OFailure1</Name><UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailu"
+	    "re1</Name><UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent></BasicEvents><PotentialCCFs><"
+	    "/PotentialCCFs><OutputDeviations><OutputDeviation><Name>Omission-DefaultOut1</Name><Severity>0</Severity><SystemO"
+	    "utport>true</SystemOutport><Causes><Cause><Probability></Probability><FailureLogic>OFailure1 OR (Omission-Default"
+	    "In1)</FailureLogic></Cause></Causes></OutputDeviation><OutputDeviation><Name>Value-DefaultOut1</Name><Severity>0<"
+	    "/Severity><SystemOutport>true</SystemOutport><Causes><Cause><Probability></Probability><FailureLogic>VFailure1 OR"
+	    " (Value-DefaultIn1)</FailureLogic></Cause></Causes></OutputDeviation></OutputDeviations><ExportedPropagations></E"
+	    "xportedPropagations><DiagnosticCoverages></DiagnosticCoverages></FailureData></Current></Implementations></HiPHOP"
+	    "S_ComponentFailureData>"
+	    HiPHOPS_isPerspective   "false"
+	  }
+	  OutputSignals		  "signal2"
+	  OutputAsBus		  on
+	}
+	Block {
+	  BlockType		  BusSelector
+	  Name			  "BusSelector3"
+	  SID			  "95"
+	  Ports			  [1, 3]
+	  Position		  [230, 489, 235, 561]
+	  List {
+	    ListType		    RTWdata
+	    HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false<"
+	    "/IncludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</Excl"
+	    "udeFromOptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>Both</HBlockType><SubsystemLocation>FromCurrentMo"
+	    "del</SubsystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent><Name>"
+	    "OFailure1</Name><UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>OFailu"
+	    "re2</Name><UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>OFailure3</N"
+	    "ame><UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailure1</Name><U"
+	    "navailabilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailure2</Name><Unavail"
+	    "abilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailure3</Name><Unavailabilit"
+	    "yFormula><None></None></UnavailabilityFormula></BasicEvent></BasicEvents><PotentialCCFs></PotentialCCFs><OutputDe"
+	    "viations><OutputDeviation><Name>Omission-DefaultOut1</Name><Severity>0</Severity><SystemOutport>true</SystemOutpo"
+	    "rt><Causes><Cause><Probability></Probability><FailureLogic>OFailure1 OR Omission-DefaultIn1</FailureLogic></Cause"
+	    "></Causes></OutputDeviation><OutputDeviation><Name>Omission-DefaultOut2</Name><Severity>0</Severity><SystemOutpor"
+	    "t>true</SystemOutport><Causes><Cause><Probability></Probability><FailureLogic>OFailure2 OR Omission-DefaultIn1</F"
+	    "ailureLogic></Cause></Causes></OutputDeviation><OutputDeviation><Name>Omission-DefaultOut3</Name><Severity>0</Sev"
+	    "erity><SystemOutport>true</SystemOutport><Causes><Cause><Probability></Probability><FailureLogic>OFailure3 OR Omi"
+	    "ssion-DefaultIn1</FailureLogic></Cause></Causes></OutputDeviation><OutputDeviation><Name>Value-DefaultOut1</Name>"
+	    "<Severity>0</Severity><SystemOutport>true</SystemOutport><Causes><Cause><Probability></Probability><FailureLogic>"
+	    "VFailure1 OR Value-DefaultIn1</FailureLogic></Cause></Causes></OutputDeviation><OutputDeviation><Name>Value-Defau"
+	    "ltOut2</Name><Severity>0</Severity><SystemOutport>true</SystemOutport><Causes><Cause><Probability></Probability><"
+	    "FailureLogic>VFailure2 OR Value-DefaultIn1</FailureLogic></Cause></Causes></OutputDeviation><OutputDeviation><Nam"
+	    "e>Value-DefaultOut3</Name><Severity>0</Severity><SystemOutport>true</SystemOutport><Causes><Cause><Probability></"
+	    "Probability><FailureLogic>VFailure3 OR Value-DefaultIn1</FailureLogic></Cause></Causes></OutputDeviation></Output"
+	    "Deviations><ExportedPropagations></ExportedPropagations><DiagnosticCoverages></DiagnosticCoverages></FailureData>"
+	    "</Current></Implementations></HiPHOPS_ComponentFailureData>"
+	    HiPHOPS_isPerspective   "false"
+	  }
+	  OutputSignals		  "signal1,signal2,signal3"
+	  Port {
+	    PortNumber		    1
+	    Name		    "<signal1>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    2
+	    Name		    "<signal2>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    3
+	    Name		    "<signal3>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  BusSelector
+	  Name			  "BusSelector4"
+	  SID			  "175"
+	  Ports			  [1, 2]
+	  Position		  [80, 236, 85, 274]
+	  List {
+	    ListType		    RTWdata
+	    HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false<"
+	    "/IncludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</Excl"
+	    "udeFromOptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>Both</HBlockType><SubsystemLocation>FromCurrentMo"
+	    "del</SubsystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent><Name>"
+	    "OFailure1</Name><UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailu"
+	    "re1</Name><UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>OFailure2</N"
+	    "ame><UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailure2</Name><U"
+	    "navailabilityFormula><None></None></UnavailabilityFormula></BasicEvent></BasicEvents><PotentialCCFs></PotentialCC"
+	    "Fs><OutputDeviations><OutputDeviation><Name>Omission-DefaultOut1</Name><Severity>0</Severity><SystemOutport>true<"
+	    "/SystemOutport><Causes><Cause><Probability></Probability><FailureLogic>OFailure1 OR (Omission-DefaultIn1) </Failu"
+	    "reLogic></Cause></Causes></OutputDeviation><OutputDeviation><Name>Value-DefaultOut1</Name><Severity>0</Severity><"
+	    "SystemOutport>true</SystemOutport><Causes><Cause><Probability></Probability><FailureLogic>VFailure1 OR (Value-Def"
+	    "aultIn1)</FailureLogic></Cause></Causes></OutputDeviation><OutputDeviation><Name>Omission-DefaultOut2</Name><Seve"
+	    "rity>0</Severity><SystemOutport>true</SystemOutport><Causes><Cause><Probability></Probability><FailureLogic>OFail"
+	    "ure2 OR Omission-DefaultIn1</FailureLogic></Cause></Causes></OutputDeviation><OutputDeviation><Name>Value-Default"
+	    "Out2</Name><Severity>0</Severity><SystemOutport>true</SystemOutport><Causes><Cause><Probability></Probability><Fa"
+	    "ilureLogic>VFailure2 OR Omission-DefaultIn1</FailureLogic></Cause></Causes></OutputDeviation></OutputDeviations><"
+	    "ExportedPropagations></ExportedPropagations><DiagnosticCoverages></DiagnosticCoverages></FailureData></Current></"
+	    "Implementations></HiPHOPS_ComponentFailureData>"
+	    HiPHOPS_isPerspective   "false"
+	  }
+	  OutputSignals		  "signal1,signal2"
+	  Port {
+	    PortNumber		    1
+	    Name		    "<signal1>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    2
+	    Name		    "<signal2>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "ClimbController"
+	  SID			  "124"
+	  Ports			  [3, 1]
+	  Position		  [795, 624, 895, 666]
+	  LibraryVersion	  "1.225"
+	  List {
+	    ListType		    RTWdata
+	    HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false<"
+	    "/IncludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</Excl"
+	    "udeFromOptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>Both</HBlockType><SubsystemLocation>FromCurrentMo"
+	    "del</SubsystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent><Name>"
+	    "OFailure1</Name><UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailu"
+	    "re1</Name><UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent></BasicEvents><PotentialCCFs><"
+	    "/PotentialCCFs><OutputDeviations><OutputDeviation><Name>Omission-elev</Name><Severity>0</Severity><SystemOutport>"
+	    "true</SystemOutport><Causes><Cause><Probability></Probability><FailureLogic>OFailure1 OR (Omission-Climb OR Omiss"
+	    "ion-Sets OR Omission-x0)</FailureLogic></Cause></Causes></OutputDeviation><OutputDeviation><Name>Value-elev</Name"
+	    "><Severity>0</Severity><SystemOutport>true</SystemOutport><Causes><Cause><Probability></Probability><FailureLogic"
+	    ">VFailure1 OR (Value-Climb OR Value-Sets OR Value-x0)</FailureLogic></Cause></Causes></OutputDeviation></OutputDe"
+	    "viations><ExportedPropagations></ExportedPropagations><DiagnosticCoverages></DiagnosticCoverages></FailureData></"
+	    "Current></Implementations></HiPHOPS_ComponentFailureData>"
+	    HiPHOPS_isPerspective   "false"
+	  }
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "ClimbController"
+	    Location		    [2, 74, 1364, 707]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Climb"
+	      SID		      "125"
+	      Position		      [110, 103, 140, 117]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Sets"
+	      SID		      "127"
+	      Position		      [110, 148, 140, 162]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "x0"
+	      SID		      "128"
+	      Position		      [110, 188, 140, 202]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "elev"
+	      SID		      "126"
+	      Position		      [360, 103, 390, 117]
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "Climb"
+	      SrcPort		      1
+	      DstBlock		      "elev"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "EmbeddedMATLABFunction"
+	  SID			  "121"
+	  Ports			  [1, 1]
+	  Position		  [545, 609, 645, 651]
+	  LibraryVersion	  "1.225"
+	  List {
+	    ListType		    RTWdata
+	    HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false<"
+	    "/IncludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</Excl"
+	    "udeFromOptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>Both</HBlockType><SubsystemLocation>FromCurrentMo"
+	    "del</SubsystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent><Name>"
+	    "VFailure1</Name><UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>OFailu"
+	    "re1</Name><UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent></BasicEvents><PotentialCCFs><"
+	    "/PotentialCCFs><OutputDeviations><OutputDeviation><Name>Omission-y</Name><Severity>0</Severity><SystemOutport>tru"
+	    "e</SystemOutport><Causes><Cause><Probability></Probability><FailureLogic>OFailure1 OR Omission-u</FailureLogic></"
+	    "Cause></Causes></OutputDeviation><OutputDeviation><Name>Value-y</Name><Severity>0</Severity><SystemOutport>true</"
+	    "SystemOutport><Causes><Cause><Probability></Probability><FailureLogic>VFailure1 OR Value-u</FailureLogic></Cause>"
+	    "</Causes></OutputDeviation></OutputDeviations><ExportedPropagations></ExportedPropagations><DiagnosticCoverages><"
+	    "/DiagnosticCoverages></FailureData></Current></Implementations></HiPHOPS_ComponentFailureData>"
+	    HiPHOPS_isPerspective   "false"
+	  }
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "EmbeddedMATLABFunction"
+	    Location		    [433, 403, 931, 703]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "u"
+	      SID		      "122"
+	      Position		      [110, 103, 140, 117]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "y"
+	      SID		      "123"
+	      Position		      [360, 103, 390, 117]
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "u"
+	      SrcPort		      1
+	      DstBlock		      "y"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "NeutralBank"
+	  SID			  "108"
+	  Position		  [1040, 185, 1070, 215]
+	  Value			  "-0.0121"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "NeutralPitch"
+	  SID			  "110"
+	  Position		  [1040, 335, 1070, 365]
+	  Value			  "-0.172"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "NeutralPitchSetPoint"
+	  SID			  "129"
+	  Position		  [705, 690, 735, 720]
+	  Value			  "-0.172"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "NeutralThrotlle"
+	  SID			  "120"
+	  Position		  [560, 505, 590, 535]
+	  Value			  "0.702"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "PitchController"
+	  SID			  "104"
+	  Ports			  [2, 1]
+	  Position		  [595, 250, 715, 330]
+	  LibraryVersion	  "1.225"
+	  List {
+	    ListType		    RTWdata
+	    HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false<"
+	    "/IncludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</Excl"
+	    "udeFromOptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>Both</HBlockType><SubsystemLocation>FromCurrentMo"
+	    "del</SubsystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent><Name>"
+	    "OFailure1</Name><UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailu"
+	    "re1</Name><UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent></BasicEvents><PotentialCCFs><"
+	    "/PotentialCCFs><OutputDeviations><OutputDeviation><Name>Omission-Elevator</Name><Severity>0</Severity><SystemOutp"
+	    "ort>true</SystemOutport><Causes><Cause><Probability></Probability><FailureLogic>OFailure1 OR (Omission-Pitch OR O"
+	    "mission-Settings)</FailureLogic></Cause></Causes></OutputDeviation><OutputDeviation><Name>Value-Elevator</Name><S"
+	    "everity>0</Severity><SystemOutport>true</SystemOutport><Causes><Cause><Probability></Probability><FailureLogic>VF"
+	    "ailure1 OR (Value-Pitch OR Value-Settings)</FailureLogic></Cause></Causes></OutputDeviation></OutputDeviations><E"
+	    "xportedPropagations></ExportedPropagations><DiagnosticCoverages></DiagnosticCoverages></FailureData></Current></I"
+	    "mplementations></HiPHOPS_ComponentFailureData>"
+	    HiPHOPS_isPerspective   "false"
+	  }
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "PitchController"
+	    Location		    [764, 319, 1262, 619]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Pitch"
+	      SID		      "107"
+	      Position		      [110, 38, 140, 52]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Settings"
+	      SID		      "105"
+	      Position		      [110, 103, 140, 117]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Elevator"
+	      SID		      "106"
+	      Position		      [360, 103, 390, 117]
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "Settings"
+	      SrcPort		      1
+	      DstBlock		      "Elevator"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "RollController"
+	  SID			  "98"
+	  Ports			  [2, 1]
+	  Position		  [535, 109, 630, 171]
+	  LibraryVersion	  "1.225"
+	  List {
+	    ListType		    RTWdata
+	    HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false<"
+	    "/IncludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</Excl"
+	    "udeFromOptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>Both</HBlockType><SubsystemLocation>FromCurrentMo"
+	    "del</SubsystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent><Name>"
+	    "OFailure1</Name><UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailu"
+	    "re1</Name><UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent></BasicEvents><PotentialCCFs><"
+	    "/PotentialCCFs><OutputDeviations><OutputDeviation><Name>Omission-Bank</Name><Severity>0</Severity><SystemOutport>"
+	    "true</SystemOutport><Causes><Cause><Probability></Probability><FailureLogic>OFailure1 OR (Omission-Roll OR Omissi"
+	    "on-Settings)</FailureLogic></Cause></Causes></OutputDeviation><OutputDeviation><Name>Value-Bank</Name><Severity>0"
+	    "</Severity><SystemOutport>true</SystemOutport><Causes><Cause><Probability></Probability><FailureLogic>VFailure1 O"
+	    "R (Omission-Roll OR Omission-Settings)</FailureLogic></Cause></Causes></OutputDeviation></OutputDeviations><Expor"
+	    "tedPropagations></ExportedPropagations></FailureData></Current></Implementations></HiPHOPS_ComponentFailureData>"
+	    HiPHOPS_isPerspective   "false"
+	  }
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "RollController"
+	    Location		    [2, 74, 1364, 707]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Roll"
+	      SID		      "99"
+	      Position		      [110, 103, 140, 117]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Settings"
+	      SID		      "101"
+	      Position		      [110, 168, 140, 182]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Bank"
+	      SID		      "100"
+	      Position		      [360, 103, 390, 117]
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "Roll"
+	      SrcPort		      1
+	      DstBlock		      "Bank"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "SpeedController"
+	  SID			  "112"
+	  Ports			  [4, 1]
+	  Position		  [690, 431, 810, 484]
+	  LibraryVersion	  "1.225"
+	  List {
+	    ListType		    RTWdata
+	    HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false<"
+	    "/IncludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</Excl"
+	    "udeFromOptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>Both</HBlockType><SubsystemLocation>FromCurrentMo"
+	    "del</SubsystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent><Name>"
+	    "OFailure1</Name><UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailu"
+	    "re1</Name><UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent></BasicEvents><PotentialCCFs><"
+	    "/PotentialCCFs><OutputDeviations><OutputDeviation><Name>Omission-throt</Name><Severity>0</Severity><SystemOutport"
+	    ">true</SystemOutport><Causes><Cause><Probability></Probability><FailureLogic>OFailure1 OR (Omission-as OR Omissio"
+	    "n-gs OR Omission-sets OR Omission-x0)</FailureLogic></Cause></Causes></OutputDeviation><OutputDeviation><Name>Val"
+	    "ue-throt</Name><Severity>0</Severity><SystemOutport>true</SystemOutport><Causes><Cause><Probability></Probability"
+	    "><FailureLogic>VFailure1 OR (Value-as OR Value-gs OR Value-sets OR Value-x0)</FailureLogic></Cause></Causes></Out"
+	    "putDeviation></OutputDeviations><ExportedPropagations></ExportedPropagations><DiagnosticCoverages></DiagnosticCov"
+	    "erages></FailureData></Current></Implementations></HiPHOPS_ComponentFailureData>"
+	    HiPHOPS_isPerspective   "false"
+	  }
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "SpeedController"
+	    Location		    [2, 82, 1348, 715]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "gs"
+	      SID		      "113"
+	      Position		      [110, 103, 140, 117]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "as"
+	      SID		      "115"
+	      Position		      [110, 153, 140, 167]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "x0"
+	      SID		      "116"
+	      Position		      [110, 198, 140, 212]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "sets"
+	      SID		      "117"
+	      Position		      [110, 238, 140, 252]
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "throt"
+	      SID		      "114"
+	      Position		      [360, 103, 390, 117]
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "gs"
+	      SrcPort		      1
+	      DstBlock		      "throt"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "Switch"
+	  SID			  "102"
+	  Position		  [1110, 123, 1165, 217]
+	  List {
+	    ListType		    RTWdata
+	    HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false<"
+	    "/IncludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</Excl"
+	    "udeFromOptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>Both</HBlockType><SubsystemLocation>FromCurrentMo"
+	    "del</SubsystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent><Name>"
+	    "OFailure1</Name><UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailu"
+	    "re1</Name><UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent></BasicEvents><PotentialCCFs><"
+	    "/PotentialCCFs><OutputDeviations><OutputDeviation><Name>Omission-DefaultOut1</Name><Severity>0</Severity><SystemO"
+	    "utport>true</SystemOutport><Causes><Cause><Probability></Probability><FailureLogic>OFailure1 OR (Omission-Default"
+	    "In1 OR Omission-DefaultIn2 OR Omission-DefaultIn3)</FailureLogic></Cause></Causes></OutputDeviation><OutputDeviat"
+	    "ion><Name>Value-DefaultOut1</Name><Severity>0</Severity><SystemOutport>true</SystemOutport><Causes><Cause><Probab"
+	    "ility></Probability><FailureLogic>VFailure1 OR (Value-DefaultIn1 OR Value-DefaultIn2 OR Value-DefaultIn3)</Failur"
+	    "eLogic></Cause></Causes></OutputDeviation></OutputDeviations><ExportedPropagations></ExportedPropagations><Diagno"
+	    "sticCoverages></DiagnosticCoverages></FailureData></Current></Implementations></HiPHOPS_ComponentFailureData>"
+	    HiPHOPS_isPerspective   "false"
+	  }
+	  InputSameDT		  off
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "Switch1"
+	  SID			  "109"
+	  Position		  [1110, 274, 1160, 366]
+	  List {
+	    ListType		    RTWdata
+	    HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false<"
+	    "/IncludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</Excl"
+	    "udeFromOptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>Both</HBlockType><SubsystemLocation>FromCurrentMo"
+	    "del</SubsystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent><Name>"
+	    "OFailure1</Name><UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailu"
+	    "re1</Name><UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent></BasicEvents><PotentialCCFs><"
+	    "/PotentialCCFs><OutputDeviations><OutputDeviation><Name>Omission-DefaultOut1</Name><Severity>0</Severity><SystemO"
+	    "utport>true</SystemOutport><Causes><Cause><Probability></Probability><FailureLogic>OFailure1 OR (Omission-Default"
+	    "In1 OR Omission-DefaultIn2 OR Omission-DefaultIn3)</FailureLogic></Cause></Causes></OutputDeviation><OutputDeviat"
+	    "ion><Name>Value-DefaultOut1</Name><Severity>0</Severity><SystemOutport>true</SystemOutport><Causes><Cause><Probab"
+	    "ility></Probability><FailureLogic>VFailure1 OR (Value-DefaultIn1 OR Value-DefaultIn2 OR Value-DefaultIn3)</Failur"
+	    "eLogic></Cause></Causes></OutputDeviation></OutputDeviations><ExportedPropagations></ExportedPropagations><Diagno"
+	    "sticCoverages></DiagnosticCoverages></FailureData></Current></Implementations></HiPHOPS_ComponentFailureData>"
+	    HiPHOPS_isPerspective   "false"
+	  }
+	  InputSameDT		  off
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "Switch2"
+	  SID			  "118"
+	  Position		  [1110, 446, 1160, 534]
+	  List {
+	    ListType		    RTWdata
+	    HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false<"
+	    "/IncludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</Excl"
+	    "udeFromOptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>Both</HBlockType><SubsystemLocation>FromCurrentMo"
+	    "del</SubsystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent><Name>"
+	    "OFailure1</Name><UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailu"
+	    "re1</Name><UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent></BasicEvents><PotentialCCFs><"
+	    "/PotentialCCFs><OutputDeviations><OutputDeviation><Name>Omission-DefaultOut1</Name><Severity>0</Severity><SystemO"
+	    "utport>true</SystemOutport><Causes><Cause><Probability></Probability><FailureLogic>OFailure1 OR (Omission-Default"
+	    "In1 OR Omission-DefaultIn2 OR Omission-DefaultIn3)</FailureLogic></Cause></Causes></OutputDeviation><OutputDeviat"
+	    "ion><Name>Value-DefaultOut1</Name><Severity>0</Severity><SystemOutport>true</SystemOutport><Causes><Cause><Probab"
+	    "ility></Probability><FailureLogic>VFailure1 OR (Value-DefaultIn1 OR Value-DefaultIn2 OR Value-DefaultIn3)</Failur"
+	    "eLogic></Cause></Causes></OutputDeviation></OutputDeviations><ExportedPropagations></ExportedPropagations><Diagno"
+	    "sticCoverages></DiagnosticCoverages></FailureData></Current></Implementations></HiPHOPS_ComponentFailureData>"
+	    HiPHOPS_isPerspective   "false"
+	  }
+	  InputSameDT		  off
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "Switch3"
+	  SID			  "119"
+	  Position		  [1105, 630, 1160, 720]
+	  List {
+	    ListType		    RTWdata
+	    HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false<"
+	    "/IncludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</Excl"
+	    "udeFromOptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>Both</HBlockType><SubsystemLocation>FromCurrentMo"
+	    "del</SubsystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent><Name>"
+	    "OFailure1</Name><UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailu"
+	    "re1</Name><UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent></BasicEvents><PotentialCCFs><"
+	    "/PotentialCCFs><OutputDeviations><OutputDeviation><Name>Omission-DefaultOut1</Name><Severity>0</Severity><SystemO"
+	    "utport>true</SystemOutport><Causes><Cause><Probability></Probability><FailureLogic>OFailure1 OR (Omission-Default"
+	    "In1 OR Omission-DefaultIn2 OR Omission-DefaultIn3)</FailureLogic></Cause></Causes></OutputDeviation><OutputDeviat"
+	    "ion><Name>Value-DefaultOut1</Name><Severity>0</Severity><SystemOutport>true</SystemOutport><Causes><Cause><Probab"
+	    "ility></Probability><FailureLogic>VFailure1 OR (Value-DefaultIn1 OR Value-DefaultIn2 OR Value-DefaultIn3)</Failur"
+	    "eLogic></Cause></Causes></OutputDeviation></OutputDeviations><ExportedPropagations></ExportedPropagations><Diagno"
+	    "sticCoverages></DiagnosticCoverages></FailureData></Current></Implementations></HiPHOPS_ComponentFailureData>"
+	    HiPHOPS_isPerspective   "false"
+	  }
+	  InputSameDT		  off
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  "Terminator"
+	  SID			  "111"
+	  Position		  [320, 515, 340, 535]
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "HighLevelControls"
+	  SID			  "21"
+	  Position		  [1390, 338, 1420, 352]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  Labels		  [0, 1; 1, 0]
+	  SrcBlock		  "Settings"
+	  SrcPort		  1
+	  Points		  [445, 0; 0, -25]
+	  Branch {
+	    Points		    [0, -45]
+	    Branch {
+	      Points		      [0, -105]
+	      Branch {
+		Points			[0, -25]
+		Branch {
+		  Points		  [0, -175]
+		  Branch {
+		    Points		    [0, 20; 490, 0; 0, -240]
+		    DstBlock		    "Switch"
+		    DstPort		    2
+		  }
+		  Branch {
+		    Points		    [0, 20]
+		    Branch {
+		    Points		    [0, -100]
+		    Branch {
+		    Points		    [0, -155]
+		    DstBlock		    "RollController"
+		    DstPort		    2
+		    }
+		    Branch {
+		    DstBlock		    "PitchController"
+		    DstPort		    2
+		    }
+		    }
+		    Branch {
+		    Points		    [0, -20; 340, 0; 0, -70]
+		    DstBlock		    "Switch1"
+		    DstPort		    2
+		    }
+		  }
+		}
+		Branch {
+		  Points		  [140, 0; 0, -85]
+		  DstBlock		  "SpeedController"
+		  DstPort		  4
+		}
+	      }
+	      Branch {
+		Points			[365, 0; 0, -100]
+		DstBlock		"Switch2"
+		DstPort			2
+	      }
+	    }
+	    Branch {
+	      Points		      [190, 0; 0, -50]
+	      DstBlock		      "ClimbController"
+	      DstPort		      2
+	    }
+	  }
+	  Branch {
+	    Points		    [0, 0; 485, 0; 0, -65]
+	    DstBlock		    "Switch3"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "SensorData"
+	  SrcPort		  1
+	  DstBlock		  "BusSelector4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "BusSelector2"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    Points		    [0, 145]
+	    DstBlock		    "PitchController"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [90, 0]
+	    Branch {
+	      DstBlock		      "RollController"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, 310]
+	      DstBlock		      "SpeedController"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "RollController"
+	  SrcPort		  1
+	  DstBlock		  "Switch"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "NeutralBank"
+	  SrcPort		  1
+	  DstBlock		  "Switch"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "PitchController"
+	  SrcPort		  1
+	  DstBlock		  "Switch1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "NeutralPitch"
+	  SrcPort		  1
+	  DstBlock		  "Switch1"
+	  DstPort		  3
+	}
+	Line {
+	  Name			  "<signal2>"
+	  Labels		  [0, 0; 0, 0]
+	  SrcBlock		  "BusSelector3"
+	  SrcPort		  2
+	  DstBlock		  "Terminator"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "<signal1>"
+	  Labels		  [0, 0; 0, 0]
+	  SrcBlock		  "BusSelector3"
+	  SrcPort		  1
+	  Points		  [55, 0; 0, -50]
+	  DstBlock		  "SpeedController"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "SpeedController"
+	  SrcPort		  1
+	  DstBlock		  "Switch2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "NeutralThrotlle"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  Branch {
+	    Points		    [0, -55]
+	    DstBlock		    "SpeedController"
+	    DstPort		    3
+	  }
+	  Branch {
+	    DstBlock		    "Switch2"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  Name			  "<signal3>"
+	  Labels		  [0, 0; 0, 0]
+	  SrcBlock		  "BusSelector3"
+	  SrcPort		  3
+	  Points		  [60, 0; 0, 80]
+	  DstBlock		  "EmbeddedMATLABFunction"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "NeutralPitchSetPoint"
+	  SrcPort		  1
+	  Points		  [20, 0]
+	  Branch {
+	    Points		    [0, -45]
+	    DstBlock		    "ClimbController"
+	    DstPort		    3
+	  }
+	  Branch {
+	    DstBlock		    "Switch3"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  SrcBlock		  "ClimbController"
+	  SrcPort		  1
+	  DstBlock		  "Switch3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "EmbeddedMATLABFunction"
+	  SrcPort		  1
+	  DstBlock		  "ClimbController"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Switch"
+	  SrcPort		  1
+	  Points		  [60, 0; 0, 105]
+	  DstBlock		  "BusCreator"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Switch1"
+	  SrcPort		  1
+	  DstBlock		  "BusCreator"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Switch2"
+	  SrcPort		  1
+	  Points		  [70, 0; 0, -125]
+	  DstBlock		  "BusCreator"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Switch3"
+	  SrcPort		  1
+	  Points		  [90, 0; 0, -265]
+	  DstBlock		  "BusCreator"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "BusCreator"
+	  SrcPort		  1
+	  DstBlock		  "HighLevelControls"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "<signal1>"
+	  Labels		  [0, 0]
+	  SrcBlock		  "BusSelector4"
+	  SrcPort		  1
+	  Points		  [115, 0; 0, -120]
+	  DstBlock		  "BusSelector2"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "<signal2>"
+	  Labels		  [0, 0]
+	  SrcBlock		  "BusSelector4"
+	  SrcPort		  2
+	  Points		  [110, 0; 0, 260]
+	  DstBlock		  "BusSelector3"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "BarometricProcessor"
+      SID		      "164"
+      Ports		      [2, 3]
+      Position		      [310, 153, 480, 227]
+      LibraryVersion	      "1.225"
+      List {
+	ListType		RTWdata
+	HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false</Inc"
+	"ludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</ExcludeFromO"
+	"ptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>Both</HBlockType><SubsystemLocation>FromCurrentModel</Subsyst"
+	"emLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent><Name>OFailure1</Name>"
+	"<UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>OFailure2</Name><Unavailab"
+	"ilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>OFailure3</Name><UnavailabilityFormu"
+	"la><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailure1</Name><UnavailabilityFormula><None><"
+	"/None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailure2</Name><UnavailabilityFormula><None></None></Un"
+	"availabilityFormula></BasicEvent><BasicEvent><Name>VFailure3</Name><UnavailabilityFormula><None></None></Unavailabili"
+	"tyFormula></BasicEvent></BasicEvents><PotentialCCFs></PotentialCCFs><OutputDeviations><OutputDeviation><Name>Omission"
+	"-PressureAltitude</Name><Severity>0</Severity><SystemOutport>true</SystemOutport><Causes><Cause><Probability></Probab"
+	"ility><FailureLogic>OFailure1 OR (Omission-StaticPressure OR Omission-DynamicPressure)</FailureLogic></Cause></Causes"
+	"></OutputDeviation><OutputDeviation><Name>Value-PressureAltitude</Name><Severity>0</Severity><SystemOutport>true</Sys"
+	"temOutport><Causes><Cause><Probability></Probability><FailureLogic>VFailure1 OR (Value-StaticPressure OR Value-Dynami"
+	"cPressure)</FailureLogic></Cause></Causes></OutputDeviation><OutputDeviation><Name>Omission-ClimbRate</Name><Severity"
+	">0</Severity><SystemOutport>true</SystemOutport><Causes><Cause><Probability></Probability><FailureLogic>OFailure2 OR "
+	"(Omission-StaticPressure OR Omission-DynamicPressure)</FailureLogic></Cause></Causes></OutputDeviation><OutputDeviati"
+	"on><Name>Omission-IndicatedAirspeed</Name><Severity>0</Severity><SystemOutport>true</SystemOutport><Causes><Cause><Pr"
+	"obability></Probability><FailureLogic>OFailure3 OR (Omission-StaticPressure OR Omission-DynamicPressure)</FailureLogi"
+	"c></Cause></Causes></OutputDeviation><OutputDeviation><Name>Value-IndicatedAirspeed</Name><Severity>0</Severity><Syst"
+	"emOutport>true</SystemOutport><Causes><Cause><Probability></Probability><FailureLogic>VFailure3 OR (Value-StaticPress"
+	"ure OR Value-DynamicPressure)</FailureLogic></Cause></Causes></OutputDeviation><OutputDeviation><Name>Value-ClimbRate"
+	"</Name><Severity>0</Severity><SystemOutport>true</SystemOutport><Causes><Cause><Probability></Probability><FailureLog"
+	"ic>VFailure2 OR (Value-StaticPressure OR Value-DynamicPressure)</FailureLogic></Cause></Causes></OutputDeviation></Ou"
+	"tputDeviations><ExportedPropagations></ExportedPropagations></FailureData></Current></Implementations></HiPHOPS_Compo"
+	"nentFailureData>"
+	HiPHOPS_isPerspective	"false"
+      }
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"BarometricProcessor"
+	Location		[2, 74, 1364, 707]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "StaticPressure"
+	  SID			  "165"
+	  Position		  [110, 103, 140, 117]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "DynamicPressure"
+	  SID			  "169"
+	  Position		  [110, 198, 140, 212]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "PressureAltitude"
+	  SID			  "166"
+	  Position		  [360, 103, 390, 117]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "ClimbRate"
+	  SID			  "167"
+	  Position		  [360, 198, 390, 212]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "IndicatedAirspeed"
+	  SID			  "168"
+	  Position		  [360, 258, 390, 272]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+      }
+    }
+    Block {
+      BlockType		      BusCreator
+      Name		      "BusCreator"
+      SID		      "172"
+      Ports		      [2, 1]
+      Position		      [550, 58, 555, 122]
+      ShowName		      off
+      List {
+	ListType		RTWdata
+	HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false</Inc"
+	"ludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</ExcludeFromO"
+	"ptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>Both</HBlockType><SubsystemLocation>FromCurrentModel</Subsyst"
+	"emLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent><Name>OFailure1</Name>"
+	"<UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailure1</Name><Unavailab"
+	"ilityFormula><None></None></UnavailabilityFormula></BasicEvent></BasicEvents><PotentialCCFs></PotentialCCFs><OutputDe"
+	"viations><OutputDeviation><Name>Omission-DefaultOut1</Name><Severity>0</Severity><SystemOutport>true</SystemOutport><"
+	"Causes><Cause><Probability></Probability><FailureLogic>OFailure1 OR (Omission-DefaultIn1 OR Omission-DefaultIn2)</Fai"
+	"lureLogic></Cause></Causes></OutputDeviation><OutputDeviation><Name>Value-DefaultOut1</Name><Severity>0</Severity><Sy"
+	"stemOutport>true</SystemOutport><Causes><Cause><Probability></Probability><FailureLogic>VFailure1 OR (Omission-Defaul"
+	"tIn1 OR Omission-DefaultIn2)</FailureLogic></Cause></Causes></OutputDeviation></OutputDeviations><ExportedPropagation"
+	"s></ExportedPropagations></FailureData></Current></Implementations></HiPHOPS_ComponentFailureData>"
+	HiPHOPS_isPerspective	"false"
+      }
+      Inputs		      "2"
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      BusCreator
+      Name		      "BusCreator1"
+      SID		      "145"
+      Ports		      [2, 1]
+      Position		      [340, 494, 345, 541]
+      List {
+	ListType		RTWdata
+	HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false</Inc"
+	"ludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</ExcludeFromO"
+	"ptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>Both</HBlockType><SubsystemLocation>FromCurrentModel</Subsyst"
+	"emLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent><Name>OFailure1</Name>"
+	"<UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailure1</Name><Unavailab"
+	"ilityFormula><None></None></UnavailabilityFormula></BasicEvent></BasicEvents><PotentialCCFs></PotentialCCFs><OutputDe"
+	"viations><OutputDeviation><Name>Omission-DefaultOut1</Name><Severity>0</Severity><SystemOutport>true</SystemOutport><"
+	"Causes><Cause><Probability></Probability><FailureLogic>OFailure1 OR (Omission-DefaultIn1 OR Omission-DefaultIn2)</Fai"
+	"lureLogic></Cause></Causes></OutputDeviation><OutputDeviation><Name>Value-DefaultOut1</Name><Severity>0</Severity><Sy"
+	"stemOutport>true</SystemOutport><Causes><Cause><Probability></Probability><FailureLogic>VFailure1 OR (Value-DefaultIn"
+	"1 OR Value-DefaultIn2)</FailureLogic></Cause></Causes></OutputDeviation></OutputDeviations><ExportedPropagations></Ex"
+	"portedPropagations><DiagnosticCoverages></DiagnosticCoverages></FailureData></Current></Implementations></HiPHOPS_Com"
+	"ponentFailureData>"
+	HiPHOPS_isPerspective	"false"
+      }
+      Inputs		      "2"
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      BusCreator
+      Name		      "BusCreator3"
+      SID		      "174"
+      Ports		      [3, 1]
+      Position		      [510, 155, 515, 225]
+      ShowName		      off
+      List {
+	ListType		RTWdata
+	HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false</Inc"
+	"ludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</ExcludeFromO"
+	"ptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>Both</HBlockType><SubsystemLocation>FromCurrentModel</Subsyst"
+	"emLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent><Name>OFailure1</Name>"
+	"<UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailure1</Name><Unavailab"
+	"ilityFormula><None></None></UnavailabilityFormula></BasicEvent></BasicEvents><PotentialCCFs></PotentialCCFs><OutputDe"
+	"viations><OutputDeviation><Name>Omission-DefaultOut1</Name><Severity>0</Severity><SystemOutport>true</SystemOutport><"
+	"Causes><Cause><Probability></Probability><FailureLogic>OFailure1 OR (Omission-DefaultIn1 OR Omission-DefaultIn2 OR Om"
+	"ission-DefaultIn3)</FailureLogic></Cause></Causes></OutputDeviation><OutputDeviation><Name>Value-DefaultOut1</Name><S"
+	"everity>0</Severity><SystemOutport>true</SystemOutport><Causes><Cause><Probability></Probability><FailureLogic>VFailu"
+	"re1 OR (Omission-DefaultIn1 OR Omission-DefaultIn2 OR Omission-DefaultIn3)</FailureLogic></Cause></Causes></OutputDev"
+	"iation></OutputDeviations><ExportedPropagations></ExportedPropagations></FailureData></Current></Implementations></Hi"
+	"PHOPS_ComponentFailureData>"
+	HiPHOPS_isPerspective	"false"
+      }
+      Inputs		      "3"
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      BusCreator
+      Name		      "BusCreator4"
+      SID		      "173"
+      Ports		      [2, 1]
+      Position		      [505, 61, 510, 119]
+      ShowName		      off
+      List {
+	ListType		RTWdata
+	HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false</Inc"
+	"ludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</ExcludeFromO"
+	"ptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>Both</HBlockType><SubsystemLocation>FromCurrentModel</Subsyst"
+	"emLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent><Name>OFailure1</Name>"
+	"<UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailure1</Name><Unavailab"
+	"ilityFormula><None></None></UnavailabilityFormula></BasicEvent></BasicEvents><PotentialCCFs></PotentialCCFs><OutputDe"
+	"viations><OutputDeviation><Name>Omission-DefaultOut1</Name><Severity>0</Severity><SystemOutport>true</SystemOutport><"
+	"Causes><Cause><Probability></Probability><FailureLogic>OFailure1 OR (Omission-DefaultIn1 OR Omission-DefaultIn2)</Fai"
+	"lureLogic></Cause></Causes></OutputDeviation><OutputDeviation><Name>Value-DefaultOut1</Name><Severity>0</Severity><Sy"
+	"stemOutport>true</SystemOutport><Causes><Cause><Probability></Probability><FailureLogic>VFailure1 OR (Omission-Defaul"
+	"tIn1 OR Omission-DefaultIn2)</FailureLogic></Cause></Causes></OutputDeviation></OutputDeviations><ExportedPropagation"
+	"s></ExportedPropagations></FailureData></Current></Implementations></HiPHOPS_ComponentFailureData>"
+	HiPHOPS_isPerspective	"false"
+      }
+      Inputs		      "2"
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      Switch
+      Name		      "CommandSwitch"
+      SID		      "6"
+      Position		      [1180, 481, 1225, 589]
+      List {
+	ListType		RTWdata
+	HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false</Inc"
+	"ludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</ExcludeFromO"
+	"ptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>Both</HBlockType><SubsystemLocation>FromCurrentModel</Subsyst"
+	"emLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent><Name>OFailure1</Name>"
+	"<UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailure1</Name><Unavailab"
+	"ilityFormula><None></None></UnavailabilityFormula></BasicEvent></BasicEvents><PotentialCCFs></PotentialCCFs><OutputDe"
+	"viations><OutputDeviation><Name>Omission-DefaultOut1</Name><Severity>0</Severity><SystemOutport>true</SystemOutport><"
+	"Causes><Cause><Probability></Probability><FailureLogic>OFailure1 OR (Omission-DefaultIn1 OR Omission-DefaultIn2 OR Om"
+	"ission-DefaultIn3)</FailureLogic></Cause></Causes></OutputDeviation><OutputDeviation><Name>Value-DefaultOut1</Name><S"
+	"everity>0</Severity><SystemOutport>true</SystemOutport><Causes><Cause><Probability></Probability><FailureLogic>VFailu"
+	"re1 OR (Omission-DefaultIn1 OR Omission-DefaultIn2 OR Omission-DefaultIn3)</FailureLogic></Cause></Causes></OutputDev"
+	"iation></OutputDeviations><ExportedPropagations></ExportedPropagations><DiagnosticCoverages></DiagnosticCoverages></F"
+	"ailureData></Current></Implementations></HiPHOPS_ComponentFailureData>"
+	HiPHOPS_isPerspective	"false"
+      }
+      InputSameDT	      off
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant"
+      SID		      "170"
+      Position		      [575, 335, 605, 365]
+      ShowName		      off
+      Value		      "0"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "FailSafeController"
+      SID		      "7"
+      Ports		      [2, 1]
+      Position		      [1275, 99, 1405, 186]
+      LibraryVersion	      "1.225"
+      List {
+	ListType		RTWdata
+	HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false</Inc"
+	"ludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</ExcludeFromO"
+	"ptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>Both</HBlockType><SubsystemLocation>FromCurrentModel</Subsyst"
+	"emLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent><Name>OFailure1</Name>"
+	"<UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailure1</Name><Unavailab"
+	"ilityFormula><None></None></UnavailabilityFormula></BasicEvent></BasicEvents><PotentialCCFs></PotentialCCFs><OutputDe"
+	"viations><OutputDeviation><Name>Omission-FilteredControls</Name><Severity>0</Severity><SystemOutport>true</SystemOutp"
+	"ort><Causes><Cause><Probability></Probability><FailureLogic>OFailure1 OR (Omission-FlightControls OR Omission-SensorD"
+	"ata)</FailureLogic></Cause></Causes></OutputDeviation><OutputDeviation><Name>Value-FilteredControls</Name><Severity>0"
+	"</Severity><SystemOutport>true</SystemOutport><Causes><Cause><Probability></Probability><FailureLogic>VFailure1 OR (V"
+	"alue-FlightControls AND Value-SensorData)</FailureLogic></Cause></Causes></OutputDeviation></OutputDeviations><Export"
+	"edPropagations></ExportedPropagations></FailureData></Current></Implementations></HiPHOPS_ComponentFailureData>"
+	HiPHOPS_isPerspective	"false"
+      }
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"FailSafeController"
+	Location		[215, 345, 713, 645]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "SensorData"
+	  SID			  "8"
+	  Position		  [110, 103, 140, 117]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "FlightControls"
+	  SID			  "10"
+	  Position		  [110, 68, 140, 82]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "FilteredControls"
+	  SID			  "9"
+	  Position		  [360, 103, 390, 117]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "FlightControls"
+	  SrcPort		  1
+	  Points		  [100, 0; 0, 35]
+	  DstBlock		  "FilteredControls"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "FlightControlMixer"
+      SID		      "11"
+      Ports		      [2, 1]
+      Position		      [1100, 114, 1240, 216]
+      LibraryVersion	      "1.225"
+      List {
+	ListType		RTWdata
+	HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false</Inc"
+	"ludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</ExcludeFromO"
+	"ptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>Both</HBlockType><SubsystemLocation>FromCurrentModel</Subsyst"
+	"emLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent><Name>OFailure1</Name>"
+	"<UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailure1</Name><Unavailab"
+	"ilityFormula><None></None></UnavailabilityFormula></BasicEvent></BasicEvents><PotentialCCFs></PotentialCCFs><OutputDe"
+	"viations><OutputDeviation><Name>Omission-FlightControls</Name><Severity>0</Severity><SystemOutport>true</SystemOutpor"
+	"t><Causes><Cause><Probability></Probability><FailureLogic>OFailure1 OR (Omission-HighLevelControls AND Omission-Senso"
+	"rData)</FailureLogic></Cause></Causes></OutputDeviation><OutputDeviation><Name>Value-FlightControls</Name><Severity>0"
+	"</Severity><SystemOutport>true</SystemOutport><Causes><Cause><Probability></Probability><FailureLogic>VFailure1 OR (V"
+	"alue-HighLevelControls OR Value-SensorData)</FailureLogic></Cause></Causes></OutputDeviation></OutputDeviations><Expo"
+	"rtedPropagations></ExportedPropagations></FailureData></Current></Implementations></HiPHOPS_ComponentFailureData>"
+	HiPHOPS_isPerspective	"false"
+      }
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"FlightControlMixer"
+	Location		[217, 236, 715, 536]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "SensorData"
+	  SID			  "15"
+	  Position		  [110, 43, 140, 57]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "HighLevelControls"
+	  SID			  "12"
+	  Position		  [110, 103, 140, 117]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "FlightControls"
+	  SID			  "13"
+	  Position		  [360, 103, 390, 117]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "HighLevelControls"
+	  SrcPort		  1
+	  DstBlock		  "FlightControls"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "FlightStabilizer"
+      SID		      "27"
+      Ports		      [3, 1]
+      Position		      [700, 277, 860, 363]
+      LibraryVersion	      "1.225"
+      List {
+	ListType		RTWdata
+	HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false</Inc"
+	"ludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</ExcludeFromO"
+	"ptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>Both</HBlockType><SubsystemLocation>FromCurrentModel</Subsyst"
+	"emLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent><Name>OFailure1</Name>"
+	"<UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailure1</Name><Unavailab"
+	"ilityFormula><None></None></UnavailabilityFormula></BasicEvent></BasicEvents><PotentialCCFs></PotentialCCFs><OutputDe"
+	"viations><OutputDeviation><Name>Omission-AutopilotSettings</Name><Severity>0</Severity><SystemOutport>true</SystemOut"
+	"port><Causes><Cause><Probability></Probability><FailureLogic>OFailure1 OR (Omission-Altitude0 OR Omission-SensorData "
+	"OR Omission-PilotCommands)</FailureLogic></Cause></Causes></OutputDeviation><OutputDeviation><Name>Value-AutopilotSet"
+	"tings</Name><Severity>0</Severity><SystemOutport>true</SystemOutport><Causes><Cause><Probability></Probability><Failu"
+	"reLogic>VFailure1 OR (Value-Altitude0 OR Value-SensorData OR Value-PilotCommands)</FailureLogic></Cause></Causes></Ou"
+	"tputDeviation></OutputDeviations><ExportedPropagations></ExportedPropagations></FailureData></Current></Implementatio"
+	"ns></HiPHOPS_ComponentFailureData>"
+	HiPHOPS_isPerspective	"false"
+      }
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"FlightStabilizer"
+	Location		[0, 50, 1350, 736]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "SensorData"
+	  SID			  "33"
+	  Position		  [110, 158, 140, 172]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "PilotCommands"
+	  SID			  "28"
+	  Position		  [110, 283, 140, 297]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Altitude0"
+	  SID			  "35"
+	  Position		  [110, 253, 140, 267]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "AltitudeController"
+	  SID			  "87"
+	  Ports			  [2, 1]
+	  Position		  [230, 245, 355, 305]
+	  LibraryVersion	  "1.225"
+	  List {
+	    ListType		    RTWdata
+	    HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false<"
+	    "/IncludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</Excl"
+	    "udeFromOptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>Both</HBlockType><SubsystemLocation>FromCurrentMo"
+	    "del</SubsystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent><Name>"
+	    "OFailure1</Name><UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailu"
+	    "re1</Name><UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent></BasicEvents><PotentialCCFs><"
+	    "/PotentialCCFs><OutputDeviations><OutputDeviation><Name>Omission-Climb</Name><Severity>0</Severity><SystemOutport"
+	    ">true</SystemOutport><Causes><Cause><Probability></Probability><FailureLogic>OFailure1 OR (Omission-Altitude OR O"
+	    "mission-Settings)</FailureLogic></Cause></Causes></OutputDeviation><OutputDeviation><Name>Value-Climb</Name><Seve"
+	    "rity>0</Severity><SystemOutport>true</SystemOutport><Causes><Cause><Probability></Probability><FailureLogic>VFail"
+	    "ure1 OR (Value-Altitude OR Value-Settings)</FailureLogic></Cause></Causes></OutputDeviation></OutputDeviations><E"
+	    "xportedPropagations></ExportedPropagations></FailureData></Current></Implementations></HiPHOPS_ComponentFailureDa"
+	    "ta>"
+	    HiPHOPS_isPerspective   "false"
+	  }
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "AltitudeController"
+	    Location		    [431, 371, 933, 724]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Altitude"
+	      SID		      "88"
+	      Position		      [110, 103, 140, 117]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Settings"
+	      SID		      "91"
+	      Position		      [110, 173, 140, 187]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Climb"
+	      SID		      "89"
+	      Position		      [360, 103, 390, 117]
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "Altitude"
+	      SrcPort		      1
+	      DstBlock		      "Climb"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "AutopilotSettings"
+	  SID			  "29"
+	  Position		  [415, 268, 445, 282]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "PilotCommands"
+	  SrcPort		  1
+	  DstBlock		  "AltitudeController"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Altitude0"
+	  SrcPort		  1
+	  DstBlock		  "AltitudeController"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "AltitudeController"
+	  SrcPort		  1
+	  DstBlock		  "AutopilotSettings"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "IMUSensor"
+      SID		      "156"
+      Ports		      [0, 2]
+      Position		      [385, 60, 480, 120]
+      LibraryVersion	      "1.225"
+      List {
+	ListType		RTWdata
+	HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false</Inc"
+	"ludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</ExcludeFromO"
+	"ptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>Both</HBlockType><SubsystemLocation>FromCurrentModel</Subsyst"
+	"emLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent><Name>OFailure1</Name>"
+	"<UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailure1</Name><Unavailab"
+	"ilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>OFailure2</Name><UnavailabilityFormu"
+	"la><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailure2</Name><UnavailabilityFormula><None><"
+	"/None></UnavailabilityFormula></BasicEvent></BasicEvents><PotentialCCFs></PotentialCCFs><OutputDeviations><OutputDevi"
+	"ation><Name>Omission-Position</Name><Severity>0</Severity><SystemOutport>true</SystemOutport><Causes><Cause><Probabil"
+	"ity></Probability><FailureLogic>OFailure1</FailureLogic></Cause></Causes></OutputDeviation><OutputDeviation><Name>Val"
+	"ue-Position</Name><Severity>0</Severity><SystemOutport>true</SystemOutport><Causes><Cause><Probability></Probability>"
+	"<FailureLogic>VFailure1</FailureLogic></Cause></Causes></OutputDeviation><OutputDeviation><Name>Omission-Velocity</Na"
+	"me><Severity>0</Severity><SystemOutport>true</SystemOutport><Causes><Cause><Probability></Probability><FailureLogic>O"
+	"Failure2</FailureLogic></Cause></Causes></OutputDeviation><OutputDeviation><Name>Value-Velocity</Name><Severity>0</Se"
+	"verity><SystemOutport>true</SystemOutport><Causes><Cause><Probability></Probability><FailureLogic>VFailure2</FailureL"
+	"ogic></Cause></Causes></OutputDeviation></OutputDeviations><ExportedPropagations></ExportedPropagations></FailureData"
+	"></Current></Implementations></HiPHOPS_ComponentFailureData>"
+	HiPHOPS_isPerspective	"false"
+      }
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"IMUSensor"
+	Location		[2, 74, 1364, 707]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Outport
+	  Name			  "Position"
+	  SID			  "158"
+	  Position		  [360, 103, 390, 117]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Velocity"
+	  SID			  "159"
+	  Position		  [360, 168, 390, 182]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "ModeSwitcher"
+      SID		      "36"
+      Ports		      [1, 1]
+      Position		      [700, 458, 860, 542]
+      LibraryVersion	      "1.225"
+      List {
+	ListType		RTWdata
+	HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false</Inc"
+	"ludeInOptimisation><Implementations><Current><Name>Implementation2</Name><ExcludeFromOptimisation>false</ExcludeFromO"
+	"ptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>Both</HBlockType><SubsystemLocation>FromCurrentModel</Subsyst"
+	"emLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent><Name>OFailure1</Name>"
+	"<UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailure1</Name><Unavailab"
+	"ilityFormula><None></None></UnavailabilityFormula></BasicEvent></BasicEvents><PotentialCCFs></PotentialCCFs><OutputDe"
+	"viations><OutputDeviation><Name>Omission-ControlMode</Name><Severity>0</Severity><SystemOutport>true</SystemOutport><"
+	"Causes><Cause><Probability></Probability><FailureLogic>OFailure1 OR Omission-PilotMode</FailureLogic></Cause></Causes"
+	"></OutputDeviation><OutputDeviation><Name>Value-ControlMode</Name><Severity>0</Severity><SystemOutport>true</SystemOu"
+	"tport><Causes><Cause><Probability></Probability><FailureLogic>VFailure1 OR (Omission-PilotMode OR Value-PilotMode)</F"
+	"ailureLogic></Cause></Causes></OutputDeviation></OutputDeviations><ExportedPropagations></ExportedPropagations></Fail"
+	"ureData></Current></Implementations></HiPHOPS_ComponentFailureData>"
+	HiPHOPS_isPerspective	"false"
+      }
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"ModeSwitcher"
+	Location		[2, 82, 1348, 715]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "PilotMode"
+	  SID			  "40"
+	  Position		  [110, 468, 140, 482]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant"
+	  SID			  "68"
+	  Position		  [290, 195, 320, 225]
+	  Value			  "0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant1"
+	  SID			  "69"
+	  Position		  [415, 195, 445, 225]
+	}
+	Block {
+	  BlockType		  MultiPortSwitch
+	  Name			  "MultiportSwitch2"
+	  SID			  "72"
+	  Ports			  [4, 1]
+	  Position		  [595, 471, 630, 524]
+	  List {
+	    ListType		    RTWdata
+	    HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false<"
+	    "/IncludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</Excl"
+	    "udeFromOptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>Both</HBlockType><SubsystemLocation>FromCurrentMo"
+	    "del</SubsystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent><Name>"
+	    "OFailure1</Name><UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailu"
+	    "re1</Name><UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent></BasicEvents><PotentialCCFs><"
+	    "/PotentialCCFs><OutputDeviations><OutputDeviation><Name>Omission-DefaultOut1</Name><Severity>0</Severity><SystemO"
+	    "utport>true</SystemOutport><Causes><Cause><Probability></Probability><FailureLogic>OFailure1 OR (Omission-Default"
+	    "In1 AND Omission-DefaultIn2 AND Omission-DefaultIn3 AND Omission-DefaultIn4)</FailureLogic></Cause></Causes></Out"
+	    "putDeviation><OutputDeviation><Name>Value-DefaultOut1</Name><Severity>0</Severity><SystemOutport>true</SystemOutp"
+	    "ort><Causes><Cause><Probability></Probability><FailureLogic>VFailure1 OR (Value-DefaultIn1 AND Value-DefaultIn2 A"
+	    "ND Value-DefaultIn3 AND Value-DefaultIn4)</FailureLogic></Cause></Causes></OutputDeviation></OutputDeviations><Ex"
+	    "portedPropagations></ExportedPropagations></FailureData></Current></Implementations></HiPHOPS_ComponentFailureDat"
+	    "a>"
+	    HiPHOPS_isPerspective   "false"
+	  }
+	  zeroidx		  off
+	  InputSameDT		  off
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "ControlMode"
+	  SID			  "39"
+	  Position		  [930, 493, 960, 507]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "PilotMode"
+	  SrcPort		  1
+	  DstBlock		  "MultiportSwitch2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "MultiportSwitch2"
+	  SrcPort		  1
+	  DstBlock		  "ControlMode"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant"
+	  SrcPort		  1
+	  Points		  [20, 0; 0, 295]
+	  Branch {
+	    Points		    [0, 15]
+	    DstBlock		    "MultiportSwitch2"
+	    DstPort		    4
+	  }
+	  Branch {
+	    DstBlock		    "MultiportSwitch2"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  SrcBlock		  "Constant1"
+	  SrcPort		  1
+	  Points		  [25, 0; 0, 280]
+	  DstBlock		  "MultiportSwitch2"
+	  DstPort		  2
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "PWMDecoder"
+      SID		      "44"
+      Ports		      [1, 2]
+      Position		      [420, 480, 575, 560]
+      LibraryVersion	      "1.225"
+      List {
+	ListType		RTWdata
+	HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false</Inc"
+	"ludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</ExcludeFromO"
+	"ptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>Both</HBlockType><SubsystemLocation>FromCurrentModel</Subsyst"
+	"emLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent><Name>OFailure1</Name>"
+	"<UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>OFailure2</Name><Unavailab"
+	"ilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailure1</Name><UnavailabilityFormu"
+	"la><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailure2</Name><UnavailabilityFormula><None><"
+	"/None></UnavailabilityFormula></BasicEvent></BasicEvents><PotentialCCFs></PotentialCCFs><OutputDeviations><OutputDevi"
+	"ation><Name>Omission-FlightControls</Name><Severity>0</Severity><SystemOutport>true</SystemOutport><Causes><Cause><Pr"
+	"obability></Probability><FailureLogic>OFailure1 OR Omission-RCCommands</FailureLogic></Cause></Causes></OutputDeviati"
+	"on><OutputDeviation><Name>Omission-PilotMode</Name><Severity>0</Severity><SystemOutport>true</SystemOutport><Causes><"
+	"Cause><Probability></Probability><FailureLogic>OFailure2 OR Omission-RCCommands</FailureLogic></Cause></Causes></Outp"
+	"utDeviation><OutputDeviation><Name>Value-FlightControls</Name><Severity>0</Severity><SystemOutport>true</SystemOutpor"
+	"t><Causes><Cause><Probability></Probability><FailureLogic>VFailure1 OR (Omission-RCCommands OR Value-RCCommands)</Fai"
+	"lureLogic></Cause></Causes></OutputDeviation><OutputDeviation><Name>Value-PilotMode</Name><Severity>0</Severity><Syst"
+	"emOutport>true</SystemOutport><Causes><Cause><Probability></Probability><FailureLogic>VFailure2 OR (Omission-RCComman"
+	"ds OR Value-RCCommands)</FailureLogic></Cause></Causes></OutputDeviation></OutputDeviations><ExportedPropagations></E"
+	"xportedPropagations></FailureData></Current><Alternatives><Alternative><Name>Implementation2</Name><ExcludeFromOptimi"
+	"sation>false</ExcludeFromOptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>Both</HBlockType><SubsystemLocation"
+	">FromCurrentModel</SubsystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEv"
+	"ent><Name>OFailure1</Name><UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>"
+	"VFailure1</Name><UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent></BasicEvents><PotentialCCFs"
+	"></PotentialCCFs><OutputDeviations><OutputDeviation><Name>Omission-FlightControls</Name><Severity>0</Severity><System"
+	"Outport>true</SystemOutport><Causes><Cause><Probability></Probability><FailureLogic>OFailure1 OR Omission-RCCommands<"
+	"/FailureLogic></Cause></Causes></OutputDeviation><OutputDeviation><Name>Value-FlightControls</Name><Severity>0</Sever"
+	"ity><SystemOutport>true</SystemOutport><Causes><Cause><Probability></Probability><FailureLogic>VFailure1 OR (Omission"
+	"-RCCommands OR Value-RCCommands)</FailureLogic></Cause></Causes></OutputDeviation></OutputDeviations><ExportedPropaga"
+	"tions></ExportedPropagations></FailureData></Alternative></Alternatives></Implementations></HiPHOPS_ComponentFailureD"
+	"ata>"
+	HiPHOPS_isPerspective	"false"
+      }
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"PWMDecoder"
+	Location		[0, 82, 1346, 722]
+	Open			on
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "RCCommands"
+	  SID			  "45"
+	  Position		  [175, 203, 205, 217]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  BusCreator
+	  Name			  "BusCreatorX"
+	  SID			  "81"
+	  Ports			  [4, 1]
+	  Position		  [1270, 117, 1275, 218]
+	  ShowName		  off
+	  List {
+	    ListType		    RTWdata
+	    HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false<"
+	    "/IncludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</Excl"
+	    "udeFromOptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>Both</HBlockType><SubsystemLocation>FromCurrentMo"
+	    "del</SubsystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent><Name>"
+	    "OFailure1</Name><UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailu"
+	    "re1</Name><UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent></BasicEvents><PotentialCCFs><"
+	    "/PotentialCCFs><OutputDeviations><OutputDeviation><Name>Omission-DefaultOut1</Name><Severity>0</Severity><SystemO"
+	    "utport>true</SystemOutport><Causes><Cause><Probability></Probability><FailureLogic>OFailure1 OR (Omission-Default"
+	    "In1 AND Omission-DefaultIn2 AND Omission-DefaultIn3 AND Omission-DefaultIn4)</FailureLogic></Cause></Causes></Out"
+	    "putDeviation><OutputDeviation><Name>Value-DefaultOut1</Name><Severity>0</Severity><SystemOutport>true</SystemOutp"
+	    "ort><Causes><Cause><Probability></Probability><FailureLogic>VFailure1 OR (Value-DefaultIn1 AND Value-DefaultIn2 A"
+	    "ND Value-DefaultIn3 AND Value-DefaultIn4)</FailureLogic></Cause></Causes></OutputDeviation></OutputDeviations><Ex"
+	    "portedPropagations></ExportedPropagations></FailureData></Current></Implementations></HiPHOPS_ComponentFailureDat"
+	    "a>"
+	    HiPHOPS_isPerspective   "false"
+	  }
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant"
+	  SID			  "77"
+	  Position		  [385, 275, 415, 305]
+	  Value			  "1000"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant1"
+	  SID			  "84"
+	  Position		  [960, 235, 990, 265]
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "Demux"
+	  SID			  "78"
+	  Ports			  [1, 6]
+	  Position		  [630, 101, 635, 314]
+	  ShowName		  off
+	  Outputs		  "6"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "Demux1"
+	  SID			  "79"
+	  Ports			  [1, 3]
+	  Position		  [1140, 118, 1145, 192]
+	  ShowName		  off
+	  List {
+	    ListType		    RTWdata
+	    HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false<"
+	    "/IncludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</Excl"
+	    "udeFromOptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>Both</HBlockType><SubsystemLocation>FromCurrentMo"
+	    "del</SubsystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent><Name>"
+	    "OFailure1</Name><UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>OFailu"
+	    "re2</Name><UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>OFailure3</N"
+	    "ame><UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailure1</Name><U"
+	    "navailabilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailure2</Name><Unavail"
+	    "abilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailure3</Name><Unavailabilit"
+	    "yFormula><None></None></UnavailabilityFormula></BasicEvent></BasicEvents><PotentialCCFs></PotentialCCFs><OutputDe"
+	    "viations><OutputDeviation><Name>Omission-DefaultOut1</Name><Severity>0</Severity><SystemOutport>true</SystemOutpo"
+	    "rt><Causes><Cause><Probability></Probability><FailureLogic>OFailure1 OR Omission-DefaultIn1</FailureLogic></Cause"
+	    "></Causes></OutputDeviation><OutputDeviation><Name>Value-DefaultOut1</Name><Severity>0</Severity><SystemOutport>t"
+	    "rue</SystemOutport><Causes><Cause><Probability></Probability><FailureLogic>VFailure1 OR Value-DefaultIn1</Failure"
+	    "Logic></Cause></Causes></OutputDeviation><OutputDeviation><Name>Omission-DefaultOut2</Name><Severity>0</Severity>"
+	    "<SystemOutport>true</SystemOutport><Causes><Cause><Probability></Probability><FailureLogic>OFailure2 OR Omission-"
+	    "DefaultIn1</FailureLogic></Cause></Causes></OutputDeviation><OutputDeviation><Name>Omission-DefaultOut3</Name><Se"
+	    "verity>0</Severity><SystemOutport>true</SystemOutport><Causes><Cause><Probability></Probability><FailureLogic>OFa"
+	    "ilure3 OR Omission-DefaultIn1</FailureLogic></Cause></Causes></OutputDeviation><OutputDeviation><Name>Value-Defau"
+	    "ltOut2</Name><Severity>0</Severity><SystemOutport>true</SystemOutport><Causes><Cause><Probability></Probability><"
+	    "FailureLogic>VFailure2 OR Value-DefaultIn1</FailureLogic></Cause></Causes></OutputDeviation><OutputDeviation><Nam"
+	    "e>Value-DefaultOut3</Name><Severity>0</Severity><SystemOutport>true</SystemOutport><Causes><Cause><Probability></"
+	    "Probability><FailureLogic>VFailure3 OR Value-DefaultIn1</FailureLogic></Cause></Causes></OutputDeviation></Output"
+	    "Deviations><ExportedPropagations></ExportedPropagations></FailureData></Current></Implementations></HiPHOPS_Compo"
+	    "nentFailureData>"
+	    HiPHOPS_isPerspective   "false"
+	  }
+	  Outputs		  "3"
+	  DisplayOption		  "bar"
+	  Port {
+	    PortNumber		    1
+	    Name		    "aileron"
+	    PropagatedSignals	    "aileron"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    2
+	    Name		    "elevator"
+	    PropagatedSignals	    "elevator"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    3
+	    Name		    "rudder"
+	    PropagatedSignals	    "rudder"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain"
+	  SID			  "75"
+	  Position		  [545, 195, 575, 225]
+	  Gain			  "1/1000"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain1"
+	  SID			  "82"
+	  Position		  [990, 140, 1020, 170]
+	  Gain			  "2"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain2"
+	  SID			  "86"
+	  Position		  [705, 280, 735, 310]
+	  Gain			  "3"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux"
+	  SID			  "80"
+	  Ports			  [3, 1]
+	  Position		  [920, 102, 925, 208]
+	  ShowName		  off
+	  Inputs		  "3"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Saturate
+	  Name			  "Saturation"
+	  SID			  "74"
+	  Ports			  [1, 1]
+	  Position		  [335, 195, 365, 225]
+	  InputPortMap		  "u0"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum"
+	  SID			  "76"
+	  Ports			  [2, 1]
+	  Position		  [460, 200, 480, 220]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|++"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum1"
+	  SID			  "83"
+	  Ports			  [2, 1]
+	  Position		  [1075, 145, 1095, 165]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|++"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "Switch"
+	  SID			  "85"
+	  Position		  [825, 255, 875, 295]
+	  InputSameDT		  off
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "PilotMode"
+	  SID			  "47"
+	  Position		  [1280, 313, 1310, 327]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "FlightControls"
+	  SID			  "46"
+	  Position		  [1350, 163, 1380, 177]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "RCCommands"
+	  SrcPort		  1
+	  DstBlock		  "Saturation"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Saturation"
+	  SrcPort		  1
+	  DstBlock		  "Sum"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant"
+	  SrcPort		  1
+	  Points		  [50, 0]
+	  DstBlock		  "Sum"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Sum"
+	  SrcPort		  1
+	  DstBlock		  "Gain"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Gain"
+	  SrcPort		  1
+	  DstBlock		  "Demux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  4
+	  Points		  [90, 0; 0, -35]
+	  DstBlock		  "Mux"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Mux"
+	  SrcPort		  1
+	  DstBlock		  "Gain1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Gain1"
+	  SrcPort		  1
+	  DstBlock		  "Sum1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant1"
+	  SrcPort		  1
+	  Points		  [90, 0]
+	  DstBlock		  "Sum1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Sum1"
+	  SrcPort		  1
+	  DstBlock		  "Demux1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  3
+	  Points		  [50, 0; 0, 15]
+	  DstBlock		  "BusCreatorX"
+	  DstPort		  4
+	}
+	Line {
+	  Name			  "rudder"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  3
+	  DstBlock		  "BusCreatorX"
+	  DstPort		  3
+	}
+	Line {
+	  Name			  "elevator"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  2
+	  DstBlock		  "BusCreatorX"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "aileron"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  1
+	  DstBlock		  "BusCreatorX"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "BusCreatorX"
+	  SrcPort		  1
+	  DstBlock		  "FlightControls"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Gain2"
+	  SrcPort		  1
+	  Points		  [35, 0]
+	  Branch {
+	    Points		    [0, -20]
+	    DstBlock		    "Switch"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, 25]
+	    DstBlock		    "PilotMode"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  2
+	  Points		  [155, 0; 0, 135]
+	  DstBlock		  "Switch"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  6
+	  DstBlock		  "Gain2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  5
+	  DstBlock		  "Switch"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Switch"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, -120]
+	  DstBlock		  "Mux"
+	  DstPort		  2
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "PWMEncoder"
+      SID		      "1"
+      Ports		      [1, 1]
+      Position		      [1250, 506, 1420, 564]
+      LibraryVersion	      "1.225"
+      List {
+	ListType		RTWdata
+	HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false</Inc"
+	"ludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</ExcludeFromO"
+	"ptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>Both</HBlockType><SubsystemLocation>FromCurrentModel</Subsyst"
+	"emLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent><Name>OFailure1</Name>"
+	"<UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailure1</Name><Unavailab"
+	"ilityFormula><None></None></UnavailabilityFormula></BasicEvent></BasicEvents><PotentialCCFs></PotentialCCFs><OutputDe"
+	"viations><OutputDeviation><Name>Omission-ServoControls</Name><Severity>0</Severity><SystemOutport>true</SystemOutport"
+	"><Causes><Cause><Probability></Probability><FailureLogic>OFailure1 OR Omission-FlightCommands</FailureLogic></Cause><"
+	"/Causes></OutputDeviation><OutputDeviation><Name>Value-ServoControls</Name><Severity>0</Severity><SystemOutport>true<"
+	"/SystemOutport><Causes><Cause><Probability></Probability><FailureLogic>VFailure1 OR (Omission-FlightCommands OR Value"
+	"-FlightCommands)</FailureLogic></Cause></Causes></OutputDeviation></OutputDeviations><ExportedPropagations></Exported"
+	"Propagations><DiagnosticCoverages></DiagnosticCoverages></FailureData></Current></Implementations></HiPHOPS_Component"
+	"FailureData>"
+	HiPHOPS_isPerspective	"false"
+      }
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"PWMEncoder"
+	Location		[2, 82, 1348, 715]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "FlightCommands"
+	  SID			  "2"
+	  Position		  [110, 103, 140, 117]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "FourWayLeverSmoothing"
+	  SID			  "48"
+	  Ports			  [1, 1]
+	  Position		  [240, 89, 340, 131]
+	  LibraryVersion	  "1.225"
+	  List {
+	    ListType		    RTWdata
+	    HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false<"
+	    "/IncludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</Excl"
+	    "udeFromOptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>Both</HBlockType><SubsystemLocation>FromCurrentMo"
+	    "del</SubsystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent><Name>"
+	    "OFailure1</Name><UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailu"
+	    "re1</Name><UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent></BasicEvents><PotentialCCFs><"
+	    "/PotentialCCFs><OutputDeviations><OutputDeviation><Name>Omission-FourWayLeverSmoothing.Out1</Name><Severity>0</Se"
+	    "verity><SystemOutport>true</SystemOutport><Causes><Cause><Probability></Probability><FailureLogic>OFailure1 OR Om"
+	    "ission-FourWayLeverSmoothing.In1</FailureLogic></Cause></Causes></OutputDeviation><OutputDeviation><Name>Value-Fo"
+	    "urWayLeverSmoothing.Out1</Name><Severity>0</Severity><SystemOutport>true</SystemOutport><Causes><Cause><Probabili"
+	    "ty></Probability><FailureLogic>VFailure1 OR Value-FourWayLeverSmoothing.In1</FailureLogic></Cause></Causes></Outp"
+	    "utDeviation></OutputDeviations><ExportedPropagations></ExportedPropagations></FailureData></Current></Implementat"
+	    "ions></HiPHOPS_ComponentFailureData>"
+	    HiPHOPS_isPerspective   "false"
+	  }
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "FourWayLeverSmoothing"
+	    Location		    [2, 82, 1348, 715]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In1"
+	      SID		      "49"
+	      Position		      [110, 128, 140, 142]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      "Demux"
+	      SID		      "63"
+	      Ports		      [1, 4]
+	      Position		      [180, 19, 185, 251]
+	      DisplayOption	      "bar"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "LeverSmoothing"
+	      SID		      "60"
+	      Ports		      [1, 1]
+	      Position		      [220, 24, 320, 66]
+	      LibraryVersion	      "1.225"
+	      List {
+		ListType		RTWdata
+		HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false</In"
+		"cludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</ExcludeFro"
+		"mOptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>Both</HBlockType><SubsystemLocation>FromCurrentModel</Subs"
+		"ystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent><Name>OFailure1</N"
+		"ame><UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailure1</Name><Unav"
+		"ailabilityFormula><None></None></UnavailabilityFormula></BasicEvent></BasicEvents><PotentialCCFs></PotentialCCFs><Ou"
+		"tputDeviations><OutputDeviation><Name>Omission-Out1</Name><Severity>0</Severity><SystemOutport>true</SystemOutport><"
+		"Causes><Cause><Probability></Probability><FailureLogic>OFailure1 OR Omission-In1</FailureLogic></Cause></Causes></Ou"
+		"tputDeviation><OutputDeviation><Name>Value-Out1</Name><Severity>0</Severity><SystemOutport>true</SystemOutport><Caus"
+		"es><Cause><Probability></Probability><FailureLogic>VFailure1 OR Value-In1</FailureLogic></Cause></Causes></OutputDev"
+		"iation></OutputDeviations><ExportedPropagations></ExportedPropagations></FailureData></Current></Implementations></H"
+		"iPHOPS_ComponentFailureData>"
+		HiPHOPS_isPerspective	"false"
+	      }
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"LeverSmoothing"
+		Location		[766, 310, 1264, 610]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "In1"
+		  SID			  "61"
+		  Position		  [110, 103, 140, 117]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out1"
+		  SID			  "62"
+		  Position		  [360, 103, 390, 117]
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  SrcBlock		  "In1"
+		  SrcPort		  1
+		  DstBlock		  "Out1"
+		  DstPort		  1
+		}
+		Annotation {
+		  Position		  [102, 146]
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "LeverSmoothing2"
+	      SID		      "51"
+	      Ports		      [1, 1]
+	      Position		      [220, 144, 320, 186]
+	      LibraryVersion	      "1.225"
+	      List {
+		ListType		RTWdata
+		HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false</In"
+		"cludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</ExcludeFro"
+		"mOptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>Both</HBlockType><SubsystemLocation>FromCurrentModel</Subs"
+		"ystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent><Name>OFailure1</N"
+		"ame><UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailure1</Name><Unav"
+		"ailabilityFormula><None></None></UnavailabilityFormula></BasicEvent></BasicEvents><PotentialCCFs></PotentialCCFs><Ou"
+		"tputDeviations><OutputDeviation><Name>Omission-Out1</Name><Severity>0</Severity><SystemOutport>true</SystemOutport><"
+		"Causes><Cause><Probability></Probability><FailureLogic>OFailure1 OR Omission-In1</FailureLogic></Cause></Causes></Ou"
+		"tputDeviation><OutputDeviation><Name>Value-Out1</Name><Severity>0</Severity><SystemOutport>true</SystemOutport><Caus"
+		"es><Cause><Probability></Probability><FailureLogic>VFailure1 OR Value-In1</FailureLogic></Cause></Causes></OutputDev"
+		"iation></OutputDeviations><ExportedPropagations></ExportedPropagations></FailureData></Current></Implementations></H"
+		"iPHOPS_ComponentFailureData>"
+		HiPHOPS_isPerspective	"false"
+	      }
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"LeverSmoothing2"
+		Location		[433, 403, 931, 703]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "In1"
+		  SID			  "52"
+		  Position		  [110, 103, 140, 117]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out1"
+		  SID			  "53"
+		  Position		  [360, 103, 390, 117]
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  SrcBlock		  "In1"
+		  SrcPort		  1
+		  DstBlock		  "Out1"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "LeverSmoothing3"
+	      SID		      "54"
+	      Ports		      [1, 1]
+	      Position		      [220, 204, 320, 246]
+	      LibraryVersion	      "1.225"
+	      List {
+		ListType		RTWdata
+		HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false</In"
+		"cludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</ExcludeFro"
+		"mOptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>Both</HBlockType><SubsystemLocation>FromCurrentModel</Subs"
+		"ystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent><Name>OFailure1</N"
+		"ame><UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailure1</Name><Unav"
+		"ailabilityFormula><None></None></UnavailabilityFormula></BasicEvent></BasicEvents><PotentialCCFs></PotentialCCFs><Ou"
+		"tputDeviations><OutputDeviation><Name>Omission-Out1</Name><Severity>0</Severity><SystemOutport>true</SystemOutport><"
+		"Causes><Cause><Probability></Probability><FailureLogic>OFailure1 OR Omission-In1</FailureLogic></Cause></Causes></Ou"
+		"tputDeviation><OutputDeviation><Name>Value-Out1</Name><Severity>0</Severity><SystemOutport>true</SystemOutport><Caus"
+		"es><Cause><Probability></Probability><FailureLogic>VFailure1 OR Value-In1</FailureLogic></Cause></Causes></OutputDev"
+		"iation></OutputDeviations><ExportedPropagations></ExportedPropagations></FailureData></Current></Implementations></H"
+		"iPHOPS_ComponentFailureData>"
+		HiPHOPS_isPerspective	"false"
+	      }
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"LeverSmoothing3"
+		Location		[433, 403, 931, 703]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "In1"
+		  SID			  "55"
+		  Position		  [110, 103, 140, 117]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out1"
+		  SID			  "56"
+		  Position		  [360, 103, 390, 117]
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  SrcBlock		  "In1"
+		  SrcPort		  1
+		  DstBlock		  "Out1"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "LeverSmothing1"
+	      SID		      "57"
+	      Ports		      [1, 1]
+	      Position		      [220, 84, 320, 126]
+	      LibraryVersion	      "1.225"
+	      List {
+		ListType		RTWdata
+		HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false</In"
+		"cludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</ExcludeFro"
+		"mOptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>Both</HBlockType><SubsystemLocation>FromCurrentModel</Subs"
+		"ystemLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent><Name>OFailure1</N"
+		"ame><UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailure1</Name><Unav"
+		"ailabilityFormula><None></None></UnavailabilityFormula></BasicEvent></BasicEvents><PotentialCCFs></PotentialCCFs><Ou"
+		"tputDeviations><OutputDeviation><Name>Omission-Out1</Name><Severity>0</Severity><SystemOutport>true</SystemOutport><"
+		"Causes><Cause><Probability></Probability><FailureLogic>OFailure1 OR Omission-In1</FailureLogic></Cause></Causes></Ou"
+		"tputDeviation><OutputDeviation><Name>Value-Out1</Name><Severity>0</Severity><SystemOutport>true</SystemOutport><Caus"
+		"es><Cause><Probability></Probability><FailureLogic>VFailure1 OR Value-In1</FailureLogic></Cause></Causes></OutputDev"
+		"iation></OutputDeviations><ExportedPropagations></ExportedPropagations></FailureData></Current></Implementations></H"
+		"iPHOPS_ComponentFailureData>"
+		HiPHOPS_isPerspective	"false"
+	      }
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"LeverSmothing1"
+		Location		[433, 403, 931, 703]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "In1"
+		  SID			  "58"
+		  Position		  [110, 103, 140, 117]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out1"
+		  SID			  "59"
+		  Position		  [360, 103, 390, 117]
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  SrcBlock		  "In1"
+		  SrcPort		  1
+		  DstBlock		  "Out1"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Mux
+	      Name		      "Mux"
+	      SID		      "64"
+	      Ports		      [4, 1]
+	      Position		      [355, 14, 360, 256]
+	      DisplayOption	      "bar"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      SID		      "50"
+	      Position		      [400, 128, 430, 142]
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "In1"
+	      SrcPort		      1
+	      DstBlock		      "Demux"
+	      DstPort		      1
+	    }
+	    Line {
+	      Labels		      [1, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      1
+	      DstBlock		      "LeverSmoothing"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "LeverSmoothing"
+	      SrcPort		      1
+	      DstBlock		      "Mux"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      2
+	      DstBlock		      "LeverSmothing1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "LeverSmothing1"
+	      SrcPort		      1
+	      DstBlock		      "Mux"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      3
+	      DstBlock		      "LeverSmoothing2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "LeverSmoothing2"
+	      SrcPort		      1
+	      DstBlock		      "Mux"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      4
+	      DstBlock		      "LeverSmoothing3"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "LeverSmoothing3"
+	      SrcPort		      1
+	      DstBlock		      "Mux"
+	      DstPort		      4
+	    }
+	    Line {
+	      SrcBlock		      "Mux"
+	      SrcPort		      1
+	      DstBlock		      "Out1"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "ServoControls"
+	  SID			  "3"
+	  Position		  [435, 103, 465, 117]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "FlightCommands"
+	  SrcPort		  1
+	  DstBlock		  "FourWayLeverSmoothing"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FourWayLeverSmoothing"
+	  SrcPort		  1
+	  DstBlock		  "ServoControls"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "PilotJoystick"
+      SID		      "138"
+      Ports		      [0, 2]
+      Position		      [235, 493, 315, 542]
+      LibraryVersion	      "1.225"
+      List {
+	ListType		RTWdata
+	HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false</Inc"
+	"ludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</ExcludeFromO"
+	"ptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>Both</HBlockType><SubsystemLocation>FromCurrentModel</Subsyst"
+	"emLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent><Name>OFailure1</Name>"
+	"<UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>OFailure2</Name><Unavailab"
+	"ilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailure1</Name><UnavailabilityFormu"
+	"la><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailure2</Name><UnavailabilityFormula><None><"
+	"/None></UnavailabilityFormula></BasicEvent></BasicEvents><PotentialCCFs></PotentialCCFs><OutputDeviations><OutputDevi"
+	"ation><Name>Omission-Analog</Name><Severity>0</Severity><SystemOutport>true</SystemOutport><Causes><Cause><Probabilit"
+	"y></Probability><FailureLogic>OFailure1</FailureLogic></Cause></Causes></OutputDeviation><OutputDeviation><Name>Omiss"
+	"ion-Buttons</Name><Severity>0</Severity><SystemOutport>true</SystemOutport><Causes><Cause><Probability></Probability>"
+	"<FailureLogic>OFailure2</FailureLogic></Cause></Causes></OutputDeviation><OutputDeviation><Name>Value-Analog</Name><S"
+	"everity>0</Severity><SystemOutport>true</SystemOutport><Causes><Cause><Probability></Probability><FailureLogic>VFailu"
+	"re1</FailureLogic></Cause></Causes></OutputDeviation><OutputDeviation><Name>Value-Buttons</Name><Severity>0</Severity"
+	"><SystemOutport>true</SystemOutport><Causes><Cause><Probability></Probability><FailureLogic>VFailure2</FailureLogic><"
+	"/Cause></Causes></OutputDeviation></OutputDeviations><ExportedPropagations></ExportedPropagations></FailureData></Cur"
+	"rent></Implementations></HiPHOPS_ComponentFailureData>"
+	HiPHOPS_isPerspective	"false"
+      }
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"PilotJoystick"
+	Location		[2, 74, 1364, 707]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Outport
+	  Name			  "Analog"
+	  SID			  "140"
+	  Position		  [360, 103, 390, 117]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Buttons"
+	  SID			  "144"
+	  Position		  [360, 168, 390, 182]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "PressureeSensor"
+      SID		      "153"
+      Ports		      [0, 2]
+      Position		      [195, 157, 280, 228]
+      LibraryVersion	      "1.225"
+      List {
+	ListType		RTWdata
+	HiPHOPS_Component_Failure_Data "<HiPHOPS_ComponentFailureData><RiskTime>0</RiskTime><IncludeInOptimisation>false</Inc"
+	"ludeInOptimisation><Implementations><Current><Name>Implementation1</Name><ExcludeFromOptimisation>false</ExcludeFromO"
+	"ptimisation><Cost>0</Cost><Weight>0</Weight><HBlockType>Both</HBlockType><SubsystemLocation>FromCurrentModel</Subsyst"
+	"emLocation><FailureData><ComponentFailureRate>0</ComponentFailureRate><BasicEvents><BasicEvent><Name>OFailure1</Name>"
+	"<UnavailabilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>OFailure2</Name><Unavailab"
+	"ilityFormula><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailure1</Name><UnavailabilityFormu"
+	"la><None></None></UnavailabilityFormula></BasicEvent><BasicEvent><Name>VFailure2</Name><UnavailabilityFormula><None><"
+	"/None></UnavailabilityFormula></BasicEvent></BasicEvents><PotentialCCFs></PotentialCCFs><OutputDeviations><OutputDevi"
+	"ation><Name>Omission-StaticPressure</Name><Severity>0</Severity><SystemOutport>true</SystemOutport><Causes><Cause><Pr"
+	"obability></Probability><FailureLogic>OFailure1</FailureLogic></Cause></Causes></OutputDeviation><OutputDeviation><Na"
+	"me>Value-StaticPressure</Name><Severity>0</Severity><SystemOutport>true</SystemOutport><Causes><Cause><Probability></"
+	"Probability><FailureLogic>VFailure1</FailureLogic></Cause></Causes></OutputDeviation><OutputDeviation><Name>Omission-"
+	"DynamicPressure</Name><Severity>0</Severity><SystemOutport>true</SystemOutport><Causes><Cause><Probability></Probabil"
+	"ity><FailureLogic>OFailure2</FailureLogic></Cause></Causes></OutputDeviation><OutputDeviation><Name>Value-DynamicPres"
+	"sure</Name><Severity>0</Severity><SystemOutport>true</SystemOutport><Causes><Cause><Probability></Probability><Failur"
+	"eLogic>VFailure2</FailureLogic></Cause></Causes></OutputDeviation></OutputDeviations><ExportedPropagations></Exported"
+	"Propagations></FailureData></Current></Implementations></HiPHOPS_ComponentFailureData>"
+	HiPHOPS_isPerspective	"false"
+      }
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"PressureeSensor"
+	Location		[2, 74, 1364, 707]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Outport
+	  Name			  "StaticPressure"
+	  SID			  "155"
+	  Position		  [360, 103, 390, 117]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "DynamicPressure"
+	  SID			  "161"
+	  Position		  [360, 153, 390, 167]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "CommandSwitch"
+      SrcPort		      1
+      DstBlock		      "PWMEncoder"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "FailSafeController"
+      SrcPort		      1
+      Points		      [10, 0; 0, 270; -270, 0; 0, 120]
+      DstBlock		      "CommandSwitch"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "FlightControlMixer"
+      SrcPort		      1
+      DstBlock		      "FailSafeController"
+      DstPort		      2
+    }
+    Line {
+      Labels		      [1, 0]
+      SrcBlock		      "BusCreator"
+      SrcPort		      1
+      Points		      [35, 0]
+      Branch {
+	Points			[310, 0]
+	Branch {
+	  Points		  [175, 0]
+	  Branch {
+	    Points		    [0, 50]
+	    DstBlock		    "FlightControlMixer"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [175, 0; 0, 30]
+	    DstBlock		    "FailSafeController"
+	    DstPort		    1
+	  }
+	}
+	Branch {
+	  Points		  [0, 80]
+	  DstBlock		  "Autopilot"
+	  DstPort		  1
+	}
+      }
+      Branch {
+	Points			[0, 200]
+	DstBlock		"FlightStabilizer"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Autopilot"
+      SrcPort		      1
+      DstBlock		      "FlightControlMixer"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "FlightStabilizer"
+      SrcPort		      1
+      Points		      [40, 0; 0, -110]
+      DstBlock		      "Autopilot"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Constant"
+      SrcPort		      1
+      DstBlock		      "FlightStabilizer"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "PWMDecoder"
+      SrcPort		      1
+      DstBlock		      "ModeSwitcher"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "PWMDecoder"
+      SrcPort		      2
+      Points		      [50, 0]
+      Branch {
+	Points			[0, 30]
+	DstBlock		"CommandSwitch"
+	DstPort			3
+      }
+      Branch {
+	Points			[0, -220]
+	DstBlock		"FlightStabilizer"
+	DstPort			2
+      }
+    }
+    Line {
+      SrcBlock		      "ModeSwitcher"
+      SrcPort		      1
+      DstBlock		      "CommandSwitch"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "PilotJoystick"
+      SrcPort		      1
+      DstBlock		      "BusCreator1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "PilotJoystick"
+      SrcPort		      2
+      DstBlock		      "BusCreator1"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "BusCreator1"
+      SrcPort		      1
+      DstBlock		      "PWMDecoder"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "IMUSensor"
+      SrcPort		      1
+      DstBlock		      "BusCreator4"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "IMUSensor"
+      SrcPort		      2
+      DstBlock		      "BusCreator4"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "BarometricProcessor"
+      SrcPort		      1
+      DstBlock		      "BusCreator3"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "BarometricProcessor"
+      SrcPort		      2
+      DstBlock		      "BusCreator3"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "BarometricProcessor"
+      SrcPort		      3
+      DstBlock		      "BusCreator3"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "PressureeSensor"
+      SrcPort		      1
+      DstBlock		      "BarometricProcessor"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "PressureeSensor"
+      SrcPort		      2
+      DstBlock		      "BarometricProcessor"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "BusCreator4"
+      SrcPort		      1
+      Points		      [5, 0; 0, -15]
+      DstBlock		      "BusCreator"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "BusCreator3"
+      SrcPort		      1
+      Points		      [10, 0; 0, -85]
+      DstBlock		      "BusCreator"
+      DstPort		      2
+    }
+  }
+}

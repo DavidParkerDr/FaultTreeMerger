@@ -1,0 +1,1652 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<HiP-HOPS_Results model="model_v15Big_two_Whells_" build="Commercial" majorVersion="2" minorVersion="5" version="869" versionDate="25 October 2013">
+  <FaultTrees>
+    <FMEA>
+      <Component>
+        <Name>Auxiliary_Battery</Name>
+        <Events>
+          <BasicEvent ID="1">
+            <Name>Auxiliary_Battery.OFailure1</Name>
+            <ShortName>OFailure1</ShortName>
+            <Description />
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="7">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="2">
+            <Name>Auxiliary_Battery.VFailure1</Name>
+            <ShortName>VFailure1</ShortName>
+            <Description />
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="8">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>true</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+        </Events>
+      </Component>
+      <Component>
+        <Name>Brake_Unit1.EMB</Name>
+        <Events>
+          <BasicEvent ID="3">
+            <Name>Brake_Unit1.EMB.OFailure1</Name>
+            <ShortName>OFailure1</ShortName>
+            <Description />
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="7">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="4">
+            <Name>Brake_Unit1.EMB.VFailure1</Name>
+            <ShortName>VFailure1</ShortName>
+            <Description />
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="8">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+        </Events>
+      </Component>
+      <Component>
+        <Name>Brake_Unit1.EMB_Power_Converter</Name>
+        <Events>
+          <BasicEvent ID="5">
+            <Name>Brake_Unit1.EMB_Power_Converter.VFailure1</Name>
+            <ShortName>VFailure1</ShortName>
+            <Description />
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="8">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="6">
+            <Name>Brake_Unit1.EMB_Power_Converter.OFailure1</Name>
+            <ShortName>OFailure1</ShortName>
+            <Description />
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="7">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+        </Events>
+      </Component>
+      <Component>
+        <Name>Brake_Unit1.IWM</Name>
+        <Events>
+          <BasicEvent ID="7">
+            <Name>Brake_Unit1.IWM.OFailure1</Name>
+            <ShortName>OFailure1</ShortName>
+            <Description />
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="7">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="8">
+            <Name>Brake_Unit1.IWM.VFailure1</Name>
+            <ShortName>VFailure1</ShortName>
+            <Description />
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="8">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+        </Events>
+      </Component>
+      <Component>
+        <Name>Brake_Unit1.IWM_Power_Converter</Name>
+        <Events>
+          <BasicEvent ID="9">
+            <Name>Brake_Unit1.IWM_Power_Converter.VFailure1</Name>
+            <ShortName>VFailure1</ShortName>
+            <Description />
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="8">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="10">
+            <Name>Brake_Unit1.IWM_Power_Converter.OFailure1</Name>
+            <ShortName>OFailure1</ShortName>
+            <Description />
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="7">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+        </Events>
+      </Component>
+      <Component>
+        <Name>Brake_Unit1.Wheel_Node_Controller</Name>
+        <Events>
+          <BasicEvent ID="11">
+            <Name>Brake_Unit1.Wheel_Node_Controller.OFailure1</Name>
+            <ShortName>OFailure1</ShortName>
+            <Description />
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="7">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="12">
+            <Name>Brake_Unit1.Wheel_Node_Controller.OFailure2</Name>
+            <ShortName>OFailure2</ShortName>
+            <Description />
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="7">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="13">
+            <Name>Brake_Unit1.Wheel_Node_Controller.VFailure1</Name>
+            <ShortName>VFailure1</ShortName>
+            <Description />
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="8">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="14">
+            <Name>Brake_Unit1.Wheel_Node_Controller.VFailure2</Name>
+            <ShortName>VFailure2</ShortName>
+            <Description />
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="8">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+        </Events>
+      </Component>
+      <Component>
+        <Name>Brake_Unit2.EMB</Name>
+        <Events>
+          <BasicEvent ID="15">
+            <Name>Brake_Unit2.EMB.OFailure1</Name>
+            <ShortName>OFailure1</ShortName>
+            <Description />
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="7">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="16">
+            <Name>Brake_Unit2.EMB.VFailure1</Name>
+            <ShortName>VFailure1</ShortName>
+            <Description />
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="8">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+        </Events>
+      </Component>
+      <Component>
+        <Name>Brake_Unit2.EMB_Power_Converter</Name>
+        <Events>
+          <BasicEvent ID="17">
+            <Name>Brake_Unit2.EMB_Power_Converter.VFailure1</Name>
+            <ShortName>VFailure1</ShortName>
+            <Description />
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="8">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="18">
+            <Name>Brake_Unit2.EMB_Power_Converter.OFailure1</Name>
+            <ShortName>OFailure1</ShortName>
+            <Description />
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="7">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+        </Events>
+      </Component>
+      <Component>
+        <Name>Brake_Unit2.IWM</Name>
+        <Events>
+          <BasicEvent ID="19">
+            <Name>Brake_Unit2.IWM.OFailure1</Name>
+            <ShortName>OFailure1</ShortName>
+            <Description />
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="7">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="20">
+            <Name>Brake_Unit2.IWM.VFailure1</Name>
+            <ShortName>VFailure1</ShortName>
+            <Description />
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="8">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+        </Events>
+      </Component>
+      <Component>
+        <Name>Brake_Unit2.IWM_Power_Converter</Name>
+        <Events>
+          <BasicEvent ID="21">
+            <Name>Brake_Unit2.IWM_Power_Converter.VFailure1</Name>
+            <ShortName>VFailure1</ShortName>
+            <Description />
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="8">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="22">
+            <Name>Brake_Unit2.IWM_Power_Converter.OFailure1</Name>
+            <ShortName>OFailure1</ShortName>
+            <Description />
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="7">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+        </Events>
+      </Component>
+      <Component>
+        <Name>Brake_Unit2.Wheel_Node_Controller</Name>
+        <Events>
+          <BasicEvent ID="23">
+            <Name>Brake_Unit2.Wheel_Node_Controller.OFailure1</Name>
+            <ShortName>OFailure1</ShortName>
+            <Description />
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="7">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="24">
+            <Name>Brake_Unit2.Wheel_Node_Controller.OFailure2</Name>
+            <ShortName>OFailure2</ShortName>
+            <Description />
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="7">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="25">
+            <Name>Brake_Unit2.Wheel_Node_Controller.VFailure1</Name>
+            <ShortName>VFailure1</ShortName>
+            <Description />
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="8">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="26">
+            <Name>Brake_Unit2.Wheel_Node_Controller.VFailure2</Name>
+            <ShortName>VFailure2</ShortName>
+            <Description />
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="8">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+        </Events>
+      </Component>
+      <Component>
+        <Name>Communication_Bus1</Name>
+        <Events>
+          <BasicEvent ID="51">
+            <Name>Communication_Bus1.OFailure1</Name>
+            <ShortName>OFailure1</ShortName>
+            <Description />
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="7">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+        </Events>
+      </Component>
+      <Component>
+        <Name>Communication_Bus2</Name>
+        <Events>
+          <BasicEvent ID="52">
+            <Name>Communication_Bus2.OFailure1</Name>
+            <ShortName>OFailure1</ShortName>
+            <Description />
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="7">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+        </Events>
+      </Component>
+      <Component>
+        <Name>Electronic_Pedal</Name>
+        <Events>
+          <BasicEvent ID="53">
+            <Name>Electronic_Pedal.OFailure1</Name>
+            <ShortName>OFailure1</ShortName>
+            <Description />
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="7">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+              <Effect ID="8">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="54">
+            <Name>Electronic_Pedal.OFailure2</Name>
+            <ShortName>OFailure2</ShortName>
+            <Description />
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="7">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="55">
+            <Name>Electronic_Pedal.VFailure1</Name>
+            <ShortName>VFailure1</ShortName>
+            <Description />
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="8">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>true</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="56">
+            <Name>Electronic_Pedal.VFailure2</Name>
+            <ShortName>VFailure2</ShortName>
+            <Description />
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="8">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+        </Events>
+      </Component>
+      <Component>
+        <Name>Mechanical_Pedal</Name>
+        <Events>
+          <BasicEvent ID="57">
+            <Name>Mechanical_Pedal.OFailure1</Name>
+            <ShortName>OFailure1</ShortName>
+            <Description />
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="7">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>true</SinglePointFailure>
+              </Effect>
+              <Effect ID="8">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="58">
+            <Name>Mechanical_Pedal.VFailure1</Name>
+            <ShortName>VFailure1</ShortName>
+            <Description />
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="8">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>true</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+        </Events>
+      </Component>
+      <Component>
+        <Name>Powertrain_Battery</Name>
+        <Events>
+          <BasicEvent ID="59">
+            <Name>Powertrain_Battery.OFailure1</Name>
+            <ShortName>OFailure1</ShortName>
+            <Description />
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="7">
+                <Name>No_Braking_Front</Name>
+                <SinglePointFailure>false</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+          <BasicEvent ID="60">
+            <Name>Powertrain_Battery.VFailure1</Name>
+            <ShortName>VFailure1</ShortName>
+            <Description />
+            <Unavailability>0</Unavailability>
+            <Effects>
+              <Effect ID="8">
+                <Name>Value_Braking</Name>
+                <SinglePointFailure>true</SinglePointFailure>
+              </Effect>
+            </Effects>
+          </BasicEvent>
+        </Events>
+      </Component>
+    </FMEA>
+    <FaultTree ID="7">
+      <Name>No_Braking_Front</Name>
+      <Description />
+      <SIL>4</SIL>
+      <Unavailability>0</Unavailability>
+      <UnavailabilitySort>0.0</UnavailabilitySort>
+      <Severity>0</Severity>
+      <OutputDeviation>
+        <Name>No_Braking_Front</Name>
+        <Children>
+          <Or ID="872">
+            <Name>No_Braking_Front</Name>
+            <Children>
+              <And ID="873">
+                <Name>AND</Name>
+                <Children>
+                  <Or ID="876">
+                    <Name>OR [Omission-Brake_Unit1.EMB.Out1]</Name>
+                    <Children>
+                      <Event ID="3" />
+                      <Event ID="6" />
+                      <Event ID="1" />
+                      <Event ID="11" />
+                      <And ID="108">
+                        <Name>AND [Omission-Brake_Unit1.Wheel_Node_Controller.Out1]</Name>
+                        <Children>
+                          <Or ID="879">
+                            <Name>OR [Omission-Brake_Unit1.In1]</Name>
+                            <Children>
+                              <Event ID="51" />
+                              <And ID="313">
+                                <Name>AND [Omission-Communication_Bus1.Out1]</Name>
+                                <Children>
+                                  <Or ID="881">
+                                    <Name>OR [Omission-Electronic_Pedal.Out1]</Name>
+                                    <Children>
+                                      <Event ID="53" />
+                                      <Event ID="57" />
+                                    </Children>
+                                  </Or>
+                                  <Or ID="883">
+                                    <Name>OR [Omission-Electronic_Pedal.Out2]</Name>
+                                    <Children>
+                                      <Event ID="54" />
+                                      <Event ID="57" />
+                                    </Children>
+                                  </Or>
+                                </Children>
+                              </And>
+                            </Children>
+                          </Or>
+                          <Or ID="884">
+                            <Name>OR [Omission-Brake_Unit1.In2]</Name>
+                            <Children>
+                              <Event ID="52" />
+                              <And ID="337">
+                                <Name>AND [Omission-Communication_Bus2.Out1]</Name>
+                                <Children>
+                                  <Or ID="881">
+                                    <Name>OR [Omission-Electronic_Pedal.Out1]</Name>
+                                    <Children>
+                                      <Event ID="53" />
+                                      <Event ID="57" />
+                                    </Children>
+                                  </Or>
+                                  <Or ID="883">
+                                    <Name>OR [Omission-Electronic_Pedal.Out2]</Name>
+                                    <Children>
+                                      <Event ID="54" />
+                                      <Event ID="57" />
+                                    </Children>
+                                  </Or>
+                                </Children>
+                              </And>
+                            </Children>
+                          </Or>
+                        </Children>
+                      </And>
+                    </Children>
+                  </Or>
+                  <Or ID="888">
+                    <Name>OR [Omission-Brake_Unit1.IWM.Out1]</Name>
+                    <Children>
+                      <Event ID="7" />
+                      <Event ID="59" />
+                      <Event ID="10" />
+                      <Event ID="12" />
+                      <And ID="119">
+                        <Name>AND [Omission-Brake_Unit1.Wheel_Node_Controller.Out2]</Name>
+                        <Children>
+                          <Or ID="879">
+                            <Name>OR [Omission-Brake_Unit1.In1]</Name>
+                            <Children>
+                              <Event ID="51" />
+                              <And ID="313">
+                                <Name>AND [Omission-Communication_Bus1.Out1]</Name>
+                                <Children>
+                                  <Or ID="881">
+                                    <Name>OR [Omission-Electronic_Pedal.Out1]</Name>
+                                    <Children>
+                                      <Event ID="53" />
+                                      <Event ID="57" />
+                                    </Children>
+                                  </Or>
+                                  <Or ID="883">
+                                    <Name>OR [Omission-Electronic_Pedal.Out2]</Name>
+                                    <Children>
+                                      <Event ID="54" />
+                                      <Event ID="57" />
+                                    </Children>
+                                  </Or>
+                                </Children>
+                              </And>
+                            </Children>
+                          </Or>
+                          <Or ID="884">
+                            <Name>OR [Omission-Brake_Unit1.In2]</Name>
+                            <Children>
+                              <Event ID="52" />
+                              <And ID="337">
+                                <Name>AND [Omission-Communication_Bus2.Out1]</Name>
+                                <Children>
+                                  <Or ID="881">
+                                    <Name>OR [Omission-Electronic_Pedal.Out1]</Name>
+                                    <Children>
+                                      <Event ID="53" />
+                                      <Event ID="57" />
+                                    </Children>
+                                  </Or>
+                                  <Or ID="883">
+                                    <Name>OR [Omission-Electronic_Pedal.Out2]</Name>
+                                    <Children>
+                                      <Event ID="54" />
+                                      <Event ID="57" />
+                                    </Children>
+                                  </Or>
+                                </Children>
+                              </And>
+                            </Children>
+                          </Or>
+                        </Children>
+                      </And>
+                    </Children>
+                  </Or>
+                  <Or ID="893">
+                    <Name>OR [Omission-Brake_Unit2.EMB.Out1]</Name>
+                    <Children>
+                      <Event ID="15" />
+                      <Event ID="18" />
+                      <Event ID="1" />
+                      <Event ID="23" />
+                      <And ID="259">
+                        <Name>AND [Omission-Brake_Unit2.Wheel_Node_Controller.Out1]</Name>
+                        <Children>
+                          <Or ID="896">
+                            <Name>OR [Omission-Brake_Unit2.In1]</Name>
+                            <Children>
+                              <Event ID="51" />
+                              <And ID="313">
+                                <Name>AND [Omission-Communication_Bus1.Out1]</Name>
+                                <Children>
+                                  <Or ID="881">
+                                    <Name>OR [Omission-Electronic_Pedal.Out1]</Name>
+                                    <Children>
+                                      <Event ID="53" />
+                                      <Event ID="57" />
+                                    </Children>
+                                  </Or>
+                                  <Or ID="883">
+                                    <Name>OR [Omission-Electronic_Pedal.Out2]</Name>
+                                    <Children>
+                                      <Event ID="54" />
+                                      <Event ID="57" />
+                                    </Children>
+                                  </Or>
+                                </Children>
+                              </And>
+                            </Children>
+                          </Or>
+                          <Or ID="897">
+                            <Name>OR [Omission-Brake_Unit2.In2]</Name>
+                            <Children>
+                              <Event ID="52" />
+                              <And ID="337">
+                                <Name>AND [Omission-Communication_Bus2.Out1]</Name>
+                                <Children>
+                                  <Or ID="881">
+                                    <Name>OR [Omission-Electronic_Pedal.Out1]</Name>
+                                    <Children>
+                                      <Event ID="53" />
+                                      <Event ID="57" />
+                                    </Children>
+                                  </Or>
+                                  <Or ID="883">
+                                    <Name>OR [Omission-Electronic_Pedal.Out2]</Name>
+                                    <Children>
+                                      <Event ID="54" />
+                                      <Event ID="57" />
+                                    </Children>
+                                  </Or>
+                                </Children>
+                              </And>
+                            </Children>
+                          </Or>
+                        </Children>
+                      </And>
+                    </Children>
+                  </Or>
+                  <Or ID="899">
+                    <Name>OR [Omission-Brake_Unit2.IWM.Out1]</Name>
+                    <Children>
+                      <Event ID="19" />
+                      <Event ID="59" />
+                      <Event ID="22" />
+                      <Event ID="24" />
+                      <And ID="270">
+                        <Name>AND [Omission-Brake_Unit2.Wheel_Node_Controller.Out2]</Name>
+                        <Children>
+                          <Or ID="896">
+                            <Name>OR [Omission-Brake_Unit2.In1]</Name>
+                            <Children>
+                              <Event ID="51" />
+                              <And ID="313">
+                                <Name>AND [Omission-Communication_Bus1.Out1]</Name>
+                                <Children>
+                                  <Or ID="881">
+                                    <Name>OR [Omission-Electronic_Pedal.Out1]</Name>
+                                    <Children>
+                                      <Event ID="53" />
+                                      <Event ID="57" />
+                                    </Children>
+                                  </Or>
+                                  <Or ID="883">
+                                    <Name>OR [Omission-Electronic_Pedal.Out2]</Name>
+                                    <Children>
+                                      <Event ID="54" />
+                                      <Event ID="57" />
+                                    </Children>
+                                  </Or>
+                                </Children>
+                              </And>
+                            </Children>
+                          </Or>
+                          <Or ID="897">
+                            <Name>OR [Omission-Brake_Unit2.In2]</Name>
+                            <Children>
+                              <Event ID="52" />
+                              <And ID="337">
+                                <Name>AND [Omission-Communication_Bus2.Out1]</Name>
+                                <Children>
+                                  <Or ID="881">
+                                    <Name>OR [Omission-Electronic_Pedal.Out1]</Name>
+                                    <Children>
+                                      <Event ID="53" />
+                                      <Event ID="57" />
+                                    </Children>
+                                  </Or>
+                                  <Or ID="883">
+                                    <Name>OR [Omission-Electronic_Pedal.Out2]</Name>
+                                    <Children>
+                                      <Event ID="54" />
+                                      <Event ID="57" />
+                                    </Children>
+                                  </Or>
+                                </Children>
+                              </And>
+                            </Children>
+                          </Or>
+                        </Children>
+                      </And>
+                    </Children>
+                  </Or>
+                </Children>
+              </And>
+            </Children>
+          </Or>
+        </Children>
+      </OutputDeviation>
+      <CutSetsSummary>
+        <CutSets order="1" pruned="false">1</CutSets>
+        <CutSets order="2" pruned="false">3</CutSets>
+        <CutSets order="3" pruned="false">18</CutSets>
+        <CutSets order="4" pruned="false">81</CutSets>
+      </CutSetsSummary>
+    </FaultTree>
+    <FaultTree ID="8">
+      <Name>Value_Braking</Name>
+      <Description />
+      <SIL>4</SIL>
+      <Unavailability>0</Unavailability>
+      <UnavailabilitySort>0.0</UnavailabilitySort>
+      <Severity>0</Severity>
+      <OutputDeviation>
+        <Name>Value_Braking</Name>
+        <Children>
+          <Or ID="903">
+            <Name>Value_Braking</Name>
+            <Children>
+              <And ID="904">
+                <Name>AND</Name>
+                <Children>
+                  <Or ID="17">
+                    <Name>Value-Brake_Unit1.Add.Braking</Name>
+                    <Children>
+                      <Event ID="4" />
+                      <Event ID="5" />
+                      <Event ID="2" />
+                      <Event ID="13" />
+                      <And ID="128">
+                        <Name>AND [Value-Brake_Unit1.Wheel_Node_Controller.Out1]</Name>
+                        <Children>
+                          <Or ID="879">
+                            <Name>OR [Omission-Brake_Unit1.In1]</Name>
+                            <Children>
+                              <Event ID="51" />
+                              <And ID="313">
+                                <Name>AND [Omission-Communication_Bus1.Out1]</Name>
+                                <Children>
+                                  <Or ID="881">
+                                    <Name>OR [Omission-Electronic_Pedal.Out1]</Name>
+                                    <Children>
+                                      <Event ID="53" />
+                                      <Event ID="57" />
+                                    </Children>
+                                  </Or>
+                                  <Or ID="883">
+                                    <Name>OR [Omission-Electronic_Pedal.Out2]</Name>
+                                    <Children>
+                                      <Event ID="54" />
+                                      <Event ID="57" />
+                                    </Children>
+                                  </Or>
+                                </Children>
+                              </And>
+                            </Children>
+                          </Or>
+                          <Or ID="915">
+                            <Name>OR [Value-Brake_Unit1.In2]</Name>
+                            <Children>
+                              <And ID="349">
+                                <Name>AND [Value-Communication_Bus2.Out1]</Name>
+                                <Children>
+                                  <Or ID="881">
+                                    <Name>OR [Omission-Electronic_Pedal.Out1]</Name>
+                                    <Children>
+                                      <Event ID="53" />
+                                      <Event ID="57" />
+                                    </Children>
+                                  </Or>
+                                  <Or ID="914">
+                                    <Name>OR [Value-Electronic_Pedal.Out2]</Name>
+                                    <Children>
+                                      <Event ID="56" />
+                                      <Event ID="58" />
+                                    </Children>
+                                  </Or>
+                                </Children>
+                              </And>
+                              <Event ID="55" />
+                              <Event ID="58" />
+                            </Children>
+                          </Or>
+                        </Children>
+                      </And>
+                      <And ID="325">
+                        <Name>AND [Value-Communication_Bus1.Out1]</Name>
+                        <Children>
+                          <Or ID="881">
+                            <Name>OR [Omission-Electronic_Pedal.Out1]</Name>
+                            <Children>
+                              <Event ID="53" />
+                              <Event ID="57" />
+                            </Children>
+                          </Or>
+                          <Or ID="914">
+                            <Name>OR [Value-Electronic_Pedal.Out2]</Name>
+                            <Children>
+                              <Event ID="56" />
+                              <Event ID="58" />
+                            </Children>
+                          </Or>
+                        </Children>
+                      </And>
+                      <Event ID="55" />
+                      <Event ID="58" />
+                      <Event ID="8" />
+                      <Event ID="60" />
+                      <Event ID="9" />
+                      <Event ID="14" />
+                      <And ID="139">
+                        <Name>AND [Value-Brake_Unit1.Wheel_Node_Controller.Out2]</Name>
+                        <Children>
+                          <Or ID="879">
+                            <Name>OR [Omission-Brake_Unit1.In1]</Name>
+                            <Children>
+                              <Event ID="51" />
+                              <And ID="313">
+                                <Name>AND [Omission-Communication_Bus1.Out1]</Name>
+                                <Children>
+                                  <Or ID="881">
+                                    <Name>OR [Omission-Electronic_Pedal.Out1]</Name>
+                                    <Children>
+                                      <Event ID="53" />
+                                      <Event ID="57" />
+                                    </Children>
+                                  </Or>
+                                  <Or ID="883">
+                                    <Name>OR [Omission-Electronic_Pedal.Out2]</Name>
+                                    <Children>
+                                      <Event ID="54" />
+                                      <Event ID="57" />
+                                    </Children>
+                                  </Or>
+                                </Children>
+                              </And>
+                            </Children>
+                          </Or>
+                          <Or ID="915">
+                            <Name>OR [Value-Brake_Unit1.In2]</Name>
+                            <Children>
+                              <And ID="349">
+                                <Name>AND [Value-Communication_Bus2.Out1]</Name>
+                                <Children>
+                                  <Or ID="881">
+                                    <Name>OR [Omission-Electronic_Pedal.Out1]</Name>
+                                    <Children>
+                                      <Event ID="53" />
+                                      <Event ID="57" />
+                                    </Children>
+                                  </Or>
+                                  <Or ID="914">
+                                    <Name>OR [Value-Electronic_Pedal.Out2]</Name>
+                                    <Children>
+                                      <Event ID="56" />
+                                      <Event ID="58" />
+                                    </Children>
+                                  </Or>
+                                </Children>
+                              </And>
+                              <Event ID="55" />
+                              <Event ID="58" />
+                            </Children>
+                          </Or>
+                        </Children>
+                      </And>
+                    </Children>
+                  </Or>
+                  <Or ID="168">
+                    <Name>Value-Brake_Unit2.Add.Braking</Name>
+                    <Children>
+                      <Event ID="16" />
+                      <Event ID="17" />
+                      <Event ID="2" />
+                      <Event ID="25" />
+                      <And ID="279">
+                        <Name>AND [Value-Brake_Unit2.Wheel_Node_Controller.Out1]</Name>
+                        <Children>
+                          <Or ID="896">
+                            <Name>OR [Omission-Brake_Unit2.In1]</Name>
+                            <Children>
+                              <Event ID="51" />
+                              <And ID="313">
+                                <Name>AND [Omission-Communication_Bus1.Out1]</Name>
+                                <Children>
+                                  <Or ID="881">
+                                    <Name>OR [Omission-Electronic_Pedal.Out1]</Name>
+                                    <Children>
+                                      <Event ID="53" />
+                                      <Event ID="57" />
+                                    </Children>
+                                  </Or>
+                                  <Or ID="883">
+                                    <Name>OR [Omission-Electronic_Pedal.Out2]</Name>
+                                    <Children>
+                                      <Event ID="54" />
+                                      <Event ID="57" />
+                                    </Children>
+                                  </Or>
+                                </Children>
+                              </And>
+                            </Children>
+                          </Or>
+                          <Or ID="928">
+                            <Name>OR [Value-Brake_Unit2.In2]</Name>
+                            <Children>
+                              <And ID="349">
+                                <Name>AND [Value-Communication_Bus2.Out1]</Name>
+                                <Children>
+                                  <Or ID="881">
+                                    <Name>OR [Omission-Electronic_Pedal.Out1]</Name>
+                                    <Children>
+                                      <Event ID="53" />
+                                      <Event ID="57" />
+                                    </Children>
+                                  </Or>
+                                  <Or ID="914">
+                                    <Name>OR [Value-Electronic_Pedal.Out2]</Name>
+                                    <Children>
+                                      <Event ID="56" />
+                                      <Event ID="58" />
+                                    </Children>
+                                  </Or>
+                                </Children>
+                              </And>
+                              <Event ID="55" />
+                              <Event ID="58" />
+                            </Children>
+                          </Or>
+                        </Children>
+                      </And>
+                      <And ID="325">
+                        <Name>AND [Value-Communication_Bus1.Out1]</Name>
+                        <Children>
+                          <Or ID="881">
+                            <Name>OR [Omission-Electronic_Pedal.Out1]</Name>
+                            <Children>
+                              <Event ID="53" />
+                              <Event ID="57" />
+                            </Children>
+                          </Or>
+                          <Or ID="914">
+                            <Name>OR [Value-Electronic_Pedal.Out2]</Name>
+                            <Children>
+                              <Event ID="56" />
+                              <Event ID="58" />
+                            </Children>
+                          </Or>
+                        </Children>
+                      </And>
+                      <Event ID="55" />
+                      <Event ID="58" />
+                      <Event ID="20" />
+                      <Event ID="60" />
+                      <Event ID="21" />
+                      <Event ID="26" />
+                      <And ID="290">
+                        <Name>AND [Value-Brake_Unit2.Wheel_Node_Controller.Out2]</Name>
+                        <Children>
+                          <Or ID="896">
+                            <Name>OR [Omission-Brake_Unit2.In1]</Name>
+                            <Children>
+                              <Event ID="51" />
+                              <And ID="313">
+                                <Name>AND [Omission-Communication_Bus1.Out1]</Name>
+                                <Children>
+                                  <Or ID="881">
+                                    <Name>OR [Omission-Electronic_Pedal.Out1]</Name>
+                                    <Children>
+                                      <Event ID="53" />
+                                      <Event ID="57" />
+                                    </Children>
+                                  </Or>
+                                  <Or ID="883">
+                                    <Name>OR [Omission-Electronic_Pedal.Out2]</Name>
+                                    <Children>
+                                      <Event ID="54" />
+                                      <Event ID="57" />
+                                    </Children>
+                                  </Or>
+                                </Children>
+                              </And>
+                            </Children>
+                          </Or>
+                          <Or ID="928">
+                            <Name>OR [Value-Brake_Unit2.In2]</Name>
+                            <Children>
+                              <And ID="349">
+                                <Name>AND [Value-Communication_Bus2.Out1]</Name>
+                                <Children>
+                                  <Or ID="881">
+                                    <Name>OR [Omission-Electronic_Pedal.Out1]</Name>
+                                    <Children>
+                                      <Event ID="53" />
+                                      <Event ID="57" />
+                                    </Children>
+                                  </Or>
+                                  <Or ID="914">
+                                    <Name>OR [Value-Electronic_Pedal.Out2]</Name>
+                                    <Children>
+                                      <Event ID="56" />
+                                      <Event ID="58" />
+                                    </Children>
+                                  </Or>
+                                </Children>
+                              </And>
+                              <Event ID="55" />
+                              <Event ID="58" />
+                            </Children>
+                          </Or>
+                        </Children>
+                      </And>
+                    </Children>
+                  </Or>
+                </Children>
+              </And>
+            </Children>
+          </Or>
+        </Children>
+      </OutputDeviation>
+      <CutSetsSummary>
+        <CutSets order="1" pruned="false">4</CutSets>
+        <CutSets order="2" pruned="false">38</CutSets>
+      </CutSetsSummary>
+    </FaultTree>
+  </FaultTrees>
+  <WarningList>
+    <Warning>Cannot start FaultTree+ - Error opening FaultTree+ key: Registry error code: 2</Warning>
+    <Warning>Cannot start FaultTree+ - Could not find FaultTree+ directory in registry</Warning>
+  </WarningList>
+  <SafetyAllocations>
+    <ModelFileName>model_v15Big_two_Whells_</ModelFileName>
+    <RandomSeed>440236974</RandomSeed>
+    <Generation>100000</Generation>
+    <EncodingType>FixedEncoding</EncodingType>
+    <TimeElapsed>6</TimeElapsed>
+    <Objectives>
+      <Objective>
+        <Name>ASILCost</Name>
+        <Goal>Minimize</Goal>
+      </Objective>
+      <Objective>
+        <Name>ASILInvalids</Name>
+        <Goal>Minimize</Goal>
+      </Objective>
+    </Objectives>
+    <Population>
+      <Individual>
+        <IndividualID>1</IndividualID>
+        <Encoding>
+          <TreeASILEncoding>
+            <EncodingNode>
+              <Component>
+                <ShortName>Auxiliary_Battery</ShortName>
+                <FullName>Auxiliary_Battery</FullName>
+                <BasicEvents>
+                  <BasicEvent>
+                    <Name>OFailure1</Name>
+                    <ID>1</ID>
+                    <SafetyRequirement>2</SafetyRequirement>
+                  </BasicEvent>
+                  <BasicEvent>
+                    <Name>VFailure1</Name>
+                    <ID>2</ID>
+                    <SafetyRequirement>4</SafetyRequirement>
+                  </BasicEvent>
+                </BasicEvents>
+              </Component>
+            </EncodingNode>
+            <EncodingNode>
+              <Component>
+                <ShortName>Brake_Unit1</ShortName>
+                <FullName>Brake_Unit1</FullName>
+              </Component>
+              <SubNodes>
+                <EncodingNode>
+                  <Component>
+                    <ShortName>EMB</ShortName>
+                    <FullName>Brake_Unit1.EMB</FullName>
+                    <BasicEvents>
+                      <BasicEvent>
+                        <Name>OFailure1</Name>
+                        <ID>21</ID>
+                        <SafetyRequirement>2</SafetyRequirement>
+                      </BasicEvent>
+                    </BasicEvents>
+                  </Component>
+                </EncodingNode>
+              </SubNodes>
+              <SubNodes>
+                <EncodingNode>
+                  <Component>
+                    <ShortName>EMB</ShortName>
+                    <FullName>Brake_Unit1.EMB</FullName>
+                    <BasicEvents>
+                      <BasicEvent>
+                        <Name>VFailure1</Name>
+                        <ID>22</ID>
+                        <SafetyRequirement>2</SafetyRequirement>
+                      </BasicEvent>
+                    </BasicEvents>
+                  </Component>
+                </EncodingNode>
+              </SubNodes>
+              <SubNodes>
+                <EncodingNode>
+                  <Component>
+                    <ShortName>EMB_Power_Converter</ShortName>
+                    <FullName>Brake_Unit1.EMB_Power_Converter</FullName>
+                    <BasicEvents>
+                      <BasicEvent>
+                        <Name>VFailure1</Name>
+                        <ID>35</ID>
+                        <SafetyRequirement>2</SafetyRequirement>
+                      </BasicEvent>
+                    </BasicEvents>
+                  </Component>
+                </EncodingNode>
+              </SubNodes>
+              <SubNodes>
+                <EncodingNode>
+                  <Component>
+                    <ShortName>EMB_Power_Converter</ShortName>
+                    <FullName>Brake_Unit1.EMB_Power_Converter</FullName>
+                    <BasicEvents>
+                      <BasicEvent>
+                        <Name>OFailure1</Name>
+                        <ID>36</ID>
+                        <SafetyRequirement>2</SafetyRequirement>
+                      </BasicEvent>
+                    </BasicEvents>
+                  </Component>
+                </EncodingNode>
+              </SubNodes>
+              <SubNodes>
+                <EncodingNode>
+                  <Component>
+                    <ShortName>IWM</ShortName>
+                    <FullName>Brake_Unit1.IWM</FullName>
+                    <BasicEvents>
+                      <BasicEvent>
+                        <Name>OFailure1</Name>
+                        <ID>53</ID>
+                        <SafetyRequirement>2</SafetyRequirement>
+                      </BasicEvent>
+                    </BasicEvents>
+                  </Component>
+                </EncodingNode>
+              </SubNodes>
+              <SubNodes>
+                <EncodingNode>
+                  <Component>
+                    <ShortName>IWM</ShortName>
+                    <FullName>Brake_Unit1.IWM</FullName>
+                    <BasicEvents>
+                      <BasicEvent>
+                        <Name>VFailure1</Name>
+                        <ID>54</ID>
+                        <SafetyRequirement>2</SafetyRequirement>
+                      </BasicEvent>
+                    </BasicEvents>
+                  </Component>
+                </EncodingNode>
+              </SubNodes>
+              <SubNodes>
+                <EncodingNode>
+                  <Component>
+                    <ShortName>IWM_Power_Converter</ShortName>
+                    <FullName>Brake_Unit1.IWM_Power_Converter</FullName>
+                    <BasicEvents>
+                      <BasicEvent>
+                        <Name>VFailure1</Name>
+                        <ID>77</ID>
+                        <SafetyRequirement>2</SafetyRequirement>
+                      </BasicEvent>
+                    </BasicEvents>
+                  </Component>
+                </EncodingNode>
+              </SubNodes>
+              <SubNodes>
+                <EncodingNode>
+                  <Component>
+                    <ShortName>IWM_Power_Converter</ShortName>
+                    <FullName>Brake_Unit1.IWM_Power_Converter</FullName>
+                    <BasicEvents>
+                      <BasicEvent>
+                        <Name>OFailure1</Name>
+                        <ID>78</ID>
+                        <SafetyRequirement>2</SafetyRequirement>
+                      </BasicEvent>
+                    </BasicEvents>
+                  </Component>
+                </EncodingNode>
+              </SubNodes>
+              <SubNodes>
+                <EncodingNode>
+                  <Component>
+                    <ShortName>Wheel_Node_Controller</ShortName>
+                    <FullName>Brake_Unit1.Wheel_Node_Controller</FullName>
+                    <BasicEvents>
+                      <BasicEvent>
+                        <Name>OFailure1</Name>
+                        <ID>101</ID>
+                        <SafetyRequirement>2</SafetyRequirement>
+                      </BasicEvent>
+                    </BasicEvents>
+                  </Component>
+                </EncodingNode>
+              </SubNodes>
+              <SubNodes>
+                <EncodingNode>
+                  <Component>
+                    <ShortName>Wheel_Node_Controller</ShortName>
+                    <FullName>Brake_Unit1.Wheel_Node_Controller</FullName>
+                    <BasicEvents>
+                      <BasicEvent>
+                        <Name>OFailure2</Name>
+                        <ID>102</ID>
+                        <SafetyRequirement>2</SafetyRequirement>
+                      </BasicEvent>
+                    </BasicEvents>
+                  </Component>
+                </EncodingNode>
+              </SubNodes>
+              <SubNodes>
+                <EncodingNode>
+                  <Component>
+                    <ShortName>Wheel_Node_Controller</ShortName>
+                    <FullName>Brake_Unit1.Wheel_Node_Controller</FullName>
+                    <BasicEvents>
+                      <BasicEvent>
+                        <Name>VFailure1</Name>
+                        <ID>103</ID>
+                        <SafetyRequirement>2</SafetyRequirement>
+                      </BasicEvent>
+                    </BasicEvents>
+                  </Component>
+                </EncodingNode>
+              </SubNodes>
+              <SubNodes>
+                <EncodingNode>
+                  <Component>
+                    <ShortName>Wheel_Node_Controller</ShortName>
+                    <FullName>Brake_Unit1.Wheel_Node_Controller</FullName>
+                    <BasicEvents>
+                      <BasicEvent>
+                        <Name>VFailure2</Name>
+                        <ID>104</ID>
+                        <SafetyRequirement>2</SafetyRequirement>
+                      </BasicEvent>
+                    </BasicEvents>
+                  </Component>
+                </EncodingNode>
+              </SubNodes>
+            </EncodingNode>
+            <EncodingNode>
+              <Component>
+                <ShortName>Brake_Unit2</ShortName>
+                <FullName>Brake_Unit2</FullName>
+              </Component>
+              <SubNodes>
+                <EncodingNode>
+                  <Component>
+                    <ShortName>EMB</ShortName>
+                    <FullName>Brake_Unit2.EMB</FullName>
+                    <BasicEvents>
+                      <BasicEvent>
+                        <Name>OFailure1</Name>
+                        <ID>172</ID>
+                        <SafetyRequirement>0</SafetyRequirement>
+                      </BasicEvent>
+                    </BasicEvents>
+                  </Component>
+                </EncodingNode>
+              </SubNodes>
+              <SubNodes>
+                <EncodingNode>
+                  <Component>
+                    <ShortName>EMB</ShortName>
+                    <FullName>Brake_Unit2.EMB</FullName>
+                    <BasicEvents>
+                      <BasicEvent>
+                        <Name>VFailure1</Name>
+                        <ID>173</ID>
+                        <SafetyRequirement>2</SafetyRequirement>
+                      </BasicEvent>
+                    </BasicEvents>
+                  </Component>
+                </EncodingNode>
+              </SubNodes>
+              <SubNodes>
+                <EncodingNode>
+                  <Component>
+                    <ShortName>EMB_Power_Converter</ShortName>
+                    <FullName>Brake_Unit2.EMB_Power_Converter</FullName>
+                    <BasicEvents>
+                      <BasicEvent>
+                        <Name>VFailure1</Name>
+                        <ID>186</ID>
+                        <SafetyRequirement>2</SafetyRequirement>
+                      </BasicEvent>
+                    </BasicEvents>
+                  </Component>
+                </EncodingNode>
+              </SubNodes>
+              <SubNodes>
+                <EncodingNode>
+                  <Component>
+                    <ShortName>EMB_Power_Converter</ShortName>
+                    <FullName>Brake_Unit2.EMB_Power_Converter</FullName>
+                    <BasicEvents>
+                      <BasicEvent>
+                        <Name>OFailure1</Name>
+                        <ID>187</ID>
+                        <SafetyRequirement>0</SafetyRequirement>
+                      </BasicEvent>
+                    </BasicEvents>
+                  </Component>
+                </EncodingNode>
+              </SubNodes>
+              <SubNodes>
+                <EncodingNode>
+                  <Component>
+                    <ShortName>IWM</ShortName>
+                    <FullName>Brake_Unit2.IWM</FullName>
+                    <BasicEvents>
+                      <BasicEvent>
+                        <Name>OFailure1</Name>
+                        <ID>204</ID>
+                        <SafetyRequirement>0</SafetyRequirement>
+                      </BasicEvent>
+                    </BasicEvents>
+                  </Component>
+                </EncodingNode>
+              </SubNodes>
+              <SubNodes>
+                <EncodingNode>
+                  <Component>
+                    <ShortName>IWM</ShortName>
+                    <FullName>Brake_Unit2.IWM</FullName>
+                    <BasicEvents>
+                      <BasicEvent>
+                        <Name>VFailure1</Name>
+                        <ID>205</ID>
+                        <SafetyRequirement>2</SafetyRequirement>
+                      </BasicEvent>
+                    </BasicEvents>
+                  </Component>
+                </EncodingNode>
+              </SubNodes>
+              <SubNodes>
+                <EncodingNode>
+                  <Component>
+                    <ShortName>IWM_Power_Converter</ShortName>
+                    <FullName>Brake_Unit2.IWM_Power_Converter</FullName>
+                    <BasicEvents>
+                      <BasicEvent>
+                        <Name>VFailure1</Name>
+                        <ID>228</ID>
+                        <SafetyRequirement>2</SafetyRequirement>
+                      </BasicEvent>
+                    </BasicEvents>
+                  </Component>
+                </EncodingNode>
+              </SubNodes>
+              <SubNodes>
+                <EncodingNode>
+                  <Component>
+                    <ShortName>IWM_Power_Converter</ShortName>
+                    <FullName>Brake_Unit2.IWM_Power_Converter</FullName>
+                    <BasicEvents>
+                      <BasicEvent>
+                        <Name>OFailure1</Name>
+                        <ID>229</ID>
+                        <SafetyRequirement>0</SafetyRequirement>
+                      </BasicEvent>
+                    </BasicEvents>
+                  </Component>
+                </EncodingNode>
+              </SubNodes>
+              <SubNodes>
+                <EncodingNode>
+                  <Component>
+                    <ShortName>Wheel_Node_Controller</ShortName>
+                    <FullName>Brake_Unit2.Wheel_Node_Controller</FullName>
+                    <BasicEvents>
+                      <BasicEvent>
+                        <Name>OFailure1</Name>
+                        <ID>252</ID>
+                        <SafetyRequirement>0</SafetyRequirement>
+                      </BasicEvent>
+                    </BasicEvents>
+                  </Component>
+                </EncodingNode>
+              </SubNodes>
+              <SubNodes>
+                <EncodingNode>
+                  <Component>
+                    <ShortName>Wheel_Node_Controller</ShortName>
+                    <FullName>Brake_Unit2.Wheel_Node_Controller</FullName>
+                    <BasicEvents>
+                      <BasicEvent>
+                        <Name>OFailure2</Name>
+                        <ID>253</ID>
+                        <SafetyRequirement>0</SafetyRequirement>
+                      </BasicEvent>
+                    </BasicEvents>
+                  </Component>
+                </EncodingNode>
+              </SubNodes>
+              <SubNodes>
+                <EncodingNode>
+                  <Component>
+                    <ShortName>Wheel_Node_Controller</ShortName>
+                    <FullName>Brake_Unit2.Wheel_Node_Controller</FullName>
+                    <BasicEvents>
+                      <BasicEvent>
+                        <Name>VFailure1</Name>
+                        <ID>254</ID>
+                        <SafetyRequirement>2</SafetyRequirement>
+                      </BasicEvent>
+                    </BasicEvents>
+                  </Component>
+                </EncodingNode>
+              </SubNodes>
+              <SubNodes>
+                <EncodingNode>
+                  <Component>
+                    <ShortName>Wheel_Node_Controller</ShortName>
+                    <FullName>Brake_Unit2.Wheel_Node_Controller</FullName>
+                    <BasicEvents>
+                      <BasicEvent>
+                        <Name>VFailure2</Name>
+                        <ID>255</ID>
+                        <SafetyRequirement>2</SafetyRequirement>
+                      </BasicEvent>
+                    </BasicEvents>
+                  </Component>
+                </EncodingNode>
+              </SubNodes>
+            </EncodingNode>
+            <EncodingNode>
+              <Component>
+                <ShortName>Communication_Bus1</ShortName>
+                <FullName>Communication_Bus1</FullName>
+                <BasicEvents>
+                  <BasicEvent>
+                    <Name>OFailure1</Name>
+                    <ID>309</ID>
+                    <SafetyRequirement>2</SafetyRequirement>
+                  </BasicEvent>
+                </BasicEvents>
+              </Component>
+            </EncodingNode>
+            <EncodingNode>
+              <Component>
+                <ShortName>Communication_Bus2</ShortName>
+                <FullName>Communication_Bus2</FullName>
+                <BasicEvents>
+                  <BasicEvent>
+                    <Name>OFailure1</Name>
+                    <ID>333</ID>
+                    <SafetyRequirement>2</SafetyRequirement>
+                  </BasicEvent>
+                </BasicEvents>
+              </Component>
+            </EncodingNode>
+            <EncodingNode>
+              <Component>
+                <ShortName>Electronic_Pedal</ShortName>
+                <FullName>Electronic_Pedal</FullName>
+                <BasicEvents>
+                  <BasicEvent>
+                    <Name>OFailure1</Name>
+                    <ID>357</ID>
+                    <SafetyRequirement>4</SafetyRequirement>
+                  </BasicEvent>
+                  <BasicEvent>
+                    <Name>OFailure2</Name>
+                    <ID>358</ID>
+                    <SafetyRequirement>0</SafetyRequirement>
+                  </BasicEvent>
+                  <BasicEvent>
+                    <Name>VFailure1</Name>
+                    <ID>359</ID>
+                    <SafetyRequirement>4</SafetyRequirement>
+                  </BasicEvent>
+                  <BasicEvent>
+                    <Name>VFailure2</Name>
+                    <ID>360</ID>
+                    <SafetyRequirement>0</SafetyRequirement>
+                  </BasicEvent>
+                </BasicEvents>
+              </Component>
+            </EncodingNode>
+            <EncodingNode>
+              <Component>
+                <ShortName>Mechanical_Pedal</ShortName>
+                <FullName>Mechanical_Pedal</FullName>
+                <BasicEvents>
+                  <BasicEvent>
+                    <Name>OFailure1</Name>
+                    <ID>381</ID>
+                    <SafetyRequirement>4</SafetyRequirement>
+                  </BasicEvent>
+                  <BasicEvent>
+                    <Name>VFailure1</Name>
+                    <ID>382</ID>
+                    <SafetyRequirement>4</SafetyRequirement>
+                  </BasicEvent>
+                </BasicEvents>
+              </Component>
+            </EncodingNode>
+            <EncodingNode>
+              <Component>
+                <ShortName>Powertrain_Battery</ShortName>
+                <FullName>Powertrain_Battery</FullName>
+                <BasicEvents>
+                  <BasicEvent>
+                    <Name>OFailure1</Name>
+                    <ID>387</ID>
+                    <SafetyRequirement>2</SafetyRequirement>
+                  </BasicEvent>
+                  <BasicEvent>
+                    <Name>VFailure1</Name>
+                    <ID>388</ID>
+                    <SafetyRequirement>4</SafetyRequirement>
+                  </BasicEvent>
+                </BasicEvents>
+              </Component>
+            </EncodingNode>
+          </TreeASILEncoding>
+        </Encoding>
+        <Evaluations>
+          <Evaluation>
+            <Name>ASILCost</Name>
+            <Value>740</Value>
+          </Evaluation>
+          <Evaluation>
+            <Name>ASILInvalids</Name>
+            <Value>0</Value>
+          </Evaluation>
+        </Evaluations>
+        <LastAlteredGeneration>500</LastAlteredGeneration>
+      </Individual>
+    </Population>
+  </SafetyAllocations>
+</HiP-HOPS_Results>

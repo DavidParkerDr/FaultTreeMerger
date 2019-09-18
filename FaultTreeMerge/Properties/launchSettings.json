@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "FaultTreeMerge": {
+      "commandName": "Project",
+      "commandLineArgs": "mergePaths.txt"
+    }
+  }
+}
