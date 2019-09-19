@@ -17,7 +17,7 @@ namespace FaultTreeMerge
             sBasicEvents = new Dictionary<string, BasicEvent>();
             outputFile = new XmlDocument();
 
-            LoadFileAsString("C:\\Users\\350809.ADIR\\Downloads\\andre files\\Variants-Automotive-Braking-System-Case-Study\\CutSets(10).xml");
+           // LoadFileAsString("C:\\Users\\350809.ADIR\\Downloads\\andre files\\Variants-Automotive-Braking-System-Case-Study\\CutSets(10).xml");
 
             string mergePathsFile = args[0];
             Console.WriteLine("Loading file of fault tree paths to merge: " + mergePathsFile);

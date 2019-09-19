@@ -4,7 +4,7 @@ using System.Text;
 
 namespace FaultTreeMerge
 {
-    class BasicEvent
+    class BasicEvent : Node
     {
         static int sIdCount = 0;
         public string Name { get; set; }
@@ -18,7 +18,6 @@ namespace FaultTreeMerge
             Name = pName;
             Id = sIdCount++;
         }
-
     }
 }
 
