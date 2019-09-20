@@ -11,18 +11,26 @@ namespace FaultTreeMerge
         static Dictionary<string, BasicEvent> sBasicEvents;
         static XmlDocument outputFile;
         static int sIDCount = 0;
+
+        static List<Effect> EffectsList = new List<Effect>();
+        static List<BasicEvent> BasicEventsList = new List<BasicEvent>();
+
+        //       static Dictionary<int, string> Effect
+
+        static Dictionary<int, int> effectIdReplacements; //First int is new id, second is old id
+
         static void Main(string[] args)
         {
             sBasicEventsLookup = new Dictionary<string, Dictionary<string, int>>();
             sBasicEvents = new Dictionary<string, BasicEvent>();
             outputFile = new XmlDocument();
 
-           // LoadFileAsString("C:\\Users\\350809.ADIR\\Downloads\\andre files\\Variants-Automotive-Braking-System-Case-Study\\CutSets(10).xml");
+            // LoadFileAsString("C:\\Users\\350809.ADIR\\Downloads\\andre files\\Variants-Automotive-Braking-System-Case-Study\\CutSets(10).xml");
 
             string mergePathsFile = args[0];
             Console.WriteLine("Loading file of fault tree paths to merge: " + mergePathsFile);
             LoadPaths(mergePathsFile);
-            PrintBasicEvents(); 
+            PrintBasicEvents();
         }
 
         static void LoadFileAsString(string pFilePath)
@@ -87,7 +95,7 @@ namespace FaultTreeMerge
 
 
 
-            foreach (KeyValuePair<int,int> kvp in replacements)
+            foreach (KeyValuePair<int, int> kvp in replacements)
             {
                 string replacementLookup = String.Format("<Event ID=\"{0}\" />", kvp.Key);
                 string replacement = String.Format("<Event ID=\"{0}\" />", kvp.Value);
@@ -110,11 +118,145 @@ namespace FaultTreeMerge
                 {
                     string path = reader.ReadLine();
                     LoadPath(path);
-                    
+
                 }
             }
         }
+
         static void LoadPath(string pPath)
+        {
+            Console.WriteLine("Loading path: " + pPath);
+            Dictionary<int, int> idSwap = new Dictionary<int, int>();
+
+            //TODO: Should this be a static dictionary outside of the method?
+        //    Dictionary<int, int> effectIdSwap = new Dictionary<int, int>();  //First int old id, second int new id
+            Dictionary<int, int> basicEventIdSwap = new Dictionary<int, int>();  //First int old id, second int new id
+
+            XmlDocument doc = new XmlDocument();
+            doc.Load(pPath + "/faulttrees.xml");
+
+            XmlNodeList effects = doc.SelectNodes("HiP-HOPS_Results/FaultTrees/FMEA/Component/Events/BasicEvent/Effects/Effect");
+            foreach (XmlNode effect in effects)
+            {
+                XmlAttribute id = effect.Attributes[0];
+                int idValue = int.Parse(id.FirstChild.Value);
+                XmlNode name = effect.SelectSingleNode("Name");
+                string nameValue = name.FirstChild.Value;
+                XmlNode singlePointFailure = effect.SelectSingleNode("SinglePointFailure");
+                string singlePointFailureValue = singlePointFailure.FirstChild.Value;
+
+                //TODO: This needs to do something with the old id (idValue) so it can compare it with the new value generated in the constructor
+                //This takes every unqiue effect from the xml files and adds it to the EffectsList list of effects
+                Effect newEffect = new Effect(nameValue, singlePointFailureValue);
+                EffectsList.Add(newEffect);
+
+                //This keeps the old and new IDs together in a list so it can be looked up
+              //  effectIdSwap.Add(newEffect.Id, idValue);
+
+
+
+                /*
+                if (EffectsList.Count < 1)
+                {
+                    EffectsList.Add(new Effect(nameValue, singlePointFailureValue));
+                }
+                else
+                {
+                    for (int i = 0; i < EffectsList.Count; i++)
+                    {
+
+                    if (EffectsList[i].Name != nameValue && EffectsList[i].SinglePointFailure != singlePointFailureValue)
+                    {
+                        Effect newEffect = new Effect(nameValue, singlePointFailureValue);
+                        EffectsList.Add(newEffect);
+                        effectIdSwap.Add(idValue, newEffect.Id);
+
+                        i = EffectsList.Count;
+                    }
+                    else
+                    {
+                        //TODO: Remove. For Debugging purposes.
+                        Console.WriteLine("Duplicate Effect: " + idValue.ToString());
+                    }
+                  }
+                }
+                */
+            }
+
+            XmlNodeList basicEvents = doc.SelectNodes("HiP-HOPS_Results/FaultTrees/FMEA/Component/Events/BasicEvent");
+            foreach (XmlNode basicEvent in basicEvents)
+            {
+                XmlAttribute id = basicEvent.Attributes[0];
+                int idValue = int.Parse(id.FirstChild.Value);
+
+                if (!basicEventIdSwap.ContainsValue(idValue))
+                {
+
+
+                    XmlNode name = basicEvent.SelectSingleNode("Name");
+                    string nameValue = name.FirstChild.Value;
+
+                    XmlNode shortName = basicEvent.SelectSingleNode("ShortName");
+                    string shortNameValue = shortName.FirstChild.Value;
+                    XmlNode description = basicEvent.SelectSingleNode("Description");
+                    string descriptionValue = "";
+                    if (description.HasChildNodes)   //TODO: I should probably do this for each property
+                    {
+                        descriptionValue = description.FirstChild.Value;
+                    }
+                    XmlNode unavailability = basicEvent.SelectSingleNode("Unavailability");
+                    string unavailabilityValue = unavailability.FirstChild.Value;
+
+                    //TODO: get all effects from the file and add them to a dictionary(?) like with basic events
+
+                    XmlNode eventEffects = basicEvent.SelectSingleNode("Effects");
+
+                    List<Effect> effectsValues = new List<Effect>(); //TODO: Should this be a list of effects?  Or Should this look of the list of effects and add that event when using the basic event constructor?
+
+                    for (int i = 0; i < eventEffects.ChildNodes.Count; i++)
+                    {
+                        XmlAttribute effectId = eventEffects.ChildNodes[i].Attributes[0];
+                        int effectIdValue = int.Parse(effectId.FirstChild.Value);
+
+                        XmlNode effectName = eventEffects.ChildNodes[i].SelectSingleNode("Name");
+                        string effectNameValue = effectName.FirstChild.Value;
+                        XmlNode effectSinglePointFailure = eventEffects.ChildNodes[i].SelectSingleNode("SinglePointFailure");
+                        string effectSinglePointFailureeValue = effectSinglePointFailure.FirstChild.Value;
+                        
+
+                        for (int j = 0; j < EffectsList.Count; j++)
+                        {
+                            if (EffectsList[j].Name == effectNameValue && EffectsList[j].SinglePointFailure == effectSinglePointFailureeValue)
+                            {
+                                effectsValues.Add(EffectsList[j]);
+
+                                //This should endure that no duplicate effect IDs are written
+                                //EffectsList should be empty when all BasicEvents have been read in
+                                EffectsList.RemoveAt(j);
+
+                                j = EffectsList.Count;
+                            }
+                        }
+                    }
+
+                    BasicEvent newBasicEvent = new BasicEvent(nameValue, shortNameValue, descriptionValue, unavailabilityValue, effectsValues);
+
+                    BasicEventsList.Add(newBasicEvent);
+                    basicEventIdSwap.Add(newBasicEvent.Id, idValue);
+
+                }
+            }
+
+            //TODO: The program should next read in either every And gate, Or gate 
+            //TODO: Find out if the gates can share IDs
+
+
+            //TODO: Check what should go here.
+            PrintIdSwap(idSwap);
+            TraverseFile(pPath, idSwap);
+        }
+
+        static void LoadPath2(string pPath)
         {
             Console.WriteLine("Loading path: " + pPath);
             Dictionary<int, int> idSwap = new Dictionary<int, int>();
@@ -138,7 +280,7 @@ namespace FaultTreeMerge
                 else
                 {
                     idSwap.Add(idValue, existingEvent.Id);
-                }                
+                }
             }
             PrintIdSwap(idSwap);
             TraverseFile(pPath, idSwap);
@@ -147,9 +289,9 @@ namespace FaultTreeMerge
         {
             XmlDocument doc = new XmlDocument();
             doc.Load(pPath + "/faulttrees.xml");
-            XmlNode node = doc.FirstChild.NextSibling;            
+            XmlNode node = doc.FirstChild.NextSibling;
             TraverseHiPHOPS_Results(node, pIdSwap);
-            outputFile.Save("testOutput.xml");
+            //    outputFile.Save("testOutput.xml");   //TODO: outputFile is not a valid xml document here
         }
         static void TraverseHiPHOPS_Results(XmlNode pHHRNode, Dictionary<int, int> pIdSwap)
         {
@@ -205,7 +347,7 @@ namespace FaultTreeMerge
         }
         static void PrintBasicEvents()
         {
-            foreach(KeyValuePair <string, BasicEvent> kvp in sBasicEvents)
+            foreach (KeyValuePair<string, BasicEvent> kvp in sBasicEvents)
             {
                 Console.WriteLine(kvp.Value.Id + " " + kvp.Value.Name);
             }
