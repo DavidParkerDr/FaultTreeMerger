@@ -13,12 +13,12 @@ namespace FaultTreeMerge
         public string Version { get; set; }
         public string VersionDate { get; set; }
 
-        public List<Component> FMEA = new List<Component>();
+        public FMEA FMEA { get; set; }
         public List<FaultTree> FaultTrees = new List<FaultTree>();
 
-        HiP_HOPSResults()  //TODO: Find out which of the properties above will need to be added to the constructor
+        public HiP_HOPSResults()  //TODO: Find out which of the properties above will need to be added to the constructor
         {
-            
+
         }
     }
 }

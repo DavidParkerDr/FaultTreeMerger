@@ -9,20 +9,22 @@ namespace FaultTreeMerge
         public static int FaultTreeCount = 0;
         public int Id { get; set; }
         public string Name { get; set; }
+        public string Description { get; set; }
         public string SIL { get; set; }
         public string Unavailability { get; set; }
-        public string UnavilabilitySort { get; set; }
+        public string UnavailabilitySort { get; set; }
         public string Severity { get; set; }
         public OutputDeviation OutputDeviation;
+        public int PreviousId { get; set; }
 
         public List<CutSets> CutSetsSummary = new List<CutSets>();
                 
-        public FaultTree(string pName, string pSIL, string pUnavailability, string pUnavailabilitySort, string pSeverity) //TODO: does this need this many parameters? 
+        public FaultTree(string pName, string pSIL, string pUnavailability, string pUnavailabilitySort, string pSeverity) //TODO: does this need this many parameters? missing description?
         {
             Name = pName;
             SIL = pSIL;
             Unavailability = pUnavailability;
-            UnavilabilitySort = pUnavailabilitySort;
+            UnavailabilitySort = pUnavailabilitySort;
             Severity = pSeverity;
 
             Id = FaultTreeCount++;  //TODO: Should the ++ be before FaultTreeCount? Should the Id start at 0 or 1? Example tree starts at 1

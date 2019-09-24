@@ -2,6 +2,7 @@
 using System.IO;
 using System.Xml;
 using System.Collections.Generic;
+using System.Xml.Serialization;
 
 namespace FaultTreeMerge
 {
@@ -11,6 +12,8 @@ namespace FaultTreeMerge
         static Dictionary<string, BasicEvent> sBasicEvents;
         static XmlDocument outputFile;
         static int sIDCount = 0;
+
+        static List<HiP_HOPSResults> HiP_HOPSResultsList = new List<HiP_HOPSResults>();
 
         static List<Effect> EffectsList = new List<Effect>();
         static List<BasicEvent> BasicEventsList = new List<BasicEvent>();
@@ -108,7 +111,6 @@ namespace FaultTreeMerge
 
 
 
-
         static void LoadPaths(string pMergePathsFileName)
         {
             FileStream fileStream = new FileStream(pMergePathsFileName, FileMode.Open);
@@ -126,10 +128,365 @@ namespace FaultTreeMerge
         static void LoadPath(string pPath)
         {
             Console.WriteLine("Loading path: " + pPath);
+
+            XmlReaderSettings settings = new XmlReaderSettings();
+            settings.Async = false;
+            settings.IgnoreWhitespace = true;
+
+            using (XmlReader reader = XmlReader.Create(new StreamReader(pPath + "/faulttrees.xml"), settings))
+            {
+                reader.ReadToFollowing("HiP-HOPS_Results");
+                HiP_HOPSResults newHiP_HOPSResults = ReadHiPHOPSResults(reader);
+                HiP_HOPSResultsList.Add(newHiP_HOPSResults);
+            }
+        }
+
+        static HiP_HOPSResults ReadHiPHOPSResults(XmlReader reader)
+        {
+            HiP_HOPSResults HiP_HOPSResults = new HiP_HOPSResults();
+
+            HiP_HOPSResults.Model = reader.GetAttribute("model");
+            HiP_HOPSResults.Build = reader.GetAttribute("build");
+            HiP_HOPSResults.MajorVersion = reader.GetAttribute("majorVersion");
+            HiP_HOPSResults.MinorVersion = reader.GetAttribute("minorVersion");
+            HiP_HOPSResults.Version = reader.GetAttribute("version");
+            HiP_HOPSResults.VersionDate = reader.GetAttribute("versionDate");
+
+            reader.ReadStartElement();
+
+            if (reader.Name == "FaultTrees")
+            {
+                reader.ReadStartElement();
+
+                if (reader.Name == "FMEA")
+                {
+                    HiP_HOPSResults.FMEA = ReadFMEA(reader);
+                }
+
+                while (reader.Name == "FaultTree")
+                {
+                    HiP_HOPSResults.FaultTrees.Add(ReadFaultTree(reader));
+                }
+            }
+
+
+            return HiP_HOPSResults;
+        }
+
+        static FaultTree ReadFaultTree(XmlReader reader)
+        {
+            int previousId = int.Parse(reader.GetAttribute("ID"));
+            string name = "";
+
+            reader.ReadStartElement();
+
+            if (reader.Name == "Name")
+            {
+                name = reader.ReadElementContentAsString();
+            }
+            FaultTree faultTree = new FaultTree(name);
+            faultTree.PreviousId = previousId;
+
+            if (reader.Name == "Description")
+            {
+                faultTree.Description = reader.ReadElementContentAsString();
+            }
+            if (reader.Name == "SIL")
+            {
+                faultTree.SIL = reader.ReadElementContentAsString();
+            }
+            if (reader.Name == "Unavailability")
+            {
+                faultTree.Unavailability = reader.ReadElementContentAsString();
+            }
+            if (reader.Name == "UnavailabilitySort")
+            {
+                faultTree.UnavailabilitySort = reader.ReadElementContentAsString();
+            }
+            if (reader.Name == "Severity")
+            {
+                faultTree.Severity = reader.ReadElementContentAsString();
+            }
+
+            if (reader.Name == "OutputDeviation")
+            {
+                faultTree.OutputDeviation = ReadOutputDeviation(reader);
+            }
+
+            if (reader.Name == "CutSetsSummary")
+            {
+                reader.ReadStartElement();
+
+                while (reader.Name == "CutSets")
+                {
+                    faultTree.CutSetsSummary.Add(ReadCutSets(reader));
+                }
+            }
+
+            reader.Read();
+            return faultTree;
+        }
+
+        static CutSets ReadCutSets(XmlReader reader)
+        {
+            CutSets cutSets = new CutSets();
+
+            cutSets.Order = int.Parse(reader.GetAttribute("order"));
+            cutSets.Pruned = bool.Parse(reader.GetAttribute("pruned"));
+
+            cutSets.Content = reader.ReadContentAsString();   //TODO: Make sure this is the correct method
+
+            reader.ReadStartElement();
+            
+
+            reader.Read();
+            return cutSets;
+        }
+
+        static OutputDeviation ReadOutputDeviation(XmlReader reader)
+        {
+            reader.ReadStartElement();
+
+            string name = "";
+            if (reader.Name == "Name")
+            {
+                name = reader.ReadElementContentAsString();
+            }
+
+            OutputDeviation outputDeviation = new OutputDeviation(name);
+
+
+            if (reader.Name == "Children")
+            {
+                outputDeviation.Children = ReadChildren(reader);
+            }
+
+
+            reader.Read();
+            return outputDeviation;
+        }
+
+        static List<Node> ReadChildren(XmlReader reader)
+        {
+            reader.ReadStartElement();
+
+            List<Node> nodes = new List<Node>();
+
+            while (reader.Name == "Or" || reader.Name == "And" || reader.Name == "Event")
+            {
+
+                if (reader.Name == "Or")
+                {
+                    nodes.Add(ReadOr(reader));
+                }
+                else if (reader.Name == "And")
+                {
+                    nodes.Add(ReadAnd(reader));
+                }
+                else if (reader.Name == "Event")
+                {
+                    //TODO: find out what needs to go here
+                    // The name for this part is 'Event', not 'BasicEvent', so ReadEvent will probably not work as it is.
+                    // Change ReadEvent to read events titles 'Event'?   maybe reader.Name.Countains("Event")?
+                    // Maybe none if this is relevent and maybe it will just work
+
+                    nodes.Add(ReadEvent(reader));
+                }
+
+            }
+            reader.Read();
+            return nodes;
+        }
+
+        static Or ReadOr(XmlReader reader)
+        {
+            int previousId = int.Parse(reader.GetAttribute("ID"));
+
+            reader.ReadStartElement();
+
+            Or or = new Or();
+            or.PreviousId = previousId;
+
+            if (reader.Name == "Name")
+            {
+                or.Name = reader.ReadElementContentAsString();
+            }
+            if (reader.Name == "Children")
+            {
+                or.Children = ReadChildren(reader);
+            }
+
+
+            reader.Read();
+            return or;
+        }
+
+        static And ReadAnd(XmlReader reader)
+        {
+            int previousId = int.Parse(reader.GetAttribute("ID"));
+
+            reader.ReadStartElement();
+
+            And and = new And();
+            and.PreviousId = previousId;
+
+            if (reader.Name == "Name")
+            {
+                and.Name = reader.ReadElementContentAsString();
+            }
+            if (reader.Name == "Children")
+            {
+                and.Children = ReadChildren(reader);
+            }
+
+            reader.Read();
+            return and;
+        }
+
+        static FMEA ReadFMEA(XmlReader reader)
+        {
+            //   reader.ReadStartElement();
+
+            List<Component> components = new List<Component>();
+
+            reader.ReadStartElement();
+
+            while (reader.Name == "Component")
+            {
+                components.Add(ReadComponent(reader));
+            }
+
+            FMEA newFMEA = new FMEA(components);
+
+            reader.Read();
+            return newFMEA;
+        }
+
+        static Component ReadComponent(XmlReader reader)
+        {
+            string name = "";
+            List<BasicEvent> basicEvents = new List<BasicEvent>();
+
+            reader.ReadStartElement();
+
+            if (reader.Name == "Name")
+            {
+                name = reader.ReadElementContentAsString();
+            }
+            Component component = new Component(name);
+
+            //  reader.Read();
+
+            if (reader.Name == "Events")
+            {
+                reader.ReadStartElement();
+
+                while (reader.Name == "BasicEvent")
+                {
+                    basicEvents.Add(ReadEvent(reader));
+                }
+                reader.Read();
+            }
+
+            reader.Read();
+            return component;
+        }
+
+        static BasicEvent ReadEvent(XmlReader reader)
+        {
+            string name = "";
+            string shortName = "";
+            string description = "";
+            string unavailability = "";
+            List<Effect> effects = new List<Effect>();
+
+            int previousId = int.Parse(reader.GetAttribute("ID"));
+
+            reader.ReadStartElement();
+
+            if (reader.Name == "Name")
+            {
+                name = reader.ReadElementContentAsString();
+            }
+
+            BasicEvent basicEvent = new BasicEvent();
+
+            if (name != "")
+            {
+                // This constructor increments the ID count for BasicEvents by one
+                basicEvent = new BasicEvent(name);
+            }
+            else
+
+                basicEvent.PreviousId = previousId;
+
+            if (reader.Name == "ShortName")
+            {
+                shortName = reader.ReadElementContentAsString();   //TODO: This can probably be simplified
+                basicEvent.ShortName = shortName;
+            }
+            if (reader.Name == "Description")
+            {
+                description = reader.ReadElementContentAsString();
+                basicEvent.Description = description;
+            }
+            if (reader.Name == "Unavailability")
+            {
+                unavailability = reader.ReadElementContentAsString();
+                basicEvent.Unavailability = unavailability;
+            }
+
+            if (reader.Name == "Effects")
+            {
+                reader.ReadStartElement();
+
+                while (reader.Name == "Effect")
+                {
+                    effects.Add(ReadEffect(reader));
+                }
+
+                reader.Read();
+            }
+
+            reader.Read();
+
+            return basicEvent;
+        }
+
+        static Effect ReadEffect(XmlReader reader)
+        {
+
+            int previousId = int.Parse(reader.GetAttribute("ID"));
+            string name = "";
+            string singlePointFailure = "";
+
+            reader.ReadStartElement();
+
+            if (reader.Name == "Name")
+            {
+                name = reader.ReadElementContentAsString();
+            }
+            if (reader.Name == "SinglePointFailure")
+            {
+                singlePointFailure = reader.ReadElementContentAsString();
+            }
+
+            Effect effect = new Effect(name, singlePointFailure);
+            effect.PreviousId = previousId;
+
+            reader.Read();
+
+            return effect;
+        }
+
+
+        static void LoadPath3(string pPath)
+        {
+            Console.WriteLine("Loading path: " + pPath);
             Dictionary<int, int> idSwap = new Dictionary<int, int>();
 
             //TODO: Should this be a static dictionary outside of the method?
-        //    Dictionary<int, int> effectIdSwap = new Dictionary<int, int>();  //First int old id, second int new id
+            //    Dictionary<int, int> effectIdSwap = new Dictionary<int, int>();  //First int old id, second int new id
             Dictionary<int, int> basicEventIdSwap = new Dictionary<int, int>();  //First int old id, second int new id
 
             XmlDocument doc = new XmlDocument();
@@ -151,7 +508,7 @@ namespace FaultTreeMerge
                 EffectsList.Add(newEffect);
 
                 //This keeps the old and new IDs together in a list so it can be looked up
-              //  effectIdSwap.Add(newEffect.Id, idValue);
+                //  effectIdSwap.Add(newEffect.Id, idValue);
 
 
 
@@ -222,7 +579,7 @@ namespace FaultTreeMerge
                         string effectNameValue = effectName.FirstChild.Value;
                         XmlNode effectSinglePointFailure = eventEffects.ChildNodes[i].SelectSingleNode("SinglePointFailure");
                         string effectSinglePointFailureeValue = effectSinglePointFailure.FirstChild.Value;
-                        
+
 
                         for (int j = 0; j < EffectsList.Count; j++)
                         {

@@ -8,6 +8,8 @@ namespace FaultTreeMerge
     {
         public static int GateIdCount = 0;
         public int Id { get; set; }
+        public int PreviousId { get; set; }
+        public string Name { get; set; }
 
         public List<Node> Children = new List<Node>();
     }

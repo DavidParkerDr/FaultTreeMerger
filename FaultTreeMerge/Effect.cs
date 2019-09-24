@@ -11,6 +11,8 @@ namespace FaultTreeMerge
         public string Name;
         public string SinglePointFailure; //TODO: Should this be a string, as it does going to be written to a file?
 
+        public int PreviousId;
+
         public Effect(string pName, string pSinglePointFailure)
         {
             Id = ++EffectCount;
