@@ -7,6 +7,7 @@ namespace FaultTreeMerge
     class BasicEvent : Node
     {
         static int sIdCount = 0;
+        public static int IdCount { get { return sIdCount; } set { sIdCount = value; } }
         public string Name { get; set; }
         public string ShortName { get; set; }
         public string Description { get; set; }
@@ -14,7 +15,7 @@ namespace FaultTreeMerge
         public string Unavailability { get; set; }
         public List<Effect> Effects { get; set; }
 
-        public int PreviousId { get; set; }   //TODO: Is this necessary? Should it also have a link to the fault tree it was linked to?
+        //   public int PreviousId { get; set; }   //TODO: Is this necessary? Should it also have a link to the fault tree it was linked to?
 
         public BasicEvent()
         {

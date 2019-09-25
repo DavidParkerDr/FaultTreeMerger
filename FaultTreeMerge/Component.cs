@@ -7,7 +7,7 @@ namespace FaultTreeMerge
     class Component
     {
         public List<BasicEvent> Events = new List<BasicEvent>();
-        string Name { get; set; } 
+        public string Name { get; set; }
 
         public Component(string pName)
         {

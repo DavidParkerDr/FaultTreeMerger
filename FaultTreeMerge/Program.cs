@@ -13,14 +13,17 @@ namespace FaultTreeMerge
         static XmlDocument outputFile;
         static int sIDCount = 0;
 
+        static List<Dictionary<int, BasicEvent>> BasicEventsDictionaryList = new List<Dictionary<int, BasicEvent>>();
         static List<HiP_HOPSResults> HiP_HOPSResultsList = new List<HiP_HOPSResults>();
+        static HiP_HOPSResults CombinedHiP_HOPSResults = new HiP_HOPSResults();
 
+        //TODO:  These are probably unecessary now
         static List<Effect> EffectsList = new List<Effect>();
         static List<BasicEvent> BasicEventsList = new List<BasicEvent>();
-
-        //       static Dictionary<int, string> Effect
-
         static Dictionary<int, int> effectIdReplacements; //First int is new id, second is old id
+        static List<BasicEvent> BasicEventsList2 = new List<BasicEvent>();  //TODO: This list is used in LoadPaths3. Remove this if no code from that method is used, rename otherwise.
+
+
 
         static void Main(string[] args)
         {
@@ -33,7 +36,182 @@ namespace FaultTreeMerge
             string mergePathsFile = args[0];
             Console.WriteLine("Loading file of fault tree paths to merge: " + mergePathsFile);
             LoadPaths(mergePathsFile);
-            PrintBasicEvents();
+            BasicEvent.IdCount = 0;   //TODO: Make sure this should reset the basic event count
+            Effect.EffectCount = 0;   //TODO: Make sure this should reset the effect count
+            CombineHiP_HOPSResults();
+
+            //  PrintBasicEvents();  //TODO: This is probably unnecessary
+        }
+
+        static void CombineHiP_HOPSResults()
+        {
+            //TODO: Find out what attributes the combined HiP-HOPS Results should have and set them here
+
+
+            CombineFMEA();
+
+        }
+
+        static void CombineFMEA()
+        {
+            FMEA combinedFMEA = new FMEA();
+            List<Component> components = new List<Component>();
+
+            foreach (HiP_HOPSResults HiPHOPSResults in HiP_HOPSResultsList)
+            {
+                foreach (Component component in HiPHOPSResults.FMEA.Components)
+                {
+                    components.Add(component);
+
+                    //TODO: The if part seems redunant, as the components will never match, currently
+                    if (!combinedFMEA.Components.Contains(component))
+                    {
+                        //TODO: For debug purposes, remove when finished
+                        foreach (Component storedComponent in combinedFMEA.Components)
+                        {
+                            if (component.Name == storedComponent.Name)
+                            {
+                                Console.WriteLine("Duplicate Component Name Found: " + component.Name);
+                            }
+                        }
+
+                        // combinedFMEA.Components.Add(component);
+                    }
+                }
+            }
+            combinedFMEA.Components = CombineComponents(components);
+
+            CombinedHiP_HOPSResults.FMEA = combinedFMEA;
+        }
+
+        static List<Component> CombineComponents(List<Component> components)
+        {
+            List<Component> combinedComponents = new List<Component>();
+
+            //This will store each different version of a component from each XML file
+            Dictionary<string, List<Component>> componentVersionsDictionary = new Dictionary<string, List<Component>>();
+
+            //TODO: Probably should change this to a for loop and stop removing from components
+            while (components.Count > 0)
+            {
+                //TODO: probably move tis outside of the while loop, like in the CombineEvents method
+                if (componentVersionsDictionary.Count < 1)
+                {
+                    List<Component> newComponentList = new List<Component>();
+                    newComponentList.Add(components[0]);
+                    componentVersionsDictionary.Add(components[0].Name, newComponentList);
+
+                    components.RemoveAt(0);
+                }
+                else
+                {
+                    bool componentAdded = false;
+
+                    for (int i = 0; i < componentVersionsDictionary.Count; i++)
+                    {
+
+                        if (componentVersionsDictionary.ContainsKey(components[0].Name))
+                        {
+                            componentVersionsDictionary[components[0].Name].Add(components[0]);
+
+                            components.RemoveAt(0);
+                            componentAdded = true;
+
+                            //TODO: Are there alternative ways of implementing this?
+                            i += componentVersionsDictionary.Count;
+                        }
+                    }
+
+                    if (!componentAdded)
+                    {
+                        List<Component> newComponentList = new List<Component>();
+                        newComponentList.Add(components[0]);
+                        componentVersionsDictionary.Add(components[0].Name, newComponentList);
+
+                        components.RemoveAt(0);
+                    }
+                }
+            }
+
+            foreach(KeyValuePair<string, List<Component>> componentsKVP in componentVersionsDictionary)
+            {
+                Component newComponent = new Component(componentsKVP.Key);
+                List<BasicEvent> events = new List<BasicEvent>();
+
+                foreach(Component component in componentsKVP.Value)
+                {
+                    foreach(BasicEvent basicEvent in component.Events)
+                    {
+                        events.Add(basicEvent);
+                    }                    
+                }
+
+                newComponent.Events = CombineEvents(events);
+            }
+
+
+            return combinedComponents;
+
+        }
+
+        static List<BasicEvent> CombineEvents(List<BasicEvent> events)
+        {
+            List<BasicEvent> combinedEvents = new List<BasicEvent>();
+
+            /*
+            combinedEvents.Add(events[0]);
+
+            //Starts at i = 1 as the first event is added above
+            for(int i = 1; i < events.Count; i++)
+            {
+                for(int j = 0; j < combinedEvents.Count; j++)
+                {
+                    if(events[i].Name == combinedEvents[j].Name)
+                    {
+
+
+                        j += combinedEvents.Count;
+                    }
+
+                }
+            }
+            */
+
+            //This will create a new event, with IDs starting at 0 as it was reset after the xml files were loaded
+            combinedEvents.Add(new BasicEvent(events[0].Name));
+            combinedEvents[0].ShortName = events[0].ShortName;
+            combinedEvents[0].Description = events[0].Description;
+            combinedEvents[0].Unavailability = events[0].Unavailability;
+
+
+            events.RemoveAt(0);
+
+            while (events.Count > 0)
+            {
+                for(int i = 0; i < combinedEvents.Count; i++)
+                {
+                    bool eventAdded = false;
+
+                    if(events[0].Name == combinedEvents[i].Name)
+                    {
+                        foreach(Effect newEffect in events[0].Effects)
+                        {
+                            //TODO: Check the Name and the SinglePointValue of each effect in the effects list of the current event (events[0]). Then create a new effect (if not already in), so the id starts at 1.
+                        }
+
+                        eventAdded = true;
+                    }
+
+                    if(!eventAdded)
+                    {
+                        combinedEvents.Add(new BasicEvent(events[0].Name));
+                        events.RemoveAt(0);
+                    }
+                }
+            }
+
+
+            return combinedEvents;
         }
 
         static void LoadFileAsString(string pFilePath)
@@ -133,6 +311,8 @@ namespace FaultTreeMerge
             settings.Async = false;
             settings.IgnoreWhitespace = true;
 
+            BasicEventsDictionaryList.Add(new Dictionary<int, BasicEvent>());
+
             using (XmlReader reader = XmlReader.Create(new StreamReader(pPath + "/faulttrees.xml"), settings))
             {
                 reader.ReadToFollowing("HiP-HOPS_Results");
@@ -167,8 +347,11 @@ namespace FaultTreeMerge
                 {
                     HiP_HOPSResults.FaultTrees.Add(ReadFaultTree(reader));
                 }
+
+                reader.Read();
             }
 
+            //TODO: Make sure the WarningList and SafetyAllocations can be ignored
 
             return HiP_HOPSResults;
         }
@@ -221,6 +404,7 @@ namespace FaultTreeMerge
                 {
                     faultTree.CutSetsSummary.Add(ReadCutSets(reader));
                 }
+                reader.Read();
             }
 
             reader.Read();
@@ -234,12 +418,12 @@ namespace FaultTreeMerge
             cutSets.Order = int.Parse(reader.GetAttribute("order"));
             cutSets.Pruned = bool.Parse(reader.GetAttribute("pruned"));
 
-            cutSets.Content = reader.ReadContentAsString();   //TODO: Make sure this is the correct method
+            cutSets.Content = reader.ReadElementContentAsString();   //TODO: Make sure this is the correct method
 
-            reader.ReadStartElement();
-            
+            //    reader.ReadStartElement();
 
-            reader.Read();
+
+            //   reader.Read();
             return cutSets;
         }
 
@@ -386,6 +570,7 @@ namespace FaultTreeMerge
                     basicEvents.Add(ReadEvent(reader));
                 }
                 reader.Read();
+                component.Events = basicEvents;
             }
 
             reader.Read();
@@ -401,55 +586,65 @@ namespace FaultTreeMerge
             List<Effect> effects = new List<Effect>();
 
             int previousId = int.Parse(reader.GetAttribute("ID"));
-
-            reader.ReadStartElement();
-
-            if (reader.Name == "Name")
-            {
-                name = reader.ReadElementContentAsString();
-            }
-
             BasicEvent basicEvent = new BasicEvent();
+            //    basicEvent.PreviousId = previousId;
 
-            if (name != "")
+            if (!BasicEventsDictionaryList[HiP_HOPSResultsList.Count].ContainsKey(previousId))
             {
-                // This constructor increments the ID count for BasicEvents by one
-                basicEvent = new BasicEvent(name);
-            }
-            else
 
-                basicEvent.PreviousId = previousId;
-
-            if (reader.Name == "ShortName")
-            {
-                shortName = reader.ReadElementContentAsString();   //TODO: This can probably be simplified
-                basicEvent.ShortName = shortName;
-            }
-            if (reader.Name == "Description")
-            {
-                description = reader.ReadElementContentAsString();
-                basicEvent.Description = description;
-            }
-            if (reader.Name == "Unavailability")
-            {
-                unavailability = reader.ReadElementContentAsString();
-                basicEvent.Unavailability = unavailability;
-            }
-
-            if (reader.Name == "Effects")
-            {
                 reader.ReadStartElement();
 
-                while (reader.Name == "Effect")
+                if (reader.Name == "Name")
                 {
-                    effects.Add(ReadEffect(reader));
+                    name = reader.ReadElementContentAsString();
                 }
 
+                // This constructor increments the ID count for BasicEvents by one
+                //TODO: This is probably not the best way of doing this. It may just be better to increment the ID count here instead.
+                basicEvent = new BasicEvent(name);
+                //  basicEvent.PreviousId = previousId;
+
+                if (reader.Name == "ShortName")
+                {
+                    shortName = reader.ReadElementContentAsString();   //TODO: This can probably be simplified
+                    basicEvent.ShortName = shortName;
+                }
+                if (reader.Name == "Description")
+                {
+                    description = reader.ReadElementContentAsString();
+                    basicEvent.Description = description;
+                }
+                if (reader.Name == "Unavailability")
+                {
+                    unavailability = reader.ReadElementContentAsString();
+                    basicEvent.Unavailability = unavailability;
+                }
+
+                if (reader.Name == "Effects")
+                {
+                    reader.ReadStartElement();
+
+                    while (reader.Name == "Effect")
+                    {
+                        effects.Add(ReadEffect(reader));
+                    }
+
+                    basicEvent.Effects = effects;
+
+                    reader.Read();
+                }
+
+
+                BasicEventsDictionaryList[HiP_HOPSResultsList.Count].Add(previousId, basicEvent);
+            }
+            else
+            {
+                //TODO: Should this return the full event, or an event containing only PreviousId, to indicate it already exists? Probably the former, as the event should probably be looked-up anyway.
                 reader.Read();
+                return BasicEventsDictionaryList[HiP_HOPSResultsList.Count][previousId];
             }
 
             reader.Read();
-
             return basicEvent;
         }
 
@@ -472,7 +667,7 @@ namespace FaultTreeMerge
             }
 
             Effect effect = new Effect(name, singlePointFailure);
-            effect.PreviousId = previousId;
+            //  effect.PreviousId = previousId;
 
             reader.Read();
 
@@ -598,7 +793,7 @@ namespace FaultTreeMerge
 
                     BasicEvent newBasicEvent = new BasicEvent(nameValue, shortNameValue, descriptionValue, unavailabilityValue, effectsValues);
 
-                    BasicEventsList.Add(newBasicEvent);
+                    BasicEventsList2.Add(newBasicEvent);
                     basicEventIdSwap.Add(newBasicEvent.Id, idValue);
 
                 }
