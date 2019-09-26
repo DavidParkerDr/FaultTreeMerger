@@ -13,12 +13,25 @@ namespace FaultTreeMerge
 
         public int PreviousId;
 
+        public int HiPHOPSResultsIndex;
+
+        public Effect()
+        {
+
+        }
+
         public Effect(string pName, string pSinglePointFailure)
         {
             Id = ++EffectCount;
 
             Name = pName;
             SinglePointFailure = pSinglePointFailure;
+        }
+
+        //TODO: Is this ever used?
+        public void NewId()
+        {
+            Id = ++EffectCount;
         }
     }
 }

@@ -17,9 +17,15 @@ namespace FaultTreeMerge
         static List<HiP_HOPSResults> HiP_HOPSResultsList = new List<HiP_HOPSResults>();
         static HiP_HOPSResults CombinedHiP_HOPSResults = new HiP_HOPSResults();
 
+        //  static Dictionary<BasicEvent, bool> EventUsedDictionary = new 
+        static Dictionary<string, BasicEvent> BasicEventsDictionary = new Dictionary<string, BasicEvent>();
+
+        //TODO: This need to link to the fault tree too
+        static List<Dictionary<int, Effect>> EffectsDictionaryList = new List<Dictionary<int, Effect>>();
+
+
         //TODO:  These are probably unecessary now
         static List<Effect> EffectsList = new List<Effect>();
-        static List<BasicEvent> BasicEventsList = new List<BasicEvent>();
         static Dictionary<int, int> effectIdReplacements; //First int is new id, second is old id
         static List<BasicEvent> BasicEventsList2 = new List<BasicEvent>();  //TODO: This list is used in LoadPaths3. Remove this if no code from that method is used, rename otherwise.
 
@@ -45,11 +51,77 @@ namespace FaultTreeMerge
 
         static void CombineHiP_HOPSResults()
         {
-            //TODO: Find out what attributes the combined HiP-HOPS Results should have and set them here
-
+            //This takes each of the attributes from the first HiP-HOPS Results read in
+            CombinedHiP_HOPSResults.Model = HiP_HOPSResultsList[0].Model + "_merged";
+            CombinedHiP_HOPSResults.Build = HiP_HOPSResultsList[0].Build;
+            CombinedHiP_HOPSResults.MajorVersion = HiP_HOPSResultsList[0].MajorVersion;
+            CombinedHiP_HOPSResults.MinorVersion = HiP_HOPSResultsList[0].MinorVersion;
+            CombinedHiP_HOPSResults.Version = HiP_HOPSResultsList[0].Version;
+            CombinedHiP_HOPSResults.VersionDate = HiP_HOPSResultsList[0].VersionDate;
 
             CombineFMEA();
 
+            CombineFaultTrees();
+        }
+
+        static void CombineFaultTrees()
+        {
+            List<FaultTree> UncombinedFaultTrees = new List<FaultTree>();
+
+            for (int i = 0; i < HiP_HOPSResultsList.Count; i++)
+            {
+                foreach (FaultTree faultTree in HiP_HOPSResultsList[i].FaultTrees)
+                {
+                    faultTree.HiPHOPSResultsIndex = i;
+                    UncombinedFaultTrees.Add(faultTree);
+                }
+            }
+
+            CombinedHiP_HOPSResults.FaultTrees = CombineFaultTrees(UncombinedFaultTrees);
+
+        }
+
+        static List<FaultTree> CombineFaultTrees(List<FaultTree> uncombinedFaultTrees)
+        {
+            List<FaultTree> combinedFaultTrees = new List<FaultTree>();
+
+            Dictionary<int, FaultTree> faultTreeDictionary = new Dictionary<int, FaultTree>();
+
+            foreach (FaultTree faultTree in uncombinedFaultTrees)
+            {
+
+                //TODO: For model v16, effect with ID 903 is not in EffectsDictionary. Find out what the problem is. Find out if any more are missing.
+
+                int newId = EffectsDictionaryList[faultTree.HiPHOPSResultsIndex][faultTree.PreviousId].Id;
+
+                if (!faultTreeDictionary.ContainsKey(newId))
+                {
+                    FaultTree newFaultTree = new FaultTree();
+                    newFaultTree.Id = newId;
+                    
+                    //TODO: Make sure the Or and And gates do not need to have there IDs reassigned. If they do, do that here.
+
+                    newFaultTree.OutputDeviation = faultTree.OutputDeviation;
+
+
+                    faultTreeDictionary.Add(newId, newFaultTree);
+                }
+            }
+
+            //  return faultTreeDictionary.Values;
+
+            return combinedFaultTrees;
+        }
+
+        static int ConvertId(int previousId, int HiPHOPSResultsIndex)
+        {
+            /*
+            int newId = 0;
+            string name = BasicEventsDictionaryList[HiPHOPSResultsIndex][previousId].Name;
+            newId = BasicEventsDictionary[name].Id;
+            return newId;
+            */
+            return BasicEventsDictionary[BasicEventsDictionaryList[HiPHOPSResultsIndex][previousId].Name].Id;
         }
 
         static void CombineFMEA()
@@ -59,6 +131,7 @@ namespace FaultTreeMerge
 
             foreach (HiP_HOPSResults HiPHOPSResults in HiP_HOPSResultsList)
             {
+                EffectsDictionaryList.Add(new Dictionary<int, Effect>());
                 foreach (Component component in HiPHOPSResults.FMEA.Components)
                 {
                     components.Add(component);
@@ -133,20 +206,21 @@ namespace FaultTreeMerge
                 }
             }
 
-            foreach(KeyValuePair<string, List<Component>> componentsKVP in componentVersionsDictionary)
+            foreach (KeyValuePair<string, List<Component>> componentsKVP in componentVersionsDictionary)
             {
                 Component newComponent = new Component(componentsKVP.Key);
-                List<BasicEvent> events = new List<BasicEvent>();
+                List<BasicEvent> uncombinedEvents = new List<BasicEvent>();
 
-                foreach(Component component in componentsKVP.Value)
+                foreach (Component component in componentsKVP.Value)
                 {
-                    foreach(BasicEvent basicEvent in component.Events)
+                    foreach (BasicEvent basicEvent in component.Events)
                     {
-                        events.Add(basicEvent);
-                    }                    
+                        uncombinedEvents.Add(basicEvent);
+                    }
                 }
 
-                newComponent.Events = CombineEvents(events);
+                newComponent.Events = CombineEvents(uncombinedEvents);
+                combinedComponents.Add(newComponent);
             }
 
 
@@ -177,24 +251,156 @@ namespace FaultTreeMerge
             }
             */
 
+            Dictionary<string, List<BasicEvent>> eventListDictionary = new Dictionary<string, List<BasicEvent>>();
+
+            while (events.Count > 0)
+            {
+                if (!eventListDictionary.ContainsKey(events[0].Name))
+                {
+                    List<BasicEvent> newEvents = new List<BasicEvent>();
+                    newEvents.Add(events[0]);
+
+                    eventListDictionary.Add(events[0].Name, newEvents);
+                }
+                else
+                {
+                    eventListDictionary[events[0].Name].Add(events[0]);
+
+                }
+
+                events.RemoveAt(0);
+            }
+
+            foreach (KeyValuePair<string, List<BasicEvent>> basicEventKVP in eventListDictionary)
+            {
+                BasicEvent newEvent = new BasicEvent(basicEventKVP.Key);   //This constructor will increment the basic event count
+                newEvent.ShortName = basicEventKVP.Value[0].ShortName;
+                newEvent.Description = basicEventKVP.Value[0].Description;
+                newEvent.Unavailability = basicEventKVP.Value[0].Unavailability;
+
+                List<Effect> uncombinedEffects = new List<Effect>();
+                foreach (BasicEvent basicEvent in basicEventKVP.Value)
+                {
+                    foreach (Effect effect in basicEvent.Effects)
+                    {
+                        uncombinedEffects.Add(effect);
+                    }
+
+                }
+                newEvent.Effects = CombineEffects(uncombinedEffects);
+
+                //TODO: Is this part necessary, or should this be in a dictionary so it can be looked up?
+                //Should the dictionary be specific to the HiP-HOPS results it came from?
+                newEvent.PreviousId = basicEventKVP.Value[0].PreviousId;
+
+
+                combinedEvents.Add(newEvent);
+
+                //TODO: Is this part necessary
+                BasicEventsDictionary.Add(newEvent.Name, newEvent);
+
+            }
+
+
+            /*
             //This will create a new event, with IDs starting at 0 as it was reset after the xml files were loaded
             combinedEvents.Add(new BasicEvent(events[0].Name));
             combinedEvents[0].ShortName = events[0].ShortName;
             combinedEvents[0].Description = events[0].Description;
             combinedEvents[0].Unavailability = events[0].Unavailability;
 
+            foreach (Effect effect in events[0].Effects)
+            {
+                Effect newEffect = new Effect();
+                newEffect.Name = effect.Name;
+                newEffect.SinglePointFailure = effect.SinglePointFailure;
+
+                combinedEvents[0].Effects.Add(newEffect);
+            }
 
             events.RemoveAt(0);
 
+
             while (events.Count > 0)
             {
-                for(int i = 0; i < combinedEvents.Count; i++)
+                bool eventRemoved = false;
+
+                foreach (BasicEvent combinedEvent in combinedEvents)
+                {
+                    if (events[0].Name == combinedEvent.Name)
+                    {
+                        foreach (Effect effect in events[0].Effects)
+                        {
+                            if (!combinedEvent.Effects.Contains(effect))
+                            {
+                                combinedEvent.Effects.Add(effect);
+                            }
+                        }
+
+                        eventRemoved = true;
+
+                        events.RemoveAt(0);
+                        break;
+                    }
+                    else
+                    {
+                        string test;
+                    }
+                }
+
+                if (!eventRemoved)
+                {
+                    combinedEvents.Add(new BasicEvent(events[0].Name));
+                    combinedEvents[0].ShortName = events[0].ShortName;
+                    combinedEvents[0].Description = events[0].Description;
+                    combinedEvents[0].Unavailability = events[0].Unavailability;
+
+                    foreach (Effect effect in events[0].Effects)
+                    {
+                        combinedEvents[0].Effects.Add(new Effect(effect.Name, effect.SinglePointFailure));
+                    }
+                    events.RemoveAt(0);
+
+                }
+            }
+
+
+            while (events.Count > 0)
+            {
+
+                foreach (BasicEvent combinedEvent in combinedEvents)
+                {
+                    if (combinedEvents[0].Name == combinedEvent.Name)
+                    {
+                        //   foreach (Effect oldEffect in combinedEvents[0].Effects)
+                        while (combinedEvents[0].Effects.Count > 0)
+                        {
+                            if (combinedEvent.Effects.Count < 1)
+                            {
+                                //  combinedEvent.Effects.Add(new Effect(oldEffect.Name, oldEffect.SinglePointFailure));
+
+                            }
+                            else
+                            {
+                                foreach (Effect newEffect in combinedEvent.Effects)
+                                {
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            while (events.Count > 0)
+            {
+                for (int i = 0; i < combinedEvents.Count; i++)
                 {
                     bool eventAdded = false;
 
-                    if(events[0].Name == combinedEvents[i].Name)
+                    if (events[0].Name == combinedEvents[i].Name)
                     {
-                        foreach(Effect newEffect in events[0].Effects)
+                        foreach (Effect newEffect in events[0].Effects)
                         {
                             //TODO: Check the Name and the SinglePointValue of each effect in the effects list of the current event (events[0]). Then create a new effect (if not already in), so the id starts at 1.
                         }
@@ -202,7 +408,7 @@ namespace FaultTreeMerge
                         eventAdded = true;
                     }
 
-                    if(!eventAdded)
+                    if (!eventAdded)
                     {
                         combinedEvents.Add(new BasicEvent(events[0].Name));
                         events.RemoveAt(0);
@@ -210,8 +416,64 @@ namespace FaultTreeMerge
                 }
             }
 
+            */
 
             return combinedEvents;
+        }
+
+        static List<Effect> CombineEffects(List<Effect> effects)
+        {
+            List<Effect> combinedEffects = new List<Effect>();
+
+            foreach (Effect effect in effects)
+            {
+                if (combinedEffects.Count < 1)
+                {
+                    Effect newEffect = new Effect();
+                    if (!EffectsDictionaryList[effect.HiPHOPSResultsIndex].ContainsKey(effect.PreviousId))
+                    {
+                        newEffect = new Effect(effect.Name, effect.SinglePointFailure);
+                        newEffect.PreviousId = effect.PreviousId;
+                        EffectsDictionaryList[effect.HiPHOPSResultsIndex].Add(effect.PreviousId, newEffect);
+                    }
+                    else
+                    {
+                        newEffect = EffectsDictionaryList[effect.HiPHOPSResultsIndex][effect.PreviousId];
+                    }
+                    combinedEffects.Add(newEffect);
+                }
+                else
+                {
+                    bool effectExists = false;
+
+                    foreach (Effect newEffect in combinedEffects)
+                    {
+                        if (newEffect.Name == effect.Name && newEffect.SinglePointFailure == effect.SinglePointFailure)
+                        {
+                            effectExists = true;
+                            break;
+                        }
+                    }
+
+                    if (!effectExists)
+                    {
+                        Effect newEffect = new Effect();
+                        if (!EffectsDictionaryList[effect.HiPHOPSResultsIndex].ContainsKey(effect.PreviousId))
+                        {
+                            newEffect = new Effect(effect.Name, effect.SinglePointFailure);
+                            newEffect.PreviousId = effect.PreviousId;
+                            EffectsDictionaryList[effect.HiPHOPSResultsIndex].Add(effect.PreviousId, newEffect);
+                        }
+                        else
+                        {
+                            newEffect = EffectsDictionaryList[effect.HiPHOPSResultsIndex][effect.PreviousId];
+                        }
+                        combinedEffects.Add(newEffect);
+                    }
+                }
+            }
+
+            return combinedEffects;
         }
 
         static void LoadFileAsString(string pFilePath)
@@ -407,6 +669,8 @@ namespace FaultTreeMerge
                 reader.Read();
             }
 
+            // faultTree.HiPHOPSResultsIndex = HiP_HOPSResultsList.Count;
+
             reader.Read();
             return faultTree;
         }
@@ -587,7 +851,7 @@ namespace FaultTreeMerge
 
             int previousId = int.Parse(reader.GetAttribute("ID"));
             BasicEvent basicEvent = new BasicEvent();
-            //    basicEvent.PreviousId = previousId;
+            basicEvent.PreviousId = previousId;
 
             if (!BasicEventsDictionaryList[HiP_HOPSResultsList.Count].ContainsKey(previousId))
             {
@@ -597,12 +861,13 @@ namespace FaultTreeMerge
                 if (reader.Name == "Name")
                 {
                     name = reader.ReadElementContentAsString();
+                    basicEvent.Name = name;
                 }
 
                 // This constructor increments the ID count for BasicEvents by one
                 //TODO: This is probably not the best way of doing this. It may just be better to increment the ID count here instead.
-                basicEvent = new BasicEvent(name);
-                //  basicEvent.PreviousId = previousId;
+                //  basicEvent = new BasicEvent(name);
+                basicEvent.PreviousId = previousId;
 
                 if (reader.Name == "ShortName")
                 {
@@ -666,8 +931,13 @@ namespace FaultTreeMerge
                 singlePointFailure = reader.ReadElementContentAsString();
             }
 
-            Effect effect = new Effect(name, singlePointFailure);
-            //  effect.PreviousId = previousId;
+            Effect effect = new Effect();
+            effect.Name = name;
+            effect.SinglePointFailure = singlePointFailure;
+
+            effect.PreviousId = previousId;
+
+            effect.HiPHOPSResultsIndex = HiP_HOPSResultsList.Count;
 
             reader.Read();
 

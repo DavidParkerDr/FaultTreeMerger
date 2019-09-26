@@ -17,8 +17,15 @@ namespace FaultTreeMerge
         public OutputDeviation OutputDeviation;
         public int PreviousId { get; set; }
 
+        public int HiPHOPSResultsIndex { get; set; }
+
         public List<CutSets> CutSetsSummary = new List<CutSets>();
-                
+
+        public FaultTree()
+        {
+
+        }
+
         public FaultTree(string pName, string pSIL, string pUnavailability, string pUnavailabilitySort, string pSeverity) //TODO: does this need this many parameters? missing description?
         {
             Name = pName;

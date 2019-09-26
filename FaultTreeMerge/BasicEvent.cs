@@ -13,9 +13,9 @@ namespace FaultTreeMerge
         public string Description { get; set; }
         public int Id { get; set; }
         public string Unavailability { get; set; }
-        public List<Effect> Effects { get; set; }
+        public List<Effect> Effects = new List<Effect>();
 
-        //   public int PreviousId { get; set; }   //TODO: Is this necessary? Should it also have a link to the fault tree it was linked to?
+           public int PreviousId { get; set; }   //TODO: Is this necessary? Should it also have a link to the fault tree it was linked to?
 
         public BasicEvent()
         {
