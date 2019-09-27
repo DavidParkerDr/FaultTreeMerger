@@ -85,34 +85,106 @@ namespace FaultTreeMerge
         {
             List<FaultTree> combinedFaultTrees = new List<FaultTree>();
 
-            Dictionary<int, FaultTree> faultTreeDictionary = new Dictionary<int, FaultTree>();
+            Dictionary<int, List<FaultTree>> faultTreeListDictionary = new Dictionary<int, List<FaultTree>>();
+
+            //TODO: Remove this after debugging
+            List<FaultTree> duplicateFaultTrees = new List<FaultTree>();
 
             foreach (FaultTree faultTree in uncombinedFaultTrees)
             {
-
-                //TODO: For model v16, effect with ID 903 is not in EffectsDictionary. Find out what the problem is. Find out if any more are missing.
-
                 int newId = EffectsDictionaryList[faultTree.HiPHOPSResultsIndex][faultTree.PreviousId].Id;
 
-                if (!faultTreeDictionary.ContainsKey(newId))
+                if (!faultTreeListDictionary.ContainsKey(newId))
                 {
                     FaultTree newFaultTree = new FaultTree();
                     newFaultTree.Id = newId;
-                    
+
+                    newFaultTree.Name = faultTree.Name;
+                    newFaultTree.Description = faultTree.Description;
+                    newFaultTree.SIL = faultTree.SIL;
+                    newFaultTree.Unavailability = faultTree.Unavailability;
+                    newFaultTree.UnavailabilitySort = faultTree.UnavailabilitySort;
+                    newFaultTree.Severity = faultTree.Severity;
+
                     //TODO: Make sure the Or and And gates do not need to have there IDs reassigned. If they do, do that here.
 
                     newFaultTree.OutputDeviation = faultTree.OutputDeviation;
 
+                    List<FaultTree> newFaultTrees = new List<FaultTree>();
+                    newFaultTrees.Add(newFaultTree);
 
-                    faultTreeDictionary.Add(newId, newFaultTree);
+                    faultTreeListDictionary.Add(newId, newFaultTrees);
+                }
+                else
+                {
+                    FaultTree newFaultTree = new FaultTree();
+                    newFaultTree.Id = newId;
+
+                    //TODO: Make sure the Or and And gates do not need to have there IDs reassigned. If they do, do that here.
+
+
+                    newFaultTree.Name = faultTree.Name;
+                    newFaultTree.Description = faultTree.Description;
+                    newFaultTree.SIL = faultTree.SIL;
+                    newFaultTree.Unavailability = faultTree.Unavailability;
+                    newFaultTree.UnavailabilitySort = faultTree.UnavailabilitySort;
+                    newFaultTree.Severity = faultTree.Severity;
+
+                    newFaultTree.OutputDeviation = faultTree.OutputDeviation;
+
+                    faultTreeListDictionary[newId].Add(newFaultTree);
                 }
             }
 
-            //  return faultTreeDictionary.Values;
+            foreach (KeyValuePair<int, List<FaultTree>> faultTreeDictionaryKVP in faultTreeListDictionary)
+            {
+                int duplicateFaultTreeNameCount = 2;
+
+                combinedFaultTrees.Add(faultTreeDictionaryKVP.Value[0]);
+
+
+                //TODO: Remove this
+                Console.WriteLine(faultTreeDictionaryKVP.Value[0].OutputDeviation.TotalChildrenChecksum());
+
+                for (int i = 1; i < faultTreeDictionaryKVP.Value.Count; i++)
+                {
+                    //TODO: Remove this
+                    Console.WriteLine(faultTreeDictionaryKVP.Value[i].OutputDeviation.TotalChildrenChecksum());
+
+                    for (int j = 0; j < combinedFaultTrees.Count; j++)
+                    {                        
+                        if (faultTreeDictionaryKVP.Value[i].Name == combinedFaultTrees[j].Name)
+                        {
+                            if (faultTreeDictionaryKVP.Value[i].OutputDeviation.TotalChildrenChecksum() != combinedFaultTrees[j].OutputDeviation.TotalChildrenChecksum())
+                            {
+                                FaultTree newFaultTree = new FaultTree(faultTreeDictionaryKVP.Value[i].Name + (duplicateFaultTreeNameCount++).ToString());
+                                newFaultTree.Description = faultTreeDictionaryKVP.Value[i].Description;
+                                newFaultTree.SIL = faultTreeDictionaryKVP.Value[i].SIL;
+                                newFaultTree.Unavailability = faultTreeDictionaryKVP.Value[i].Unavailability;
+                                newFaultTree.UnavailabilitySort = faultTreeDictionaryKVP.Value[i].UnavailabilitySort;
+                                newFaultTree.Severity = faultTreeDictionaryKVP.Value[i].Severity;
+
+                                newFaultTree.OutputDeviation = faultTreeDictionaryKVP.Value[i].OutputDeviation;
+
+                                combinedFaultTrees.Add(newFaultTree);
+                            }
+                            else
+                            {
+                                //TODO: Remove after debugging
+                                Console.WriteLine("Duplicate Found");
+                                duplicateFaultTrees.Add(faultTreeDictionaryKVP.Value[i]);
+                            }
+                        }
+                    }
+                }
+            }
+            
+            //TODO: Reassign the Fault Tree IDs and add them to a dictionary so the ID of the related effect can be looked up (the other way around to what I have implemented). Also make sure a new effect is created (with 2 or whatever added to the end of the name)
 
             return combinedFaultTrees;
         }
 
+        //TODO: This is never used. Remove it if it remains unused
         static int ConvertId(int previousId, int HiPHOPSResultsIndex)
         {
             /*
@@ -451,6 +523,20 @@ namespace FaultTreeMerge
                         if (newEffect.Name == effect.Name && newEffect.SinglePointFailure == effect.SinglePointFailure)
                         {
                             effectExists = true;
+
+                            //        Effect existingEffect = newEffect;
+                            /*
+                            existingEffect.Name = effect.Name;
+                            existingEffect.SinglePointFailure = effect.SinglePointFailure;
+                            existingEffect.PreviousId = effect.PreviousId;
+                            existingEffect.Id = newEffect.Id;
+                            */
+
+                            if (!EffectsDictionaryList[effect.HiPHOPSResultsIndex].ContainsKey(effect.PreviousId))
+                            {
+                                EffectsDictionaryList[effect.HiPHOPSResultsIndex].Add(effect.PreviousId, newEffect);
+                            }
+
                             break;
                         }
                     }
@@ -753,7 +839,9 @@ namespace FaultTreeMerge
             reader.ReadStartElement();
 
             Or or = new Or();
-            or.PreviousId = previousId;
+            or.PreviousId = previousId;    //TODO: Remove this if the IDs do no need to be reassigned
+
+            or.Id = previousId;
 
             if (reader.Name == "Name")
             {
@@ -776,7 +864,9 @@ namespace FaultTreeMerge
             reader.ReadStartElement();
 
             And and = new And();
-            and.PreviousId = previousId;
+            and.PreviousId = previousId;    //TODO: Remove this if the IDs do no need to be reassigned
+
+            and.Id = previousId;
 
             if (reader.Name == "Name")
             {
