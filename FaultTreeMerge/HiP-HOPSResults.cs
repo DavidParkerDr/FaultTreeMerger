@@ -18,9 +18,8 @@ namespace FaultTreeMerge
 
         public Dictionary<int, BasicEvent> BasicEventsDictionary = new Dictionary<int, BasicEvent>();
 
-        public HiP_HOPSResults()  //TODO: Find out which of the properties above will need to be added to the constructor
+        public HiP_HOPSResults()
         {
-
         }
     }
 }

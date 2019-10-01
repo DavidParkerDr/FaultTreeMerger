@@ -21,8 +21,8 @@ namespace FaultTreeMerge
 
         public static string TotalChildrenChecksum(List<Node> children)
         {
-            //This string will contain a character for each node present in the output deviation
-            // 'E' represents basic events. 'O' represents and Or gate. 'A' represents an And gate. The number after an O or A represents the number of characters in the gate's name.
+            // This string will contain a character for each node present in the output deviation
+            // 'E' represents basic events. 'O' represents and Or gate. 'A' represents an And gate. The string after an O or A is the gate's name.
             string totalChildrenCheck = "";
 
             foreach (Node child in children)
@@ -42,7 +42,7 @@ namespace FaultTreeMerge
 
                     if (!string.IsNullOrEmpty(gate.Name))
                     {
-                        totalChildrenCheck += gate.Name.Length.ToString();
+                        totalChildrenCheck += gate.Name;
                     }
 
                     totalChildrenCheck += TotalChildrenChecksum(gate.Children);

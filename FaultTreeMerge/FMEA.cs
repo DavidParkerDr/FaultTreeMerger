@@ -15,7 +15,6 @@ namespace FaultTreeMerge
 
         public FMEA()
         {
-
         }
 
     }

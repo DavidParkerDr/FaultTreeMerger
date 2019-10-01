@@ -8,7 +8,6 @@ namespace FaultTreeMerge
     {
         public Or()
         {
-         //   Id = ++GateIdCount;
         }
     }
 }

@@ -6,10 +6,5 @@ namespace FaultTreeMerge
 {
     abstract class Node
     {
-        //TODO: Remove this if not used
-        /*
-        public List<Node> Children;
-        public string Name;
-        */
     }
 }

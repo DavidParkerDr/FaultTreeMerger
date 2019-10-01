@@ -6,13 +6,12 @@ namespace FaultTreeMerge
 {
     class CutSets
     {
-        public int Order { get; set; }  //TODO: Should this be a string, as the program is writing it to a file anyway?
-        public bool Pruned { get; set; } //TODO: Should this be a string, as the program is writing it to a file anyway?
-        public string Content { get; set; } //TODO: Is this an appropriate name? It appears to hold a number e.g. 36 or 72
+        public int Order { get; set; }
+        public bool Pruned { get; set; }
+        public string Content { get; set; }
 
         public CutSets()
         {
-
         }
 
       public  CutSets(int pOrder, bool pPruned, string pContent)

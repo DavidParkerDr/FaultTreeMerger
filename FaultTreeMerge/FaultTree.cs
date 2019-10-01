@@ -23,25 +23,13 @@ namespace FaultTreeMerge
 
         public FaultTree()
         {
-
         }
 
-        public FaultTree(string pName, string pSIL, string pUnavailability, string pUnavailabilitySort, string pSeverity) //TODO: does this need this many parameters? missing description?
-        {
-            Name = pName;
-            SIL = pSIL;
-            Unavailability = pUnavailability;
-            UnavailabilitySort = pUnavailabilitySort;
-            Severity = pSeverity;
-
-            Id = FaultTreeCount++;  //TODO: Should the ++ be before FaultTreeCount? Should the Id start at 0 or 1? Example tree starts at 1
-        }
-
-        public FaultTree(string pName)  //TODO: Should this be the only constructor?
+        public FaultTree(string pName)
         {
             Name = pName;
 
-            Id = FaultTreeCount++;
+            Id = ++FaultTreeCount;
         }
     }
 }
