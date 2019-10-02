@@ -6,19 +6,11 @@ namespace FaultTreeMerge
 {
     class CutSets
     {
-        public int Order { get; set; }
-        public bool Pruned { get; set; }
-        public string Content { get; set; }
+        public List<CutSet> CutSetList = new List<CutSet>();
+        public string Order { get; set; }
 
         public CutSets()
         {
-        }
-
-      public  CutSets(int pOrder, bool pPruned, string pContent)
-        {
-            Order = pOrder;
-            Pruned = pPruned;
-            Content = pContent;
         }
     }
 }

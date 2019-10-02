@@ -16,8 +16,6 @@ namespace FaultTreeMerge
         public FMEA FMEA { get; set; }
         public List<FaultTree> FaultTrees = new List<FaultTree>();
 
-        public Dictionary<int, BasicEvent> BasicEventsDictionary = new Dictionary<int, BasicEvent>();
-
         public HiP_HOPSResults()
         {
         }

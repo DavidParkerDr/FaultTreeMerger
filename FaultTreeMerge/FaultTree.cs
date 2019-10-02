@@ -19,7 +19,9 @@ namespace FaultTreeMerge
 
         public int HiPHOPSResultsIndex { get; set; }
 
-        public List<CutSets> CutSetsSummary = new List<CutSets>();
+        public List<CutSetsSummary> CutSetsSummary = new List<CutSetsSummary>();
+
+        public List<CutSets> AllCutSets = new List<CutSets>();
 
         public FaultTree()
         {

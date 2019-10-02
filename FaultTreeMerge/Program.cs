@@ -11,15 +11,15 @@ namespace FaultTreeMerge
         static XmlDocument outputFile;
 
         static List<Dictionary<int, BasicEvent>> BasicEventsDictionaryList = new List<Dictionary<int, BasicEvent>>();
+        static Dictionary<string, BasicEvent> BasicEventsDictionary = new Dictionary<string, BasicEvent>();
+        static List<Dictionary<int, Effect>> FaultTreesDictionaryLookup = new List<Dictionary<int, Effect>>();
+
         static List<HiP_HOPSResults> HiP_HOPSResultsList = new List<HiP_HOPSResults>();
         static HiP_HOPSResults CombinedHiP_HOPSResults = new HiP_HOPSResults();
 
+        static List<Dictionary<int, FaultTree>> CutSetsDictionaryList = new List<Dictionary<int, FaultTree>>();
+
         static List<CutSets> CutSetsList = new List<CutSets>();
-
-        //  static Dictionary<BasicEvent, bool> EventUsedDictionary = new 
-        static Dictionary<string, BasicEvent> BasicEventsDictionary = new Dictionary<string, BasicEvent>();
-
-        static List<Dictionary<int, Effect>> FaultTreesDictionaryLookup = new List<Dictionary<int, Effect>>();
 
         static void Main(string[] args)
         {
@@ -36,13 +36,6 @@ namespace FaultTreeMerge
 
         static void WriteHiP_HOPSResults()
         {
-
-            // Write FaultTrees.xml file here
-
-            //   using (XmlWriter writer)
-
-
-
             XmlWriterSettings settings = new XmlWriterSettings()
             {
                 Async = false,
@@ -58,13 +51,81 @@ namespace FaultTreeMerge
                 WriteHiPHOPSResults(writer, CombinedHiP_HOPSResults);
             }
 
-            foreach (FaultTree cutSets in CombinedHiP_HOPSResults.FaultTrees)
+            foreach (FaultTree faultTree in CombinedHiP_HOPSResults.FaultTrees)
             {
+                string filePath = "CutSets(" + faultTree.Id + ").xml";
 
-                // Write CutSets(x).xml files here
-                // x represents the ID of the fault tree
+                using (XmlWriter writer = XmlWriter.Create(filePath, settings))
+                {
+                    Console.WriteLine("Writing File: " + filePath);  //TODO: Should this have the file path?
 
+                    writer.WriteStartDocument();
+                    WriteCutSets(writer, faultTree);
+                }
             }
+
+        }
+
+        static void WriteCutSets(XmlWriter writer, FaultTree cutSets)
+        {
+            writer.WriteStartElement("HiP-HOPS_Results");
+            writer.WriteAttributeString("model", CombinedHiP_HOPSResults.Model);
+            writer.WriteAttributeString("build", CombinedHiP_HOPSResults.Build);
+            writer.WriteAttributeString("maorVersion", CombinedHiP_HOPSResults.MajorVersion);
+            writer.WriteAttributeString("minorVersion", CombinedHiP_HOPSResults.MinorVersion);
+            writer.WriteAttributeString("version", CombinedHiP_HOPSResults.Version);
+            writer.WriteAttributeString("versionDate", CombinedHiP_HOPSResults.VersionDate);
+
+            writer.WriteStartElement("FaultTrees");
+
+            WriteFMEA(writer, CombinedHiP_HOPSResults.FMEA);
+
+            WriteFaultTreeCutSet(writer, cutSets);
+        }
+
+        static void WriteFaultTreeCutSet(XmlWriter writer, FaultTree faultTree)
+        {
+
+            writer.WriteStartElement("FaultTree");
+            writer.WriteAttributeString("ID", faultTree.Id.ToString());
+
+            writer.WriteStartElement("Name");
+            writer.WriteString(faultTree.Name);
+            writer.WriteEndElement();
+
+            writer.WriteStartElement("Description");
+            if (!string.IsNullOrEmpty(faultTree.Description))
+            {
+                writer.WriteString(faultTree.Description);
+            }
+            writer.WriteEndElement();
+
+            writer.WriteStartElement("Unavailability");
+            writer.WriteString(faultTree.Unavailability);
+            writer.WriteEndElement();
+
+            writer.WriteStartElement("UnavailabilitySort");
+            writer.WriteString(faultTree.UnavailabilitySort);
+            writer.WriteEndElement();
+
+            writer.WriteStartElement("Severity");
+            writer.WriteString(faultTree.Severity);
+            writer.WriteEndElement();
+
+            writer.WriteStartElement("CutSetsSummary");
+            WriteCutSetsSummary(writer, faultTree.CutSetsSummary);
+            writer.WriteEndElement();
+
+            writer.WriteStartElement("AllCutSets");
+            WriteAllCutSets(writer, faultTree.AllCutSets);    //TODO: This will be empty. Look up the AllCutSets from the cut sets dictionary list
+            writer.WriteEndElement();
+
+            writer.WriteEndElement();
+
+        }
+
+        static void WriteAllCutSets(XmlWriter writer, List<CutSets> allCutSets)
+        {
 
         }
 
@@ -86,8 +147,6 @@ namespace FaultTreeMerge
 
         static void WriteFaultTrees(XmlWriter writer, List<FaultTree> faultTrees)
         {
-            //TODO: Can the cut sets be written here?
-
             foreach (FaultTree faultTree in faultTrees)
             {
                 writer.WriteStartElement("FaultTree");
@@ -104,10 +163,6 @@ namespace FaultTreeMerge
                 }
                 writer.WriteEndElement();
 
-                writer.WriteStartElement("Name");
-                writer.WriteString(faultTree.Name);
-                writer.WriteEndElement();
-
                 writer.WriteStartElement("Unavailability");
                 writer.WriteString(faultTree.Unavailability);
                 writer.WriteEndElement();
@@ -121,6 +176,7 @@ namespace FaultTreeMerge
                 writer.WriteEndElement();
 
                 writer.WriteStartElement("OutputDeviation");
+
                 writer.WriteStartElement("Name");
                 writer.WriteString(faultTree.OutputDeviation.Name);
                 writer.WriteEndElement();
@@ -128,17 +184,65 @@ namespace FaultTreeMerge
                 writer.WriteStartElement("Children");
                 WriteChildren(writer, faultTree.OutputDeviation.Children);
                 writer.WriteEndElement();
-
+                                
+                writer.WriteStartElement("CutSetsSummary");
+                WriteCutSetsSummary(writer, faultTree.CutSetsSummary);
+                writer.WriteEndElement();
 
                 writer.WriteEndElement();
+
+
             }
+        }
+
+        static void WriteCutSetsSummary(XmlWriter writer, List<CutSetsSummary> cutSetsSummary)
+        {
+            foreach (CutSetsSummary cutSets in cutSetsSummary)
+            {
+                writer.WriteStartElement("CutSets");
+                writer.WriteAttributeString("order", cutSets.Order);
+                writer.WriteAttributeString("pruned", cutSets.Pruned);
+                writer.WriteString(cutSets.Content);
+                writer.WriteEndElement();
+
+            }
+
+            //TODO: Write CutSetsSummary
         }
 
         static void WriteChildren(XmlWriter writer, List<Node> nodes)
         {
             foreach (Node node in nodes)
             {
+                if (node is Gate)
+                {
+                    if (node is Or)
+                    {
+                        writer.WriteStartElement("Or");
+                    }
+                    else if (node is And)
+                    {
+                        writer.WriteStartElement("And");
+                    }
 
+                    writer.WriteAttributeString("ID", ((Gate)node).Id.ToString());
+
+                    writer.WriteStartElement("Name");
+                    writer.WriteString(((Gate)node).Name);
+                    writer.WriteEndElement();
+
+                    writer.WriteStartElement("Children");
+                    WriteChildren(writer, ((Gate)node).Children);
+
+                    writer.WriteEndElement();
+                }
+                else if (node is BasicEvent)
+                {
+                    writer.WriteStartElement("Event");
+                    writer.WriteAttributeString("ID", ((BasicEvent)node).Id.ToString());
+                    writer.WriteEndElement();
+                    //       writer.WriteEndElement();
+                }
             }
 
             writer.WriteEndElement();
@@ -239,6 +343,64 @@ namespace FaultTreeMerge
 
             CombineFaultTrees();
             CombineFMEA();
+
+            ReassignEvents();
+        }
+
+        static void ReassignEvents()
+        {
+            foreach (FaultTree faultTree in CombinedHiP_HOPSResults.FaultTrees)
+            {
+                faultTree.OutputDeviation = ReassignEvents(faultTree.OutputDeviation);
+                faultTree.AllCutSets = ReassignCutSetsEvents(faultTree);
+            }
+        }
+
+        static OutputDeviation ReassignEvents(OutputDeviation outputDeviation)
+        {
+            OutputDeviation newOutputDeviation = new OutputDeviation(outputDeviation.Name);
+            newOutputDeviation.Children = ReassignEvents(outputDeviation.Children);
+
+            return newOutputDeviation;
+        }
+
+        static List<Node> ReassignEvents(List<Node> children)
+        {
+            List<Node> newChildren = new List<Node>();
+
+            foreach (Node node in children)
+            {
+                if (node is Gate)
+                {
+                    ReassignEvents(((Gate)node).Children);
+                }
+                else if (node is BasicEvent)
+                {
+                    ((BasicEvent)node).Id = BasicEventsDictionary[BasicEventsDictionaryList[((BasicEvent)node).HiPHOPSResultsIndex][((BasicEvent)node).PreviousId].Name].Id;
+                }
+
+                newChildren.Add(node);
+            }
+
+            return newChildren;
+        }
+
+        static List<CutSets> ReassignCutSetsEvents(FaultTree faultTree)
+        {
+            List<CutSets> oldCutSetsList = faultTree.AllCutSets;
+
+            foreach (CutSets oldCutSets in oldCutSetsList)
+            {
+                foreach(CutSet  oldCutSet in oldCutSets.CutSetList)
+                {
+                    foreach(BasicEvent oldEvent in oldCutSet.Events)
+                    {
+                        oldEvent.Id = BasicEventsDictionary[BasicEventsDictionaryList[faultTree.HiPHOPSResultsIndex][oldEvent.PreviousId].Name].Id;
+                    }
+                }
+            }
+
+            return oldCutSetsList;
         }
 
         static void CombineFaultTrees()
@@ -267,13 +429,8 @@ namespace FaultTreeMerge
 
             Dictionary<string, int> duplicateNameCount = new Dictionary<string, int>();
 
-            //TODO: Remove this after debugging
-            List<FaultTree> duplicateFaultTrees = new List<FaultTree>();
-
             foreach (FaultTree faultTree in uncombinedFaultTrees)
             {
-                //  int newId = EffectsDictionaryList[faultTree.HiPHOPSResultsIndex][faultTree.PreviousId].Id;
-
                 string outputDeviationChecksum = faultTree.OutputDeviation.TotalChildrenChecksum();
 
                 if (!faultTreeListDictionary.ContainsKey(outputDeviationChecksum))
@@ -296,6 +453,10 @@ namespace FaultTreeMerge
                     newFaultTree.UnavailabilitySort = faultTree.UnavailabilitySort;
                     newFaultTree.Severity = faultTree.Severity;
                     newFaultTree.OutputDeviation = faultTree.OutputDeviation;
+                    newFaultTree.CutSetsSummary = faultTree.CutSetsSummary;
+
+
+                    newFaultTree.AllCutSets = CutSetsDictionaryList[faultTree.HiPHOPSResultsIndex][faultTree.PreviousId].AllCutSets;
 
                     faultTreeListDictionary.Add(newFaultTree.OutputDeviation.TotalChildrenChecksum(), newFaultTree);
                     combinedFaultTrees.Add(newFaultTree);
@@ -528,13 +689,146 @@ namespace FaultTreeMerge
             settings.IgnoreWhitespace = true;
 
             BasicEventsDictionaryList.Add(new Dictionary<int, BasicEvent>());
+            CutSetsDictionaryList.Add(new Dictionary<int, FaultTree>());
 
-            using (XmlReader reader = XmlReader.Create(new StreamReader(pPath + "/faulttrees.xml"), settings))
+            foreach (string file in Directory.GetFiles(pPath, "*.xml"))
             {
-                reader.ReadToFollowing("HiP-HOPS_Results");
-                HiP_HOPSResults newHiP_HOPSResults = ReadHiPHOPSResults(reader);
-                HiP_HOPSResultsList.Add(newHiP_HOPSResults);
+                string fileName = Path.GetFileName(file);
+
+
+                if (fileName.ToLower().StartsWith("cutsets"))
+                {
+                    string[] fileNameParts = fileName.Split(new char[] { '(', ')' }, StringSplitOptions.None);
+
+                    if (int.TryParse(fileNameParts[1], out int Id))
+                    {
+                        Console.WriteLine("Reading File: " + fileName);
+                        using (XmlReader reader = XmlReader.Create(new StreamReader(pPath + "/" + fileName), settings))
+                        {
+                            reader.ReadToFollowing("FaultTree");
+                            CutSetsDictionaryList[CutSetsDictionaryList.Count - 1].Add(Id, ReadCutSets(reader, Id));
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("Invalid File Name: " + fileName);
+                    }
+                }
+                else if (fileName.ToLower() == "faulttrees.xml")
+                {
+                    Console.WriteLine("Reading File: " + fileName);
+                    using (XmlReader reader = XmlReader.Create(new StreamReader(pPath + "/faulttrees.xml"), settings))
+                    {
+                        reader.ReadToFollowing("HiP-HOPS_Results");
+                        HiP_HOPSResults newHiP_HOPSResults = ReadHiPHOPSResults(reader);
+                        HiP_HOPSResultsList.Add(newHiP_HOPSResults);
+                    }
+                }
             }
+        }
+
+        static FaultTree ReadCutSets(XmlReader reader, int Id)
+        {
+            FaultTree cutSets = new FaultTree();
+            cutSets.PreviousId = Id;
+
+            reader.ReadStartElement();
+            if (reader.Name == "Name")
+            {
+                cutSets.Name = reader.ReadElementContentAsString();
+            }
+            if (reader.Name == "Description")
+            {
+                cutSets.Description = reader.ReadElementContentAsString();
+            }
+            if (reader.Name == "SIL")
+            {
+                cutSets.SIL = reader.ReadElementContentAsString();
+            }
+            if (reader.Name == "Unavailability")
+            {
+                cutSets.Unavailability = reader.ReadElementContentAsString();
+            }
+            if (reader.Name == "UnavailabilitySort")
+            {
+                cutSets.UnavailabilitySort = reader.ReadElementContentAsString();
+            }
+            if (reader.Name == "Severity")
+            {
+                cutSets.Severity = reader.ReadElementContentAsString();
+            }
+
+            if (reader.Name == "CutSetsSummary")
+            {
+                reader.ReadStartElement();
+
+                while (reader.Name == "CutSets")
+                {
+                    cutSets.CutSetsSummary.Add(ReadCutSetsSummary(reader));
+                }
+                reader.Read();
+            }
+
+
+            if (reader.Name == "AllCutSets")
+            {
+                cutSets.AllCutSets = ReadAllCutSets(reader);
+            }
+
+            return cutSets;
+        }
+
+        static List<CutSets> ReadAllCutSets(XmlReader reader)
+        {
+            List<CutSets> cutSets = new List<CutSets>();
+
+            reader.ReadStartElement();
+
+            while (reader.Name == "CutSets")
+            {
+                CutSets newCutSets = new CutSets();
+                newCutSets.Order = reader.GetAttribute("order");
+
+                reader.ReadStartElement();
+                while (reader.Name == "CutSet")
+                {
+                    CutSet cutSet = new CutSet();
+
+                    reader.ReadStartElement();
+
+                    if (reader.Name == "Unavailability")
+                    {
+                        cutSet.Unavailability = reader.ReadElementContentAsString();
+                    }
+                    if (reader.Name == "UnavailabilitySort")
+                    {
+                        cutSet.UnavailabilitySort = reader.ReadElementContentAsString();
+                    }
+
+                    if (reader.Name == "Events")
+                    {
+                        reader.ReadStartElement();
+
+                        while (reader.Name == "Event")
+                        {
+                            BasicEvent basicEvent = new BasicEvent();
+                            basicEvent.PreviousId = int.Parse(reader.GetAttribute("ID"));
+                            cutSet.Events.Add(basicEvent);
+
+                            reader.Read();
+                        }
+                        reader.Read();
+                    }
+
+                    newCutSets.CutSetList.Add(cutSet);
+                    reader.Read();
+                }
+                cutSets.Add(newCutSets);
+                reader.Read();
+            }
+            reader.Read();
+
+            return cutSets;
         }
 
         static HiP_HOPSResults ReadHiPHOPSResults(XmlReader reader)
@@ -619,7 +913,7 @@ namespace FaultTreeMerge
 
                 while (reader.Name == "CutSets")
                 {
-                    faultTree.CutSetsSummary.Add(ReadCutSets(reader));
+                    faultTree.CutSetsSummary.Add(ReadCutSetsSummary(reader));
                 }
                 reader.Read();
             }
@@ -630,12 +924,12 @@ namespace FaultTreeMerge
             return faultTree;
         }
 
-        static CutSets ReadCutSets(XmlReader reader)
+        static CutSetsSummary ReadCutSetsSummary(XmlReader reader)
         {
-            CutSets cutSets = new CutSets();
+            CutSetsSummary cutSets = new CutSetsSummary();
 
-            cutSets.Order = int.Parse(reader.GetAttribute("order"));
-            cutSets.Pruned = bool.Parse(reader.GetAttribute("pruned"));
+            cutSets.Order = reader.GetAttribute("order");
+            cutSets.Pruned = reader.GetAttribute("pruned");
 
             cutSets.Content = reader.ReadElementContentAsString();   //TODO: Make sure this is the correct method
 
@@ -805,6 +1099,7 @@ namespace FaultTreeMerge
             int previousId = int.Parse(reader.GetAttribute("ID"));
             BasicEvent basicEvent = new BasicEvent();
             basicEvent.PreviousId = previousId;
+            basicEvent.HiPHOPSResultsIndex = HiP_HOPSResultsList.Count;
 
             if (!BasicEventsDictionaryList[HiP_HOPSResultsList.Count].ContainsKey(previousId))
             {
