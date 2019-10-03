@@ -10,14 +10,11 @@ namespace FaultTreeMerge
         public int Id;
         public string Name;
         public string SinglePointFailure;
-
         public int PreviousId;
-
         public int HiPHOPSResultsIndex;
 
         public Effect()
         {
-
         }
 
         public Effect(string pName, string pSinglePointFailure)

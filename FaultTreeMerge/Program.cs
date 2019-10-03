@@ -17,9 +17,9 @@ namespace FaultTreeMerge
         static List<HiP_HOPSResults> HiP_HOPSResultsList = new List<HiP_HOPSResults>();
         static HiP_HOPSResults CombinedHiP_HOPSResults = new HiP_HOPSResults();
 
-        static List<Dictionary<int, FaultTree>> CutSetsDictionaryList = new List<Dictionary<int, FaultTree>>();
-
         static List<CutSets> CutSetsList = new List<CutSets>();
+
+        static List<string> FilePaths = new List<string>();
 
         static void Main(string[] args)
         {
@@ -28,8 +28,8 @@ namespace FaultTreeMerge
             string mergePathsFile = args[0];
             Console.WriteLine("Loading file of fault tree paths to merge: " + mergePathsFile);
             LoadPaths(mergePathsFile);
-            BasicEvent.IdCount = 0;   //TODO: Make sure this should reset the basic event count
-            Effect.EffectCount = 0;   //TODO: Make sure this should reset the effect count
+            BasicEvent.IdCount = 0;
+            Effect.EffectCount = 0;
             CombineHiP_HOPSResults();
             WriteHiP_HOPSResults();
         }
@@ -45,8 +45,7 @@ namespace FaultTreeMerge
 
             using (XmlWriter writer = XmlWriter.Create("FaultTrees.xml", settings))
             {
-                Console.WriteLine("Writing File: FaultTrees.xml");  //TODO: Should this have the file path?
-
+                Console.WriteLine("Writing File: FaultTrees.xml");
                 writer.WriteStartDocument();
                 WriteHiPHOPSResults(writer, CombinedHiP_HOPSResults);
             }
@@ -57,8 +56,7 @@ namespace FaultTreeMerge
 
                 using (XmlWriter writer = XmlWriter.Create(filePath, settings))
                 {
-                    Console.WriteLine("Writing File: " + filePath);  //TODO: Should this have the file path?
-
+                    Console.WriteLine("Writing File: " + filePath);
                     writer.WriteStartDocument();
                     WriteCutSets(writer, faultTree);
                 }
@@ -117,7 +115,7 @@ namespace FaultTreeMerge
             writer.WriteEndElement();
 
             writer.WriteStartElement("AllCutSets");
-            WriteAllCutSets(writer, faultTree.AllCutSets);    //TODO: This will be empty. Look up the AllCutSets from the cut sets dictionary list
+            WriteAllCutSets(writer, faultTree.AllCutSets);
             writer.WriteEndElement();
 
             writer.WriteEndElement();
@@ -126,7 +124,42 @@ namespace FaultTreeMerge
 
         static void WriteAllCutSets(XmlWriter writer, List<CutSets> allCutSets)
         {
+            foreach(CutSets cutSets in allCutSets)
+            {
+                writer.WriteStartElement("CutSets");
+                writer.WriteAttributeString("order", cutSets.Order);
 
+                foreach(CutSet cutSet in cutSets.CutSetList)
+                {
+                    writer.WriteStartElement("CutSet");
+
+
+                    writer.WriteStartElement("Unavailability");
+                    writer.WriteString(cutSet.Unavailability);
+                    writer.WriteEndElement();
+
+                    writer.WriteStartElement("UnavailabilitySort");
+                    writer.WriteString(cutSet.UnavailabilitySort);
+                    writer.WriteEndElement();
+
+                    writer.WriteStartElement("Events");
+                    foreach(BasicEvent basicEvent in cutSet.Events)
+                    {
+                        writer.WriteStartElement("Event");
+                        writer.WriteAttributeString("ID", basicEvent.Id.ToString());
+                        writer.WriteEndElement();
+                    }
+                    writer.WriteEndElement();
+
+
+                    writer.WriteEndElement();
+
+                }
+
+
+
+                writer.WriteEndElement();
+            }
         }
 
         static void WriteHiPHOPSResults(XmlWriter writer, HiP_HOPSResults hiP_HOPSResults)
@@ -205,9 +238,7 @@ namespace FaultTreeMerge
                 writer.WriteString(cutSets.Content);
                 writer.WriteEndElement();
 
-            }
-
-            //TODO: Write CutSetsSummary
+            }            
         }
 
         static void WriteChildren(XmlWriter writer, List<Node> nodes)
@@ -241,7 +272,6 @@ namespace FaultTreeMerge
                     writer.WriteStartElement("Event");
                     writer.WriteAttributeString("ID", ((BasicEvent)node).Id.ToString());
                     writer.WriteEndElement();
-                    //       writer.WriteEndElement();
                 }
             }
 
@@ -262,8 +292,6 @@ namespace FaultTreeMerge
         {
             foreach (Component component in components)
             {
-                //   writer.WriteStartAttribute("Component");
-
                 writer.WriteStartElement("Component");
 
                 writer.WriteStartElement("Name");
@@ -282,7 +310,6 @@ namespace FaultTreeMerge
         {
             foreach (BasicEvent basicEvent in events)
             {
-
                 writer.WriteStartElement("BasicEvent");
                 writer.WriteAttributeString("ID", basicEvent.Id.ToString());
 
@@ -454,9 +481,8 @@ namespace FaultTreeMerge
                     newFaultTree.Severity = faultTree.Severity;
                     newFaultTree.OutputDeviation = faultTree.OutputDeviation;
                     newFaultTree.CutSetsSummary = faultTree.CutSetsSummary;
-
-
-                    newFaultTree.AllCutSets = CutSetsDictionaryList[faultTree.HiPHOPSResultsIndex][faultTree.PreviousId].AllCutSets;
+                    newFaultTree.HiPHOPSResultsIndex = faultTree.HiPHOPSResultsIndex;
+                    newFaultTree.AllCutSets = ReadCutsSetsFile(FilePaths[faultTree.HiPHOPSResultsIndex] + "/CutSets(" + faultTree.PreviousId + ").xml");
 
                     faultTreeListDictionary.Add(newFaultTree.OutputDeviation.TotalChildrenChecksum(), newFaultTree);
                     combinedFaultTrees.Add(newFaultTree);
@@ -466,8 +492,6 @@ namespace FaultTreeMerge
                     newEffect.Name = newFaultTree.Name;
 
                     FaultTreesDictionaryLookup[faultTree.HiPHOPSResultsIndex].Add(faultTree.PreviousId, newEffect);
-
-
                 }
                 else
                 {
@@ -492,21 +516,6 @@ namespace FaultTreeMerge
                 foreach (Component component in HiPHOPSResults.FMEA.Components)
                 {
                     components.Add(component);
-
-                    //TODO: The if part seems redunant, as the components will never match, currently
-                    if (!combinedFMEA.Components.Contains(component))
-                    {
-                        //TODO: For debug purposes, remove when finished
-                        foreach (Component storedComponent in combinedFMEA.Components)
-                        {
-                            if (component.Name == storedComponent.Name)
-                            {
-                                Console.WriteLine("Duplicate Component Name Found: " + component.Name);
-                            }
-                        }
-
-                        // combinedFMEA.Components.Add(component);
-                    }
                 }
             }
             combinedFMEA.Components = CombineComponents(components);
@@ -521,10 +530,8 @@ namespace FaultTreeMerge
             //This will store each different version of a component from each XML file
             Dictionary<string, List<Component>> componentVersionsDictionary = new Dictionary<string, List<Component>>();
 
-            //TODO: Probably should change this to a for loop and stop removing from components
             while (components.Count > 0)
             {
-                //TODO: probably move tis outside of the while loop, like in the CombineEvents method
                 if (componentVersionsDictionary.Count < 1)
                 {
                     List<Component> newComponentList = new List<Component>();
@@ -546,8 +553,6 @@ namespace FaultTreeMerge
 
                             components.RemoveAt(0);
                             componentAdded = true;
-
-                            //TODO: Are there alternative ways of implementing this?
                             i += componentVersionsDictionary.Count;
                         }
                     }
@@ -611,7 +616,7 @@ namespace FaultTreeMerge
 
             foreach (KeyValuePair<string, List<BasicEvent>> basicEventKVP in eventListDictionary)
             {
-                BasicEvent newEvent = new BasicEvent(basicEventKVP.Key);   //This constructor will increment the basic event count
+                BasicEvent newEvent = new BasicEvent(basicEventKVP.Key);
                 newEvent.ShortName = basicEventKVP.Value[0].ShortName;
                 newEvent.Description = basicEventKVP.Value[0].Description;
                 newEvent.Unavailability = basicEventKVP.Value[0].Unavailability;
@@ -626,15 +631,8 @@ namespace FaultTreeMerge
 
                 }
                 newEvent.Effects = CombineEffects(uncombinedEffects);
-
-                //TODO: Is this part necessary, or should this be in a dictionary so it can be looked up?
-                //Should the dictionary be specific to the HiP-HOPS results it came from?
                 newEvent.PreviousId = basicEventKVP.Value[0].PreviousId;
-
-
                 combinedEvents.Add(newEvent);
-
-                //TODO: Is this part necessary
                 BasicEventsDictionary.Add(newEvent.Name, newEvent);
 
             }
@@ -674,6 +672,9 @@ namespace FaultTreeMerge
                 while (!reader.EndOfStream)
                 {
                     string path = reader.ReadLine();
+
+                    FilePaths.Add(path);
+
                     LoadPath(path);
 
                 }
@@ -689,42 +690,36 @@ namespace FaultTreeMerge
             settings.IgnoreWhitespace = true;
 
             BasicEventsDictionaryList.Add(new Dictionary<int, BasicEvent>());
-            CutSetsDictionaryList.Add(new Dictionary<int, FaultTree>());
 
-            foreach (string file in Directory.GetFiles(pPath, "*.xml"))
+            using (XmlReader reader = XmlReader.Create(new StreamReader(pPath + "/faulttrees.xml"), settings))
             {
-                string fileName = Path.GetFileName(file);
+                reader.ReadToFollowing("HiP-HOPS_Results");
+                HiP_HOPSResults newHiP_HOPSResults = ReadHiPHOPSResults(reader);
+                HiP_HOPSResultsList.Add(newHiP_HOPSResults);
+            }
+        }
 
+        static List<CutSets> ReadCutsSetsFile(string pPath)
+        {
+            FaultTree cutSets = new FaultTree();
+            XmlReaderSettings settings = new XmlReaderSettings();
+            settings.Async = false;
+            settings.IgnoreWhitespace = true;
 
-                if (fileName.ToLower().StartsWith("cutsets"))
+            string fileName = Path.GetFileName(pPath);
+            string[] fileNameParts = fileName.Split(new char[] { '(', ')' }, StringSplitOptions.None);
+
+            if (int.TryParse(fileNameParts[1], out int Id))
+            {
+                Console.WriteLine("Reading File: " + fileName);
+                using (XmlReader reader = XmlReader.Create(new StreamReader(pPath), settings))
                 {
-                    string[] fileNameParts = fileName.Split(new char[] { '(', ')' }, StringSplitOptions.None);
-
-                    if (int.TryParse(fileNameParts[1], out int Id))
-                    {
-                        Console.WriteLine("Reading File: " + fileName);
-                        using (XmlReader reader = XmlReader.Create(new StreamReader(pPath + "/" + fileName), settings))
-                        {
-                            reader.ReadToFollowing("FaultTree");
-                            CutSetsDictionaryList[CutSetsDictionaryList.Count - 1].Add(Id, ReadCutSets(reader, Id));
-                        }
-                    }
-                    else
-                    {
-                        Console.WriteLine("Invalid File Name: " + fileName);
-                    }
-                }
-                else if (fileName.ToLower() == "faulttrees.xml")
-                {
-                    Console.WriteLine("Reading File: " + fileName);
-                    using (XmlReader reader = XmlReader.Create(new StreamReader(pPath + "/faulttrees.xml"), settings))
-                    {
-                        reader.ReadToFollowing("HiP-HOPS_Results");
-                        HiP_HOPSResults newHiP_HOPSResults = ReadHiPHOPSResults(reader);
-                        HiP_HOPSResultsList.Add(newHiP_HOPSResults);
-                    }
+                    reader.ReadToFollowing("FaultTree");
+                    cutSets = ReadCutSets(reader, Id);
                 }
             }
+
+            return cutSets.AllCutSets;
         }
 
         static FaultTree ReadCutSets(XmlReader reader, int Id)
@@ -860,9 +855,6 @@ namespace FaultTreeMerge
 
                 reader.Read();
             }
-
-            //TODO: Make sure the WarningList and SafetyAllocations can be ignored
-
             return HiP_HOPSResults;
         }
 
@@ -917,9 +909,7 @@ namespace FaultTreeMerge
                 }
                 reader.Read();
             }
-
-            // faultTree.HiPHOPSResultsIndex = HiP_HOPSResultsList.Count;
-
+            
             reader.Read();
             return faultTree;
         }
@@ -930,13 +920,8 @@ namespace FaultTreeMerge
 
             cutSets.Order = reader.GetAttribute("order");
             cutSets.Pruned = reader.GetAttribute("pruned");
+            cutSets.Content = reader.ReadElementContentAsString();
 
-            cutSets.Content = reader.ReadElementContentAsString();   //TODO: Make sure this is the correct method
-
-            //    reader.ReadStartElement();
-
-
-            //   reader.Read();
             return cutSets;
         }
 
@@ -952,13 +937,11 @@ namespace FaultTreeMerge
 
             OutputDeviation outputDeviation = new OutputDeviation(name);
 
-
             if (reader.Name == "Children")
             {
                 outputDeviation.Children = ReadChildren(reader);
             }
-
-
+            
             reader.Read();
             return outputDeviation;
         }
@@ -982,15 +965,11 @@ namespace FaultTreeMerge
                 }
                 else if (reader.Name == "Event")
                 {
-                    //TODO: find out what needs to go here
-                    // The name for this part is 'Event', not 'BasicEvent', so ReadEvent will probably not work as it is.
-                    // Change ReadEvent to read events titles 'Event'?   maybe reader.Name.Countains("Event")?
-                    // Maybe none if this is relevent and maybe it will just work
-
                     nodes.Add(ReadEvent(reader));
                 }
 
             }
+
             reader.Read();
             return nodes;
         }
@@ -998,11 +977,8 @@ namespace FaultTreeMerge
         static Or ReadOr(XmlReader reader)
         {
             int previousId = int.Parse(reader.GetAttribute("ID"));
-
             reader.ReadStartElement();
-
             Or or = new Or();
-
             or.Id = previousId;
 
             if (reader.Name == "Name")
@@ -1014,7 +990,6 @@ namespace FaultTreeMerge
                 or.Children = ReadChildren(reader);
             }
 
-
             reader.Read();
             return or;
         }
@@ -1022,11 +997,8 @@ namespace FaultTreeMerge
         static And ReadAnd(XmlReader reader)
         {
             int previousId = int.Parse(reader.GetAttribute("ID"));
-
             reader.ReadStartElement();
-
             And and = new And();
-
             and.Id = previousId;
 
             if (reader.Name == "Name")
@@ -1045,7 +1017,6 @@ namespace FaultTreeMerge
         static FMEA ReadFMEA(XmlReader reader)
         {
             List<Component> components = new List<Component>();
-
             reader.ReadStartElement();
 
             while (reader.Name == "Component")
@@ -1063,7 +1034,6 @@ namespace FaultTreeMerge
         {
             string name = "";
             List<BasicEvent> basicEvents = new List<BasicEvent>();
-
             reader.ReadStartElement();
 
             if (reader.Name == "Name")
@@ -1140,10 +1110,8 @@ namespace FaultTreeMerge
                     }
 
                     basicEvent.Effects = effects;
-
                     reader.Read();
                 }
-
 
                 BasicEventsDictionaryList[HiP_HOPSResultsList.Count].Add(previousId, basicEvent);
             }
@@ -1162,7 +1130,6 @@ namespace FaultTreeMerge
             int previousId = int.Parse(reader.GetAttribute("ID"));
             string name = "";
             string singlePointFailure = "";
-
             reader.ReadStartElement();
 
             if (reader.Name == "Name")
@@ -1177,11 +1144,8 @@ namespace FaultTreeMerge
             Effect effect = new Effect();
             effect.Name = name;
             effect.SinglePointFailure = singlePointFailure;
-
             effect.PreviousId = previousId;
-
             effect.HiPHOPSResultsIndex = HiP_HOPSResultsList.Count;
-
             reader.Read();
 
             return effect;

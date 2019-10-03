@@ -14,10 +14,8 @@ namespace FaultTreeMerge
         public int Id { get; set; }
         public string Unavailability { get; set; }
         public List<Effect> Effects = new List<Effect>();
-
         public int PreviousId { get; set; }
         public int HiPHOPSResultsIndex;
-
 
         public BasicEvent()
         {

@@ -12,7 +12,6 @@ namespace FaultTreeMerge
         public string MinorVersion { get; set; }
         public string Version { get; set; }
         public string VersionDate { get; set; }
-
         public FMEA FMEA { get; set; }
         public List<FaultTree> FaultTrees = new List<FaultTree>();
 

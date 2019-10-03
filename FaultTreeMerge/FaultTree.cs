@@ -16,11 +16,8 @@ namespace FaultTreeMerge
         public string Severity { get; set; }
         public OutputDeviation OutputDeviation;
         public int PreviousId { get; set; }
-
         public int HiPHOPSResultsIndex { get; set; }
-
         public List<CutSetsSummary> CutSetsSummary = new List<CutSetsSummary>();
-
         public List<CutSets> AllCutSets = new List<CutSets>();
 
         public FaultTree()
