@@ -98,6 +98,13 @@ namespace FaultTreeMerge
             }
             writer.WriteEndElement();
 
+            writer.WriteStartElement("SIL");
+            if (!string.IsNullOrEmpty(faultTree.SIL))
+            {
+                writer.WriteString(faultTree.SIL);
+            }
+            writer.WriteEndElement();
+
             writer.WriteStartElement("Unavailability");
             writer.WriteString(faultTree.Unavailability);
             writer.WriteEndElement();
@@ -193,6 +200,13 @@ namespace FaultTreeMerge
                 if (!string.IsNullOrEmpty(faultTree.Description))
                 {
                     writer.WriteString(faultTree.Description);
+                }
+                writer.WriteEndElement();
+
+                writer.WriteStartElement("SIL");
+                if (!string.IsNullOrEmpty(faultTree.SIL))
+                {
+                    writer.WriteString(faultTree.SIL);
                 }
                 writer.WriteEndElement();
 

@@ -1,4 +1,3 @@
-E:\Users\Lewis\Documents\Internship\Fault Tree Merger\FaultTreeMerger\branches\Lewis-Barker\andre files\Variants-Aerospace-Tiriba-Case-Study\config01-ALL\TiribaFlightControl-FMEAOutput\
-E:\Users\Lewis\Documents\Internship\Fault Tree Merger\FaultTreeMerger\branches\Lewis-Barker\andre files\Variants-Aerospace-Tiriba-Case-Study\config02-MAT\TiribaFlightControl-FMEAOutput\
-E:\Users\Lewis\Documents\Internship\Fault Tree Merger\FaultTreeMerger\branches\Lewis-Barker\andre files\Variants-Aerospace-Tiriba-Case-Study\config03-MAS\TiribaFlightControl-FMEAOutput\
-E:\Users\Lewis\Documents\Internship\Fault Tree Merger\FaultTreeMerger\branches\Lewis-Barker\andre files\Variants-Aerospace-Tiriba-Case-Study\config04-MAP\TiribaFlightControl-FMEAOutput\
+C:\TempBuildLocation\FaultTreeLewis\andre files\Variants-Automotive-Braking-System-Case-Study\model_v14Big_four_whells\model_v14Big_Haz-FMEAOutput
+C:\TempBuildLocation\FaultTreeLewis\andre files\Variants-Automotive-Braking-System-Case-Study\model_v15Big_two_Whells\model_v15Big_two_Whells_-FMEAOutput
+C:\TempBuildLocation\FaultTreeLewis\andre files\Variants-Automotive-Braking-System-Case-Study\model_v16Big_rear_braking\model_v16Big_Rear_Braking_Haz-FMEAOutput
